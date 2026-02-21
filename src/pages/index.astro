@@ -5,9 +5,11 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout>
   <div class="hero">
-    <h1>Welcome to Owen's portfolio</h1>
-    <p>Learning technologies to solve problems with the best solutions.</p>
-    <p>This site is built with Astro*</p>
+    <div>
+      <h1>Welcome to Owen's portfolio</h1>
+      <p>Learning technologies to solve problems with the best solutions.</p>
+      <p>This site is built with Astro*</p>
+    </div>
   </div>
 </Layout>
 
@@ -21,6 +23,7 @@ import Layout from "../layouts/Layout.astro";
     display: grid;
     justify-content: center;
     align-items: center;
+
     width: 100vw;
     height: 100vh;
 
@@ -29,18 +32,20 @@ import Layout from "../layouts/Layout.astro";
     text-align: center;
 
     h1 {
-      font-size: 3vw;
-      margin-bottom: 1.5vw;
+      font-size: 3.4vw;
+      margin-bottom: 3.2vw;
       animation: fadeIn 0.4s ease-in-out forwards;
     }
     p {
-      font-size: 2vw;
-      font-weight: 500;
+      font-size: 1.8vw;
+      font-weight: 300;
+      letter-spacing: 0.1vw;
       animation: fadeIn 0.6s ease-in-out forwards;
       animation-delay: 0.1s;
+      margin-bottom: 2vw;
     }
     p:nth-of-type(2) {
-      font-size: 1.3vw;
+      font-size: 1vw;
       font-weight: 100;
       animation-delay: 0.2s;
     }
@@ -88,12 +93,7 @@ import Layout from "../layouts/Layout.astro";
       50vmax 50vmax;
     background-repeat: no-repeat;
     animation: move 12s linear infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     height: 850px;
-    gap: 2rem;
 
     &::after {
       content: "";
