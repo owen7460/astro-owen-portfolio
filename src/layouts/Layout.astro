@@ -1,6 +1,8 @@
 ---
 const { title = "Owen Portfolio | Full Stack Developer" }: { title?: string } =
   Astro.props;
+import "../styles/global.scss";
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
@@ -14,6 +16,7 @@ const { title = "Owen Portfolio | Full Stack Developer" }: { title?: string } =
     <title>{title}</title>
   </head>
   <body>
+    <Header />
     <slot />
   </body>
 </html>
