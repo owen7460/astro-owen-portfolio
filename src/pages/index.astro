@@ -1,16 +1,153 @@
 ---
 import "../styles/global.scss";
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import blendbetter from "../assets/blendbetter.png";
+import jokeshare from "../assets/jokeshare.jpg";
+import owenkitchen from "../assets/owenkitchen.png";
+import noirrose from "../assets/noirrose.png";
+import portfolio from "../assets/portfolio.png";
 ---
 
 <Layout>
-  <div class="hero">
-    <div>
-      <h1>Welcome to Owen's portfolio</h1>
-      <p>Learning technologies to solve problems with the best solutions.</p>
-      <p>This site is built with Astro*</p>
-    </div>
-  </div>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Welcome to Owen's portfolio</h1>
+        <p>Learning technologies to solve problems with the best solutions.</p>
+        <p>This site is built with Astro*</p>
+      </div>
+    </section>
+
+    <section class="projects">
+      <ul>
+        <li>
+          <div class="left">
+            <Image src={blendbetter} alt="Blendbetter Website" />
+          </div>
+          <div class="right">
+            <div class="right-content">
+              <h2>Blendbetter</h2>
+              <p>
+                An AI-powered web app that recommends better smoothie
+                combinations by suggesting fruit pairings based on taste and
+                nutrition.
+              </p>
+              <p>
+                Full-stack project, built with Next.js, TypeScript, Tailwind
+                CSS, and Shadcn UI.
+              </p>
+              <div class="buttons">
+                <a
+                  href="https://github.com/owen7460/nextjs-blendbetter"
+                  target="_blank">View Code</a
+                >
+                <a
+                  class="view-project"
+                  href="https://nextjs-blendbetter.vercel.app"
+                  target="_blank">View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <Image src={jokeshare} alt="Jokeshare Website" />
+          </div>
+          <div class="right">
+            <div class="right-content">
+              <h2>Jokeshare</h2>
+              <p>
+                A single page app that allows users to share, like and collect
+                jokes.
+              </p>
+              <p>Built with React, Zustand, Tailwind CSS</p>
+              <div class="buttons">
+                <a
+                  href="https://github.com/owen7460/joke-share-react"
+                  target="_blank">View Code</a
+                >
+                <a
+                  class="view-project"
+                  href="https://owenouyang.com/"
+                  target="_blank">View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <Image src={owenkitchen} alt="Owen's Kitchen Website" />
+          </div>
+          <div class="right">
+            <div class="right-content">
+              <h2>Owen's Kitchen</h2>
+              <p>
+                Owen’s Kitchen is a web-based ordering system built with PHP and
+                MySQL, allowing users to browse menus, place orders, and manage
+                basic order data efficiently.
+              </p>
+              <p>Built with PHP, MySQL, HTML, CSS, JavaScript</p>
+              <div class="buttons">
+                <a
+                  class="view-project"
+                  href="https://owen-kitchen.com/"
+                  target="_blank">View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <Image src={noirrose} alt="Noir Rose Website" />
+          </div>
+          <div class="right">
+            <div class="right-content">
+              <h2>Noir Rose</h2>
+              <p>
+                Noir Rose is a press-on nails brand website designed to showcase
+                the brand identity and product collections, while providing a
+                smooth and intuitive online shopping experience for customers.
+              </p>
+              <p>Built with Wordpress, Elementor, and WooCommerce.</p>
+              <div class="buttons">
+                <a
+                  class="view-project"
+                  href="https://noir-rose.shop/"
+                  target="_blank">View Project</a
+                >
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="left">
+            <Image src={portfolio} alt="Portfolio Website" />
+          </div>
+          <div class="right">
+            <div class="right-content">
+              <h2>Portfolio</h2>
+              <p>
+                This portfolio website is built with Astro, and it showcases my
+                projects and skills.
+              </p>
+              <p>Built with Astro, Sass.</p>
+              <div class="buttons">
+                <a
+                  class="view-project"
+                  href="https://github.com/owen7460/astro-owen-portfolio"
+                  target="_blank">View Code</a
+                >
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
 </Layout>
 
 <style lang="scss">
@@ -48,120 +185,73 @@ import Layout from "../layouts/Layout.astro";
       font-weight: 100;
       animation-delay: 0.2s;
     }
-
-    background-color: #e493d0;
-    background:
-      radial-gradient(
-        closest-side,
-        rgba(235, 105, 78, 1),
-        rgba(235, 105, 78, 0)
-      ),
-      radial-gradient(
-        closest-side,
-        rgba(243, 11, 164, 1),
-        rgba(243, 11, 164, 0)
-      ),
-      radial-gradient(
-        closest-side,
-        rgba(254, 234, 131, 1),
-        rgba(254, 234, 131, 0)
-      ),
-      radial-gradient(
-        closest-side,
-        rgb(170, 142, 254, 1),
-        rgba(170, 142, 245, 0)
-      ),
-      radial-gradient(
-        closest-side,
-        rgb(248, 131, 124, 1),
-        rgba(248, 192, 147, 0)
-      );
-    background-size:
-      130vmax 130vmax,
-      80vmax 80vmax,
-      90vmax 90vmax,
-      110vmax 110vmax,
-      90vmax 90vmax;
-    background-position:
-      -80vmax -80vmax,
-      60vmax -30vmax,
-      10vmax 10vmax,
-      -30vmax -10vmax,
-      50vmax 50vmax;
-    background-repeat: no-repeat;
-    animation: move 12s linear infinite;
   }
 
-  @keyframes move {
-    0%,
-    100% {
-      background-size:
-        130vmax 130vmax,
-        80vmax 80vmax,
-        80vmax 90vmax,
-        110vmax 110vmax,
-        90vmax 90vmax;
-      background-position:
-        -80vmax -80vmax,
-        60vmax -30vmax,
-        10vmax 10vmax,
-        -30vmax -10vmax,
-        50vmax 50vmax;
-    }
+  .projects {
+    width: 80vw;
+    margin: 0 auto;
 
-    25% {
-      background-size:
-        40vmax 40vmax,
-        110vmax 110vmax,
-        20vmax 20vmax,
-        30vmax 30vmax,
-        110vmax 110vmax;
-      background-position:
-        -20vmax -20vmax,
-        90vmax 90vmax,
-        50vmax 50vmax,
-        50vmax 30vmax,
-        10vmax 30vmax;
-    }
-    50% {
-      background-size:
-        10vmax 10vmax,
-        110vmax 110vmax,
-        60vmax 70vmax,
-        90vmax 90vmax,
-        70vmax 70vmax;
-      background-position:
-        -80vmax -80vmax,
-        60vmax -30vmax,
-        10vmax 10vmax,
-        -30vmax -10vmax,
-        50vmax 50vmax;
-    }
+    li {
+      overflow: hidden;
+      position: sticky;
+      top: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: var(--cardHeight);
+      margin-bottom: var(--cardMargin);
+      background-color: rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(15px);
+      border-radius: 1em;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        .right-content {
+          width: 80%;
+          margin: 0 auto;
+        }
+        h2 {
+          font-weight: 100;
+          font-size: 2.5em;
+        }
+        p {
+          margin: 1em 0;
+          font-size: 0.72em;
+          margin-left: 0.2em;
+        }
+        .buttons {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 0.2em;
+          margin-top: 2.6em;
+          a {
+            font-size: 0.82em;
+            padding: 0.5em 1em;
+            border-radius: 26px;
+            margin-right: 1em;
+            border: 1px solid var(--text-color);
+            backdrop-filter: blur(60px);
+            background-color: transparent;
+            &.view-project {
+              background-color: var(--text-color);
+              color: var(--background-color);
 
-    75% {
-      background-size:
-        10vmax 10vmax,
-        20vmax 20vmax,
-        30vmax 30vmax,
-        -90vmax -90vmax,
-        50vmax 50vmax;
-      background-position:
-        -10vmax -50vmax,
-        110vmax 110vmax,
-        30vmax 40vmax,
-        130vmax 10vmax,
-        30vmax 30vmax;
-    }
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(150px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+              &:hover {
+                box-shadow: 0 0 15px 3px rgba(96, 96, 96, 0.5);
+              }
+            }
+          }
+        }
+      }
     }
   }
 </style>

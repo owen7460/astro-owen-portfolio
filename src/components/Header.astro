@@ -23,22 +23,23 @@ import "../styles/global.scss";
 <style lang="scss">
   nav {
     position: fixed;
-    display: flex;
     z-index: 100;
-    backdrop-filter: blur(15px);
     top: 1rem;
     left: 50%;
+    width: 70%;
+    max-width: 1200px;
     transform: translateX(-50%);
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.65em;
     padding: 1rem;
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 3px 3px 5px 0 rgba(136, 136, 136, 0.5);
     box-shadow: 1px 1px 3px 0 rgba(255, 255, 255, 0.6);
     border: 2px solid rgb(226, 226, 226);
+    backdrop-filter: blur(8px);
     border-radius: 26px;
-    width: 70%;
-    max-width: 1200px;
 
     a {
       font-weight: 500;
