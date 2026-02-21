@@ -4,5 +4,181 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1>Hello World</h1>
+  <div class="hero">
+    <h1>Welcome to Owen's portfolio</h1>
+    <p>Learning technologies to solve problems with the best solutions.</p>
+    <p>This site is built with Astro*</p>
+  </div>
 </Layout>
+
+<style lang="scss">
+  :root {
+    --cardHeight: 40vw;
+    --cardMargin: 4vw;
+  }
+
+  .hero {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;
+
+    h1 {
+      font-size: 3vw;
+      margin-bottom: 1.5vw;
+      animation: fadeIn 0.4s ease-in-out forwards;
+    }
+    p {
+      font-size: 2vw;
+      font-weight: 500;
+      animation: fadeIn 0.6s ease-in-out forwards;
+      animation-delay: 0.1s;
+    }
+    p:nth-of-type(2) {
+      font-size: 1.3vw;
+      font-weight: 100;
+      animation-delay: 0.2s;
+    }
+
+    position: relative;
+    z-index: -10;
+    background-color: #e493d0;
+    background:
+      radial-gradient(
+        closest-side,
+        rgba(235, 105, 78, 1),
+        rgba(235, 105, 78, 0)
+      ),
+      radial-gradient(
+        closest-side,
+        rgba(243, 11, 164, 1),
+        rgba(243, 11, 164, 0)
+      ),
+      radial-gradient(
+        closest-side,
+        rgba(254, 234, 131, 1),
+        rgba(254, 234, 131, 0)
+      ),
+      radial-gradient(
+        closest-side,
+        rgb(170, 142, 254, 1),
+        rgba(170, 142, 245, 0)
+      ),
+      radial-gradient(
+        closest-side,
+        rgb(248, 131, 124, 1),
+        rgba(248, 192, 147, 0)
+      );
+    background-size:
+      130vmax 130vmax,
+      80vmax 80vmax,
+      90vmax 90vmax,
+      110vmax 110vmax,
+      90vmax 90vmax;
+    background-position:
+      -80vmax -80vmax,
+      60vmax -30vmax,
+      10vmax 10vmax,
+      -30vmax -10vmax,
+      50vmax 50vmax;
+    background-repeat: no-repeat;
+    animation: move 12s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 850px;
+    gap: 2rem;
+
+    &::after {
+      content: "";
+      position: fixed;
+      z-index: -5;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  }
+
+  @keyframes move {
+    0%,
+    100% {
+      background-size:
+        130vmax 130vmax,
+        80vmax 80vmax,
+        80vmax 90vmax,
+        110vmax 110vmax,
+        90vmax 90vmax;
+      background-position:
+        -80vmax -80vmax,
+        60vmax -30vmax,
+        10vmax 10vmax,
+        -30vmax -10vmax,
+        50vmax 50vmax;
+    }
+
+    25% {
+      background-size:
+        40vmax 40vmax,
+        110vmax 110vmax,
+        20vmax 20vmax,
+        30vmax 30vmax,
+        110vmax 110vmax;
+      background-position:
+        -20vmax -20vmax,
+        90vmax 90vmax,
+        50vmax 50vmax,
+        50vmax 30vmax,
+        10vmax 30vmax;
+    }
+    50% {
+      background-size:
+        10vmax 10vmax,
+        110vmax 110vmax,
+        60vmax 70vmax,
+        90vmax 90vmax,
+        70vmax 70vmax;
+      background-position:
+        -80vmax -80vmax,
+        60vmax -30vmax,
+        10vmax 10vmax,
+        -30vmax -10vmax,
+        50vmax 50vmax;
+    }
+
+    75% {
+      background-size:
+        10vmax 10vmax,
+        20vmax 20vmax,
+        30vmax 30vmax,
+        -90vmax -90vmax,
+        50vmax 50vmax;
+      background-position:
+        -10vmax -50vmax,
+        110vmax 110vmax,
+        30vmax 40vmax,
+        130vmax 10vmax,
+        30vmax 30vmax;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(150px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
