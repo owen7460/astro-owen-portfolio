@@ -147,6 +147,76 @@ import portfolio from "../assets/portfolio.png";
         </li>
       </ul>
     </section>
+    <section class="content">
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi sit
+        iusto repellat ducimus saepe officia eaque ex, incidunt, dolor amet
+        corporis at! Amet sed, deserunt voluptate voluptates culpa rem
+        possimus?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque
+        voluptate laborum ab. Unde dolores eos qui pariatur illum laborum iste
+        excepturi est dignissimos quaerat perferendis ratione perspiciatis,
+        beatae fugiat possimus? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Ut, animi molestias. Hic placeat perferendis porro
+        earum incidunt expedita architecto, consequuntur neque, labore facilis.
+        Libero sed iste cum repellat cupiditate. Commodi, minus officiis maiores
+        praesentium ipsum quo quisquam molestiae dolore eaque architecto
+        recusandae vel itaque, voluptas natus veniam aut fugiat rerum, similique
+        saepe. Eos? Est, quas ad? Inventore repellendus a adipisci! Tempore,
+        unde suscipit porro facere ullam fugiat quas? Molestias tempore nobis
+        illo quos nisi repellendus libero dicta iure, fugiat dolorem commodi?
+        Porro, voluptatum? Deserunt ut odit debitis architecto aliquam, totam,
+        delectus et similique repudiandae suscipit laborum? Quo quos, distinctio
+        eos ipsa maiores nam velit adipisci, nobis dolorem, facere facilis
+        dolores laudantium quis dolor. Ipsa ea placeat, ducimus accusamus
+        officia atque? Aut error in eum ex accusamus officiis officia
+        exercitationem sed minima commodi non deleniti est tenetur tempore
+        labore dolores voluptate, maxime dolore ipsa. Lorem ipsum dolor sit,
+        amet consectetur adipisicing elit. Excepturi sit iusto repellat ducimus
+        saepe officia eaque ex, incidunt, dolor amet corporis at! Amet sed,
+        deserunt voluptate voluptates culpa rem possimus?Lorem, ipsum dolor sit
+        amet consectetur adipisicing elit. Neque voluptate laborum ab. Unde
+        dolores eos qui pariatur illum laborum iste excepturi est dignissimos
+        quaerat perferendis ratione perspiciatis, beatae fugiat possimus? Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Ut, animi molestias.
+        Hic placeat perferendis porro earum incidunt expedita architecto,
+        consequuntur neque, labore facilis. Libero sed iste cum repellat
+        cupiditate. Commodi, minus officiis maiores praesentium ipsum quo
+        quisquam molestiae dolore eaque architecto recusandae vel itaque,
+        voluptas natus veniam aut fugiat rerum, similique saepe. Eos? Est, quas
+        ad? Inventore repellendus a adipisci! Tempore, unde suscipit porro
+        facere ullam fugiat quas? Molestias tempore nobis illo quos nisi
+        repellendus libero dicta iure, fugiat dolorem commodi? Porro,
+        voluptatum? Deserunt ut odit debitis architecto aliquam, totam, delectus
+        et similique repudiandae suscipit laborum? Quo quos, distinctio eos ipsa
+        maiores nam velit adipisci, nobis dolorem, facere facilis dolores
+        laudantium quis dolor. Ipsa ea placeat, ducimus accusamus officia atque?
+        Aut error in eum ex accusamus officiis officia exercitationem sed minima
+        commodi non deleniti est tenetur tempore labore dolores voluptate,
+        maxime dolore ipsa. Lorem ipsum dolor sit, amet consectetur adipisicing
+        elit. Excepturi sit iusto repellat ducimus saepe officia eaque ex,
+        incidunt, dolor amet corporis at! Amet sed, deserunt voluptate
+        voluptates culpa rem possimus?Lorem, ipsum dolor sit amet consectetur
+        adipisicing elit. Neque voluptate laborum ab. Unde dolores eos qui
+        pariatur illum laborum iste excepturi est dignissimos quaerat
+        perferendis ratione perspiciatis, beatae fugiat possimus? Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Ut, animi molestias. Hic
+        placeat perferendis porro earum incidunt expedita architecto,
+        consequuntur neque, labore facilis. Libero sed iste cum repellat
+        cupiditate. Commodi, minus officiis maiores praesentium ipsum quo
+        quisquam molestiae dolore eaque architecto recusandae vel itaque,
+        voluptas natus veniam aut fugiat rerum, similique saepe. Eos? Est, quas
+        ad? Inventore repellendus a adipisci! Tempore, unde suscipit porro
+        facere ullam fugiat quas? Molestias tempore nobis illo quos nisi
+        repellendus libero dicta iure, fugiat dolorem commodi? Porro,
+        voluptatum? Deserunt ut odit debitis architecto aliquam, totam, delectus
+        et similique repudiandae suscipit laborum? Quo quos, distinctio eos ipsa
+        maiores nam velit adipisci, nobis dolorem, facere facilis dolores
+        laudantium quis dolor. Ipsa ea placeat, ducimus accusamus officia atque?
+        Aut error in eum ex accusamus officiis officia exercitationem sed minima
+        commodi non deleniti est tenetur tempore labore dolores voluptate,
+        maxime dolore ipsa.
+      </p>
+    </section>
   </main>
 </Layout>
 
@@ -200,9 +270,14 @@ import portfolio from "../assets/portfolio.png";
       height: var(--cardHeight);
       margin-bottom: var(--cardMargin);
       background-color: rgba(255, 255, 255, 0.4);
-      box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+      box-shadow:
+        0 0 10px 2px rgba(255, 255, 255, 0.8),
+        3px 3px 5px 0 rgba(136, 136, 136, 0.5),
+        1px 1px 3px 0 rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(15px);
       border-radius: 1em;
+      // animation: scaleIn 1s ease-in-out forwards;
+      // animation-timeline: view();
       img {
         width: 100%;
         height: 100%;
@@ -244,14 +319,30 @@ import portfolio from "../assets/portfolio.png";
             &.view-project {
               background-color: var(--text-color);
               color: var(--background-color);
-
-              &:hover {
-                box-shadow: 0 0 15px 3px rgba(96, 96, 96, 0.5);
-              }
+            }
+            &:hover {
+              box-shadow: 1px 2px 15px 1px rgba(96, 96, 96, 0.5);
             }
           }
         }
       }
     }
   }
+  .content {
+    width: 80vw;
+    margin: 0 auto;
+    p {
+      font-size: 0.8em;
+      line-height: 1.5;
+    }
+  }
+
+  // @keyframes scaleIn {
+  //   0% {
+  //     transform: scaleX(1);
+  //   }
+  //   100% {
+  //     transform: scaleX(1);
+  //   }
+  // }
 </style>
