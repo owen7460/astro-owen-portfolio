@@ -27,7 +27,6 @@ import Layout from "../layouts/Layout.astro";
     width: 100vw;
     height: 100vh;
 
-    background-color: var(--background-color);
     color: var(--text-color);
     text-align: center;
 
@@ -50,8 +49,6 @@ import Layout from "../layouts/Layout.astro";
       animation-delay: 0.2s;
     }
 
-    position: relative;
-    z-index: -10;
     background-color: #e493d0;
     background:
       radial-gradient(
@@ -93,20 +90,6 @@ import Layout from "../layouts/Layout.astro";
       50vmax 50vmax;
     background-repeat: no-repeat;
     animation: move 12s linear infinite;
-    height: 850px;
-
-    &::after {
-      content: "";
-      position: fixed;
-      z-index: -5;
-      display: block;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-    }
   }
 
   @keyframes move {
