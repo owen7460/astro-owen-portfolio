@@ -1,3 +1,8 @@
+---
+const { title = "Owen Portfolio | Full Stack Developer" }: { title?: string } =
+  Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -6,7 +11,7 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content="Owen Portfolio" />
-    <title>Owen Portfolio | Full Stack Developer</title>
+    <title>{title}</title>
   </head>
   <body>
     <slot />
