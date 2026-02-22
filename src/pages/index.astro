@@ -220,7 +220,7 @@ import zCrewPancakes from "../assets/design-zcrew.png";
             </div>
           </li>
           <li class="design-item">
-            <h3>Canmore&Banff Brochure</h3>
+            <h3>Canmore&Banff</h3>
             <p>
               I've visited Canmore many times, I was fascinated by those thick
               forests, majestic mountains and breathtaking northern lights.
@@ -297,7 +297,7 @@ import zCrewPancakes from "../assets/design-zcrew.png";
       li {
         overflow: hidden;
         position: sticky;
-        top: 0;
+        top: 5vh;
         display: grid;
         grid-template-columns: 1fr 1fr;
         height: var(--cardHeight);
@@ -449,7 +449,7 @@ import zCrewPancakes from "../assets/design-zcrew.png";
         animation-delay: 0.1s;
       }
       &:nth-of-type(3) {
-        animation-delay: 0.2s;
+        animation-delay: 0.3s;
       }
     }
 
@@ -508,7 +508,7 @@ import zCrewPancakes from "../assets/design-zcrew.png";
             }
           });
         },
-        { threshold: 0.2 },
+        { threshold: 0.3 },
       );
 
       elementsToObserve.forEach((el) => observer.observe(el));
