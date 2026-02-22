@@ -2,8 +2,95 @@
 import "../styles/global.scss";
 import Layout from "../layouts/Layout.astro";
 const title: string = "About Owen | Developer & Designer";
+// import { Image } from "astro:assets";
+// import stage from "../assets/stage.png";
 ---
 
 <Layout title={title}>
-  <h1>About Me</h1>
+  <main>
+    <div class="first-part">
+      <!-- <Image loading="eager" src={stage} alt="Me" /> -->
+      <div class="first-part-text">
+        <p>Hey, I'm Owen</p>
+        <p>
+          Before transitioning into tech, I worked as a <span
+            >professional opera tenor</span
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="second-part">
+      <div>
+        <img src="developer.png" alt="Developer" />
+        <p>
+          I enjoy being on stage and sharing stories through opera, but I began
+          to feel that I wanted to create something with a broader reach. In the
+          theatre, I performed for the audience in front of me; in technology, I
+          can design and build experiences for people across the world. By
+          combining code, visual design, and creativity, I strive to craft
+          delightful digital experiences that are not only functional, but also
+          visually compelling.
+        </p>
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<style lang="scss">
+  main {
+    background-color: var(--background-color);
+  }
+
+  .first-part {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("stage.jpg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    gap: 0;
+    animation: gradually-fade-out linear forwards;
+    animation-timeline: view();
+    animation-range: entry 100% exit 30%;
+    .first-part-text {
+      margin-top: 24vw;
+
+      text-align: left;
+      p:first-of-type {
+        font-size: 4rem;
+        font-weight: 100;
+      }
+      p:last-of-type {
+        margin-top: 1.6rem;
+        font-size: 1.5rem;
+        font-weight: 100;
+      }
+    }
+  }
+
+  @keyframes gradually-fade-out {
+    to {
+      opacity: 0;
+      scale: 3;
+    }
+  }
+
+  .second-part {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        width: 80ch;
+        font-size: 1.5rem;
+        font-weight: 100;
+      }
+    }
+  }
+</style>
