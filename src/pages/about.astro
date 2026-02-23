@@ -2,14 +2,11 @@
 import "../styles/global.scss";
 import Layout from "../layouts/Layout.astro";
 const title: string = "About Owen | Developer & Designer";
-// import { Image } from "astro:assets";
-// import stage from "../assets/stage.png";
 ---
 
 <Layout title={title}>
   <main>
     <div class="first-part">
-      <!-- <Image loading="eager" src={stage} alt="Me" /> -->
       <div class="first-part-text">
         <p>Hey, I'm Owen</p>
         <p>
@@ -21,76 +18,523 @@ const title: string = "About Owen | Developer & Designer";
     </div>
 
     <div class="second-part">
-      <div>
+      <div class="second-part-content">
         <img src="developer.png" alt="Developer" />
-        <p>
-          I enjoy being on stage and sharing stories through opera, but I began
-          to feel that I wanted to create something with a broader reach. In the
-          theatre, I performed for the audience in front of me; in technology, I
-          can design and build experiences for people across the world. By
-          combining code, visual design, and creativity, I strive to craft
-          delightful digital experiences that are not only functional, but also
-          visually compelling.
-        </p>
+        <div class="second-part-text">
+          <p>
+            I enjoy being on stage and sharing stories through opera, but I
+            began to feel that I wanted to create something with a broader
+            reach. In the theatre, I performed for the audience in front of me;
+          </p>
+          <p>
+            In technology, I can design and build experiences for people across
+            the world. By combining code, visual design, and creativity, I
+            strive to craft delightful digital experiences that are not only
+            functional, but also visually compelling.
+          </p>
+        </div>
       </div>
     </div>
+
+    <div class="third-part">
+      <div class="third-part-content">
+        <div class="third-part-content-text">
+          <h2>Technology with Purpose</h2>
+          <p>
+            I am a self-driven developer, always taking the initiative to learn
+            and explore new technologies, including many cutting-edge tools and
+            concepts. I get genuinely excited when I can apply what I’ve learned
+            to real projects. Yet, I understand that all technology ultimately
+            exists to serve functionality and deliver the best possible user
+            experience.
+          </p>
+        </div>
+        <img
+          class="pc-1"
+          src="icons/react.png"
+          alt="React"
+          width="96"
+          height="96"
+        />
+        <img
+          class="pc-2"
+          src="icons/js.png"
+          alt="JavaScript"
+          width="96"
+          height="96"
+        />
+        <img
+          class="pc-3"
+          src="icons/ts.png"
+          alt="TypeScript"
+          width="96"
+          height="96"
+        />
+        <img
+          class="pc-4"
+          src="icons/astro-logo-dark.svg"
+          alt="Astro"
+          width="96"
+          height="96"
+        />
+        <img
+          class="pc-5"
+          src="icons/nextjs.jpeg"
+          alt="Next.js"
+          width="96"
+          height="96"
+        />
+        <img
+          class="pc-6"
+          src="icons/tailwind-css-seeklogo.svg"
+          alt="Tailwind CSS"
+          width="96"
+          height="96"
+        />
+        <img
+          class="pc-7"
+          src="icons/shadcn.jpg"
+          alt="Shadcn UI"
+          width="128"
+          height="66"
+        />
+        <img
+          class="pc-8"
+          src="icons/nodejs.png"
+          alt="Node.js"
+          width="116"
+          height="62"
+        />
+        <img
+          class="pc-9"
+          src="icons/mongodb.svg"
+          alt="MongoDB"
+          width="256"
+          height="128"
+        />
+        <img
+          class="pc-10"
+          src="icons/expressjs.webp"
+          alt="Express.js"
+          width="256"
+          height="120"
+        />
+        <img
+          class="pc-11"
+          src="icons/php.png"
+          alt="PHP"
+          width="256"
+          height="128"
+        />
+        <img
+          class="pc-12"
+          src="icons/mysql.svg"
+          alt="MySQL"
+          width="256"
+          height="128"
+        />
+
+        <img
+          class="pc-13"
+          src="icons/react-native-logo.png"
+          alt="React Native"
+          width="128"
+          height="128"
+        />
+        <img
+          class="pc-14"
+          src="icons/figma.png"
+          alt="Figma"
+          width="128"
+          height="56"
+        />
+        <img
+          class="pc-15"
+          src="icons/photoshop.svg"
+          alt="Photoshop"
+          width="64"
+          height="64"
+        />
+        <img
+          class="pc-16"
+          src="icons/illustrator.png"
+          alt="Illustrator"
+          width="64"
+          height="64"
+        />
+        <img
+          class="pc-17"
+          src="icons/sass.png"
+          alt="Sass"
+          width="76"
+          height="76"
+        />
+        <img
+          class="pc-18"
+          src="icons/swiftUI.png"
+          alt="SwiftUI"
+          width="76"
+          height="76"
+        />
+        <img
+          class="pc-19"
+          src="icons/elementor.png"
+          alt="Flutter"
+          width="228"
+          height="56"
+        />
+        <img
+          class="pc-20"
+          src="icons/wordpress.svg"
+          alt="WordPress"
+          width="228"
+          height="56"
+        />
+      </div>
+    </div>
+
+    <style lang="scss">
+      main {
+        background-color: var(--background-color);
+      }
+
+      .first-part {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("stage.jpg");
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        display: grid;
+        place-items: center;
+        gap: 0;
+        animation: gradually-fade-out linear forwards;
+        animation-timeline: view();
+        animation-range: entry 100% exit 40%;
+        .first-part-text {
+          margin-top: 24vw;
+
+          text-align: left;
+          p:first-of-type {
+            font-size: 4rem;
+            font-weight: 100;
+          }
+          p:last-of-type {
+            margin-top: 1.6rem;
+            font-size: 1.5rem;
+            font-weight: 100;
+          }
+        }
+      }
+
+      @keyframes gradually-fade-out {
+        from {
+          opacity: 1;
+          scale: 1;
+        }
+        to {
+          opacity: 0;
+          scale: 1.5;
+        }
+      }
+
+      .second-part {
+        width: 100vw;
+        height: 60vh;
+        background-color: var(--background-color);
+
+        .second-part-content {
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4rem;
+          width: 60%;
+          .second-part-text {
+            p {
+              font-size: 1.5rem;
+              font-weight: 100;
+              line-height: 1.5;
+            }
+
+            p:first-of-type {
+              margin-bottom: 2rem;
+            }
+          }
+        }
+      }
+
+      .third-part {
+        margin-top: 15vh;
+        width: 100vw;
+        height: 6000px;
+        background-color: var(--background-color);
+
+        .third-part-content {
+          position: sticky;
+          top: 50px;
+          width: 100vw;
+          height: 100vh;
+
+          .third-part-content-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.6rem;
+            text-align: center;
+
+            p {
+              font-size: 1.3rem;
+              font-weight: 100;
+              line-height: 1.5;
+            }
+          }
+
+          img {
+            border-radius: 12px;
+            position: absolute;
+          }
+
+          @keyframes pc-1-animation {
+            0% {
+              scale: 0.1;
+              opacity: 0.4;
+              filter: blur(5px);
+            }
+
+            33% {
+              scale: 0.5;
+              opacity: 1;
+              filter: blur(0px);
+            }
+
+            100% {
+              scale: 0.6;
+            }
+          }
+
+          .pc-1 {
+            top: 3%;
+            left: 10%;
+            animation: pc-1-animation 1s ease-in-out forwards;
+            animation-timeline: view();
+          }
+
+          @keyframes pc-2-animation {
+            0% {
+              scale: 0.1;
+              opacity: 0.4;
+              filter: blur(5px);
+            }
+
+            50% {
+              scale: 0.6;
+              opacity: 0.9;
+              filter: blur(0px);
+            }
+
+            100% {
+              scale: 0.6;
+              opacity: 1;
+              filter: blur(0px);
+            }
+          }
+
+          .pc-2 {
+            right: 10%;
+            bottom: 54%;
+            animation: pc-2-animation 1s ease-in-out forwards;
+            animation-timeline: view();
+          }
+
+          @keyframes pc-3-animation {
+            from {
+              scale: 0.1;
+              opacity: 0.4;
+              filter: blur(5px);
+            }
+            to {
+              scale: 0.6;
+              opacity: 1;
+              filter: blur(0px);
+            }
+          }
+          .pc-3 {
+            top: 12%;
+            right: 23%;
+            animation: skills-animation 1s ease-in-out forwards;
+            animation-timeline: view();
+          }
+
+          @keyframes skills-animation {
+            from {
+              scale: 1;
+            }
+            to {
+              scale: 1.5;
+            }
+          }
+
+          .pc-4 {
+            bottom: 12%;
+            left: 10%;
+            animation: skills-animation 1s ease-in-out forwards;
+            animation-timeline: view();
+          }
+
+          .pc-5 {
+            bottom: 12%;
+            right: 10%;
+            animation: skills-animation 1s ease-in-out forwards;
+            animation-timeline: view();
+          }
+
+          @keyframes pc-6-animation {
+            0% {
+              scale: 0.1;
+              opacity: 0.4;
+              filter: blur(5px);
+            }
+
+            15% {
+              scale: 1;
+              opacity: 0.9;
+              filter: blur(0px);
+            }
+
+            100% {
+              scale: 1;
+              opacity: 1;
+              filter: blur(0px);
+            }
+          }
+
+          .pc-6 {
+            bottom: 16%;
+            left: 50%;
+            animation: pc-6-animation 1s ease-in-out forwards;
+            animation-timeline: view();
+          }
+
+          .pc-7 {
+            bottom: 50%;
+            left: 3%;
+            animation: pc-6-animation 1s ease-in-out forwards;
+            animation-timeline: view();
+          }
+          .pc-8 {
+            border-radius: 12px;
+            top: 16%;
+            left: 15%;
+            animation: pc-2-animation 1s ease-in-out forwards;
+            animation-timeline: view();
+          }
+        }
+
+        @keyframes pc-9-animation {
+          0% {
+            scale: 0.1;
+            opacity: 0.4;
+            filter: blur(25px);
+          }
+          33% {
+            scale: 0.7;
+            opacity: 0.9;
+            filter: blur(0px);
+          }
+          66% {
+            scale: 1;
+            opacity: 0.9;
+            filter: blur(0px);
+          }
+          100% {
+            scale: 1;
+            opacity: 1;
+            filter: blur(0px);
+          }
+        }
+
+        .pc-9 {
+          top: 13%;
+          right: 50%;
+          animation: pc-9-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+
+        .pc-10 {
+          top: 13%;
+          left: 50%;
+          animation: pc-3-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+      }
+
+      .pc-11 {
+        top: 2%;
+        left: 25%;
+        animation: pc-1-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+
+      .pc-12 {
+        top: 2%;
+        right: 2%;
+        animation: skills-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+      .pc-13 {
+        bottom: 22%;
+        left: 27%;
+        animation: pc-1-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+      .pc-14 {
+        bottom: 22%;
+        right: 27%;
+        animation: pc-9-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+      .pc-15 {
+        top: 30%;
+        left: 4%;
+        animation: pc-9-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+      .pc-16 {
+        top: 30%;
+        right: 4%;
+        animation: pc-9-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+      .pc-17 {
+        bottom: 26%;
+        left: 7%;
+        animation: pc-9-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+      .pc-18 {
+        bottom: 26%;
+        right: 7%;
+        animation: pc-9-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+      .pc-19 {
+        bottom: 12%;
+        left: 29%;
+        animation: pc-2-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+      .pc-20 {
+        bottom: 12%;
+        right: 29%;
+        animation: pc-9-animation 1s ease-in-out forwards;
+        animation-timeline: view();
+      }
+    </style>
   </main>
 </Layout>
-
-<style lang="scss">
-  main {
-    background-color: var(--background-color);
-  }
-
-  .first-part {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("stage.jpg");
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    display: grid;
-    place-items: center;
-    gap: 0;
-    animation: gradually-fade-out linear forwards;
-    animation-timeline: view();
-    animation-range: entry 100% exit 30%;
-    .first-part-text {
-      margin-top: 24vw;
-
-      text-align: left;
-      p:first-of-type {
-        font-size: 4rem;
-        font-weight: 100;
-      }
-      p:last-of-type {
-        margin-top: 1.6rem;
-        font-size: 1.5rem;
-        font-weight: 100;
-      }
-    }
-  }
-
-  @keyframes gradually-fade-out {
-    to {
-      opacity: 0;
-      scale: 3;
-    }
-  }
-
-  .second-part {
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--background-color);
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      p {
-        width: 80ch;
-        font-size: 1.5rem;
-        font-weight: 100;
-      }
-    }
-  }
-</style>
