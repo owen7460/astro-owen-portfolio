@@ -4,17 +4,16 @@ import Layout from "../layouts/Layout.astro";
 const title: string = "About Owen | Developer & Designer";
 import { Image } from "astro:assets";
 import goodreads1 from "../assets/widget-goodreads-1.png";
-import goodreads2 from "../assets/widget-goodreads-2.png";
-import goodreads3 from "../assets/widget-goodreads-3.png";
 import goodreads4 from "../assets/widget-goodreads-4.png";
 import jomalone2 from "../assets/widget-jomalone-2.png";
 import jomalone1 from "../assets/widget-jomalone-1.png";
 import volvo from "../assets/widget-volvo.png";
+import beach from "../assets/beach.png";
 ---
 
 <Layout title={title}>
   <main>
-    <!-- <div class="first-part">
+    <div class="first-part">
       <div class="first-part-text">
         <p>Hey, I'm Owen</p>
         <p>
@@ -23,7 +22,7 @@ import volvo from "../assets/widget-volvo.png";
           >
         </p>
       </div>
-    </div> -->
+    </div>
 
     <div class="second-part">
       <div class="second-part-content">
@@ -259,6 +258,49 @@ import volvo from "../assets/widget-volvo.png";
       </div>
     </div>
 
+    <div class="fifth-part">
+      <Image class="background-image" src={beach} alt="Beach" />
+      <div class="container">
+        <div class="vision-text">
+          <p>Owen Ouyang</p>
+          <div class="vision-text-hr"></div>
+          <div class="right-text">
+            <p>A front-end focused Full-Stack Developer</p>
+            <p>
+              My vision is to contribute to a collaborative development team.
+            </p>
+          </div>
+        </div>
+        <div class="my-skills">
+          <div>
+            <h2>Core Skills</h2>
+            <p>TypeScript, JavaScript</p>
+            <p>React, Next.js, Astro</p>
+            <p>Node.js, Express.js, PHP</p>
+          </div>
+          <div>
+            <h2>Database</h2>
+            <p>MySQL, MongoDB</p>
+          </div>
+          <div>
+            <h2>Mobile</h2>
+            <p>React Native, SwiftUI</p>
+          </div>
+          <div>
+            <h2>Styling & UI</h2>
+            <p>Tailwind CSS, Shadcn, Sass</p>
+          </div>
+          <div>
+            <h2>Other</h2>
+            <p>Git, WordPress, Elementor</p>
+          </div>
+          <div>
+            <h2>Design</h2>
+            <p>Figma, Photoshop, Illustrator</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <style lang="scss">
       main {
         background-color: var(--background-color);
@@ -620,7 +662,7 @@ import volvo from "../assets/widget-volvo.png";
           animation: video-animation 1s ease-out forwards;
           animation-timeline: view();
           animation-range: entry;
-          clip-path: inset(0 50% 0 50%);
+          clip-path: inset(0 20% 0 20%);
         }
         .fourth-part-content {
           margin: 15vh auto 15vh;
@@ -695,11 +737,95 @@ import volvo from "../assets/widget-volvo.png";
 
         @keyframes video-animation {
           from {
-            clip-path: inset(0 60% 0 60%);
+            clip-path: inset(0 20% 0 20%);
           }
           to {
             clip-path: inset(0 0 0 0);
             opacity: 1;
+          }
+        }
+      }
+
+      .fifth-part {
+        margin-top: 20vh;
+        width: 100vw;
+        background-color: var(--background-color);
+        position: relative;
+        .background-image {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          // filter: blur(8px);
+        }
+        .container {
+          z-index: 10;
+          position: absolute;
+          text-align: center;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 5.5rem;
+          backdrop-filter: blur(16px);
+          padding: 3rem;
+          border-radius: 1rem;
+          // box-shadow: var(--liquid-border-shadow);
+          border: 2px solid rgb(226, 226, 226);
+          p {
+            font-size: 2.6rem;
+            font-weight: 100;
+            line-height: 1.5;
+            color: var(--background-color);
+          }
+          .vision-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            .vision-text-hr {
+              width: 2px;
+              height: 100px;
+              background-color: var(--background-color);
+            }
+            .right-text {
+              text-align: left;
+              p {
+                font-size: 1.6rem;
+                font-weight: 100;
+                line-height: 1.5;
+                color: var(--background-color);
+              }
+            }
+          }
+
+          .my-skills {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+
+            div {
+              h2 {
+                color: var(--background-color);
+                font-size: 1.4rem;
+                font-weight: 300;
+                margin-bottom: 1rem;
+              }
+              p {
+                color: var(--background-color);
+                font-size: 1rem;
+                font-weight: 100;
+                line-height: 1.5;
+                margin-top: 1rem;
+              }
+            }
           }
         }
       }
