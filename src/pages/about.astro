@@ -260,6 +260,11 @@ import beach from "../assets/beach.png";
 
     <div class="fifth-part">
       <Image class="background-image" src={beach} alt="Beach" />
+
+      <div class="vision-title">
+        <h2>MY VISION</h2>
+      </div>
+
       <div class="container">
         <div class="vision-text">
           <p>Owen Ouyang</p>
@@ -302,6 +307,7 @@ import beach from "../assets/beach.png";
       </div>
     </div>
     <style lang="scss">
+      @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
       main {
         background-color: var(--background-color);
       }
@@ -755,8 +761,23 @@ import beach from "../assets/beach.png";
           width: 100%;
           height: auto;
           object-fit: cover;
-          // filter: blur(8px);
         }
+
+        .vision-title {
+          position: absolute;
+          top: 35%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 15;
+          h2 {
+            font-family: "Caveat", cursive, serif;
+            font-size: 11rem;
+            font-weight: bold;
+            line-height: 1.5;
+            color: var(--background-color);
+          }
+        }
+
         .container {
           z-index: 10;
           position: absolute;
