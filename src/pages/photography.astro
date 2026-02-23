@@ -1,0 +1,381 @@
+---
+import "../styles/global.scss";
+import Layout from "../layouts/Layout.astro";
+const title: string = "Photography | Owen Portfolio";
+import { Image } from "astro:assets";
+import photographyBanner from "../assets/photos/banner.jpg";
+import montrealImage1 from "../assets/photos/montreal1.jpg";
+import montrealImage2 from "../assets/photos/montreal2.jpg";
+import montrealImage3 from "../assets/photos/montreal3.jpg";
+import quebecCityImage1 from "../assets/photos/quebec-city1.jpg";
+import quebecCityImage2 from "../assets/photos/quebec-city2.jpg";
+import quebecCityImage3 from "../assets/photos/quebec-city3.jpg";
+import quebecCityImage4 from "../assets/photos/quebec-city4.jpg";
+import sanyaImage1 from "../assets/photos/sanya1.jpg";
+import sanyaImage2 from "../assets/photos/sanya2.jpg";
+import sanyaImage3 from "../assets/photos/sanya3.jpg";
+import sanyaImage4 from "../assets/photos/sanya4.jpg";
+import sanyaImage5 from "../assets/photos/sanya5.jpg";
+import sanyaImage6 from "../assets/photos/sanya6.jpg";
+import sanyaImage7 from "../assets/photos/sanya7.jpg";
+---
+
+<Layout title={title}>
+  <header>
+    <div class="banner">
+      <Image src={photographyBanner} alt="Photography Banner" />
+    </div>
+  </header>
+  <main>
+    <section class="introduction">
+      <div class="intro-text">
+        <div class="left">
+          <h1>Photography</h1>
+          <p>
+            Photography is one of my hobbies. Through it, I have refined my
+            aesthetic sensibility. My awareness of light and colour has also
+            deepened my understanding of graphic design.
+          </p>
+        </div>
+
+        <div class="right">
+          <p>
+            Lenses | Tamron 28-200mm F/2.8-5.6 Di III RXD, Zeiss 50mm f1.4, Sony
+            FE 50mm F1.2 GM
+          </p>
+          <p>Cameras | Sony Alpha 7 IV, Nikon DF</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="montreal">
+      <Image
+        class="montreal-image-1"
+        src={montrealImage1}
+        alt="Montreal Image"
+      />
+      <Image
+        class="montreal-image-2"
+        src={montrealImage2}
+        alt="Montreal Image"
+      />
+      <Image
+        class="montreal-image-3"
+        src={montrealImage3}
+        alt="Montreal Image"
+      />
+      <div class="montreal-text">
+        <h2>Montreal</h2>
+        <p>
+          Montreal is Canada’s second-largest city and the cultural heart of the
+          province of Quebec, Montreal offers a striking blend of old-world
+          charm and modern urban life. The cobblestone streets and historic
+          architecture of Old Montreal contrast beautifully with contemporary
+          skylines viewed from Mount Royal, creating rich opportunities for both
+          street and landscape photography. Vibrant neighborhoods like
+          Plateau-Mont-Royal add colorful facades, murals, and everyday scenes
+          that capture the city’s artistic spirit and multicultural energy.
+        </p>
+        <!-- <a
+          href="https://www.behance.net/gallery/188032209/The-Seas-Breeze"
+          target="_blank">View more</a
+        > -->
+      </div>
+    </section>
+
+    <hr class="horizontal-rule" />
+
+    <section class="quebec-city">
+      <Image
+        class="quebec-city-image-1"
+        src={quebecCityImage1}
+        alt="Quebec City Image"
+      />
+      <Image
+        class="quebec-city-image-2"
+        src={quebecCityImage2}
+        alt="Quebec City Image"
+      />
+      <Image
+        class="quebec-city-image-3"
+        src={quebecCityImage3}
+        alt="Quebec City Image"
+      />
+      <Image
+        class="quebec-city-image-4"
+        src={quebecCityImage4}
+        alt="Quebec City Image"
+      />
+      <div class="quebec-city-text">
+        <h2>Quebec City</h2>
+
+        <p>
+          Quebec City is a charming and historic city, known for its fortified
+          Old Town, cobblestone streets, and European-style architecture. The
+          iconic Château Frontenac, the scenic Dufferin Terrace, and the winding
+          streets of Petit Champlain offer stunning opportunities for
+          architectural and street photography. Seasonal changes, from colorful
+          autumn leaves to winter snow, add dramatic light and mood, making
+          Quebec City a rich canvas for capturing both timeless cityscapes and
+          intimate urban moments.
+        </p>
+        <!-- <a
+          href="https://www.behance.net/gallery/188032209/The-Seas-Breeze"
+          target="_blank">View more</a
+        > -->
+      </div>
+    </section>
+
+    <hr class="horizontal-rule" />
+
+    <section class="sanya">
+      <div class="sanya-images">
+        <Image class="sanya-image-1" src={sanyaImage1} alt="Sanya Image" />
+        <Image class="sanya-image-2" src={sanyaImage2} alt="Sanya Image" />
+        <Image class="sanya-image-3" src={sanyaImage3} alt="Sanya Image" />
+      </div>
+
+      <Image class="sanya-image-4" src={sanyaImage4} alt="Sanya Image" />
+      <Image class="sanya-image-5" src={sanyaImage5} alt="Sanya Image" />
+      <Image class="sanya-image-6" src={sanyaImage6} alt="Sanya Image" />
+      <Image class="sanya-image-7" src={sanyaImage7} alt="Sanya Image" />
+
+      <div class="sanya-text">
+        <h2>Sanya</h2>
+        <p>
+          Sanya, Hainan, which is located in a beautiful island in the south of
+          China. Most people choose to come during the winter because the
+          weather is quite cozy, The climate here is subtropical. I dislike
+          packed venues, and that's really unnecessary. That being said, the
+          only thing you need to do here is be laid-back. So I spent all day
+          staying in the hotel and went to the beach around dusk.
+        </p>
+        <!-- <a
+          href="https://www.behance.net/gallery/188032209/The-Seas-Breeze"
+          target="_blank">View more</a
+        > -->
+      </div>
+    </section>
+  </main>
+
+  <style lang="scss">
+    .horizontal-rule {
+      width: 60vw;
+      margin: 5vw auto;
+    }
+    header {
+      .banner {
+        width: 100vw;
+        height: auto;
+        img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          object-position: top;
+        }
+      }
+    }
+
+    main {
+      h1 {
+        font-size: 3.2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: 100;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: underline;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        font-weight: 100;
+        margin-top: 2rem;
+      }
+      .introduction {
+        width: 80vw;
+        margin: 4rem auto 4rem;
+      }
+      .intro-text {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        .left {
+          width: 50%;
+        }
+        .right {
+          width: 50%;
+          text-align: right;
+          margin-top: 5.6rem;
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    .montreal {
+      width: 80vw;
+      height: 200vh;
+      margin: 6rem auto 6rem;
+      position: relative;
+
+      .montreal-image-1 {
+        position: absolute;
+        top: 0;
+        left: 2vw;
+        width: 1200px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+      .montreal-image-2 {
+        position: absolute;
+        bottom: 32vh;
+        right: 3vw;
+        width: 600px;
+        height: auto;
+      }
+      .montreal-image-3 {
+        position: absolute;
+        bottom: 0;
+        left: 0vw;
+        width: 600px;
+        height: auto;
+      }
+      .montreal-text {
+        position: absolute;
+        top: 50%;
+        left: 0vw;
+        width: 600px;
+        p {
+          padding-bottom: 4rem;
+        }
+      }
+    }
+
+    .quebec-city {
+      width: 80vw;
+      height: 230vh;
+      margin: 6rem auto;
+      position: relative;
+      .quebec-city-image-1 {
+        position: absolute;
+        top: 0;
+        right: 2vw;
+        width: 600px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+      .quebec-city-image-2 {
+        position: absolute;
+        bottom: 2vh;
+        left: 6vw;
+        width: 900px;
+        height: auto;
+      }
+      .quebec-city-image-3 {
+        position: absolute;
+        top: 24vh;
+        left: 0vw;
+        width: 500px;
+        height: auto;
+      }
+      .quebec-city-image-4 {
+        position: absolute;
+        top: 110vh;
+        right: 2vw;
+        width: 550px;
+        height: auto;
+      }
+      .quebec-city-text {
+        position: absolute;
+        top: 50%;
+        left: 0vw;
+        width: 600px;
+        p {
+          padding-bottom: 4rem;
+        }
+      }
+    }
+
+    .sanya {
+      width: 80vw;
+      height: 200vh;
+      margin: 6rem auto;
+      position: relative;
+      .sanya-images {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        .sanya-image-1,
+        .sanya-image-2,
+        .sanya-image-3 {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+
+      .sanya-image-4 {
+        position: absolute;
+        top: 80vh;
+        right: 0;
+        width: 600px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .sanya-image-5 {
+        position: absolute;
+        top: 90vh;
+        left: 0;
+        width: 600px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .sanya-image-6 {
+        position: absolute;
+        bottom: 15vh;
+        right: 0;
+        width: 900px;
+        height: auto;
+      }
+      .sanya-image-7 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 500px;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .sanya-text {
+        width: 1400px;
+        margin: 0 auto;
+        text-align: center;
+        align-items: center;
+        margin: 6rem auto;
+      }
+    }
+  </style>
+</Layout>
