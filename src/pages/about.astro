@@ -305,6 +305,21 @@ import beach from "../assets/beach.png";
           </div>
         </div>
       </div>
+
+      <ul class="footer-skills">
+        <li>Frontend</li>
+        <li>Backend</li>
+        <li>Design</li>
+      </ul>
+
+      <div class="contact-me">
+        <p>
+          Email: <a href="mailto:ouyangxiongwen@gmail.com"
+            >ouyangxiongwen@gmail.com</a
+          >
+        </p>
+        <p>Phone: <a href="tel:+13689992887">+1 368-999-2887</a></p>
+      </div>
     </div>
     <style lang="scss">
       @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
@@ -775,6 +790,19 @@ import beach from "../assets/beach.png";
             font-weight: bold;
             line-height: 1.5;
             color: var(--background-color);
+            filter: blur(10px);
+            animation: vision-title-animation 1s linear forwards;
+            animation-timeline: view();
+            animation-range: entry;
+          }
+        }
+
+        @keyframes vision-title-animation {
+          from {
+            filter: blur(10px);
+          }
+          to {
+            filter: blur(0px);
           }
         }
 
@@ -846,6 +874,51 @@ import beach from "../assets/beach.png";
                 line-height: 1.5;
                 margin-top: 1rem;
               }
+            }
+          }
+        }
+
+        .footer-skills {
+          position: absolute;
+          bottom: 15%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1.4rem;
+          margin: 0.6rem auto;
+          background-color: rgb(243, 243, 243);
+          padding: 0.4rem 0.6rem;
+          border-radius: 32px;
+          box-shadow: var(--liquid-border-shadow);
+          li {
+            font-size: 0.8rem;
+            font-weight: 100;
+            padding: 0.6rem 1.6rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 28px;
+            box-shadow:
+              var(--liquid-border-shadow),
+              inset 0 0 10px 2px rgba(160, 160, 160, 0.2);
+          }
+        }
+
+        .contact-me {
+          position: absolute;
+          bottom: 5%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 15;
+          text-align: center;
+          p {
+            font-weight: 100;
+            font-size: 1.1rem;
+            color: var(--background-color);
+            margin-bottom: 1rem;
+            a {
+              color: var(--background-color);
+              text-decoration: underline;
             }
           }
         }

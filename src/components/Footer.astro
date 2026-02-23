@@ -19,7 +19,7 @@ import "../styles/global.scss";
       >ouyangxiongwen@gmail.com</a
     >
   </p>
-  <p class="phone">Phone: +1 368-999-2887</p>
+  <p class="phone">Phone: <a href="tel:+13689992887">+1 368-999-2887</a></p>
   <div class="social-links">
     <a href="https://www.linkedin.com/in/xiongwenouyang/"
       ><img src="linkedin.png" alt="linkedin" width="24" height="24" /></a
@@ -91,6 +91,10 @@ import "../styles/global.scss";
 
     .phone {
       margin: 0.9rem auto;
+      a {
+        color: var(--text-color);
+        text-decoration: underline;
+      }
     }
 
     .slogan {
