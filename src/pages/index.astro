@@ -72,7 +72,11 @@ import zCrewPancakes from "../assets/design-zcrew.png";
               <div class="buttons">
                 <a
                   href="https://github.com/owen7460/joke-share-react"
-                  target="_blank">View Code</a
+                  target="_blank">Frontend Code</a
+                >
+                <a
+                  href="https://github.com/owen7460/joke_share_project"
+                  target="_blank">Backend Code</a
                 >
                 <a
                   class="view-project"
@@ -166,6 +170,7 @@ import zCrewPancakes from "../assets/design-zcrew.png";
         <ul>
           <li class="design-item">
             <h3>Jo Malone London</h3>
+            <a href="/design/jomalone">View Project</a>
             <p>
               Jo Malone is a British fragrance brand known for its elegant,
               minimalist scents and signature cream-and-black packaging,
@@ -178,22 +183,23 @@ import zCrewPancakes from "../assets/design-zcrew.png";
               <Image src={joMalone} alt="Jo Malone website" />
             </div>
           </li>
+
           <li class="design-item">
             <h3>Goodreads</h3>
+            <a href="/design/goodreads">View Project</a>
             <p>
               Goodreads is a popular social platform where readers can discover
               books, track their reading progress, write reviews, and connect
-              with other book lovers. However, its current web design feels
-              dated—largely unchanged for over a decade—so this redesign adopts
-              a more modern style, using component-based layouts to present
-              users’ reading status in a clearer and more intuitive way.
+              with other book lovers.
             </p>
             <div class="design-item-image">
               <Image src={goodreads} alt="Goodreads website" />
             </div>
           </li>
+
           <li class="design-item">
             <h3>Volvo Cars</h3>
+            <a href="/design/volvocars">View Project</a>
             <p>
               Volvo Cars is a Swedish automotive brand known for its commitment
               to safety, Scandinavian design, and engineering innovation. This
@@ -208,6 +214,7 @@ import zCrewPancakes from "../assets/design-zcrew.png";
           </li>
           <li class="design-item">
             <h3>Calgary Stampede</h3>
+            <a href="/design/calgarystampede">View Project</a>
             <p>
               Calgary Stampede is an iconic annual rodeo and festival in Calgary
               celebrating Western heritage, cowboy culture, and community
@@ -219,8 +226,10 @@ import zCrewPancakes from "../assets/design-zcrew.png";
               <Image src={calgaryStampede} alt="Calgary Stampede" />
             </div>
           </li>
+
           <li class="design-item">
             <h3>Canmore&Banff</h3>
+            <a href="/design/canmorebanff">View Project</a>
             <p>
               I've visited Canmore many times, I was fascinated by those thick
               forests, majestic mountains and breathtaking northern lights.
@@ -235,8 +244,10 @@ import zCrewPancakes from "../assets/design-zcrew.png";
               <Image src={canmoreBanff} alt="Canmore&Banff Brochure" />
             </div>
           </li>
+
           <li class="design-item">
             <h3>Zcrew Pancakes</h3>
+            <a href="/design/zcrew">View Project</a>
             <p>
               Design often comes from the small details of everyday life. When I
               paid attention to the beautiful moments around me and transformed
@@ -250,289 +261,294 @@ import zCrewPancakes from "../assets/design-zcrew.png";
         </ul>
       </div>
     </section>
-  </main>
 
-  <style lang="scss">
-    @use "../styles/mixins.scss" as mixins;
-    :root {
-      --cardHeight: 40vw;
-      --cardMargin: 4vw;
-    }
-
-    body {
-      @include mixins.gradient-background;
-    }
-
-    .hero {
-      display: grid;
-      justify-content: center;
-      align-items: center;
-
-      width: 100vw;
-      height: 100vh;
-
-      color: var(--text-color);
-      text-align: center;
-
-      h1 {
-        font-size: 3.4vw;
-        margin-bottom: 3.2vw;
-        animation: fadeIn 0.4s ease-in-out forwards;
-      }
-      p {
-        font-size: 1.8vw;
-        font-weight: 300;
-        letter-spacing: 0.1vw;
-        animation: fadeIn 0.6s ease-in-out forwards;
-        animation-delay: 0.1s;
-        margin-bottom: 2vw;
-      }
-      p:nth-of-type(2) {
-        font-size: 1vw;
-        font-weight: 100;
-        animation-delay: 0.2s;
-      }
-    }
-
-    .projects {
-      width: 80vw;
-      margin: 0 auto;
-
-      li {
-        overflow: hidden;
-        position: sticky;
-        // top: 5vh;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        height: var(--cardHeight);
-        margin-bottom: var(--cardMargin);
-        background-color: rgba(255, 255, 255, 0.4);
-        box-shadow: var(--liquid-border-shadow);
-        backdrop-filter: blur(15px);
-        border-radius: 1em;
-        // animation: scaleIn 1s ease-in-out forwards;
-        // animation-timeline: view();
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-        .right {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: flex-start;
-          .right-content {
-            width: 80%;
-            margin: 0 auto;
-          }
-          h2 {
-            font-weight: 100;
-            font-size: 2.5em;
-          }
-          p {
-            margin: 1em 0;
-            font-size: 0.72em;
-            margin-left: 0.2em;
-          }
-          p:last-of-type {
-            margin-top: 3em;
-            font-weight: 100;
-          }
-          .buttons {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 0.2em;
-            margin-top: 2.6em;
-            a {
-              font-size: 0.68em;
-              padding: 0.4em 1em;
-              border-radius: 26px;
-              margin-right: 1em;
-              border: 1px solid var(--text-color);
-              backdrop-filter: blur(60px);
-              background-color: transparent;
-              &.view-project {
-                background-color: var(--text-color);
-                color: var(--background-color);
-              }
-              &:hover {
-                box-shadow: 1px 2px 15px 1px rgba(96, 96, 96, 0.5);
-              }
-            }
-          }
-        }
+    <style lang="scss">
+      @use "../styles/mixins.scss" as mixins;
+      :root {
+        --cardHeight: 40vw;
+        --cardMargin: 4vw;
       }
 
-      li:nth-of-type(1) {
-        top: 5vh;
-      }
-      li:nth-of-type(2) {
-        top: 8vh;
-      }
-      li:nth-of-type(3) {
-        top: 11vh;
-      }
-      li:nth-of-type(4) {
-        top: 14vh;
-      }
-      li:nth-of-type(5) {
-        top: 15vh;
-      }
-    }
-    .design {
-      position: relative;
-      z-index: 1;
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
+      body {
         @include mixins.gradient-background;
-        transform: scaleY(-1);
-        z-index: -5;
       }
-      text-align: center;
-      margin: 0 auto;
 
-      .design-container {
+      .hero {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+        height: 100vh;
+
+        color: var(--text-color);
+        text-align: center;
+
+        h1 {
+          font-size: 3.4vw;
+          margin-bottom: 3.2vw;
+          animation: fadeIn 0.4s ease-in-out forwards;
+        }
+        p {
+          font-size: 1.8vw;
+          font-weight: 300;
+          letter-spacing: 0.1vw;
+          animation: fadeIn 0.6s ease-in-out forwards;
+          animation-delay: 0.1s;
+          margin-bottom: 2vw;
+        }
+        p:nth-of-type(2) {
+          font-size: 1vw;
+          font-weight: 100;
+          animation-delay: 0.2s;
+        }
+      }
+
+      .projects {
         width: 80vw;
         margin: 0 auto;
-        padding: 6rem 0;
-        .design-header {
-          text-align: center;
-          margin: 6rem auto;
-          h2 {
-            font-size: 3vw;
-            margin-bottom: 1em;
+
+        li {
+          overflow: hidden;
+          position: sticky;
+          // top: 5vh;
+
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          height: var(--cardHeight);
+          margin-bottom: var(--cardMargin);
+          background-color: rgba(255, 255, 255, 0.4);
+          box-shadow: var(--liquid-border-shadow);
+          backdrop-filter: blur(15px);
+          border-radius: 1em;
+          // animation: scaleIn 1s ease-in-out forwards;
+          // animation-timeline: view();
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
           }
-          p {
-            font-size: 1.2vw;
-            font-weight: 100;
-            margin-bottom: 1em;
+          .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            .right-content {
+              width: 80%;
+              margin: 0 auto;
+            }
+            h2 {
+              font-weight: 100;
+              font-size: 2.5em;
+            }
+            p {
+              margin: 1em 0;
+              font-size: 0.72em;
+              margin-left: 0.2em;
+            }
+            p:last-of-type {
+              margin-top: 3em;
+              font-weight: 100;
+            }
+            .buttons {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              gap: 0.2em;
+              margin-top: 2.6em;
+              a {
+                font-size: 0.68em;
+                padding: 0.4em 1em;
+                border-radius: 26px;
+                margin-right: 1em;
+                border: 1px solid var(--text-color);
+                backdrop-filter: blur(60px);
+                background-color: transparent;
+                &.view-project {
+                  background-color: var(--text-color);
+                  color: var(--background-color);
+                }
+                &:hover {
+                  box-shadow: 1px 2px 15px 1px rgba(96, 96, 96, 0.5);
+                }
+              }
+            }
           }
         }
 
-        ul {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-          gap: 1.6em;
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          .design-item {
-            background-color: rgba(92, 92, 92, 0.2);
-            box-shadow: var(--liquid-border-shadow);
-            border-radius: 1em;
-            padding: 2.6em 3em;
-            text-align: left;
-            color: var(--text-color);
-            h3 {
-              font-size: 1.6vw;
-              font-weight: 500;
-              margin-bottom: 0.8em;
+        li:nth-of-type(1) {
+          top: 5vh;
+        }
+        li:nth-of-type(2) {
+          top: 8vh;
+        }
+        li:nth-of-type(3) {
+          top: 11vh;
+        }
+        li:nth-of-type(4) {
+          top: 14vh;
+        }
+        li:nth-of-type(5) {
+          top: 15vh;
+        }
+      }
+      .design {
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          @include mixins.gradient-background;
+          transform: scaleY(-1);
+          z-index: -5;
+        }
+        text-align: center;
+        margin: 0 auto;
+
+        .design-container {
+          width: 80vw;
+          margin: 0 auto;
+          padding: 6rem 0;
+          .design-header {
+            text-align: center;
+            margin: 6rem auto;
+            h2 {
+              font-size: 3vw;
+              margin-bottom: 1em;
             }
             p {
-              font-size: 0.8vw;
+              font-size: 1.2vw;
               font-weight: 100;
-              line-height: 1.5;
-              margin-bottom: 3em;
-              line-height: 1.8;
+              margin-bottom: 1em;
             }
-            .design-item-image {
-              width: 100%;
-              object-fit: cover;
-              object-position: center;
-              margin: 0 auto;
-              img {
+          }
+
+          ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 1.6em;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            .design-item {
+              background-color: rgba(92, 92, 92, 0.2);
+              box-shadow: var(--liquid-border-shadow);
+              border-radius: 1em;
+              padding: 2.6em 3em;
+              text-align: left;
+              color: var(--text-color);
+              a {
+                font-size: 0.68em;
+                text-decoration: underline;
+              }
+              h3 {
+                font-size: 1.6vw;
+                font-weight: 500;
+                margin-bottom: 0.8em;
+              }
+              p {
+                font-size: 0.8vw;
+                font-weight: 100;
+                line-height: 1.5;
+                margin-top: 1em;
+                margin-bottom: 3em;
+                line-height: 1.8;
+              }
+              .design-item-image {
                 width: 100%;
-                height: auto;
+                object-fit: cover;
+                object-position: center;
+                margin: 0 auto;
+                img {
+                  width: 100%;
+                  height: auto;
+                }
               }
             }
           }
         }
       }
-    }
 
-    .design-header h2,
-    .design-header p {
-      opacity: 0;
+      .design-header h2,
+      .design-header p {
+        opacity: 0;
 
-      &.visible {
-        animation: fadeIn 0.8s ease-out forwards;
-      }
+        &.visible {
+          animation: fadeIn 0.8s ease-out forwards;
+        }
 
-      &:nth-of-type(1) {
-        animation-delay: 0s;
-      }
-      &:nth-of-type(2) {
-        animation-delay: 0.1s;
-      }
-      &:nth-of-type(3) {
-        animation-delay: 0.3s;
-      }
-    }
-
-    .design-item {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease-out;
-
-      &.visible {
-        opacity: 1;
-        transform: translateY(0);
+        &:nth-of-type(1) {
+          animation-delay: 0s;
+        }
+        &:nth-of-type(2) {
+          animation-delay: 0.1s;
+        }
+        &:nth-of-type(3) {
+          animation-delay: 0.3s;
+        }
       }
 
-      &:nth-of-type(1) {
-        transition-delay: 0s;
-      }
-      &:nth-of-type(2) {
-        transition-delay: 0.1s;
-      }
-      &:nth-of-type(3) {
-        transition-delay: 0.2s;
-      }
-      &:nth-of-type(4) {
-        transition-delay: 0.3s;
-      }
-      &:nth-of-type(5) {
-        transition-delay: 0.4s;
-      }
-      &:nth-of-type(6) {
-        transition-delay: 0.5s;
-      }
-    }
+      .design-item {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease-out;
 
-    // @keyframes scaleIn {
-    //   0% {
-    //     transform: scaleX(1);
-    //   }
-    //   100% {
-    //     transform: scaleX(1);
-    //   }
-    // }
-  </style>
-  <script>
-    if (typeof window !== "undefined") {
-      const elementsToObserve = [
-        ...document.querySelectorAll(".design-header h2, .design-header p"),
-        ...document.querySelectorAll(".design-item"),
-      ];
+        &.visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
 
-      const observer = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              obs.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.3 },
-      );
+        &:nth-of-type(1) {
+          transition-delay: 0s;
+        }
+        &:nth-of-type(2) {
+          transition-delay: 0.1s;
+        }
+        &:nth-of-type(3) {
+          transition-delay: 0.2s;
+        }
+        &:nth-of-type(4) {
+          transition-delay: 0.3s;
+        }
+        &:nth-of-type(5) {
+          transition-delay: 0.4s;
+        }
+        &:nth-of-type(6) {
+          transition-delay: 0.5s;
+        }
+      }
 
-      elementsToObserve.forEach((el) => observer.observe(el));
-    }
-  </script>
+      // @keyframes scaleIn {
+      //   0% {
+      //     transform: scaleX(1);
+      //   }
+      //   100% {
+      //     transform: scaleX(1);
+      //   }
+      // }
+    </style>
+    <script>
+      if (typeof window !== "undefined") {
+        const elementsToObserve = [
+          ...document.querySelectorAll(".design-header h2, .design-header p"),
+          ...document.querySelectorAll(".design-item"),
+        ];
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.3 },
+        );
+
+        elementsToObserve.forEach((el) => observer.observe(el));
+      }
+    </script>
+  </main>
 </Layout>

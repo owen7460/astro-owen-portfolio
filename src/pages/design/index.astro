@@ -1,0 +1,227 @@
+---
+import "../../styles/global.scss";
+import Layout from "../../layouts/Layout.astro";
+const title: string = "Design | Owen Portfolio";
+import { Image } from "astro:assets";
+import designBanner from "../../assets/design/banner.png";
+import joMalone from "../../assets/design-jomalone.png";
+import goodreads from "../../assets/design-goodreads.png";
+import volvoCars from "../../assets/design-volvo.png";
+import calgaryStampede from "../../assets/design-stampede.png";
+import canmoreBanff from "../../assets/design-canmorebanff.png";
+import zCrewPancakes from "../../assets/design-zcrew.png";
+---
+
+<Layout title={title}>
+  <header>
+    <div class="banner">
+      <Image src={designBanner} alt="Design Banner" />
+    </div>
+  </header>
+  <main>
+    <section class="introduction">
+      <h1>Design Portfolio</h1>
+    </section>
+
+    <section class="design">
+      <div class="design-container">
+        <div class="design-header">
+          <ul>
+            <a href="/design/jomalone">
+              <li class="design-item">
+                <h3>Jo Malone London</h3>
+                <p>
+                  Jo Malone is a British fragrance brand known for its elegant,
+                  minimalist scents and signature cream-and-black packaging,
+                  representing understated luxury and refinement. This website
+                  design embraces the “liquid glass” trend, featuring a clean
+                  and modern layout, intuitive navigation, and a strong focus on
+                  showcasing the brand’s products and services.
+                </p>
+                <div class="design-item-image">
+                  <Image src={joMalone} alt="Jo Malone website" />
+                </div>
+              </li>
+            </a>
+            <a href="/design/goodreads">
+              <li class="design-item">
+                <h3>Goodreads</h3>
+                <p>
+                  Goodreads is a popular social platform where readers can
+                  discover books, track their reading progress, write reviews,
+                  and connect with other book lovers. However, its current web
+                  design feels dated—largely unchanged for over a decade—so this
+                  redesign adopts a more modern style, using component-based
+                  layouts to present users’ reading status in a clearer and more
+                  intuitive way.
+                </p>
+                <div class="design-item-image">
+                  <Image src={goodreads} alt="Goodreads website" />
+                </div>
+              </li>
+            </a>
+            <a href="/design/volvocars">
+              <li class="design-item">
+                <h3>Volvo Cars</h3>
+                <p>
+                  Volvo Cars is a Swedish automotive brand known for its
+                  commitment to safety, Scandinavian design, and engineering
+                  innovation. This project envisions a future-ready website
+                  tailored for the brand’s transition to electrification,
+                  presenting a clean, modern interface that highlights electric
+                  vehicles and sustainable mobility.
+                </p>
+                <div class="design-item-image">
+                  <Image src={volvoCars} alt="Volvo Cars website" />
+                </div>
+              </li>
+            </a>
+            <a href="/design/calgarystampede">
+              <li class="design-item">
+                <h3>Calgary Stampede</h3>
+                <p>
+                  Calgary Stampede is an iconic annual rodeo and festival in
+                  Calgary celebrating Western heritage, cowboy culture, and
+                  community spirit. This design project reimagines its visual
+                  identity by creating a new logo along with a comprehensive
+                  brand guideline to ensure consistent and modern usage across
+                  all media.
+                </p>
+                <div class="design-item-image">
+                  <Image src={calgaryStampede} alt="Calgary Stampede" />
+                </div>
+              </li>
+            </a>
+            <a href="/design/canmorebanff">
+              <li class="design-item">
+                <h3>Canmore&Banff</h3>
+                <p>
+                  I've visited Canmore many times, I was fascinated by those
+                  thick forests, majestic mountains and breathtaking northern
+                  lights. Recently I heard a story about some artists, many
+                  years ago they decided to live here just because of what they
+                  saw, I consider this a kind of heritage, and today it inspires
+                  me as well. Therefore, these works are designed for a
+                  brochure, it is intended to let more people realize that there
+                  is the best mountain view in our Alberta.
+                </p>
+                <div class="design-item-image">
+                  <Image src={canmoreBanff} alt="Canmore&Banff Brochure" />
+                </div>
+              </li>
+            </a>
+            <a href="/design/zcrew">
+              <li class="design-item">
+                <h3>Zcrew Pancakes</h3>
+                <p>
+                  Design often comes from the small details of everyday life.
+                  When I paid attention to the beautiful moments around me and
+                  transformed them through technical means—mixing 3D models and
+                  adjusting lighting and layers in Photoshop—they became a new
+                  work of art.
+                </p>
+                <div class="design-item-image">
+                  <Image src={zCrewPancakes} alt="Z-crew Pancakes" />
+                </div>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <style lang="scss">
+      header {
+        .banner {
+          width: 100vw;
+          height: 30vh;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            filter: brightness(0.9);
+          }
+        }
+      }
+      main {
+        .introduction {
+          width: 80vw;
+          margin: 4rem auto 4rem;
+          h1 {
+            font-size: 3.2rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+          }
+        }
+
+        .design {
+          position: relative;
+          z-index: 1;
+          text-align: center;
+          margin: 0 auto;
+
+          .design-container {
+            width: 80vw;
+            margin: 0 auto;
+            .design-header {
+              text-align: center;
+              margin: 6rem auto;
+              h2 {
+                font-size: 3vw;
+                margin-bottom: 1em;
+              }
+              p {
+                font-size: 1.2vw;
+                font-weight: 100;
+                margin-bottom: 1em;
+              }
+            }
+
+            ul {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+              gap: 1.6em;
+              backdrop-filter: blur(12px);
+              -webkit-backdrop-filter: blur(12px);
+
+              .design-item {
+                background-color: rgba(92, 92, 92, 0.2);
+                box-shadow: var(--liquid-border-shadow);
+                border-radius: 1em;
+                padding: 2.6em 3em;
+                text-align: left;
+                color: var(--text-color);
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                  transform: scale(1.03);
+                }
+                h3 {
+                  font-size: 1.6vw;
+                  font-weight: 500;
+                  margin-bottom: 0.8em;
+                }
+                p {
+                  font-size: 0.8vw;
+                  font-weight: 100;
+                  line-height: 1.5;
+                  margin-bottom: 3em;
+                  line-height: 1.8;
+                }
+                .design-item-image {
+                  width: 100%;
+                  object-fit: cover;
+                  object-position: center;
+                  margin: 0 auto;
+                  img {
+                    width: 100%;
+                    height: auto;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    </style>
+  </main>
+</Layout>

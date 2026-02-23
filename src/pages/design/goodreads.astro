@@ -1,0 +1,42 @@
+---
+import "../../styles/global.scss";
+import Layout from "../../layouts/Layout.astro";
+const title: string = "Goodreads | Owen Portfolio";
+import { Image } from "astro:assets";
+import goodreads1 from "../../assets/design/goodreads/goodreads_01.png";
+import goodreads2 from "../../assets/design/goodreads/goodreads_02.png";
+import goodreads3 from "../../assets/design/goodreads/goodreads_03.png";
+import goodreads4 from "../../assets/design/goodreads/goodreads_04.png";
+import goodreads5 from "../../assets/design/goodreads/goodreads_05.png";
+import goodreads6 from "../../assets/design/goodreads/goodreads_06.png";
+import goodreads7 from "../../assets/design/goodreads/goodreads_07.jpg";
+---
+
+<Layout title={title}>
+  <main>
+    <section class="goodreads-images">
+      <Image src={goodreads1} alt="Goodreads" />
+      <Image src={goodreads2} alt="Goodreads" />
+      <Image src={goodreads3} alt="Goodreads" />
+      <Image src={goodreads4} alt="Goodreads" />
+      <Image src={goodreads5} alt="Goodreads" />
+      <Image src={goodreads6} alt="Goodreads" />
+      <Image src={goodreads7} alt="Goodreads" />
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+  .goodreads-images {
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>

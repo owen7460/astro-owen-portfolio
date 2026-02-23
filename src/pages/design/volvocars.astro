@@ -1,0 +1,32 @@
+---
+import "../../styles/global.scss";
+import Layout from "../../layouts/Layout.astro";
+const title: string = "Volvo Cars | Owen Portfolio";
+import { Image } from "astro:assets";
+import volvocars1 from "../../assets/design/volvocars/volvo1.png";
+import volvocars2 from "../../assets/design/volvocars/volvo2.png";
+---
+
+<Layout title={title}>
+  <main>
+    <section class="volvocars-images">
+      <Image src={volvocars1} alt="Volvo Cars" />
+      <Image src={volvocars2} alt="Volvo Cars" />
+    </section>
+  </main>
+</Layout>
+
+<style lang="scss">
+  .volvocars-images {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>

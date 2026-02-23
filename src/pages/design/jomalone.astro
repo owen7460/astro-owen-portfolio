@@ -1,0 +1,39 @@
+---
+import "../../styles/global.scss";
+import Layout from "../../layouts/Layout.astro";
+const title: string = "Jo Malone London | Owen Portfolio";
+import { Image } from "astro:assets";
+import jomalone1 from "../../assets/design/jomalone/1.jpg";
+import jomalone2 from "../../assets/design/jomalone/2.jpg";
+import jomalone3 from "../../assets/design/jomalone/3.jpg";
+import jomalone4 from "../../assets/design/jomalone/4.jpg";
+import jomalone5 from "../../assets/design/jomalone/5.jpg";
+import jomalone6 from "../../assets/design/jomalone/6.jpg";
+---
+
+<Layout title={title}>
+  <main>
+    <section class="jomalone-images">
+      <Image src={jomalone1} alt="Jo Malone London" />
+      <Image src={jomalone2} alt="Jo Malone London" />
+      <Image src={jomalone3} alt="Jo Malone London" />
+      <Image src={jomalone4} alt="Jo Malone London" />
+      <Image src={jomalone5} alt="Jo Malone London" />
+      <Image src={jomalone6} alt="Jo Malone London" />
+    </section>
+  </main>
+</Layout>
+<style lang="scss">
+  .jomalone-images {
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+</style>
