@@ -1,0 +1,137 @@
+---
+import "../styles/global.scss";
+import Layout from "../layouts/Layout.astro";
+const title: string = "Frontend development | Owen Portfolio";
+import { Image } from "astro:assets";
+import frontendBanner from "../assets/frontend/banner.jpg";
+import jokeshare from "../assets/frontend/jokeshare.png";
+---
+
+<Layout title={title}>
+  <header>
+    <div class="banner">
+      <Image src={frontendBanner} alt="Frontend Banner" />
+    </div>
+  </header>
+  <main>
+    <section class="introduction">
+      <div class="intro-text">
+        <div class="left">
+          <h1>Frontend</h1>
+          <p>
+            Frontend development is my favorite. When designing pages and
+            components for users, seeing those beautiful and practical tools
+            appear on the screen in real time is what excites me the most. With
+            numerous frameworks and libraries available now, along with
+            component-based development in React, our development efficiency has
+            greatly improved.
+          </p>
+        </div>
+
+        <div class="right">
+          <p>Technologies | HTML, CSS, JavaScript, React, Next.js, Astro</p>
+          <p>Styling & UI | Tailwind CSS, Shadcn, Sass</p>
+        </div>
+      </div>
+    </section>
+    <section class="jokeshare">
+      <div class="jokeshare-content">
+        <div class="jokeshare-content-inner">
+          <div class="left">
+            <Image src={jokeshare} alt="Jokeshare" width={822} height={413} />
+          </div>
+          <div class="right">
+            <h2>Jokeshare</h2>
+            <p>
+              A single page app that allows users to share, like and collect
+              jokes.
+            </p>
+            <p>Built with React, Zustand and Tailwind CSS</p>
+            <a href="https://owenouyang.com/">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <style lang="scss">
+    header {
+      .banner {
+        width: 100vw;
+        height: 30vh;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+    main {
+      h1 {
+        font-size: 3.2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: 100;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: underline;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        font-weight: 100;
+        margin-top: 2rem;
+      }
+
+      .introduction {
+        width: 80vw;
+        margin: 4rem auto 4rem;
+        .intro-text {
+          text-align: left;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          gap: 2rem;
+          .left {
+            width: 50%;
+          }
+          .right {
+            width: 50%;
+            text-align: right;
+            margin-top: 5.6rem;
+            p {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+      .jokeshare-content {
+        width: 80vw;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        .jokeshare-content-inner {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 2rem;
+        }
+      }
+    }
+  </style>
+</Layout>
