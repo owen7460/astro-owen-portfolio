@@ -2,11 +2,19 @@
 import "../styles/global.scss";
 import Layout from "../layouts/Layout.astro";
 const title: string = "About Owen | Developer & Designer";
+import { Image } from "astro:assets";
+import goodreads1 from "../assets/widget-goodreads-1.png";
+import goodreads2 from "../assets/widget-goodreads-2.png";
+import goodreads3 from "../assets/widget-goodreads-3.png";
+import goodreads4 from "../assets/widget-goodreads-4.png";
+import jomalone2 from "../assets/widget-jomalone-2.png";
+import jomalone1 from "../assets/widget-jomalone-1.png";
+import volvo from "../assets/widget-volvo.png";
 ---
 
 <Layout title={title}>
   <main>
-    <div class="first-part">
+    <!-- <div class="first-part">
       <div class="first-part-text">
         <p>Hey, I'm Owen</p>
         <p>
@@ -15,7 +23,7 @@ const title: string = "About Owen | Developer & Designer";
           >
         </p>
       </div>
-    </div>
+    </div> -->
 
     <div class="second-part">
       <div class="second-part-content">
@@ -193,6 +201,64 @@ const title: string = "About Owen | Developer & Designer";
       </div>
     </div>
 
+    <div class="fourth-part">
+      <video autoplay muted loop>
+        <source src="videos/opera-house.mp4" type="video/mp4" />
+      </video>
+      <div class="fourth-part-content">
+        <div class="fourth-part-content-upper">
+          <div class="fourth-part-text">
+            <h2>Product with Purpose</h2>
+            <p>
+              I see strong parallels between performing on stage and building
+              products. Just like a successful opera requires every note to
+              appear at the precise moment and pitch, a brilliant website or app
+              depends on structure, functionality, and aesthetics. I often study
+              digital products with the same attention, while also admiring the
+              beauty of thoughtful and refined design.
+            </p>
+          </div>
+          <div class="fourth-part-image-upper">
+            <Image src={goodreads1} alt="Goodreads" width={226} height={422} />
+            <Image src={jomalone2} alt="Goodreads" width={488} height={373} />
+          </div>
+        </div>
+        <div class="fourth-part-content-mid">
+          <Image src={jomalone1} alt="Goodreads" width={911} height={734} />
+
+          <div class="fourth-part-content-mid-text">
+            <p>
+              I am deeply grateful for my artistic training, which has
+              profoundly shaped how I see the world. When I experience or build
+              products, I often rely on an intuition cultivated through years of
+              studying art.
+            </p>
+            <p>
+              Early in my training, I listened to many works without fully
+              understanding the composers’ intentions. Over time, however, I
+              began to feel deeply moved by certain pieces — even on first
+              listening.
+            </p>
+          </div>
+        </div>
+        <div class="fourth-part-content-lower">
+          <div class="fourth-part-content-lower-image">
+            <Image src={goodreads4} alt="Goodreads" width={308} height={363} />
+            <Image src={volvo} alt="Goodreads" width={500} height={280} />
+          </div>
+
+          <div class="fourth-part-content-lower-text">
+            <p>
+              This sensitivity, developed through discipline and immersion, has
+              become part of my instinct. Today, it influences how I evaluate
+              functionality, aesthetics, and emotional resonance in digital
+              experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <style lang="scss">
       main {
         background-color: var(--background-color);
@@ -267,7 +333,7 @@ const title: string = "About Owen | Developer & Designer";
       .third-part {
         margin-top: 15vh;
         width: 100vw;
-        height: 6000px;
+        height: 5000px;
         background-color: var(--background-color);
 
         .third-part-content {
@@ -287,6 +353,12 @@ const title: string = "About Owen | Developer & Designer";
             align-items: center;
             gap: 1.6rem;
             text-align: center;
+
+            h2 {
+              font-size: 3rem;
+              font-weight: 100;
+              line-height: 1.5;
+            }
 
             p {
               font-size: 1.3rem;
@@ -472,68 +544,164 @@ const title: string = "About Owen | Developer & Designer";
           animation: pc-3-animation 1s ease-in-out forwards;
           animation-timeline: view();
         }
+
+        .pc-11 {
+          top: 2%;
+          left: 25%;
+          animation: pc-1-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+
+        .pc-12 {
+          top: 2%;
+          right: 2%;
+          animation: skills-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+        .pc-13 {
+          bottom: 22%;
+          left: 27%;
+          animation: pc-1-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+        .pc-14 {
+          bottom: 22%;
+          right: 27%;
+          animation: pc-9-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+        .pc-15 {
+          top: 30%;
+          left: 4%;
+          animation: pc-9-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+        .pc-16 {
+          top: 30%;
+          right: 4%;
+          animation: pc-9-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+        .pc-17 {
+          bottom: 26%;
+          left: 7%;
+          animation: pc-9-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+        .pc-18 {
+          bottom: 26%;
+          right: 7%;
+          animation: pc-9-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+        .pc-19 {
+          bottom: 12%;
+          left: 29%;
+          animation: pc-2-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
+        .pc-20 {
+          bottom: 12%;
+          right: 29%;
+          animation: pc-9-animation 1s ease-in-out forwards;
+          animation-timeline: view();
+        }
       }
 
-      .pc-11 {
-        top: 2%;
-        left: 25%;
-        animation: pc-1-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
+      .fourth-part {
+        margin-top: 15vh;
+        width: 100vw;
+        background-color: var(--background-color);
+        video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.5;
+          animation: video-animation 1s ease-out forwards;
+          animation-timeline: view();
+          animation-range: entry;
+          clip-path: inset(0 50% 0 50%);
+        }
+        .fourth-part-content {
+          margin: 15vh auto 15vh;
+          width: 80vw;
 
-      .pc-12 {
-        top: 2%;
-        right: 2%;
-        animation: skills-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
-      .pc-13 {
-        bottom: 22%;
-        left: 27%;
-        animation: pc-1-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
-      .pc-14 {
-        bottom: 22%;
-        right: 27%;
-        animation: pc-9-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
-      .pc-15 {
-        top: 30%;
-        left: 4%;
-        animation: pc-9-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
-      .pc-16 {
-        top: 30%;
-        right: 4%;
-        animation: pc-9-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
-      .pc-17 {
-        bottom: 26%;
-        left: 7%;
-        animation: pc-9-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
-      .pc-18 {
-        bottom: 26%;
-        right: 7%;
-        animation: pc-9-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
-      .pc-19 {
-        bottom: 12%;
-        left: 29%;
-        animation: pc-2-animation 1s ease-in-out forwards;
-        animation-timeline: view();
-      }
-      .pc-20 {
-        bottom: 12%;
-        right: 29%;
-        animation: pc-9-animation 1s ease-in-out forwards;
-        animation-timeline: view();
+          h2 {
+            font-size: 3rem;
+            font-weight: 100;
+            line-height: 1.5;
+          }
+          p {
+            text-align: left;
+            font-size: 1.3rem;
+            font-weight: 100;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+          }
+          .fourth-part-content-upper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+
+            .fourth-part-text {
+              display: flex;
+              flex-direction: column;
+              width: 40%;
+              gap: 2.6rem;
+              margin-bottom: 4rem;
+            }
+            .fourth-part-image-upper {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 1rem;
+            }
+          }
+          .fourth-part-content-mid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 2rem;
+            .fourth-part-content-mid-text {
+              display: flex;
+              flex-direction: column;
+              width: 40%;
+              gap: 2.6rem;
+            }
+          }
+          .fourth-part-content-lower {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+            .fourth-part-content-lower-image {
+              display: flex;
+              justify-content: center;
+              align-items: flex-end;
+              gap: 2rem;
+            }
+            .fourth-part-content-lower-text {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              width: 40%;
+              gap: 2.6rem;
+            }
+          }
+        }
+
+        @keyframes video-animation {
+          from {
+            clip-path: inset(0 60% 0 60%);
+          }
+          to {
+            clip-path: inset(0 0 0 0);
+            opacity: 1;
+          }
+        }
       }
     </style>
   </main>
