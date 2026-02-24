@@ -27,8 +27,8 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
       <div class="design-container">
         <div class="design-header">
           <ul>
-            <a href="/design/jomalone">
-              <li class="design-item">
+            <li class="design-item">
+              <a href="/design/jomalone">
                 <h3>Jo Malone London</h3>
                 <p>
                   Jo Malone is a British fragrance brand known for its elegant,
@@ -41,10 +41,11 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
                 <div class="design-item-image">
                   <Image src={joMalone} alt="Jo Malone website" />
                 </div>
-              </li>
-            </a>
-            <a href="/design/goodreads">
-              <li class="design-item">
+              </a>
+            </li>
+
+            <li class="design-item">
+              <a href="/design/goodreads">
                 <h3>Goodreads</h3>
                 <p>
                   Goodreads is a popular social platform where readers can
@@ -58,10 +59,11 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
                 <div class="design-item-image">
                   <Image src={goodreads} alt="Goodreads website" />
                 </div>
-              </li>
-            </a>
-            <a href="/design/volvocars">
-              <li class="design-item">
+              </a>
+            </li>
+
+            <li class="design-item">
+              <a href="/design/volvocars">
                 <h3>Volvo Cars</h3>
                 <p>
                   Volvo Cars is a Swedish automotive brand known for its
@@ -74,10 +76,11 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
                 <div class="design-item-image">
                   <Image src={volvoCars} alt="Volvo Cars website" />
                 </div>
-              </li>
-            </a>
-            <a href="/design/calgarystampede">
-              <li class="design-item">
+              </a>
+            </li>
+
+            <li class="design-item">
+              <a href="/design/calgarystampede">
                 <h3>Calgary Stampede</h3>
                 <p>
                   Calgary Stampede is an iconic annual rodeo and festival in
@@ -90,10 +93,11 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
                 <div class="design-item-image">
                   <Image src={calgaryStampede} alt="Calgary Stampede" />
                 </div>
-              </li>
-            </a>
-            <a href="/design/canmorebanff">
-              <li class="design-item">
+              </a>
+            </li>
+
+            <li class="design-item">
+              <a href="/design/canmorebanff">
                 <h3>Canmore&Banff</h3>
                 <p>
                   I've visited Canmore many times, I was fascinated by those
@@ -108,10 +112,11 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
                 <div class="design-item-image">
                   <Image src={canmoreBanff} alt="Canmore&Banff Brochure" />
                 </div>
-              </li>
-            </a>
-            <a href="/design/zcrew">
-              <li class="design-item">
+              </a>
+            </li>
+
+            <li class="design-item">
+              <a href="/design/zcrew">
                 <h3>Zcrew Pancakes</h3>
                 <p>
                   Design often comes from the small details of everyday life.
@@ -123,8 +128,8 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
                 <div class="design-item-image">
                   <Image src={zCrewPancakes} alt="Z-crew Pancakes" />
                 </div>
-              </li>
-            </a>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -184,17 +189,25 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
               backdrop-filter: blur(12px);
               -webkit-backdrop-filter: blur(12px);
 
-              .design-item {
+              a {
+                display: block;
+                width: 100%;
+                height: 100%;
+
                 background-color: rgba(92, 92, 92, 0.2);
                 box-shadow: var(--liquid-border-shadow);
                 border-radius: 1em;
                 padding: 2.6em 3em;
                 text-align: left;
                 color: var(--text-color);
-                transition: all 0.3s ease-in-out;
+              }
+
+              .design-item {
+                transition: all 0.2s ease-in-out;
                 &:hover {
-                  transform: scale(1.03);
+                  transform: scale(1.02);
                 }
+
                 h3 {
                   font-size: 1.6vw;
                   font-weight: 500;
