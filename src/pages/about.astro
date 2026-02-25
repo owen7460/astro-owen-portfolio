@@ -676,7 +676,7 @@ import beach from "../assets/beach.png";
           animation: video-animation 1s ease-out forwards;
           animation-timeline: view();
           animation-range: entry;
-          clip-path: inset(0 20% 0 20%);
+          clip-path: inset(0 40% 0 40%);
         }
         .fourth-part-content {
           margin: 15vh auto 15vh;
@@ -751,7 +751,7 @@ import beach from "../assets/beach.png";
 
         @keyframes video-animation {
           from {
-            clip-path: inset(0 20% 0 20%);
+            clip-path: inset(0 40% 0 40%);
           }
           to {
             clip-path: inset(0 0 0 0);
@@ -765,6 +765,7 @@ import beach from "../assets/beach.png";
         width: 100vw;
         background-color: var(--background-color);
         position: relative;
+
         .background-image {
           width: 100%;
           height: auto;
@@ -783,19 +784,20 @@ import beach from "../assets/beach.png";
             font-weight: bold;
             line-height: 1.5;
             color: var(--background-color);
-            filter: blur(10px);
+
+            filter: blur(50px);
             animation: vision-title-animation 1s linear forwards;
             animation-timeline: view();
             animation-range: entry;
-          }
-        }
 
-        @keyframes vision-title-animation {
-          from {
-            filter: blur(10px);
-          }
-          to {
-            filter: blur(0px);
+            @keyframes vision-title-animation {
+              from {
+                filter: blur(50px);
+              }
+              to {
+                filter: blur(0px);
+              }
+            }
           }
         }
 
