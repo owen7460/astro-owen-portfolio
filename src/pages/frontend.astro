@@ -19,7 +19,7 @@ import card8 from "../assets/frontend/card8.png";
     <section class="introduction">
       <div class="left">
         <h1><span>Design and Develop</span>Frontend</h1>
-        <p>
+        <p class="intro-frontend">
           Frontend development is my favourite. When designing pages and
           components for users, seeing those beautiful and practical tools
           appear on the screen in real time is what excites me the most. With
@@ -36,28 +36,76 @@ import card8 from "../assets/frontend/card8.png";
       </div>
       <div class="right">
         <div class="image-card card1">
-          <Image src={card1} alt="Card 1" />
+          <Image
+            loading="eager"
+            src={card1}
+            alt="Card for weather"
+            width={356}
+            height={99}
+          />
         </div>
         <div class="image-card card2">
-          <Image src={card2} alt="Card 2" />
+          <Image
+            loading="eager"
+            src={card2}
+            alt="Card for tab bar"
+            width={298}
+            height={55}
+          />
         </div>
         <div class="image-card card3">
-          <Image src={card3} alt="Card 3" />
+          <Image
+            loading="eager"
+            src={card3}
+            alt="Card for BlendBetter App"
+            width={151}
+            height={328}
+          />
         </div>
         <div class="image-card card4">
-          <Image src={card4} alt="Card 4" />
+          <Image
+            loading="eager"
+            src={card4}
+            alt="Card for Owen's Kitchen"
+            width={621}
+            height={419}
+          />
         </div>
         <div class="image-card card5">
-          <Image src={card5} alt="Card 5" />
+          <Image
+            loading="eager"
+            src={card5}
+            alt="Card for Jokeshare"
+            width={349}
+            height={287}
+          />
         </div>
         <div class="image-card card6">
-          <Image src={card6} alt="Card 6" />
+          <Image
+            loading="eager"
+            src={card6}
+            alt="Card BlendBetter web"
+            width={316}
+            height={161}
+          />
         </div>
         <div class="image-card card7">
-          <Image src={card7} alt="Card 7" />
+          <Image
+            loading="eager"
+            src={card7}
+            alt="Card for Vue project"
+            width={253}
+            height={125}
+          />
         </div>
         <div class="image-card card8">
-          <Image src={card8} alt="Card 8" />
+          <Image
+            loading="eager"
+            src={card8}
+            alt="Card for Tailwind CSS"
+            width={143}
+            height={250}
+          />
         </div>
       </div>
     </section>
@@ -90,33 +138,23 @@ import card8 from "../assets/frontend/card8.png";
       overflow-y: scroll;
       height: 100vh;
       h1 {
-        font-size: 4.2rem;
+        font-size: 4.8rem;
         font-weight: 100;
         margin-bottom: 2rem;
+        animation: fadeIn-slightly 0.7s ease-in-out both;
+        animation-delay: 0.2s;
         span {
           display: block;
           font-size: 3.2rem;
           font-weight: 900;
           line-height: 1.5;
+          animation: fadeIn-slightly 0.6s ease-in-out both;
         }
-      }
-
-      h2 {
-        font-size: 3.2rem;
-        font-weight: 100;
-        margin-bottom: 2rem;
       }
       p {
         font-size: 1.2rem;
         font-weight: 100;
         line-height: 1.5;
-      }
-      a {
-        text-decoration: underline;
-        color: var(--text-color);
-        font-size: 1.4rem;
-        font-weight: 100;
-        margin-top: 2rem;
       }
 
       section {
@@ -132,13 +170,18 @@ import card8 from "../assets/frontend/card8.png";
         max-width: 2400px;
         gap: 8rem;
         margin: 0 auto;
+
+        .intro-frontend {
+          animation: fadeIn-opacity 0.2s ease-in-out both;
+          animation-delay: 0.3s;
+        }
         .left {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
           gap: 2rem;
-          width: 40%;
+          width: 45%;
           padding-left: 10%;
           .technologies {
             display: flex;
@@ -146,13 +189,15 @@ import card8 from "../assets/frontend/card8.png";
             justify-content: center;
             align-items: flex-start;
             gap: 0.4rem;
+            animation: fadeIn-opacity 0.2s ease-in-out both;
+            animation-delay: 0.4s;
             p {
               font-size: 1.05rem;
             }
           }
         }
         .right {
-          width: 60%;
+          width: 55%;
           padding-right: 10%;
           position: relative;
           height: 750px;
@@ -191,7 +236,7 @@ import card8 from "../assets/frontend/card8.png";
             box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
             overflow: hidden;
             transform: rotateY(-20deg) rotateX(20deg);
-            transition: all 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
             img {
               width: 100%;
