@@ -16,6 +16,7 @@ import blendbetterMobile from "../assets/frontend/blendbetterMobile.png";
 import blendbetterApple from "../assets/frontend/blendbetterApple.png";
 import jokeshare from "../assets/frontend/jokeshare.png";
 import zustand from "../assets/frontend/zustand.png";
+import lodash from "../assets/frontend/lodash.png";
 ---
 
 <Layout title={title}>
@@ -194,7 +195,7 @@ import zustand from "../assets/frontend/zustand.png";
           Jokeshare is a typical React SPA project. In this web app, any user
           can browse and upload jokes, like and comment on them, and sort jokes
           by number of likes or by most recent. Users can also save jokes using
-          the collection feature.
+          the Collections feature.
         </p>
       </div>
       <div class="section-4-right">
@@ -211,7 +212,7 @@ import zustand from "../assets/frontend/zustand.png";
         <p>
           In this SPA project, I used Zustand for global state management.
           Compared to Redux, Zustand is more lightweight, simpler, and more
-          efficient, which allowed me to implement the favorites feature very
+          efficient, which allowed me to implement the favourites feature very
           quickly.
         </p>
         <p>
@@ -230,6 +231,46 @@ import zustand from "../assets/frontend/zustand.png";
         />
       </div>
     </section>
+    <section class="section-6">
+      <div class="section-6-content">
+        <p>
+          I also used Lodash’s sorting utilities to implement dynamic joke
+          ordering. When users click the sorting controls, a click event is
+          triggered that applies different sorting strategies: one displays
+          jokes in descending order based on the counts of likes, and the
+          another one shows the newest jokes first based on their creation time.
+        </p>
+        <p>
+          This approach keeps the sorting logic clean and efficient while
+          providing users with a smooth way to switch between “Most Liked” and
+          “Latest” views.
+        </p>
+        <div class="section-6-buttons">
+          <img
+            src="/likeButton.png"
+            alt="Like Button"
+            width={160}
+            height={35}
+          />
+          <img
+            src="/recentButton.png"
+            alt="Recent Button"
+            width={169}
+            height={35}
+          />
+        </div>
+      </div>
+      <div class="section-6-lodash">
+        <Image
+          class="jokeshare-lodash"
+          src={lodash}
+          alt="Lodash"
+          width={1285 * 0.75}
+          height={873 * 0.75}
+        />
+      </div>
+    </section>
+    <section class="section-7">section 7</section>
 
     <style lang="scss">
       main {
@@ -528,6 +569,49 @@ import zustand from "../assets/frontend/zustand.png";
             top: 15%;
             right: 2%;
             z-index: 1;
+          }
+        }
+        .section-6 {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          .section-6-content {
+            position: absolute;
+            top: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70ch;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+            .section-6-buttons {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 2rem;
+              margin-top: 2rem;
+            }
+          }
+
+          .section-6-lodash {
+            position: absolute;
+            bottom: 30%;
+            right: 50%;
+            transform: translateX(50%) translateY(50%);
+            z-index: 1;
+            .jokeshare-lodash {
+              animation-timeline: view();
+              animation-name: fadeIn-opacity-scroll;
+              animation-duration: 1s;
+              animation-delay: 0.2s;
+              animation-fill-mode: both;
+            }
           }
         }
       }
