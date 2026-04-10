@@ -16,22 +16,36 @@ const pathname = Astro.url.pathname;
       </li>
       <li>
         <a
-          href="/design"
+          href="/frontend"
           style="anchor-name: --link2"
+          class={pathname === "/frontend/" ? "active" : ""}>Frontend</a
+        >
+      </li>
+      <li>
+        <a
+          href="/backend"
+          style="anchor-name: --link3"
+          class={pathname === "/backend/" ? "active" : ""}>Backend</a
+        >
+      </li>
+      <li>
+        <a
+          href="/design"
+          style="anchor-name: --link4"
           class={pathname === "/design/" ? "active" : ""}>Design</a
         >
       </li>
       <li>
         <a
           href="/photography"
-          style="anchor-name: --link3"
+          style="anchor-name: --link5"
           class={pathname === "/photography/" ? "active" : ""}>Photography</a
         >
       </li>
       <li>
         <a
           href="/about"
-          style="anchor-name: --link4"
+          style="anchor-name: --link6"
           class={pathname === "/about/" ? "active" : ""}>About Me</a
         >
       </li>
@@ -53,7 +67,12 @@ const pathname = Astro.url.pathname;
   ul:has(li:nth-child(4):hover) ~ .liquid {
     position-anchor: --link4;
   }
-
+  ul:has(li:nth-child(5):hover) ~ .liquid {
+    position-anchor: --link5;
+  }
+  ul:has(li:nth-child(6):hover) ~ .liquid {
+    position-anchor: --link6;
+  }
   .active {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 28px;
