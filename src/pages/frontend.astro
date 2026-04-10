@@ -15,6 +15,7 @@ import blendbetterMac from "../assets/frontend/blendbetterMac.png";
 import blendbetterMobile from "../assets/frontend/blendbetterMobile.png";
 import blendbetterApple from "../assets/frontend/blendbetterApple.png";
 import jokeshare from "../assets/frontend/jokeshare.png";
+import zustand from "../assets/frontend/zustand.png";
 ---
 
 <Layout title={title}>
@@ -178,12 +179,12 @@ import jokeshare from "../assets/frontend/jokeshare.png";
           The app is currently in the final stage of development, and it is
           expected to be launched on the App Store within the next few weeks.
         </p>
-        <!-- <img
+        <img
           src="/appStore.png"
           width={320 * 0.5}
           height={108 * 0.5}
           alt="App Store"
-        /> -->
+        />
       </div>
     </section>
     <section class="section-4">
@@ -205,7 +206,30 @@ import jokeshare from "../assets/frontend/jokeshare.png";
         />
       </div>
     </section>
-    <section class="section-5">section 5</section>
+    <section class="section-5">
+      <div class="section-5-content">
+        <p>
+          In this SPA project, I used Zustand for global state management.
+          Compared to Redux, Zustand is more lightweight, simpler, and more
+          efficient, which allowed me to implement the favorites feature very
+          quickly.
+        </p>
+        <p>
+          I also used Zustand’s built-in persist middleware for state
+          persistence, ensuring that users’ favorited jokes are saved locally
+          and can be loaded again the next time they visit the website.
+        </p>
+      </div>
+      <div class="section-5-image">
+        <Image
+          class="zustand"
+          src={zustand}
+          alt="Zustand"
+          width={1371 * 0.7}
+          height={941 * 0.7}
+        />
+      </div>
+    </section>
 
     <style lang="scss">
       main {
@@ -472,6 +496,38 @@ import jokeshare from "../assets/frontend/jokeshare.png";
           }
           .section-4-right {
             width: 55%;
+          }
+        }
+
+        .section-5 {
+          background-image: url("../assets/frontend/bear.jpg");
+          background-size: cover;
+          background-position: right;
+          background-repeat: no-repeat;
+          position: relative;
+          .section-5-content {
+            position: absolute;
+            bottom: 10%;
+            right: 5%;
+            width: 50ch;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+            color: var(--text-color);
+            background-color: rgb(255, 255, 255);
+            padding: 4rem;
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 2;
+          }
+          .section-5-image {
+            position: absolute;
+            top: 15%;
+            right: 2%;
+            z-index: 1;
           }
         }
       }
