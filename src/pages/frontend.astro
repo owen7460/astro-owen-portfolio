@@ -14,6 +14,7 @@ import card8 from "../assets/frontend/card8.png";
 import blendbetterMac from "../assets/frontend/blendbetterMac.png";
 import blendbetterMobile from "../assets/frontend/blendbetterMobile.png";
 import blendbetterApple from "../assets/frontend/blendbetterApple.png";
+import jokeshare from "../assets/frontend/jokeshare.png";
 ---
 
 <Layout title={title}>
@@ -129,7 +130,7 @@ import blendbetterApple from "../assets/frontend/blendbetterApple.png";
         />
       </div>
       <div class="section-2-right">
-        <h2>BlendBetter</h2>
+        <h2>Next.js Project</h2>
         <p>
           BlendBetter is a multi-platform project. On the desktop side, I
           developed it using Next.js, whose routing system is very convenient,
@@ -150,7 +151,7 @@ import blendbetterApple from "../assets/frontend/blendbetterApple.png";
     </section>
     <section class="section-3">
       <div class="section-3-left">
-        <h2>Rebuilding BlendBetter</h2>
+        <h2>SwiftUI Rebuilding BlendBetter</h2>
         <p>
           After implementing the core mobile features with React Native, I set
           higher expectations for the project. This time, I wanted to use an
@@ -177,27 +178,34 @@ import blendbetterApple from "../assets/frontend/blendbetterApple.png";
           The app is currently in the final stage of development, and it is
           expected to be launched on the App Store within the next few weeks.
         </p>
-        <img
+        <!-- <img
           src="/appStore.png"
           width={320 * 0.5}
           height={108 * 0.5}
           alt="App Store"
-        />
+        /> -->
       </div>
     </section>
-    <section>
+    <section class="section-4">
       <div class="section-4-left">
-        <h2>React Project</h2>
+        <h2>React Project<span>Single Page App</span></h2>
         <p>
           Jokeshare is a typical React SPA project. In this web app, any user
           can browse and upload jokes, like and comment on them, and sort jokes
           by number of likes or by most recent. Users can also save jokes using
-          the favorites feature.
+          the collection feature.
         </p>
       </div>
-      <div class="section-4-right"></div>
-      <section>section 5</section>
+      <div class="section-4-right">
+        <Image
+          src={jokeshare}
+          alt="Jokeshare"
+          width={1387 * 0.75}
+          height={899 * 0.75}
+        />
+      </div>
     </section>
+    <section class="section-5">section 5</section>
 
     <style lang="scss">
       main {
@@ -231,6 +239,8 @@ import blendbetterApple from "../assets/frontend/blendbetterApple.png";
           display: flex;
           justify-content: center;
           align-items: center;
+          max-width: 2400px;
+          margin: 0 auto;
         }
 
         .introduction {
@@ -238,10 +248,6 @@ import blendbetterApple from "../assets/frontend/blendbetterApple.png";
           gap: 8rem;
           margin: 0 auto;
 
-          .intro-frontend {
-            animation: fadeIn-opacity 0.2s ease-in-out both;
-            animation-delay: 0.3s;
-          }
           .left {
             display: flex;
             flex-direction: column;
@@ -250,6 +256,10 @@ import blendbetterApple from "../assets/frontend/blendbetterApple.png";
             gap: 2rem;
             width: 45%;
             padding-left: 10%;
+            .intro-frontend {
+              animation: fadeIn-opacity 0.2s ease-in-out both;
+              animation-delay: 0.3s;
+            }
             .technologies {
               display: flex;
               flex-direction: column;
@@ -369,77 +379,101 @@ import blendbetterApple from "../assets/frontend/blendbetterApple.png";
             }
           }
         }
-      }
 
-      .section-2 {
-        background-image: url("../assets/frontend/blendbetterBG.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        max-width: 2400px;
-        margin: 0 auto;
-        .section-2-left {
-          width: 55%;
-          position: relative;
+        .section-2 {
+          background-image: url("../assets/frontend/blendbetterBG.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          .section-2-left {
+            width: 55%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            .blendbetter-mobile {
+              position: absolute;
+              bottom: 0px;
+              right: 15px;
+            }
+          }
+          .section-2-right {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+            padding-left: 6rem;
+            padding-right: 10%;
+          }
+        }
+        .section-3 {
           display: flex;
           justify-content: center;
           align-items: center;
-          overflow: hidden;
-          .blendbetter-mobile {
-            position: absolute;
-            bottom: 0px;
-            right: 15px;
+          gap: 2rem;
+          .section-3-left {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+            padding-left: 10%;
+          }
+          .section-3-middle {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .blendbetter-apple {
+            animation-timeline: view();
+            animation-name: fadeIn-opacity-scroll;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+          }
+          .section-3-right {
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+            padding-right: 10%;
           }
         }
-        .section-2-right {
-          width: 45%;
+
+        .section-4 {
           display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
+          justify-content: center;
+          align-items: center;
           gap: 2rem;
-          padding-left: 6rem;
-          padding-right: 10%;
+          .section-4-left {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 2rem;
+            padding-left: 10%;
+            padding-right: 5%;
+            h2 {
+              span {
+                display: block;
+                font-weight: 900;
+                line-height: 1.2;
+                margin-top: 0.4rem;
+              }
+            }
+          }
+          .section-4-right {
+            width: 55%;
+          }
         }
-      }
-      .section-3 {
-        max-width: 2400px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-      }
-      .section-3-left {
-        width: 33%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 2rem;
-        padding-left: 10%;
-      }
-      .section-3-middle {
-        width: 33%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .blendbetter-apple {
-        animation-timeline: view();
-        animation-name: fadeIn-opacity-scroll;
-        animation-duration: 1s;
-        animation-delay: 0.2s;
-        animation-fill-mode: both;
-      }
-      .section-3-right {
-        width: 33%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        gap: 2rem;
-        padding-right: 10%;
       }
     </style>
   </main>
