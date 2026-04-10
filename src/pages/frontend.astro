@@ -3,7 +3,6 @@ import "../styles/global.scss";
 import Layout from "../layouts/Layout.astro";
 const title: string = "Frontend development | Owen Portfolio";
 import { Image } from "astro:assets";
-import jokeshare from "../assets/frontend/jokeshare.png";
 import card1 from "../assets/frontend/card1.png";
 import card2 from "../assets/frontend/card2.png";
 import card3 from "../assets/frontend/card3.png";
@@ -12,6 +11,8 @@ import card5 from "../assets/frontend/card5.png";
 import card6 from "../assets/frontend/card6.png";
 import card7 from "../assets/frontend/card7.png";
 import card8 from "../assets/frontend/card8.png";
+import blendbetterMac from "../assets/frontend/blendbetterMac.png";
+import blendbetterMobile from "../assets/frontend/blendbetterMobile.png";
 ---
 
 <Layout title={title}>
@@ -109,22 +110,38 @@ import card8 from "../assets/frontend/card8.png";
         </div>
       </div>
     </section>
-    <section class="jokeshare">
-      <div class="jokeshare-content">
-        <div class="jokeshare-content-inner">
-          <div class="left">
-            <Image src={jokeshare} alt="Jokeshare" width={822} height={413} />
-          </div>
-          <div class="right">
-            <h2>Jokeshare</h2>
-            <p>
-              A single page app that allows users to share, like and collect
-              jokes.
-            </p>
-            <p>Built with React, Zustand and Tailwind CSS</p>
-            <a href="https://owenouyang.com/">View Project</a>
-          </div>
-        </div>
+    <section class="section-2">
+      <div class="section-2-left">
+        <Image
+          class="blendbetter-mac"
+          src={blendbetterMac}
+          alt="Blendbetter"
+          width={980 * 0.8}
+          height={596 * 0.8}
+        />
+        <Image
+          class="blendbetter-mobile"
+          src={blendbetterMobile}
+          alt="Blendbetter"
+          width={195}
+          height={396}
+        />
+      </div>
+      <div class="section-2-right">
+        <h2>BlendBetter</h2>
+        <p>
+          BlendBetter is a multi-platform project. On the desktop side, I
+          developed it using Next.js, whose routing system is very convenient.
+          By organizing different pages as folders, I could automatically create
+          the website’s routes. With the help of Tailwind CSS and shadcn/ui, the
+          interface development was highly efficient. The sidebar design makes
+          the site’s features clear at a glance, and Lucide Icons provide a
+          clean visual style that makes buttons easy to recognize while reducing
+          users’ reading effort. These advantages allowed me to complete the
+          desktop version quickly. I then developed the mobile version using
+          React Native, enabling BlendBetter to better serve both iOS and
+          Android users with greater convenience in the kitchen.
+        </p>
       </div>
     </section>
     <section>section 3</section>
@@ -302,21 +319,37 @@ import card8 from "../assets/frontend/card8.png";
           }
         }
       }
+    }
 
-      .jokeshare-content {
-        margin: 0 auto;
-        text-align: center;
+    .section-2 {
+      background-image: url("../assets/frontend/blendbetterBG.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      max-width: 2400px;
+      margin: 0 auto;
+      .section-2-left {
+        width: 55%;
+        position: relative;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
-        .jokeshare-content-inner {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          gap: 2rem;
+        overflow: hidden;
+        .blendbetter-mobile {
+          position: absolute;
+          bottom: 0px;
+          right: 15px;
         }
+      }
+      .section-2-right {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2rem;
+        padding-left: 6rem;
+        padding-right: 10%;
       }
     }
   </style>
