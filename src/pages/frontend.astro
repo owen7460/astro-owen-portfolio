@@ -13,6 +13,7 @@ import card7 from "../assets/frontend/card7.png";
 import card8 from "../assets/frontend/card8.png";
 import blendbetterMac from "../assets/frontend/blendbetterMac.png";
 import blendbetterMobile from "../assets/frontend/blendbetterMobile.png";
+import blendbetterApple from "../assets/frontend/blendbetterApple.png";
 ---
 
 <Layout title={title}>
@@ -124,27 +125,66 @@ import blendbetterMobile from "../assets/frontend/blendbetterMobile.png";
           src={blendbetterMobile}
           alt="Blendbetter"
           width={195}
-          height={396}
+          height={406}
         />
       </div>
       <div class="section-2-right">
         <h2>BlendBetter</h2>
         <p>
           BlendBetter is a multi-platform project. On the desktop side, I
-          developed it using Next.js, whose routing system is very convenient.
-          By organizing different pages as folders, I could automatically create
+          developed it using Next.js, whose routing system is very convenient,
+          by organizing different pages as folders, I could automatically create
           the website’s routes. With the help of Tailwind CSS and shadcn/ui, the
           interface development was highly efficient. The sidebar design makes
           the site’s features clear at a glance, and Lucide Icons provide a
           clean visual style that makes buttons easy to recognize while reducing
-          users’ reading effort. These advantages allowed me to complete the
-          desktop version quickly. I then developed the mobile version using
-          React Native, enabling BlendBetter to better serve both iOS and
-          Android users with greater convenience in the kitchen.
+          users’ reading effort.
+        </p>
+        <p>
+          These advantages allowed me to complete the desktop version quickly. I
+          then developed the mobile version using React Native, enabling
+          BlendBetter to better serve both iOS and Android users with greater
+          convenience in the kitchen.
         </p>
       </div>
     </section>
-    <section>section 3</section>
+    <section class="section-3">
+      <div class="section-3-left">
+        <h2>Rebuilding BlendBetter</h2>
+        <p>
+          After implementing the core mobile features with React Native, I set
+          higher expectations for the project. This time, I wanted to use an
+          on-device model to directly recognize fruit types. To better achieve
+          this, I rebuilt the entire project using SwiftUI and leveraged Apple’s
+          Vision framework.
+        </p>
+        <p>
+          As a result, on iOS, users can directly use the camera to scan the
+          fruits they have.
+        </p>
+      </div>
+      <div class="section-3-middle">
+        <Image
+          class="blendbetter-apple"
+          src={blendbetterApple}
+          alt="Blendbetter detects fruits"
+          width={1300 * 0.3}
+          height={2642 * 0.3}
+        />
+      </div>
+      <div class="section-3-right">
+        <p>
+          The app is currently in the final stage of development, and it is
+          expected to be launched on the App Store within the next few weeks.
+        </p>
+        <img
+          src="/public/appStore.png"
+          width={320 * 0.5}
+          height={108 * 0.5}
+          alt="App Store"
+        />
+      </div>
+    </section>
     <section>section 4</section>
     <section>section 5</section>
   </main>
@@ -351,6 +391,45 @@ import blendbetterMobile from "../assets/frontend/blendbetterMobile.png";
         padding-left: 6rem;
         padding-right: 10%;
       }
+    }
+    .section-3 {
+      max-width: 2400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    .section-3-left {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 2rem;
+      padding-left: 10%;
+    }
+    .section-3-middle {
+      width: 33%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .blendbetter-apple {
+      animation-timeline: view();
+      animation-name: fadeIn-opacity-scroll;
+      animation-duration: 1s;
+      animation-delay: 0.2s;
+      animation-fill-mode: both;
+    }
+    .section-3-right {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 2rem;
+      padding-right: 10%;
     }
   </style>
 </Layout>
