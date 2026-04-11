@@ -14,7 +14,7 @@ import { Image } from "astro:assets";
           <p>Technologies | Node.js, Python</p>
           <p>Frameworks | Express.js, FastAPI</p>
           <p>Database | MySQL, MongoDB, PostgreSQL, GraphQL</p>
-          <p>Other | RESTful, Swagger, Docker, Coolify</p>
+          <p>Other | RESTful, Swagger, Postman, Docker, Coolify</p>
         </div>
         <div class="icons">
           <img id="fastapi" src="/icons/fastapi.webp" alt="FastAPI" />
@@ -34,11 +34,27 @@ import { Image } from "astro:assets";
           knowledge essential for building complete applications. Understanding
           API design and database structure helps me create more efficient and
           scalable frontend solutions. I have experience building RESTful APIs
-          with Node.js, Express, and FastAPI, and working with databases such as
-          PostgreSQL, MongoDB, and MySQL. This full-stack perspective allows me
-          to better connect UI with data and design more practical products.
+          with Express.js and FastAPI, and working with databases such as
+          PostgreSQL, MongoDB, GraphQL and MySQL. This full-stack perspective
+          allows me to better connect UI with data and design more practical
+          products.
         </p>
       </div>
+    </section>
+
+    <section class="DORC">
+      <h2>DORC</h2>
+      <p>
+        DORC is a MERN stack RPG-style productivity app that gamifies
+        habit-building. Users create quests, earn XP, level up, unlock badges,
+        and join guilds to stay motivated.
+      </p>
+      <p>
+        This was a collaborative full-stack project with a separated frontend
+        and backend architecture. I primarily worked on backend development,
+        building RESTful APIs, designing data models, and implementing core
+        logic to support the game’s progression system.
+      </p>
     </section>
   </main>
 
@@ -48,7 +64,7 @@ import { Image } from "astro:assets";
         font-size: 3.2rem;
         font-weight: 100;
         margin-bottom: 2rem;
-        animation: fadeIn 0.4s ease-in-out both;
+        animation: fadeIn-slightly 0.4s ease-in-out both;
       }
 
       h2 {
@@ -94,19 +110,19 @@ import { Image } from "astro:assets";
           p {
             font-size: 1rem;
             &:nth-of-type(1) {
-              animation: fadeIn 0.4s ease-in-out both;
+              animation: fadeIn-slightly 0.4s ease-in-out both;
               animation-delay: 0.2s;
             }
             &:nth-of-type(2) {
-              animation: fadeIn 0.4s ease-in-out both;
+              animation: fadeIn-slightly 0.4s ease-in-out both;
               animation-delay: 0.3s;
             }
             &:nth-of-type(3) {
-              animation: fadeIn 0.4s ease-in-out both;
+              animation: fadeIn-slightly 0.4s ease-in-out both;
               animation-delay: 0.4s;
             }
             &:nth-of-type(4) {
-              animation: fadeIn 0.4s ease-in-out both;
+              animation: fadeIn-slightly 0.4s ease-in-out both;
               animation-delay: 0.5s;
             }
           }
@@ -127,8 +143,8 @@ import { Image } from "astro:assets";
             transform: translateX(-50%) translateY(-50%);
             position: absolute;
             opacity: 0;
-            animation-timeline: scroll();
-            animation-range: entry -20% exit 30%;
+            // animation-timeline: scroll();
+            // animation-range: entry -20% exit 30%;
           }
           #fastapi {
             top: 61%;
