@@ -3,52 +3,52 @@ import "../styles/global.scss";
 import Layout from "../layouts/Layout.astro";
 const title: string = "Backend development | Owen Portfolio";
 import { Image } from "astro:assets";
-import frontendBanner from "../assets/backend/banner.jpg";
 ---
 
 <Layout title={title}>
   <main>
     <section class="introduction">
-      <div class="intro-text">
-        <div class="left">
+      <div class="intro">
+        <div class="skills">
           <h1>Backend</h1>
-          <p>
-            Backend development is an essential part of implementing
-            functionality. Thanks to tools like Node and Express, we can
-            interact with databases and deliver the data users need. When
-            designing products, I also take database usage into account, and
-            considerations such as RESTful design and other best practices are
-            included in the process.
-          </p>
+          <p>Technologies | Node.js, Python</p>
+          <p>Frameworks | Express.js, FastAPI</p>
+          <p>Database | MySQL, MongoDB, PostgreSQL, GraphQL</p>
+          <p>Other | RESTful, Swagger, Docker, Coolify</p>
         </div>
-        <div class="right">
-          <p>Technologies | TypeScript, JavaScript</p>
-          <p>Frameworks | Node.js, Express.js</p>
-          <p>Database | MySQL, MongoDB</p>
-          <p>Other | RESTful, API</p>
+        <div class="icons">
+          <img id="fastapi" src="/icons/fastapi.webp" alt="FastAPI" />
+          <img id="swagger" src="/icons/swagger.webp" alt="swagger" />
+          <img id="python" src="/icons/python.png" alt="Python" />
+          <img id="postgresql" src="/icons/postgresql.png" alt="PostgreSQL" />
+          <img id="docker" src="/icons/docker.png" alt="Docker" />
+          <img id="expressjs" src="/icons/expressjs.webp" alt="Express.js" />
+          <img id="mongodb" src="/icons/mongodb.svg" alt="MongoDB" />
+          <img id="mysql" src="/icons/mysql.svg" alt="MySQL" />
+          <img id="php" src="/icons/php.png" alt="PHP" />
+          <img id="coolify" src="/icons/coolify.jpeg" alt="Coolify" />
+          <img id="graphql" src="/icons/graphql.png" alt="GraphQL" />
         </div>
+        <p>
+          While frontend development is my main focus, I consider backend
+          knowledge essential for building complete applications. Understanding
+          API design and database structure helps me create more efficient and
+          scalable frontend solutions. I have experience building RESTful APIs
+          with Node.js, Express, and FastAPI, and working with databases such as
+          PostgreSQL, MongoDB, and MySQL. This full-stack perspective allows me
+          to better connect UI with data and design more practical products.
+        </p>
       </div>
     </section>
   </main>
 
   <style lang="scss">
-    header {
-      .banner {
-        width: 100vw;
-        height: 30vh;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-        }
-      }
-    }
     main {
       h1 {
         font-size: 3.2rem;
         font-weight: 100;
         margin-bottom: 2rem;
+        animation: fadeIn 0.4s ease-in-out both;
       }
 
       h2 {
@@ -71,24 +71,262 @@ import frontendBanner from "../assets/backend/banner.jpg";
 
       .introduction {
         width: 80vw;
+        height: 100vh;
         margin: 4rem auto 4rem;
       }
-      .intro-text {
-        text-align: left;
-        width: 100%;
+      .intro {
+        text-align: center;
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 85vh;
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
         gap: 2rem;
-        .left {
-          width: 50%;
-        }
-        .right {
-          width: 50%;
-          text-align: right;
-          margin-top: 5.6rem;
+        .skills {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.4rem;
           p {
             font-size: 1rem;
+            &:nth-of-type(1) {
+              animation: fadeIn 0.4s ease-in-out both;
+              animation-delay: 0.2s;
+            }
+            &:nth-of-type(2) {
+              animation: fadeIn 0.4s ease-in-out both;
+              animation-delay: 0.3s;
+            }
+            &:nth-of-type(3) {
+              animation: fadeIn 0.4s ease-in-out both;
+              animation-delay: 0.4s;
+            }
+            &:nth-of-type(4) {
+              animation: fadeIn 0.4s ease-in-out both;
+              animation-delay: 0.5s;
+            }
+          }
+        }
+        .icons {
+          position: relative;
+          height: 144px;
+          margin: 0 auto;
+          max-width: 1200px;
+          width: 100%;
+          img {
+            width: 110px;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 16px;
+            box-shadow: var(--liquid-border-shadow);
+            transform: translateX(-50%) translateY(-50%);
+            position: absolute;
+            opacity: 0;
+            animation-timeline: scroll();
+            animation-range: entry -20% exit 30%;
+          }
+          #fastapi {
+            top: 61%;
+            left: 50%;
+            @keyframes fastapi-animation {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+            animation-name: fastapi-animation;
+            animation-duration: 0.6s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #swagger {
+            top: 67%;
+            left: 0%;
+            @keyframes swagger-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 0%;
+                opacity: 1;
+              }
+            }
+            animation-name: swagger-animation;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #python {
+            top: 60%;
+            left: 10%;
+            @keyframes python-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 10%;
+                opacity: 1;
+              }
+            }
+
+            animation-name: python-animation;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #postgresql {
+            top: 58%;
+            left: 20%;
+            @keyframes postgresql-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 20%;
+                opacity: 1;
+              }
+            }
+            animation-name: postgresql-animation;
+            animation-duration: 0.6s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #docker {
+            top: 44%;
+            left: 30%;
+            @keyframes docker-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 30%;
+                opacity: 1;
+              }
+            }
+            animation-name: docker-animation;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #expressjs {
+            top: 65%;
+            left: 40%;
+            @keyframes expressjs-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 40%;
+                opacity: 1;
+              }
+            }
+            animation-name: expressjs-animation;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #mongodb {
+            top: 48%;
+            left: 60%;
+            @keyframes mongodb-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 60%;
+                opacity: 1;
+              }
+            }
+            animation-name: mongodb-animation;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #mysql {
+            top: 48%;
+            left: 70%;
+            @keyframes mysql-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 70%;
+                opacity: 1;
+              }
+            }
+
+            animation-name: mysql-animation;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #php {
+            top: 70%;
+            left: 80%;
+            @keyframes php-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 80%;
+                opacity: 1;
+              }
+            }
+            animation-name: php-animation;
+            animation-duration: 0.7s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #coolify {
+            top: 69%;
+            left: 90%;
+            @keyframes coolify-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 90%;
+                opacity: 1;
+              }
+            }
+            animation-name: coolify-animation;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+          }
+          #graphql {
+            top: 72%;
+            left: 100%;
+            @keyframes graphql-animation {
+              from {
+                left: 50%;
+                opacity: 0;
+              }
+              to {
+                left: 100%;
+                opacity: 1;
+              }
+            }
+            animation-name: graphql-animation;
+            animation-duration: 0.6s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
           }
         }
       }
