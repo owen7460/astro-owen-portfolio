@@ -8,6 +8,8 @@ import dorc2 from "../assets/backend/dorc2.png";
 import dorc3 from "../assets/backend/dorc3.png";
 import dorc4 from "../assets/backend/dorc4.png";
 import dorc5 from "../assets/backend/dorc5.png";
+import rest from "../assets/backend/rest.png";
+import swaggerdoc from "../assets/backend/swaggerdoc.png";
 ---
 
 <Layout title={title}>
@@ -21,7 +23,7 @@ import dorc5 from "../assets/backend/dorc5.png";
           <p>Database | MySQL, MongoDB, PostgreSQL, GraphQL</p>
           <p>Other | RESTful, Swagger, Postman, Docker, Coolify</p>
         </div>
-        <div class="icons">
+        <!-- <div class="icons">
           <img id="fastapi" src="/icons/fastapi.webp" alt="FastAPI" />
           <img id="swagger" src="/icons/swagger.webp" alt="swagger" />
           <img id="python" src="/icons/python.png" alt="Python" />
@@ -33,7 +35,7 @@ import dorc5 from "../assets/backend/dorc5.png";
           <img id="php" src="/icons/php.png" alt="PHP" />
           <img id="coolify" src="/icons/coolify.jpeg" alt="Coolify" />
           <img id="graphql" src="/icons/graphql.png" alt="GraphQL" />
-        </div>
+        </div> -->
         <p>
           While frontend development is my main focus, I consider backend
           knowledge essential for building complete applications. Understanding
@@ -80,6 +82,57 @@ import dorc5 from "../assets/backend/dorc5.png";
         </p>
       </div>
     </section>
+
+    <section class="section-3">
+      <div class="section-3-left">
+        <h2 class="animation-title">
+          RESTful API<span>API Design and Implementation</span>
+        </h2>
+        <p class="animation-text">
+          RESTful APIs are the backbone of modern web applications. They provide
+          a standardized way to interact with backend services, making it easier
+          to build and maintain applications. I have experience building RESTful
+          APIs with Express.js and FastAPI, and working with databases such as
+          PostgreSQL, MongoDB, GraphQL and MySQL.
+        </p>
+      </div>
+      <div class="section-3-right">
+        <Image
+          class="rest-image"
+          src={rest}
+          alt="RESTful API"
+          width={1279 * 0.9}
+          height={850 * 0.9}
+        />
+      </div>
+    </section>
+
+    <section class="section-4">
+      <div class="section-4-left">
+        <Image
+          class="swaggerdoc-image"
+          src={swaggerdoc}
+          alt="SwaggerDoc"
+          width={1879 * 0.55}
+          height={1197 * 0.55}
+        />
+      </div>
+      <div class="section-4-right">
+        <h2 class="animation-title">
+          Swagger Doc<span>API Documentation</span>
+        </h2>
+        <p class="animation-text">
+          In the DORC project, I used SwaggerDoc to document the RESTful APIs I
+          built for the backend. It generates an interactive API documentation
+          interface, allowing team members to easily test endpoints and
+          understand request and response formats. This improved communication
+          between frontend and backend, and made the system easier to maintain
+          and extend.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-5"></section>
   </main>
 
   <style lang="scss">
@@ -107,6 +160,10 @@ import dorc5 from "../assets/backend/dorc5.png";
         font-size: 1.4rem;
         font-weight: 100;
         margin-top: 2rem;
+      }
+      section {
+        max-width: 2400px;
+        margin: 0 auto;
       }
 
       .introduction {
@@ -405,7 +462,7 @@ import dorc5 from "../assets/backend/dorc5.png";
             // animation-duration: 1s;
             // animation-delay: 0.1s;
             animation-fill-mode: both;
-            animation-range: entry 50% entry 100%;
+            animation-range: entry 15% entry 35%;
             img {
               display: block;
               width: 100%;
@@ -469,6 +526,147 @@ import dorc5 from "../assets/backend/dorc5.png";
           }
         }
       }
+
+      .section-3 {
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .section-3-left {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-left: 10%;
+          padding-right: 5%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        .section-3-right {
+          width: 55%;
+          .rest-image {
+            animation-timeline: view();
+            animation-name: fadeIn-right;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+            animation-range: entry 50% entry 100%;
+          }
+        }
+      }
+
+      .section-4 {
+        margin-top: 25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .section-4-left {
+          width: 55%;
+          .swaggerdoc-image {
+            border-radius: 16px;
+            animation-timeline: view();
+            animation-name: fadeIn-left;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+            animation-range: entry 10% entry 55%;
+          }
+        }
+        .section-4-right {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-left: 10%;
+          padding-right: 5%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+      }
+      .section-5 {
+        height: 100vh;
+      }
+    }
+
+    .animation-title,
+    .animation-text {
+      opacity: 0;
+    }
+    .visible {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .visible-text {
+      animation: fadeIn-opacity 0.8s ease-in-out forwards;
+      animation-delay: 0.1s;
     }
   </style>
+  <script>
+    function setupTitleObserver() {
+      const elementsToObserve = document.querySelectorAll(".animation-title");
+
+      if (!elementsToObserve.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.7 },
+      );
+
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible");
+        observer.observe(el);
+      });
+    }
+
+    function setupTextObserver() {
+      const elementsToObserve = document.querySelectorAll(".animation-text");
+
+      if (!elementsToObserve.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible-text");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.7 },
+      );
+
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible-text");
+        observer.observe(el);
+      });
+    }
+
+    document.addEventListener("astro:page-load", setupTitleObserver);
+    document.addEventListener("astro:page-load", setupTextObserver);
+  </script>
 </Layout>
