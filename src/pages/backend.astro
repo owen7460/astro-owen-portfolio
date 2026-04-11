@@ -3,6 +3,11 @@ import "../styles/global.scss";
 import Layout from "../layouts/Layout.astro";
 const title: string = "Backend development | Owen Portfolio";
 import { Image } from "astro:assets";
+import dorc1 from "../assets/backend/dorc1.png";
+import dorc2 from "../assets/backend/dorc2.png";
+import dorc3 from "../assets/backend/dorc3.png";
+import dorc4 from "../assets/backend/dorc4.png";
+import dorc5 from "../assets/backend/dorc5.png";
 ---
 
 <Layout title={title}>
@@ -42,19 +47,38 @@ import { Image } from "astro:assets";
       </div>
     </section>
 
-    <section class="DORC">
-      <h2>DORC</h2>
-      <p>
-        DORC is a MERN stack RPG-style productivity app that gamifies
-        habit-building. Users create quests, earn XP, level up, unlock badges,
-        and join guilds to stay motivated.
-      </p>
-      <p>
-        This was a collaborative full-stack project with a separated frontend
-        and backend architecture. I primarily worked on backend development,
-        building RESTful APIs, designing data models, and implementing core
-        logic to support the game’s progression system.
-      </p>
+    <section class="section-2">
+      <div class="section-2-left">
+        <div class="dorc-card dorc1">
+          <Image loading="eager" src={dorc1} alt="Card for Owen's Kitchen" />
+        </div>
+        <div class="dorc-card dorc2">
+          <Image loading="eager" src={dorc2} alt="Card for Owen's Kitchen" />
+        </div>
+        <div class="dorc-card dorc3">
+          <Image loading="eager" src={dorc3} alt="Card for Owen's Kitchen" />
+        </div>
+        <div class="dorc-card dorc4">
+          <Image loading="eager" src={dorc4} alt="Card for Owen's Kitchen" />
+        </div>
+        <div class="dorc-card dorc5">
+          <Image loading="eager" src={dorc5} alt="Card for Owen's Kitchen" />
+        </div>
+      </div>
+      <div class="section-2-right">
+        <h2 class="animation-title">DORC <span>MERN Stack Project</span></h2>
+        <p class="animation-text">
+          DORC is a MERN stack RPG-style productivity app that gamifies
+          habit-building. Users create quests, earn XP, level up, unlock badges,
+          and join guilds to stay motivated.
+        </p>
+        <p class="animation-text">
+          This was a collaborative full-stack project with a separated frontend
+          and backend architecture. I primarily worked on backend development,
+          building RESTful APIs, designing data models, and implementing core
+          logic to support the game’s progression system.
+        </p>
+      </div>
     </section>
   </main>
 
@@ -149,6 +173,7 @@ import { Image } from "astro:assets";
           #fastapi {
             top: 61%;
             left: 50%;
+            z-index: 10;
             @keyframes fastapi-animation {
               from {
                 opacity: 0;
@@ -165,13 +190,14 @@ import { Image } from "astro:assets";
           #swagger {
             top: 67%;
             left: 0%;
+            z-index: 4;
             @keyframes swagger-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 0%;
+                left: 14%;
                 opacity: 1;
               }
             }
@@ -182,14 +208,15 @@ import { Image } from "astro:assets";
           }
           #python {
             top: 60%;
-            left: 10%;
+            left: 24%;
+            z-index: 5;
             @keyframes python-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 10%;
+                left: 20%;
                 opacity: 1;
               }
             }
@@ -202,13 +229,14 @@ import { Image } from "astro:assets";
           #postgresql {
             top: 58%;
             left: 20%;
+            z-index: 6;
             @keyframes postgresql-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 20%;
+                left: 30%;
                 opacity: 1;
               }
             }
@@ -220,13 +248,14 @@ import { Image } from "astro:assets";
           #docker {
             top: 44%;
             left: 30%;
+            z-index: 8;
             @keyframes docker-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 30%;
+                left: 37%;
                 opacity: 1;
               }
             }
@@ -238,13 +267,14 @@ import { Image } from "astro:assets";
           #expressjs {
             top: 65%;
             left: 40%;
+            z-index: 9;
             @keyframes expressjs-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 40%;
+                left: 42%;
                 opacity: 1;
               }
             }
@@ -256,13 +286,14 @@ import { Image } from "astro:assets";
           #mongodb {
             top: 48%;
             left: 60%;
+            z-index: 9;
             @keyframes mongodb-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 60%;
+                left: 58%;
                 opacity: 1;
               }
             }
@@ -274,13 +305,14 @@ import { Image } from "astro:assets";
           #mysql {
             top: 48%;
             left: 70%;
+            z-index: 8;
             @keyframes mysql-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 70%;
+                left: 66%;
                 opacity: 1;
               }
             }
@@ -293,13 +325,14 @@ import { Image } from "astro:assets";
           #php {
             top: 70%;
             left: 80%;
+            z-index: 7;
             @keyframes php-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 80%;
+                left: 74%;
                 opacity: 1;
               }
             }
@@ -311,13 +344,14 @@ import { Image } from "astro:assets";
           #coolify {
             top: 69%;
             left: 90%;
+            z-index: 6;
             @keyframes coolify-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 90%;
+                left: 82%;
                 opacity: 1;
               }
             }
@@ -329,13 +363,14 @@ import { Image } from "astro:assets";
           #graphql {
             top: 72%;
             left: 100%;
+            z-index: 5;
             @keyframes graphql-animation {
               from {
                 left: 50%;
                 opacity: 0;
               }
               to {
-                left: 100%;
+                left: 90%;
                 opacity: 1;
               }
             }
@@ -343,6 +378,94 @@ import { Image } from "astro:assets";
             animation-duration: 0.6s;
             animation-timing-function: ease-in-out;
             animation-fill-mode: forwards;
+          }
+        }
+      }
+
+      .section-2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        height: 100vh;
+        .section-2-left {
+          width: 65%;
+          height: 100%;
+          padding-left: 10%;
+          position: relative;
+          .dorc-card {
+            position: absolute;
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+            overflow: hidden;
+            width: 600px;
+            height: auto;
+            animation-timeline: scroll();
+            animation-name: fadeIn-opacity-scroll-slow;
+            // animation-duration: 1s;
+            // animation-delay: 0.1s;
+            animation-fill-mode: both;
+            animation-range: entry 50% entry 100%;
+            img {
+              display: block;
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+          .dorc1 {
+            top: 20%;
+            left: 5%;
+            z-index: 1;
+            animation-duration: 1s;
+            animation-delay: 0.1s;
+          }
+          .dorc2 {
+            top: 30%;
+            left: 15%;
+            z-index: 2;
+            animation-duration: 1s;
+            animation-delay: 0.3s;
+          }
+          .dorc3 {
+            top: 40%;
+            left: 25%;
+            z-index: 3;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+          }
+          .dorc4 {
+            top: 50%;
+            left: 35%;
+            z-index: 4;
+            animation-duration: 1s;
+            animation-delay: 0.7s;
+          }
+          .dorc5 {
+            top: 60%;
+            left: 45%;
+            z-index: 5;
+            animation-duration: 1s;
+            animation-delay: 0.9s;
+          }
+        }
+        .section-2-right {
+          scroll-snap-stop: none;
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-right: 10%;
+          padding-left: 5%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
           }
         }
       }
