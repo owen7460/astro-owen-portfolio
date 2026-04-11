@@ -548,7 +548,7 @@ import zCrewPancakes from "../assets/design-zcrew.png";
   </style>
 
   <script>
-    function setupFourthPartTitleObserver() {
+    function setupTitleObserver() {
       const elementsToObserve = [
         ...document.querySelectorAll(".design-header h2, .design-header p"),
         ...document.querySelectorAll(".design-item"),
@@ -574,6 +574,6 @@ import zCrewPancakes from "../assets/design-zcrew.png";
       });
     }
 
-    document.addEventListener("astro:page-load", setupFourthPartTitleObserver);
+    document.addEventListener("astro:page-load", setupTitleObserver);
   </script>
 </Layout>

@@ -136,8 +136,8 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
         />
       </div>
       <div class="section-2-right">
-        <h2>Next.js Project</h2>
-        <p>
+        <h2 class="animation-title">Next.js Project</h2>
+        <p class="animation-text">
           BlendBetter is a multi-platform project. On the desktop side, I
           developed it using Next.js, whose routing system is very convenient,
           by organizing different pages as folders, I could automatically create
@@ -147,7 +147,7 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
           clean visual style that makes buttons easy to recognize while reducing
           users’ reading effort.
         </p>
-        <p>
+        <p class="animation-text">
           These advantages allowed me to complete the desktop version quickly. I
           then developed the mobile version using React Native, enabling
           BlendBetter to better serve both iOS and Android users with greater
@@ -157,15 +157,15 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
     </section>
     <section class="section-3">
       <div class="section-3-left">
-        <h2>SwiftUI Rebuilding BlendBetter</h2>
-        <p>
+        <h2 class="animation-title">SwiftUI Rebuilding BlendBetter</h2>
+        <p class="animation-text">
           After implementing the core mobile features with React Native, I set
           higher expectations for the project. This time, I wanted to use an
           on-device model to directly recognize fruit types. To better achieve
           this, I rebuilt the entire project using SwiftUI and leveraged Apple’s
           Vision framework.
         </p>
-        <p>
+        <p class="animation-text">
           As a result, on iOS, users can directly use the camera to scan the
           fruits they have.
         </p>
@@ -180,7 +180,7 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
         />
       </div>
       <div class="section-3-right">
-        <p>
+        <p class="animation-text">
           The app is currently in the final stage of development, and it is
           expected to be launched on the App Store within the next few weeks.
         </p>
@@ -194,8 +194,10 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
     </section>
     <section class="section-4">
       <div class="section-4-left">
-        <h2>React Project<span>Single Page App</span></h2>
-        <p>
+        <h2 class="animation-title">
+          React Project<span>Single Page App</span>
+        </h2>
+        <p class="animation-text">
           Jokeshare is a typical React SPA project. In this web app, any user
           can browse and upload jokes, like and comment on them, and sort jokes
           by number of likes or by most recent. Users can also save jokes using
@@ -237,14 +239,14 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
     </section>
     <section class="section-6">
       <div class="section-6-content">
-        <p>
+        <p class="animation-text">
           I also used Lodash’s sorting utilities to implement dynamic joke
           ordering. When users click the sorting controls, a click event is
           triggered that applies different sorting strategies: one displays
           jokes in descending order based on the counts of likes, and the
           another one shows the newest jokes first based on their creation time.
         </p>
-        <p>
+        <p class="animation-text">
           This approach keeps the sorting logic clean and efficient while
           providing users with a smooth way to switch between “Most Liked” and
           “Latest” views.
@@ -314,14 +316,14 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
         </div>
       </div>
       <div class="section-7-right">
-        <h2>Owen's Kitchen <span>PHP Project</span></h2>
-        <p>
+        <h2 class="animation-title">Owen's Kitchen <span>PHP Project</span></h2>
+        <p class="animation-text">
           Today, PHP still plays a very important role in development,
           especially for full-stack projects and applications that need to be
           built quickly. I enjoy cooking and sharing food, and Owen’s Kitchen is
           a project built with PHP and MySQL.
         </p>
-        <p>
+        <p class="animation-text">
           It allows users to browse dishes, add items to a cart, leave notes
           (such as marking allergies to certain dishes), confirm orders, and
           view their balance and bills.
@@ -356,6 +358,7 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
 
         section {
           scroll-snap-align: start;
+          scroll-snap-stop: always;
           height: 100vh;
           width: 100vw;
           display: flex;
@@ -379,8 +382,8 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
             width: 45%;
             padding-left: 10%;
             .intro-frontend {
-              animation: fadeIn-opacity 0.2s ease-in-out both;
-              animation-delay: 0.3s;
+              animation: fadeIn-opacity 0.3s ease-in-out both;
+              animation-delay: 0.5s;
             }
             .technologies {
               display: flex;
@@ -388,8 +391,8 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
               justify-content: center;
               align-items: flex-start;
               gap: 0.4rem;
-              animation: fadeIn-opacity 0.2s ease-in-out both;
-              animation-delay: 0.4s;
+              animation: fadeIn-opacity 0.4s ease-in-out both;
+              animation-delay: 0.6s;
               p {
                 font-size: 1.05rem;
               }
@@ -722,6 +725,7 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
             }
           }
           .section-7-right {
+            scroll-snap-stop: none;
             width: 50%;
             display: flex;
             flex-direction: column;
@@ -741,6 +745,68 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
           }
         }
       }
+      .animation-title,
+      .animation-text {
+        opacity: 0;
+      }
+      .visible {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .visible-text {
+        animation: fadeIn-opacity 0.8s ease-in-out forwards;
+        animation-delay: 0.1s;
+      }
     </style>
   </main>
+  <script>
+    function setupTitleObserver() {
+      const elementsToObserve = document.querySelectorAll(".animation-title");
+
+      if (!elementsToObserve.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.7 },
+      );
+
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible");
+        observer.observe(el);
+      });
+    }
+
+    function setupTextObserver() {
+      const elementsToObserve = document.querySelectorAll(".animation-text");
+
+      if (!elementsToObserve.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible-text");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.7 },
+      );
+
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible-text");
+        observer.observe(el);
+      });
+    }
+
+    document.addEventListener("astro:page-load", setupTitleObserver);
+    document.addEventListener("astro:page-load", setupTextObserver);
+  </script>
 </Layout>
