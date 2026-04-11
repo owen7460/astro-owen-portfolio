@@ -25,7 +25,7 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
 
 <Layout title={title}>
   <main>
-    <section class="introduction">
+    <section id="top" class="introduction">
       <div class="left">
         <h1><span>Design and Develop</span>Frontend</h1>
         <p class="intro-frontend">
@@ -328,11 +328,16 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
           (such as marking allergies to certain dishes), confirm orders, and
           view their balance and bills.
         </p>
+        <div class="end-of-page">
+          <p>This is the end of this page.</p>
+          <a href="#top">Back to Top</a>
+        </div>
       </div>
     </section>
 
     <style lang="scss">
       main {
+        scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
         overflow-y: scroll;
         height: 100vh;
@@ -740,6 +745,23 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
                 font-weight: 900;
                 line-height: 1.2;
                 margin-top: 0.4rem;
+              }
+            }
+            .end-of-page {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 1rem;
+              a {
+                display: block;
+                font-size: 0.8rem;
+                font-weight: 100;
+                padding: 0.6rem 1.6rem;
+                background-color: rgba(255, 255, 255, 0.9);
+                border-radius: 28px;
+                box-shadow:
+                  var(--liquid-border-shadow),
+                  inset 0 0 10px 2px rgba(160, 160, 160, 0.2);
               }
             }
           }
