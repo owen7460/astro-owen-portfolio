@@ -51,12 +51,15 @@ body {
 }
 
 @keyframes fadeIn-right {
-  from {
+  0% {
     opacity: 0;
     transform: translateX(150px);
   }
-  to {
+  50% {
     opacity: 1;
+    transform: translateX(25px);
+  }
+  100% {
     transform: translateX(0);
   }
 }

@@ -206,6 +206,7 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
       </div>
       <div class="section-4-right">
         <Image
+          class="jokeshare-image"
           src={jokeshare}
           alt="Jokeshare"
           width={1387 * 0.75}
@@ -602,6 +603,13 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
           }
           .section-4-right {
             width: 55%;
+            .jokeshare-image {
+              animation-timeline: view();
+              animation-name: fadeIn-right;
+              animation-duration: 1s;
+              animation-delay: 0.2s;
+              animation-fill-mode: both;
+            }
           }
         }
 
