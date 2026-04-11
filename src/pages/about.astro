@@ -926,12 +926,11 @@ import beach from "../assets/beach.png";
     }
   }
 </style>
-
 <script>
-  if (typeof window !== "undefined") {
-    const elementsToObserve = [
-      ...document.querySelectorAll(".fourth-part-title"),
-    ];
+  function setupFourthPartTitleObserver() {
+    const elementsToObserve = document.querySelectorAll(".fourth-part-title");
+
+    if (!elementsToObserve.length) return;
 
     const observer = new IntersectionObserver(
       (entries, obs) => {
@@ -945,6 +944,11 @@ import beach from "../assets/beach.png";
       { threshold: 0.7 },
     );
 
-    elementsToObserve.forEach((el) => observer.observe(el));
+    elementsToObserve.forEach((el) => {
+      el.classList.remove("visible");
+      observer.observe(el);
+    });
   }
+
+  document.addEventListener("astro:page-load", setupFourthPartTitleObserver);
 </script>

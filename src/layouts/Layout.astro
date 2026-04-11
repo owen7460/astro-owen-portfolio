@@ -16,9 +16,9 @@ import { ClientRouter } from "astro:transitions";
     <link rel="icon" href="/favicon.png" />
     <meta name="generator" content="Owen Portfolio" />
     <title>{title}</title>
+    <ClientRouter />
   </head>
   <body>
-    <ClientRouter />
     <Header />
     <slot />
     <Footer />
