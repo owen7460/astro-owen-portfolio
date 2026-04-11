@@ -4,6 +4,7 @@ const { title = "Owen Portfolio | Full Stack Developer" }: { title?: string } =
 import "../styles/global.scss";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -17,6 +18,7 @@ import Footer from "../components/Footer.astro";
     <title>{title}</title>
   </head>
   <body>
+    <ClientRouter />
     <Header />
     <slot />
     <Footer />
