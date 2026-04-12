@@ -11,6 +11,7 @@ import dorc4 from "../assets/backend/dorc4.png";
 import dorc5 from "../assets/backend/dorc5.png";
 import rest from "../assets/backend/rest.png";
 import swaggerdoc from "../assets/backend/swaggerdoc.png";
+import { CarouselDApiDemo } from "../components/Caresoul";
 ---
 
 <Layout title={title}>
@@ -145,7 +146,7 @@ import swaggerdoc from "../assets/backend/swaggerdoc.png";
           potential security vulnerabilities and ensuring data integrity.
         </p>
       </div>
-      <div class="section-5-bottom">..Carousel</div>
+      <div class="section-5-bottom"><CarouselDApiDemo client:load /></div>
 
       <style lang="scss">
         main {
@@ -614,8 +615,48 @@ import swaggerdoc from "../assets/backend/swaggerdoc.png";
             }
           }
           .section-5 {
+            margin-top: 25rem;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            padding: 0 3rem;
+            .section-5-top {
+              max-width: 1200px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              text-align: center;
+              h2 {
+                span {
+                  display: block;
+                  font-weight: 900;
+                  line-height: 1.2;
+                  margin-top: 0.4rem;
+                }
+              }
+            }
           }
+          .section-5-bottom {
+            max-width: 2400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+          }
+        }
+
+        .section-6 {
+          margin-top: 25rem;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
         }
 
         .animation-title,
@@ -683,6 +724,15 @@ import swaggerdoc from "../assets/backend/swaggerdoc.png";
         document.addEventListener("astro:page-load", setupTitleObserver);
         document.addEventListener("astro:page-load", setupTextObserver);
       </script>
+    </section>
+
+    <section class="section-6">
+      <div class="section-6-left">
+        <h2 class="animation-title">
+          Middlewares<span>Safety Does Matter</span>
+        </h2>
+      </div>
+      <div class="section-6-right"></div>
     </section>
   </main></Layout
 >
