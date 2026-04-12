@@ -12,42 +12,49 @@ import dorc5 from "../assets/backend/dorc5.png";
 import rest from "../assets/backend/rest.png";
 import swaggerdoc from "../assets/backend/swaggerdoc.png";
 import { CarouselDApiDemo } from "../components/Caresoul";
+import Iridescence from "../components/Iridescence";
 ---
 
 <Layout title={title}>
   <main>
-    <section class="introduction">
-      <div class="intro">
+    <section class="section-1">
+      <Iridescence
+        class="section-1-background"
+        client:load
+        color={[0.5, 0.6, 0.8]}
+        mouseReact
+        amplitude={0.1}
+        speed={1}
+      />
+
+      <div class="section-1-text">
+        <h1>Backend</h1>
         <div class="skills">
-          <h1>Backend</h1>
-          <p>Technologies | Node.js, Python</p>
-          <p>Frameworks | Express.js, FastAPI</p>
-          <p>Database | MySQL, MongoDB, PostgreSQL, GraphQL</p>
-          <p>Other | RESTful, Swagger, Postman, Docker, Coolify</p>
+          <p class="animation-text">Technologies: Node.js, Python</p>
+          <hr class="animation-hr hr-1" />
+          <p class="animation-text">Frameworks: Express.js, FastAPI</p>
+          <hr class="animation-hr hr-2" />
+          <p class="animation-text">
+            Database: MySQL, MongoDB, PostgreSQL, GraphQL
+          </p>
+          <hr class="animation-hr hr-3" />
+          <p class="animation-text">
+            Other: RESTful, Swagger, Postman, Docker, Coolify
+          </p>
+          <hr class="animation-hr hr-4" />
         </div>
-        <!-- <div class="icons">
-          <img id="fastapi" src="/icons/fastapi.webp" alt="FastAPI" />
-          <img id="swagger" src="/icons/swagger.webp" alt="swagger" />
-          <img id="python" src="/icons/python.png" alt="Python" />
-          <img id="postgresql" src="/icons/postgresql.png" alt="PostgreSQL" />
-          <img id="docker" src="/icons/docker.png" alt="Docker" />
-          <img id="expressjs" src="/icons/expressjs.webp" alt="Express.js" />
-          <img id="mongodb" src="/icons/mongodb.svg" alt="MongoDB" />
-          <img id="mysql" src="/icons/mysql.svg" alt="MySQL" />
-          <img id="php" src="/icons/php.png" alt="PHP" />
-          <img id="coolify" src="/icons/coolify.jpeg" alt="Coolify" />
-          <img id="graphql" src="/icons/graphql.png" alt="GraphQL" />
-        </div> -->
-        <p>
-          While frontend development is my main focus, I consider backend
-          knowledge essential for building complete applications. Understanding
-          API design and database structure helps me create more efficient and
-          scalable frontend solutions. I have experience building RESTful APIs
-          with Express.js and FastAPI, and working with databases such as
-          PostgreSQL, MongoDB, GraphQL and MySQL. This full-stack perspective
-          allows me to better connect UI with data and design more practical
-          products.
-        </p>
+        <div class="description">
+          <p class="animation-text">
+            While frontend development is my main focus, I consider backend
+            knowledge essential for building complete applications.
+            Understanding API design and database structure helps me create more
+            efficient and scalable frontend solutions. I have experience
+            building RESTful APIs with Express.js and FastAPI, and working with
+            databases such as PostgreSQL, MongoDB, GraphQL and MySQL. This
+            full-stack perspective allows me to better connect UI with data and
+            design more practical products.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -181,290 +188,41 @@ import { CarouselDApiDemo } from "../components/Caresoul";
             margin: 0 auto;
           }
 
-          .introduction {
-            width: 80vw;
+          .section-1 {
             height: 100vh;
-            margin: 4rem auto 4rem;
-          }
-          .intro {
-            text-align: center;
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 85vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 2rem;
-            .skills {
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              gap: 0.4rem;
-              p {
-                font-size: 1rem;
-                &:nth-of-type(1) {
-                  animation: fadeIn-slightly 0.4s ease-in-out both;
-                  animation-delay: 0.2s;
-                }
-                &:nth-of-type(2) {
-                  animation: fadeIn-slightly 0.4s ease-in-out both;
-                  animation-delay: 0.3s;
-                }
-                &:nth-of-type(3) {
-                  animation: fadeIn-slightly 0.4s ease-in-out both;
-                  animation-delay: 0.4s;
-                }
-                &:nth-of-type(4) {
-                  animation: fadeIn-slightly 0.4s ease-in-out both;
-                  animation-delay: 0.5s;
-                }
-              }
-            }
-            .icons {
-              position: relative;
-              height: 144px;
-              margin: 0 auto;
-              max-width: 1200px;
+            width: 100vw;
+            position: relative;
+            .section-1-background {
+              height: 100%;
               width: 100%;
-              img {
-                width: 110px;
-                height: auto;
-                object-fit: cover;
-                object-position: center;
-                border-radius: 16px;
-                box-shadow: var(--liquid-border-shadow);
-                transform: translateX(-50%) translateY(-50%);
-                position: absolute;
-                opacity: 0;
-                // animation-timeline: scroll();
-                // animation-range: entry -20% exit 30%;
-              }
-              #fastapi {
-                top: 61%;
-                left: 50%;
-                z-index: 10;
-                @keyframes fastapi-animation {
-                  from {
-                    opacity: 0;
-                  }
-                  to {
-                    opacity: 1;
-                  }
-                }
-                animation-name: fastapi-animation;
-                animation-duration: 0.6s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #swagger {
-                top: 67%;
-                left: 0%;
-                z-index: 4;
-                @keyframes swagger-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 14%;
-                    opacity: 1;
-                  }
-                }
-                animation-name: swagger-animation;
-                animation-duration: 0.5s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #python {
-                top: 60%;
-                left: 24%;
-                z-index: 5;
-                @keyframes python-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 20%;
-                    opacity: 1;
-                  }
-                }
-
-                animation-name: python-animation;
-                animation-duration: 0.4s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #postgresql {
-                top: 58%;
-                left: 20%;
-                z-index: 6;
-                @keyframes postgresql-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 30%;
-                    opacity: 1;
-                  }
-                }
-                animation-name: postgresql-animation;
-                animation-duration: 0.6s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #docker {
-                top: 44%;
-                left: 30%;
-                z-index: 8;
-                @keyframes docker-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 37%;
-                    opacity: 1;
-                  }
-                }
-                animation-name: docker-animation;
-                animation-duration: 0.4s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #expressjs {
-                top: 65%;
-                left: 40%;
-                z-index: 9;
-                @keyframes expressjs-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 42%;
-                    opacity: 1;
-                  }
-                }
-                animation-name: expressjs-animation;
-                animation-duration: 0.5s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #mongodb {
-                top: 48%;
-                left: 60%;
-                z-index: 9;
-                @keyframes mongodb-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 58%;
-                    opacity: 1;
-                  }
-                }
-                animation-name: mongodb-animation;
-                animation-duration: 0.4s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #mysql {
-                top: 48%;
-                left: 70%;
-                z-index: 8;
-                @keyframes mysql-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 66%;
-                    opacity: 1;
-                  }
-                }
-
-                animation-name: mysql-animation;
-                animation-duration: 0.4s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #php {
-                top: 70%;
-                left: 80%;
-                z-index: 7;
-                @keyframes php-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 74%;
-                    opacity: 1;
-                  }
-                }
-                animation-name: php-animation;
-                animation-duration: 0.7s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #coolify {
-                top: 69%;
-                left: 90%;
-                z-index: 6;
-                @keyframes coolify-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 82%;
-                    opacity: 1;
-                  }
-                }
-                animation-name: coolify-animation;
-                animation-duration: 0.5s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
-              }
-              #graphql {
-                top: 72%;
-                left: 100%;
-                z-index: 5;
-                @keyframes graphql-animation {
-                  from {
-                    left: 50%;
-                    opacity: 0;
-                  }
-                  to {
-                    left: 90%;
-                    opacity: 1;
-                  }
-                }
-                animation-name: graphql-animation;
-                animation-duration: 0.6s;
-                animation-timing-function: ease-in-out;
-                animation-fill-mode: forwards;
+            }
+            .section-1-text {
+              position: absolute;
+              z-index: 10;
+              color: var(--background-color);
+              max-width: 80ch;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              .description {
+                margin-top: 2rem;
               }
             }
           }
 
           .section-2 {
+            margin-top: 6rem;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 2rem;
             height: 100vh;
+            width: 100vw;
             .section-2-left {
-              width: 65%;
+              width: 60%;
               height: 100%;
-              padding-left: 10%;
               position: relative;
+              padding-right: 4rem;
               .dorc-card {
                 position: absolute;
                 border-radius: 16px;
@@ -508,14 +266,14 @@ import { CarouselDApiDemo } from "../components/Caresoul";
               }
               .dorc4 {
                 top: 50%;
-                left: 35%;
+                left: 32%;
                 z-index: 4;
                 animation-duration: 1s;
                 animation-delay: 0.7s;
               }
               .dorc5 {
                 top: 60%;
-                left: 45%;
+                left: 41%;
                 z-index: 5;
                 animation-duration: 1s;
                 animation-delay: 0.9s;
@@ -523,14 +281,14 @@ import { CarouselDApiDemo } from "../components/Caresoul";
             }
             .section-2-right {
               scroll-snap-stop: none;
-              width: 50%;
+              width: 40%;
+              height: 100%;
               display: flex;
               flex-direction: column;
-              justify-content: flex-start;
+              justify-content: center;
               align-items: flex-start;
               gap: 2rem;
-              padding-right: 10%;
-              padding-left: 5%;
+              padding-right: 4rem;
               h2 {
                 span {
                   display: block;
@@ -665,6 +423,36 @@ import { CarouselDApiDemo } from "../components/Caresoul";
         .animation-text {
           opacity: 0;
         }
+
+        .animation-hr {
+          width: 0;
+          height: 1px;
+          color: var(--text-color);
+          animation: grow-hr 0.6s ease-out forwards;
+          @keyframes grow-hr {
+            from {
+              width: 0;
+            }
+            to {
+              width: 100%;
+            }
+          }
+        }
+        .hr-1 {
+          animation-delay: 0.2s;
+        }
+        .hr-2 {
+          animation-duration: 0.9s;
+          animation-delay: 0.3s;
+        }
+        .hr-3 {
+          animation-duration: 0.8s;
+          animation-delay: 0.5s;
+        }
+        .hr-4 {
+          animation-duration: 0.4s;
+          animation-delay: 0.7s;
+        }
         .visible {
           animation: fadeIn 0.8s ease-out forwards;
         }
@@ -736,5 +524,5 @@ import { CarouselDApiDemo } from "../components/Caresoul";
       </div>
       <div class="section-6-right"></div>
     </section>
-  </main></Layout
->
+  </main>
+</Layout>
