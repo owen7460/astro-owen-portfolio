@@ -1,5 +1,6 @@
 ---
 import "../styles/global.scss";
+import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 const title: string = "Backend development | Owen Portfolio";
 import { Image } from "astro:assets";
@@ -132,541 +133,556 @@ import swaggerdoc from "../assets/backend/swaggerdoc.png";
       </div>
     </section>
 
-    <section class="section-5"></section>
-  </main>
+    <section class="section-5">
+      <div class="section-5-top">
+        <h2 class="animation-title">
+          Middlewares<span>Safety Does Matter</span>
+        </h2>
+        <p class="animation-text">
+          Middlewares are essential for ensuring the security and integrity of
+          your application. They act as a gatekeeper, filtering incoming
+          requests and responses to validate and sanitize data, preventing
+          potential security vulnerabilities and ensuring data integrity.
+        </p>
+      </div>
+      <div class="section-5-bottom">..Carousel</div>
 
-  <style lang="scss">
-    main {
-      h1 {
-        font-size: 3.2rem;
-        font-weight: 100;
-        margin-bottom: 2rem;
-        animation: fadeIn-slightly 0.4s ease-in-out both;
-      }
+      <style lang="scss">
+        main {
+          h1 {
+            font-size: 3.2rem;
+            font-weight: 100;
+            margin-bottom: 2rem;
+            animation: fadeIn-slightly 0.4s ease-in-out both;
+          }
 
-      h2 {
-        font-size: 3.2rem;
-        font-weight: 100;
-        margin-bottom: 2rem;
-      }
-      p {
-        font-size: 1.4rem;
-        font-weight: 100;
-        line-height: 1.5;
-      }
-      a {
-        text-decoration: underline;
-        color: var(--text-color);
-        font-size: 1.4rem;
-        font-weight: 100;
-        margin-top: 2rem;
-      }
-      section {
-        max-width: 2400px;
-        margin: 0 auto;
-      }
-
-      .introduction {
-        width: 80vw;
-        height: 100vh;
-        margin: 4rem auto 4rem;
-      }
-      .intro {
-        text-align: center;
-        width: 80%;
-        max-width: 1200px;
-        margin: 0 auto;
-        height: 85vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 2rem;
-        .skills {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 0.4rem;
+          h2 {
+            font-size: 3.2rem;
+            font-weight: 100;
+            margin-bottom: 2rem;
+          }
           p {
-            font-size: 1rem;
-            &:nth-of-type(1) {
-              animation: fadeIn-slightly 0.4s ease-in-out both;
-              animation-delay: 0.2s;
-            }
-            &:nth-of-type(2) {
-              animation: fadeIn-slightly 0.4s ease-in-out both;
-              animation-delay: 0.3s;
-            }
-            &:nth-of-type(3) {
-              animation: fadeIn-slightly 0.4s ease-in-out both;
-              animation-delay: 0.4s;
-            }
-            &:nth-of-type(4) {
-              animation: fadeIn-slightly 0.4s ease-in-out both;
-              animation-delay: 0.5s;
-            }
+            font-size: 1.4rem;
+            font-weight: 100;
+            line-height: 1.5;
           }
-        }
-        .icons {
-          position: relative;
-          height: 144px;
-          margin: 0 auto;
-          max-width: 1200px;
-          width: 100%;
-          img {
-            width: 110px;
-            height: auto;
-            object-fit: cover;
-            object-position: center;
-            border-radius: 16px;
-            box-shadow: var(--liquid-border-shadow);
-            transform: translateX(-50%) translateY(-50%);
-            position: absolute;
-            opacity: 0;
-            // animation-timeline: scroll();
-            // animation-range: entry -20% exit 30%;
+          a {
+            text-decoration: underline;
+            color: var(--text-color);
+            font-size: 1.4rem;
+            font-weight: 100;
+            margin-top: 2rem;
           }
-          #fastapi {
-            top: 61%;
-            left: 50%;
-            z-index: 10;
-            @keyframes fastapi-animation {
-              from {
-                opacity: 0;
-              }
-              to {
-                opacity: 1;
-              }
-            }
-            animation-name: fastapi-animation;
-            animation-duration: 0.6s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
+          section {
+            max-width: 2400px;
+            margin: 0 auto;
           }
-          #swagger {
-            top: 67%;
-            left: 0%;
-            z-index: 4;
-            @keyframes swagger-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 14%;
-                opacity: 1;
-              }
-            }
-            animation-name: swagger-animation;
-            animation-duration: 0.5s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-          #python {
-            top: 60%;
-            left: 24%;
-            z-index: 5;
-            @keyframes python-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 20%;
-                opacity: 1;
-              }
-            }
 
-            animation-name: python-animation;
-            animation-duration: 0.4s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
+          .introduction {
+            width: 80vw;
+            height: 100vh;
+            margin: 4rem auto 4rem;
           }
-          #postgresql {
-            top: 58%;
-            left: 20%;
-            z-index: 6;
-            @keyframes postgresql-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 30%;
-                opacity: 1;
+          .intro {
+            text-align: center;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 2rem;
+            .skills {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 0.4rem;
+              p {
+                font-size: 1rem;
+                &:nth-of-type(1) {
+                  animation: fadeIn-slightly 0.4s ease-in-out both;
+                  animation-delay: 0.2s;
+                }
+                &:nth-of-type(2) {
+                  animation: fadeIn-slightly 0.4s ease-in-out both;
+                  animation-delay: 0.3s;
+                }
+                &:nth-of-type(3) {
+                  animation: fadeIn-slightly 0.4s ease-in-out both;
+                  animation-delay: 0.4s;
+                }
+                &:nth-of-type(4) {
+                  animation: fadeIn-slightly 0.4s ease-in-out both;
+                  animation-delay: 0.5s;
+                }
               }
             }
-            animation-name: postgresql-animation;
-            animation-duration: 0.6s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-          #docker {
-            top: 44%;
-            left: 30%;
-            z-index: 8;
-            @keyframes docker-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 37%;
-                opacity: 1;
-              }
-            }
-            animation-name: docker-animation;
-            animation-duration: 0.4s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-          #expressjs {
-            top: 65%;
-            left: 40%;
-            z-index: 9;
-            @keyframes expressjs-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 42%;
-                opacity: 1;
-              }
-            }
-            animation-name: expressjs-animation;
-            animation-duration: 0.5s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-          #mongodb {
-            top: 48%;
-            left: 60%;
-            z-index: 9;
-            @keyframes mongodb-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 58%;
-                opacity: 1;
-              }
-            }
-            animation-name: mongodb-animation;
-            animation-duration: 0.4s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-          #mysql {
-            top: 48%;
-            left: 70%;
-            z-index: 8;
-            @keyframes mysql-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 66%;
-                opacity: 1;
-              }
-            }
-
-            animation-name: mysql-animation;
-            animation-duration: 0.4s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-          #php {
-            top: 70%;
-            left: 80%;
-            z-index: 7;
-            @keyframes php-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 74%;
-                opacity: 1;
-              }
-            }
-            animation-name: php-animation;
-            animation-duration: 0.7s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-          #coolify {
-            top: 69%;
-            left: 90%;
-            z-index: 6;
-            @keyframes coolify-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 82%;
-                opacity: 1;
-              }
-            }
-            animation-name: coolify-animation;
-            animation-duration: 0.5s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-          #graphql {
-            top: 72%;
-            left: 100%;
-            z-index: 5;
-            @keyframes graphql-animation {
-              from {
-                left: 50%;
-                opacity: 0;
-              }
-              to {
-                left: 90%;
-                opacity: 1;
-              }
-            }
-            animation-name: graphql-animation;
-            animation-duration: 0.6s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-          }
-        }
-      }
-
-      .section-2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        height: 100vh;
-        .section-2-left {
-          width: 65%;
-          height: 100%;
-          padding-left: 10%;
-          position: relative;
-          .dorc-card {
-            position: absolute;
-            border-radius: 16px;
-            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
-            overflow: hidden;
-            width: 600px;
-            height: auto;
-            animation-timeline: scroll();
-            animation-name: fadeIn-opacity-scroll-slow;
-            // animation-duration: 1s;
-            // animation-delay: 0.1s;
-            animation-fill-mode: both;
-            animation-range: entry 15% entry 35%;
-            img {
-              display: block;
+            .icons {
+              position: relative;
+              height: 144px;
+              margin: 0 auto;
+              max-width: 1200px;
               width: 100%;
-              height: auto;
-              object-fit: cover;
+              img {
+                width: 110px;
+                height: auto;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 16px;
+                box-shadow: var(--liquid-border-shadow);
+                transform: translateX(-50%) translateY(-50%);
+                position: absolute;
+                opacity: 0;
+                // animation-timeline: scroll();
+                // animation-range: entry -20% exit 30%;
+              }
+              #fastapi {
+                top: 61%;
+                left: 50%;
+                z-index: 10;
+                @keyframes fastapi-animation {
+                  from {
+                    opacity: 0;
+                  }
+                  to {
+                    opacity: 1;
+                  }
+                }
+                animation-name: fastapi-animation;
+                animation-duration: 0.6s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #swagger {
+                top: 67%;
+                left: 0%;
+                z-index: 4;
+                @keyframes swagger-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 14%;
+                    opacity: 1;
+                  }
+                }
+                animation-name: swagger-animation;
+                animation-duration: 0.5s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #python {
+                top: 60%;
+                left: 24%;
+                z-index: 5;
+                @keyframes python-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 20%;
+                    opacity: 1;
+                  }
+                }
+
+                animation-name: python-animation;
+                animation-duration: 0.4s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #postgresql {
+                top: 58%;
+                left: 20%;
+                z-index: 6;
+                @keyframes postgresql-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 30%;
+                    opacity: 1;
+                  }
+                }
+                animation-name: postgresql-animation;
+                animation-duration: 0.6s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #docker {
+                top: 44%;
+                left: 30%;
+                z-index: 8;
+                @keyframes docker-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 37%;
+                    opacity: 1;
+                  }
+                }
+                animation-name: docker-animation;
+                animation-duration: 0.4s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #expressjs {
+                top: 65%;
+                left: 40%;
+                z-index: 9;
+                @keyframes expressjs-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 42%;
+                    opacity: 1;
+                  }
+                }
+                animation-name: expressjs-animation;
+                animation-duration: 0.5s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #mongodb {
+                top: 48%;
+                left: 60%;
+                z-index: 9;
+                @keyframes mongodb-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 58%;
+                    opacity: 1;
+                  }
+                }
+                animation-name: mongodb-animation;
+                animation-duration: 0.4s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #mysql {
+                top: 48%;
+                left: 70%;
+                z-index: 8;
+                @keyframes mysql-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 66%;
+                    opacity: 1;
+                  }
+                }
+
+                animation-name: mysql-animation;
+                animation-duration: 0.4s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #php {
+                top: 70%;
+                left: 80%;
+                z-index: 7;
+                @keyframes php-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 74%;
+                    opacity: 1;
+                  }
+                }
+                animation-name: php-animation;
+                animation-duration: 0.7s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #coolify {
+                top: 69%;
+                left: 90%;
+                z-index: 6;
+                @keyframes coolify-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 82%;
+                    opacity: 1;
+                  }
+                }
+                animation-name: coolify-animation;
+                animation-duration: 0.5s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
+              #graphql {
+                top: 72%;
+                left: 100%;
+                z-index: 5;
+                @keyframes graphql-animation {
+                  from {
+                    left: 50%;
+                    opacity: 0;
+                  }
+                  to {
+                    left: 90%;
+                    opacity: 1;
+                  }
+                }
+                animation-name: graphql-animation;
+                animation-duration: 0.6s;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+              }
             }
           }
-          .dorc1 {
-            top: 20%;
-            left: 5%;
-            z-index: 1;
-            animation-duration: 1s;
-            animation-delay: 0.1s;
-          }
-          .dorc2 {
-            top: 30%;
-            left: 15%;
-            z-index: 2;
-            animation-duration: 1s;
-            animation-delay: 0.3s;
-          }
-          .dorc3 {
-            top: 40%;
-            left: 25%;
-            z-index: 3;
-            animation-duration: 1s;
-            animation-delay: 0.5s;
-          }
-          .dorc4 {
-            top: 50%;
-            left: 35%;
-            z-index: 4;
-            animation-duration: 1s;
-            animation-delay: 0.7s;
-          }
-          .dorc5 {
-            top: 60%;
-            left: 45%;
-            z-index: 5;
-            animation-duration: 1s;
-            animation-delay: 0.9s;
-          }
-        }
-        .section-2-right {
-          scroll-snap-stop: none;
-          width: 50%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: 2rem;
-          padding-right: 10%;
-          padding-left: 5%;
-          h2 {
-            span {
-              display: block;
-              font-weight: 900;
-              line-height: 1.2;
-              margin-top: 0.4rem;
+
+          .section-2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            height: 100vh;
+            .section-2-left {
+              width: 65%;
+              height: 100%;
+              padding-left: 10%;
+              position: relative;
+              .dorc-card {
+                position: absolute;
+                border-radius: 16px;
+                box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+                overflow: hidden;
+                width: 600px;
+                height: auto;
+                animation-timeline: scroll();
+                animation-name: fadeIn-opacity-scroll-slow;
+                // animation-duration: 1s;
+                // animation-delay: 0.1s;
+                animation-fill-mode: both;
+                animation-range: entry 15% entry 35%;
+                img {
+                  display: block;
+                  width: 100%;
+                  height: auto;
+                  object-fit: cover;
+                }
+              }
+              .dorc1 {
+                top: 20%;
+                left: 5%;
+                z-index: 1;
+                animation-duration: 1s;
+                animation-delay: 0.1s;
+              }
+              .dorc2 {
+                top: 30%;
+                left: 15%;
+                z-index: 2;
+                animation-duration: 1s;
+                animation-delay: 0.3s;
+              }
+              .dorc3 {
+                top: 40%;
+                left: 25%;
+                z-index: 3;
+                animation-duration: 1s;
+                animation-delay: 0.5s;
+              }
+              .dorc4 {
+                top: 50%;
+                left: 35%;
+                z-index: 4;
+                animation-duration: 1s;
+                animation-delay: 0.7s;
+              }
+              .dorc5 {
+                top: 60%;
+                left: 45%;
+                z-index: 5;
+                animation-duration: 1s;
+                animation-delay: 0.9s;
+              }
+            }
+            .section-2-right {
+              scroll-snap-stop: none;
+              width: 50%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              gap: 2rem;
+              padding-right: 10%;
+              padding-left: 5%;
+              h2 {
+                span {
+                  display: block;
+                  font-weight: 900;
+                  line-height: 1.2;
+                  margin-top: 0.4rem;
+                }
+              }
             }
           }
-        }
-      }
 
-      .section-3 {
-        margin-top: 10rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        .section-3-left {
-          width: 45%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: 2rem;
-          padding-left: 10%;
-          padding-right: 5%;
-          h2 {
-            span {
-              display: block;
-              font-weight: 900;
-              line-height: 1.2;
-              margin-top: 0.4rem;
+          .section-3 {
+            margin-top: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            .section-3-left {
+              width: 45%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              gap: 2rem;
+              padding-left: 10%;
+              padding-right: 5%;
+              h2 {
+                span {
+                  display: block;
+                  font-weight: 900;
+                  line-height: 1.2;
+                  margin-top: 0.4rem;
+                }
+              }
+            }
+            .section-3-right {
+              width: 55%;
+              .rest-image {
+                animation-timeline: view();
+                animation-name: fadeIn-right;
+                animation-duration: 1s;
+                animation-delay: 0.2s;
+                animation-fill-mode: both;
+                animation-range: entry 50% entry 100%;
+              }
             }
           }
-        }
-        .section-3-right {
-          width: 55%;
-          .rest-image {
-            animation-timeline: view();
-            animation-name: fadeIn-right;
-            animation-duration: 1s;
-            animation-delay: 0.2s;
-            animation-fill-mode: both;
-            animation-range: entry 50% entry 100%;
-          }
-        }
-      }
 
-      .section-4 {
-        margin-top: 25rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        .section-4-left {
-          width: 55%;
-          .swaggerdoc-image {
-            border-radius: 16px;
-            animation-timeline: view();
-            animation-name: fadeIn-left;
-            animation-duration: 1s;
-            animation-delay: 0.2s;
-            animation-fill-mode: both;
-            animation-range: entry 10% entry 55%;
-          }
-        }
-        .section-4-right {
-          width: 45%;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
-          gap: 2rem;
-          padding-left: 10%;
-          padding-right: 5%;
-          h2 {
-            span {
-              display: block;
-              font-weight: 900;
-              line-height: 1.2;
-              margin-top: 0.4rem;
+          .section-4 {
+            margin-top: 25rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            .section-4-left {
+              width: 55%;
+              .swaggerdoc-image {
+                border-radius: 16px;
+                animation-timeline: view();
+                animation-name: fadeIn-left;
+                animation-duration: 1s;
+                animation-delay: 0.2s;
+                animation-fill-mode: both;
+                animation-range: entry 10% entry 55%;
+              }
+            }
+            .section-4-right {
+              width: 45%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              gap: 2rem;
+              padding-left: 10%;
+              padding-right: 5%;
+              h2 {
+                span {
+                  display: block;
+                  font-weight: 900;
+                  line-height: 1.2;
+                  margin-top: 0.4rem;
+                }
+              }
             }
           }
+          .section-5 {
+            height: 100vh;
+          }
         }
-      }
-      .section-5 {
-        height: 100vh;
-      }
-    }
 
-    .animation-title,
-    .animation-text {
-      opacity: 0;
-    }
-    .visible {
-      animation: fadeIn 0.8s ease-out forwards;
-    }
+        .animation-title,
+        .animation-text {
+          opacity: 0;
+        }
+        .visible {
+          animation: fadeIn 0.8s ease-out forwards;
+        }
 
-    .visible-text {
-      animation: fadeIn-opacity 0.8s ease-in-out forwards;
-      animation-delay: 0.1s;
-    }
-  </style>
-  <script>
-    function setupTitleObserver() {
-      const elementsToObserve = document.querySelectorAll(".animation-title");
+        .visible-text {
+          animation: fadeIn-opacity 0.8s ease-in-out forwards;
+          animation-delay: 0.1s;
+        }
+      </style>
+      <script>
+        function setupTitleObserver() {
+          const elementsToObserve =
+            document.querySelectorAll(".animation-title");
 
-      if (!elementsToObserve.length) return;
+          if (!elementsToObserve.length) return;
 
-      const observer = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              obs.unobserve(entry.target);
-            }
+          const observer = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.7 },
+          );
+
+          elementsToObserve.forEach((el) => {
+            el.classList.remove("visible");
+            observer.observe(el);
           });
-        },
-        { threshold: 0.7 },
-      );
+        }
 
-      elementsToObserve.forEach((el) => {
-        el.classList.remove("visible");
-        observer.observe(el);
-      });
-    }
+        function setupTextObserver() {
+          const elementsToObserve =
+            document.querySelectorAll(".animation-text");
 
-    function setupTextObserver() {
-      const elementsToObserve = document.querySelectorAll(".animation-text");
+          if (!elementsToObserve.length) return;
 
-      if (!elementsToObserve.length) return;
+          const observer = new IntersectionObserver(
+            (entries, obs) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("visible-text");
+                  obs.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.7 },
+          );
 
-      const observer = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible-text");
-              obs.unobserve(entry.target);
-            }
+          elementsToObserve.forEach((el) => {
+            el.classList.remove("visible-text");
+            observer.observe(el);
           });
-        },
-        { threshold: 0.7 },
-      );
+        }
 
-      elementsToObserve.forEach((el) => {
-        el.classList.remove("visible-text");
-        observer.observe(el);
-      });
-    }
-
-    document.addEventListener("astro:page-load", setupTitleObserver);
-    document.addEventListener("astro:page-load", setupTextObserver);
-  </script>
-</Layout>
+        document.addEventListener("astro:page-load", setupTitleObserver);
+        document.addEventListener("astro:page-load", setupTextObserver);
+      </script>
+    </section>
+  </main></Layout
+>
