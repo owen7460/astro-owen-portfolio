@@ -13,14 +13,16 @@ import beach from "../assets/beach.png";
 
 <Layout title={title}>
   <main>
-    <div class="first-part">
-      <div class="first-part-text">
-        <p>Hey, I'm Owen</p>
-        <p>
-          Before transitioning into tech, I worked as a <span
-            >professional opera tenor</span
-          >
-        </p>
+    <div class="first-part-base">
+      <div class="first-part">
+        <div class="first-part-text">
+          <p>Hey, I'm Owen</p>
+          <p>
+            Before transitioning into tech, I worked as a <span
+              >professional opera tenor</span
+            >
+          </p>
+        </div>
       </div>
     </div>
 
@@ -327,9 +329,17 @@ import beach from "../assets/beach.png";
       background-color: var(--background-color);
     }
 
-    .first-part {
+    .first-part-base {
       width: 100vw;
       height: 100vh;
+      position: relative;
+    }
+
+    .first-part {
+      position: absolute;
+      overflow-x: clip;
+      width: 100%;
+      height: 100%;
       background-image: url("/stage.jpg");
       background-size: cover;
       background-position: top;
