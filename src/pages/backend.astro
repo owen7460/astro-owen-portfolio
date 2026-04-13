@@ -156,373 +156,355 @@ import Iridescence from "../components/Iridescence";
         </p>
       </div>
       <div class="section-5-bottom"><CarouselDApiDemo client:load /></div>
-
-      <style lang="scss">
-        main {
-          h1 {
-            font-size: 3.2rem;
-            font-weight: 100;
-            margin-bottom: 2rem;
-            animation: fadeIn-slightly 0.4s ease-in-out both;
-          }
-
-          h2 {
-            font-size: 3.2rem;
-            font-weight: 100;
-            margin-bottom: 2rem;
-          }
-          p {
-            font-size: 1.2rem;
-            font-weight: 100;
-            line-height: 1.5;
-          }
-          a {
-            text-decoration: underline;
-            color: var(--text-color);
-            font-size: 1.4rem;
-            font-weight: 100;
-            margin-top: 2rem;
-          }
-          section {
-            max-width: 2400px;
-            margin: 0 auto;
-          }
-
-          .section-1 {
-            height: 100vh;
-            width: 100vw;
-            position: relative;
-            .section-1-background {
-              height: 100%;
-              width: 100%;
-            }
-            .section-1-text {
-              position: absolute;
-              z-index: 10;
-              color: var(--background-color);
-              max-width: 80ch;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              .description {
-                margin-top: 2rem;
-              }
-            }
-          }
-
-          .section-2 {
-            margin-top: 6rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            height: 100vh;
-            width: 100vw;
-            .section-2-left {
-              width: 60%;
-              height: 100%;
-              position: relative;
-              padding-right: 4rem;
-              .dorc-card {
-                position: absolute;
-                border-radius: 16px;
-                box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
-                overflow: hidden;
-                width: 600px;
-                height: auto;
-                animation-timeline: scroll();
-                animation-name: fadeIn-opacity-scroll-slow;
-                // animation-duration: 1s;
-                // animation-delay: 0.1s;
-                animation-fill-mode: both;
-                animation-range: entry 10% entry 25%;
-                img {
-                  display: block;
-                  width: 100%;
-                  height: auto;
-                  object-fit: cover;
-                }
-              }
-              .dorc1 {
-                top: 20%;
-                left: 5%;
-                z-index: 1;
-                animation-duration: 1s;
-                animation-delay: 0.1s;
-              }
-              .dorc2 {
-                top: 30%;
-                left: 15%;
-                z-index: 2;
-                animation-duration: 1s;
-                animation-delay: 0.3s;
-              }
-              .dorc3 {
-                top: 40%;
-                left: 25%;
-                z-index: 3;
-                animation-duration: 1s;
-                animation-delay: 0.5s;
-              }
-              .dorc4 {
-                top: 50%;
-                left: 32%;
-                z-index: 4;
-                animation-duration: 1s;
-                animation-delay: 0.7s;
-              }
-              .dorc5 {
-                top: 60%;
-                left: 41%;
-                z-index: 5;
-                animation-duration: 1s;
-                animation-delay: 0.9s;
-              }
-            }
-            .section-2-right {
-              scroll-snap-stop: none;
-              width: 40%;
-              height: 100%;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: flex-start;
-              gap: 2rem;
-              padding-right: 4rem;
-              h2 {
-                span {
-                  display: block;
-                  font-weight: 900;
-                  line-height: 1.2;
-                  margin-top: 0.4rem;
-                }
-              }
-            }
-          }
-
-          .section-3 {
-            margin-top: 10rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            .section-3-left {
-              width: 45%;
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-start;
-              align-items: flex-start;
-              gap: 2rem;
-              padding-left: 10%;
-              padding-right: 5%;
-              h2 {
-                span {
-                  display: block;
-                  font-weight: 900;
-                  line-height: 1.2;
-                  margin-top: 0.4rem;
-                }
-              }
-            }
-            .section-3-right {
-              width: 55%;
-              .rest-image {
-                animation-timeline: view();
-                animation-name: fadeIn-right;
-                animation-duration: 1s;
-                animation-delay: 0.2s;
-                animation-fill-mode: both;
-                animation-range: entry 50% entry 100%;
-              }
-            }
-          }
-
-          .section-4 {
-            margin-top: 25rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            .section-4-left {
-              width: 55%;
-              .swaggerdoc-image {
-                border-radius: 16px;
-                animation-timeline: view();
-                animation-name: fadeIn-left;
-                animation-duration: 1s;
-                animation-delay: 0.2s;
-                animation-fill-mode: both;
-                animation-range: entry 10% entry 55%;
-              }
-            }
-            .section-4-right {
-              width: 45%;
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-start;
-              align-items: flex-start;
-              gap: 2rem;
-              padding-left: 10%;
-              padding-right: 5%;
-              h2 {
-                span {
-                  display: block;
-                  font-weight: 900;
-                  line-height: 1.2;
-                  margin-top: 0.4rem;
-                }
-              }
-            }
-          }
-          .section-5 {
-            margin-top: 25rem;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            padding: 0 3rem;
-            .section-5-top {
-              max-width: 1200px;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-              text-align: center;
-              h2 {
-                span {
-                  display: block;
-                  font-weight: 900;
-                  line-height: 1.2;
-                  margin-top: 0.4rem;
-                }
-              }
-            }
-          }
-          .section-5-bottom {
-            max-width: 2400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-          }
-        }
-
-        .section-6 {
-          margin-top: 25rem;
-          height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 2rem;
-        }
-
-        .animation-title,
-        .animation-text {
-          opacity: 0;
-        }
-
-        .animation-hr {
-          width: 0;
-          height: 1px;
-          color: var(--text-color);
-          animation: grow-hr 0.6s ease-out forwards;
-          @keyframes grow-hr {
-            from {
-              width: 0;
-            }
-            to {
-              width: 100%;
-            }
-          }
-        }
-        .hr-1 {
-          animation-delay: 0.2s;
-        }
-        .hr-2 {
-          animation-duration: 0.9s;
-          animation-delay: 0.3s;
-        }
-        .hr-3 {
-          animation-duration: 0.8s;
-          animation-delay: 0.5s;
-        }
-        .hr-4 {
-          animation-duration: 0.4s;
-          animation-delay: 0.7s;
-        }
-        .visible {
-          animation: fadeIn 0.8s ease-out forwards;
-        }
-
-        .visible-text {
-          animation: fadeIn-opacity 0.8s ease-in-out forwards;
-          animation-delay: 0.1s;
-        }
-      </style>
-      <script>
-        function setupTitleObserver() {
-          const elementsToObserve =
-            document.querySelectorAll(".animation-title");
-
-          if (!elementsToObserve.length) return;
-
-          const observer = new IntersectionObserver(
-            (entries, obs) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("visible");
-                  obs.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.7 },
-          );
-
-          elementsToObserve.forEach((el) => {
-            el.classList.remove("visible");
-            observer.observe(el);
-          });
-        }
-
-        function setupTextObserver() {
-          const elementsToObserve =
-            document.querySelectorAll(".animation-text");
-
-          if (!elementsToObserve.length) return;
-
-          const observer = new IntersectionObserver(
-            (entries, obs) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("visible-text");
-                  obs.unobserve(entry.target);
-                }
-              });
-            },
-            { threshold: 0.7 },
-          );
-
-          elementsToObserve.forEach((el) => {
-            el.classList.remove("visible-text");
-            observer.observe(el);
-          });
-        }
-
-        document.addEventListener("astro:page-load", setupTitleObserver);
-        document.addEventListener("astro:page-load", setupTextObserver);
-      </script>
-    </section>
-
-    <section class="section-6">
-      <div class="section-6-left">
-        <h2 class="animation-title">
-          Middlewares<span>Safety Does Matter</span>
-        </h2>
-      </div>
-      <div class="section-6-right"></div>
     </section>
   </main>
+
+  <style lang="scss">
+    main {
+      margin: 0 auto;
+      h1 {
+        font-size: 3.2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+        animation: fadeIn-slightly 0.4s ease-in-out both;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 100;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: underline;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        font-weight: 100;
+        margin-top: 2rem;
+      }
+      section {
+        max-width: 2400px;
+        margin: 0 auto;
+      }
+
+      .section-1 {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        .section-1-background {
+          height: 100%;
+          width: 100%;
+        }
+        .section-1-text {
+          position: absolute;
+          z-index: 10;
+          color: var(--background-color);
+          max-width: 80ch;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          .description {
+            margin-top: 2rem;
+          }
+        }
+      }
+
+      .section-2 {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        .section-2-left {
+          width: 60%;
+          height: 100%;
+          position: relative;
+          .dorc-card {
+            position: absolute;
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+            overflow: hidden;
+            width: 55%;
+            height: auto;
+            animation-timeline: scroll();
+            animation-name: fadeIn-opacity-scroll-slow;
+            // animation-duration: 1s;
+            // animation-delay: 0.1s;
+            animation-fill-mode: both;
+            animation-range: entry 10% entry 25%;
+            img {
+              display: block;
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+          .dorc1 {
+            top: 20%;
+            left: 1%;
+            z-index: 1;
+            animation-duration: 1s;
+            animation-delay: 0.1s;
+          }
+          .dorc2 {
+            top: 30%;
+            left: 11%;
+            z-index: 2;
+            animation-duration: 1s;
+            animation-delay: 0.3s;
+          }
+          .dorc3 {
+            top: 40%;
+            left: 21%;
+            z-index: 3;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+          }
+          .dorc4 {
+            top: 50%;
+            left: 27%;
+            z-index: 4;
+            animation-duration: 1s;
+            animation-delay: 0.7s;
+          }
+          .dorc5 {
+            top: 60%;
+            left: 37%;
+            z-index: 5;
+            animation-duration: 1s;
+            animation-delay: 0.9s;
+          }
+        }
+        .section-2-right {
+          scroll-snap-stop: none;
+          width: 40%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-right: 4rem;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+      }
+
+      .section-3 {
+        margin-top: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        overflow-x: clip;
+        .section-3-left {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-left: 10%;
+          padding-right: 5%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        .section-3-right {
+          width: 55%;
+          .rest-image {
+            animation-timeline: view();
+            animation-name: fadeIn-right;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+            animation-range: entry 50% entry 100%;
+          }
+        }
+      }
+
+      .section-4 {
+        margin-top: 25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .section-4-left {
+          width: 55%;
+          .swaggerdoc-image {
+            border-radius: 16px;
+            animation-timeline: view();
+            animation-name: fadeIn-left;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+            animation-range: entry 10% entry 55%;
+          }
+        }
+        .section-4-right {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-left: 10%;
+          padding-right: 5%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+      }
+
+      .section-5 {
+        margin-top: 25rem;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 3rem;
+        .section-5-top {
+          max-width: 1200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+      }
+      .section-5-bottom {
+        max-width: 2400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+
+    .animation-title,
+    .animation-text {
+      opacity: 0;
+    }
+
+    .animation-hr {
+      width: 0;
+      height: 1px;
+      color: var(--text-color);
+      animation: grow-hr 0.6s ease-out forwards;
+      @keyframes grow-hr {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    }
+    .hr-1 {
+      animation-delay: 0.2s;
+    }
+    .hr-2 {
+      animation-duration: 0.9s;
+      animation-delay: 0.3s;
+    }
+    .hr-3 {
+      animation-duration: 0.8s;
+      animation-delay: 0.5s;
+    }
+    .hr-4 {
+      animation-duration: 0.4s;
+      animation-delay: 0.7s;
+    }
+    .visible {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+
+    .visible-text {
+      animation: fadeIn-opacity 0.8s ease-in-out forwards;
+      animation-delay: 0.1s;
+    }
+  </style>
+
+  <script>
+    function setupTitleObserver() {
+      const elementsToObserve = document.querySelectorAll(".animation-title");
+
+      if (!elementsToObserve.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.7 },
+      );
+
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible");
+        observer.observe(el);
+      });
+    }
+
+    function setupTextObserver() {
+      const elementsToObserve = document.querySelectorAll(".animation-text");
+
+      if (!elementsToObserve.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible-text");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.7 },
+      );
+
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible-text");
+        observer.observe(el);
+      });
+    }
+
+    document.addEventListener("astro:page-load", setupTitleObserver);
+    document.addEventListener("astro:page-load", setupTextObserver);
+  </script>
 </Layout>
