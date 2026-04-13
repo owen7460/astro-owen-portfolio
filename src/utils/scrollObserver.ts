@@ -4,7 +4,7 @@ export function observeElements(
   className = "visible",
   once = true
 ) {
-  if (typeof window === "undefined") return; // SSR 环境下直接返回
+  if (typeof window === "undefined") return; //
 
   const elements = document.querySelectorAll(selector);
 
