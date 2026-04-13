@@ -157,6 +157,43 @@ import Iridescence from "../components/Iridescence";
       </div>
       <div class="section-5-bottom"><CarouselDApiDemo client:load /></div>
     </section>
+
+    <section class="section-6">
+      <div class="section-6-left">
+        <div class="database-card erd">
+          <p>ERD</p>
+        </div>
+        <div class="database-card schema">
+          <p>Schema</p>
+        </div>
+        <div class="database-card mysql">
+          <p>Mysql</p>
+        </div>
+        <div class="database-card mongodb">
+          <p>MongoDB</p>
+        </div>
+        <div class="database-card graphql">
+          <p>GraphQL</p>
+        </div>
+        <div class="database-card postgresql">
+          <p>PostgreSQL</p>
+        </div>
+      </div>
+      <div class="section-6-right">
+        <h2 class="animation-title">
+          Database<span>From ERD to Implementation</span>
+        </h2>
+        <p class="animation-text">
+          Databases are the backbone of modern web applications. My workflow
+          begins with designing Entity Relationship Diagrams (ERD) to model data
+          structures and relationships, followed by translating them into
+          schemas and finally implementing them in the database. I have
+          experience working with PostgreSQL, MongoDB, GraphQL, and MySQL. This
+          approach helps me build well-structured, scalable, and maintainable
+          backend systems.
+        </p>
+      </div>
+    </section>
   </main>
 
   <style lang="scss">
@@ -402,14 +439,83 @@ import Iridescence from "../components/Iridescence";
             }
           }
         }
+        .section-5-bottom {
+          max-width: 2400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+        }
       }
-      .section-5-bottom {
-        max-width: 2400px;
+
+      .section-6 {
+        margin: 25rem auto;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        .section-6-left {
+          width: 55%;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 2rem;
+          padding-left: 5%;
+          .database-card {
+            opacity: 0;
+            width: 100%;
+            height: 150px;
+            color: var(--background-color);
+            background-color: rgb(15, 15, 15);
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              font-size: 1.2rem;
+              font-weight: 100;
+              line-height: 1.5;
+            }
+          }
+          .erd {
+            animation-delay: 0.2s;
+          }
+          .schema {
+            animation-delay: 0.4s;
+          }
+          .mysql {
+            animation-delay: 0.6s;
+          }
+          .mongodb {
+            animation-delay: 0.8s;
+          }
+          .graphql {
+            animation-delay: 1s;
+          }
+          .postgresql {
+            animation-delay: 1.2s;
+          }
+        }
+        .section-6-right {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-left: 5%;
+          padding-right: 5%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
       }
     }
 
@@ -460,8 +566,11 @@ import Iridescence from "../components/Iridescence";
   <script>
     function setupTitleObserver() {
       const elementsToObserve = document.querySelectorAll(".animation-title");
+      const elementsToObserveDatabase =
+        document.querySelectorAll(".database-card");
 
       if (!elementsToObserve.length) return;
+      if (!elementsToObserveDatabase.length) return;
 
       const observer = new IntersectionObserver(
         (entries, obs) => {
@@ -476,6 +585,10 @@ import Iridescence from "../components/Iridescence";
       );
 
       elementsToObserve.forEach((el) => {
+        el.classList.remove("visible");
+        observer.observe(el);
+      });
+      elementsToObserveDatabase.forEach((el) => {
         el.classList.remove("visible");
         observer.observe(el);
       });
