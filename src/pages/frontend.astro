@@ -1,6 +1,6 @@
 ---
 import "../styles/global.scss";
-import Layout from "../layouts/Layout.astro";
+import FrontendLayout from "../layouts/FrontendLayout.astro";
 const title: string = "Frontend development | Owen Portfolio";
 import { Image } from "astro:assets";
 import card1 from "../assets/frontend/card1.png";
@@ -21,9 +21,10 @@ import kitchen1 from "../assets/frontend/kitchen1.png";
 import kitchen2 from "../assets/frontend/kitchen2.png";
 import kitchen3 from "../assets/frontend/kitchen3.png";
 import kitchen4 from "../assets/frontend/kitchen4.png";
+import Footer from "../components/Footer.astro";
 ---
 
-<Layout title={title}>
+<FrontendLayout title={title}>
   <main>
     <section id="top" class="introduction">
       <div class="left">
@@ -317,7 +318,9 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
         </div>
       </div>
       <div class="section-7-right">
-        <h2 class="animation-title">Owen's Kitchen <span>PHP Project</span></h2>
+        <h2 class="animation-title">
+          Owen's Kitchen <span>PHP Project</span>
+        </h2>
         <p class="animation-text">
           Today, PHP still plays a very important role in development,
           especially for full-stack projects and applications that need to be
@@ -335,6 +338,9 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
         </div>
       </div>
     </section>
+    <section class="last-section">
+      <Footer />
+    </section>
   </main>
 
   <style lang="scss">
@@ -343,6 +349,7 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
       scroll-snap-type: y mandatory;
       overflow-y: scroll;
       height: 100vh;
+
       h1 {
         font-size: 4.8rem;
         font-weight: 100;
@@ -778,6 +785,12 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
           }
         }
       }
+
+      .last-section {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
     }
     .animation-title,
     .animation-text {
@@ -842,4 +855,4 @@ import kitchen4 from "../assets/frontend/kitchen4.png";
     document.addEventListener("astro:page-load", setupTitleObserver);
     document.addEventListener("astro:page-load", setupTextObserver);
   </script>
-</Layout>
+</FrontendLayout>
