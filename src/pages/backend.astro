@@ -565,12 +565,12 @@ import Iridescence from "../components/Iridescence";
 
   <script>
     function setupTitleObserver() {
-      const elementsToObserve = document.querySelectorAll(".animation-title");
-      const elementsToObserveDatabase =
-        document.querySelectorAll(".database-card");
+      const elementsToObserve = [
+        ...document.querySelectorAll(".animation-title"),
+        ...document.querySelectorAll(".database-card"),
+      ];
 
       if (!elementsToObserve.length) return;
-      if (!elementsToObserveDatabase.length) return;
 
       const observer = new IntersectionObserver(
         (entries, obs) => {
@@ -585,10 +585,6 @@ import Iridescence from "../components/Iridescence";
       );
 
       elementsToObserve.forEach((el) => {
-        el.classList.remove("visible");
-        observer.observe(el);
-      });
-      elementsToObserveDatabase.forEach((el) => {
         el.classList.remove("visible");
         observer.observe(el);
       });
