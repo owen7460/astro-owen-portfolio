@@ -332,13 +332,30 @@ import Footer from "../components/Footer.astro";
           (such as marking allergies to certain dishes), confirm orders, and
           view their balance and bills.
         </p>
-        <div class="end-of-page">
-          <p>This is the end of this page.</p>
-          <a href="#top">Back to Top</a>
-        </div>
       </div>
     </section>
     <section class="last-section">
+      <div class="end-of-page">
+        <h2 class="animation-title">
+          Selecting the most suitable technologies for different application
+          scenarios
+        </h2>
+        <div class="technologies">
+          <p class="animation-text p1">
+            Frameworks | React, React Native, Next.js, Astro, SwiftUI, Vue3
+          </p>
+          <p class="animation-text p2">
+            CSS | Tailwind CSS, Sass, Shadcn UI, Element Plus
+          </p>
+          <p class="animation-text p3">
+            Libraries | Redux, Zustand, Pinia, Axios, Lucide Icons
+          </p>
+          <p class="animation-text p4">
+            Other | PHP, TypeScript, Lottie Animations, Figma
+          </p>
+        </div>
+        <a href="#top">Back to Top</a>
+      </div>
       <Footer />
     </section>
   </main>
@@ -766,30 +783,57 @@ import Footer from "../components/Footer.astro";
               margin-top: 0.4rem;
             }
           }
-          .end-of-page {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            a {
-              display: block;
-              font-size: 0.8rem;
-              font-weight: 100;
-              padding: 0.6rem 1.6rem;
-              background-color: rgba(255, 255, 255, 0.9);
-              border-radius: 28px;
-              box-shadow:
-                var(--liquid-border-shadow),
-                inset 0 0 10px 2px rgba(160, 160, 160, 0.2);
-            }
-          }
         }
       }
 
       .last-section {
         display: flex;
         justify-content: flex-end;
-        align-items: flex-end;
+        align-items: center;
+        flex-direction: column;
+        gap: 12rem;
+        .end-of-page {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 3rem;
+          h2 {
+            max-width: 900px;
+            text-align: center;
+            line-height: 1.4;
+          }
+          .technologies {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.4rem;
+          }
+          .p1 {
+            animation-delay: 0.2s;
+          }
+          .p2 {
+            animation-delay: 0.3s;
+          }
+          .p3 {
+            animation-delay: 0.4s;
+          }
+          .p4 {
+            animation-delay: 0.5s;
+          }
+          a {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 100;
+            padding: 0.6rem 1.6rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 28px;
+            box-shadow:
+              var(--liquid-border-shadow),
+              inset 0 0 10px 2px rgba(160, 160, 160, 0.2);
+          }
+        }
       }
     }
     .animation-title,
