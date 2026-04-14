@@ -12,7 +12,7 @@ export function AstroAccordionComponent() {
   };
 
   return (
-    <div className="flex flex-col justify-start items-start w-[1000px] h-[500px] h-2/1 gap-4">
+    <div className="flex flex-col justify-start items-start w-[1000px] h-[500px] gap-4">
       <div className="w-full mx-auto flex justify-center items-center">
         <img
           src="/icons/astro-logo-dark.svg"

@@ -12,7 +12,7 @@ export function AccordionComponent() {
   };
 
   return (
-    <div className="flex justify-center items-start max-w-[1200px] w-full gap-4">
+    <div className="flex justify-center items-start max-w-[1600px] w-full gap-4">
       <div className="w-[50%]">
         <img
           className="rounded-lg overflow-hidden"
