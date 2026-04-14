@@ -17,6 +17,7 @@ const pathname = Astro.url.pathname;
       <li>
         <a
           href="/frontend"
+          data-astro-prefetch="load"
           style="anchor-name: --link2"
           class={pathname === "/frontend/" ? "active" : ""}>Frontend</a
         >
@@ -24,6 +25,7 @@ const pathname = Astro.url.pathname;
       <li>
         <a
           href="/backend"
+          data-astro-prefetch="load"
           style="anchor-name: --link3"
           class={pathname === "/backend/" ? "active" : ""}>Backend</a
         >
@@ -38,6 +40,7 @@ const pathname = Astro.url.pathname;
       <li>
         <a
           href="/photography"
+          data-astro-prefetch="load"
           style="anchor-name: --link5"
           class={pathname === "/photography/" ? "active" : ""}>Photography</a
         >
@@ -45,6 +48,7 @@ const pathname = Astro.url.pathname;
       <li>
         <a
           href="/about"
+          data-astro-prefetch="load"
           style="anchor-name: --link6"
           class={pathname === "/about/" ? "active" : ""}>About Me</a
         >
