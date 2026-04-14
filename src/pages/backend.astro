@@ -13,6 +13,7 @@ import rest from "../assets/backend/rest.png";
 import swaggerdoc from "../assets/backend/swaggerdoc.png";
 import { CarouselDApiDemo } from "../components/Caresoul";
 import Iridescence from "../components/Iridescence";
+import { AccordionComponent } from "../components/Accordion";
 ---
 
 <Layout title={title}>
@@ -197,32 +198,11 @@ import Iridescence from "../components/Iridescence";
         <p class="animation-text">
           Coolify is a platform that allows me to deploy my applications to
           production environments. It provides a simple and easy-to-use
-          interface for deploying and managing my applications.
+          interface for deploying and managing my backend services.
         </p>
       </div>
       <div class="section-7-bottom">
-        <div class="deployment-card">
-          <img src="/icons/docker.webp" alt="Docker" />
-          <p>
-            Docker is a platform that packages applications and their
-            dependencies into portable containers. These containers run
-            consistently across different environments, ensuring the application
-            works the same everywhere. Docker simplifies development,
-            deployment, and scaling by isolating services and improving workflow
-            consistency.
-          </p>
-        </div>
-        <div class="deployment-card">
-          <img src="/icons/coolify.jpeg" alt="Coolify" />
-          <p>
-            Coolify is a self-hosted platform that helps developers deploy
-            applications, databases, and services with ease. It works as an
-            open-source alternative to platforms like Vercel or Heroku, allowing
-            you to deploy directly from Git repositories. Coolify simplifies
-            DevOps by managing Docker containers, environment variables,
-            domains, and SSL automatically.
-          </p>
-        </div>
+        <AccordionComponent client:load />
       </div>
     </section>
 
@@ -278,6 +258,8 @@ import Iridescence from "../components/Iridescence";
       }
       section {
         max-width: 2400px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .section-1 {
@@ -502,7 +484,7 @@ import Iridescence from "../components/Iridescence";
       }
 
       .section-6 {
-        margin-top: 15rem;
+        margin-top: 20rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -594,22 +576,21 @@ import Iridescence from "../components/Iridescence";
       }
 
       .section-7 {
-        margin-top: 15rem;
+        margin-top: 20rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
-        padding: 0 10%;
+        padding: 0 5%;
         .section-7-top {
           width: 100%;
-          max-width: 1200px;
+          max-width: 2400px;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          align-items: center;
-          gap: 2rem;
-          text-align: center;
+          align-items: flex-start;
+          gap: 0.2rem;
+          text-align: left;
           h2 {
             span {
               display: block;
@@ -620,27 +601,10 @@ import Iridescence from "../components/Iridescence";
           }
         }
         .section-7-bottom {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 2rem;
-          .deployment-card {
-            width: 500px;
-            height: auto;
-            border-radius: 16px;
-            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
-            overflow: hidden;
-            img {
-              border-bottom: 1px solid rgba(160, 160, 160, 0.2);
-            }
-
-            p {
-              font-size: 1.1rem;
-              font-weight: 100;
-              line-height: 1.5;
-              padding: 2rem;
-            }
-          }
+          width: 100%;
+          height: calc(100% + 10rem);
+          padding-top: 3rem;
+          margin: 0 auto;
         }
       }
 
@@ -653,7 +617,7 @@ import Iridescence from "../components/Iridescence";
         gap: 2rem;
         .section-8-top {
           width: 100%;
-          max-width: 1200px;
+          max-width: 2400px;
           display: flex;
           flex-direction: column;
           justify-content: center;
