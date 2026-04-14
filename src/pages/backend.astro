@@ -182,11 +182,76 @@ import Iridescence from "../components/Iridescence";
         </p>
       </div>
     </section>
+
+    <section class="section-7">
+      <div class="section-7-top">
+        <h2 class="animation-title">
+          Deployment<span>Docker & Coolify</span>
+        </h2>
+        <p class="animation-text">
+          Docker is a containerization tool that allows me to package my
+          application and its dependencies into a container, making it easier to
+          deploy and scale. I have experience using Docker to deploy my
+          applications to production environments.
+        </p>
+        <p class="animation-text">
+          Coolify is a platform that allows me to deploy my applications to
+          production environments. It provides a simple and easy-to-use
+          interface for deploying and managing my applications.
+        </p>
+      </div>
+      <div class="section-7-bottom">
+        <div class="deployment-card">
+          <img src="/icons/docker.webp" alt="Docker" />
+          <p>
+            Docker is a platform that packages applications and their
+            dependencies into portable containers. These containers run
+            consistently across different environments, ensuring the application
+            works the same everywhere. Docker simplifies development,
+            deployment, and scaling by isolating services and improving workflow
+            consistency.
+          </p>
+        </div>
+        <div class="deployment-card">
+          <img src="/icons/coolify.jpeg" alt="Coolify" />
+          <p>
+            Coolify is a self-hosted platform that helps developers deploy
+            applications, databases, and services with ease. It works as an
+            open-source alternative to platforms like Vercel or Heroku, allowing
+            you to deploy directly from Git repositories. Coolify simplifies
+            DevOps by managing Docker containers, environment variables,
+            domains, and SSL automatically.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-8">
+      <div class="section-8-top">
+        <h2 class="animation-title">
+          CI/CD<span>Continuous Integration/Continuous Deployment</span>
+        </h2>
+        <p class="animation-text">
+          CI/CD is a practice that helps developers deploy their applications
+          quickly and easily. It involves automating the process of building,
+          testing, and deploying applications.
+        </p>
+      </div>
+      <div class="section-8-bottom">
+        <div class="ci-cd-card">
+          <p>
+            CI/CD is a practice that helps developers deploy their applications
+            quickly and easily. It involves automating the process of building,
+            testing, and deploying applications.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <style lang="scss">
     main {
-      margin: 0 auto;
+      margin: 0 auto 10rem;
       h1 {
         font-size: 3.2rem;
         font-weight: 100;
@@ -213,7 +278,6 @@ import Iridescence from "../components/Iridescence";
       }
       section {
         max-width: 2400px;
-        margin: 0 auto;
       }
 
       .section-1 {
@@ -239,7 +303,7 @@ import Iridescence from "../components/Iridescence";
       }
 
       .section-2 {
-        margin-top: 6rem;
+        margin-top: 5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -327,7 +391,7 @@ import Iridescence from "../components/Iridescence";
       }
 
       .section-3 {
-        margin-top: 10rem;
+        margin-top: 5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -365,7 +429,7 @@ import Iridescence from "../components/Iridescence";
       }
 
       .section-4 {
-        margin-top: 25rem;
+        margin-top: 15rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -403,7 +467,7 @@ import Iridescence from "../components/Iridescence";
       }
 
       .section-5 {
-        margin-top: 25rem;
+        margin-top: 15rem;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -438,7 +502,7 @@ import Iridescence from "../components/Iridescence";
       }
 
       .section-6 {
-        margin: 25rem auto;
+        margin-top: 15rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -528,49 +592,117 @@ import Iridescence from "../components/Iridescence";
           }
         }
       }
-    }
 
-    .animation-title,
-    .animation-text {
-      opacity: 0;
-    }
-
-    .animation-hr {
-      width: 0;
-      height: 1px;
-      color: var(--text-color);
-      animation: grow-hr 0.6s ease-out forwards;
-      @keyframes grow-hr {
-        from {
-          width: 0;
-        }
-        to {
+      .section-7 {
+        margin-top: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 10%;
+        .section-7-top {
           width: 100%;
+          max-width: 1200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          text-align: center;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        .section-7-bottom {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          .deployment-card {
+            width: 500px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+            overflow: hidden;
+            img {
+              border-bottom: 1px solid rgba(160, 160, 160, 0.2);
+            }
+
+            p {
+              font-size: 1.1rem;
+              font-weight: 100;
+              line-height: 1.5;
+              padding: 2rem;
+            }
+          }
         }
       }
-    }
-    .hr-1 {
-      animation-delay: 0.2s;
-    }
-    .hr-2 {
-      animation-duration: 0.9s;
-      animation-delay: 0.3s;
-    }
-    .hr-3 {
-      animation-duration: 0.8s;
-      animation-delay: 0.5s;
-    }
-    .hr-4 {
-      animation-duration: 0.4s;
-      animation-delay: 0.7s;
-    }
-    .visible {
-      animation: fadeIn 0.8s ease-out forwards;
-    }
 
-    .visible-text {
-      animation: fadeIn-opacity 0.8s ease-in-out forwards;
-      animation-delay: 0.1s;
+      .section-8 {
+        margin-top: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .section-8-top {
+          width: 100%;
+          max-width: 1200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .animation-title,
+      .animation-text {
+        opacity: 0;
+      }
+
+      .animation-hr {
+        width: 0;
+        height: 1px;
+        color: var(--text-color);
+        animation: grow-hr 0.6s ease-out forwards;
+        @keyframes grow-hr {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+      }
+      .hr-1 {
+        animation-delay: 0.2s;
+      }
+      .hr-2 {
+        animation-duration: 0.9s;
+        animation-delay: 0.3s;
+      }
+      .hr-3 {
+        animation-duration: 0.8s;
+        animation-delay: 0.5s;
+      }
+      .hr-4 {
+        animation-duration: 0.4s;
+        animation-delay: 0.7s;
+      }
+      .visible {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .visible-text {
+        animation: fadeIn-opacity 0.8s ease-in-out forwards;
+        animation-delay: 0.1s;
+      }
     }
   </style>
 
