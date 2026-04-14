@@ -23,7 +23,9 @@ import kitchen2 from "../assets/frontend/kitchen2.png";
 import kitchen3 from "../assets/frontend/kitchen3.png";
 import kitchen4 from "../assets/frontend/kitchen4.png";
 import Footer from "../components/Footer.astro";
-import { AstroAccordionComponent } from "../components/AstroAccordion";
+import astro1 from "../assets/frontend/astro-1.png";
+import astro2 from "../assets/frontend/astro-2.png";
+import astro3 from "../assets/frontend/astro-3.png";
 ---
 
 <FrontendLayout title={title}>
@@ -121,6 +123,7 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
         </div>
       </div>
     </section>
+
     <section class="section-2">
       <div class="section-2-left">
         <Image
@@ -158,6 +161,7 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
         </p>
       </div>
     </section>
+
     <section class="section-3">
       <div class="section-3-left">
         <h2 class="animation-title">SwiftUI Rebuilding BlendBetter</h2>
@@ -195,6 +199,7 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
         />
       </div>
     </section>
+
     <section class="section-4">
       <div class="section-4-left">
         <h2 class="animation-title">
@@ -217,6 +222,7 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
         />
       </div>
     </section>
+
     <section class="section-5">
       <div class="section-5-content">
         <p>
@@ -241,6 +247,7 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
         />
       </div>
     </section>
+
     <section class="section-6">
       <div class="section-6-content">
         <p class="animation-text">
@@ -280,6 +287,7 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
         />
       </div>
     </section>
+
     <section class="section-7">
       <div class="section-7-left">
         <div class="kitchen-card kitchen1">
@@ -338,25 +346,76 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
     </section>
 
     <section class="section-8">
-      <div class="section-8-top">
-        <h2 class="animation-title">
-          Owen's Portfolio<span>Astro Project</span>
-        </h2>
-        <p class="animation-text">
-          Owen's Portfolio is a project built with Astro. It is a portfolio
-          website that showcases my projects and skills. I chose Astro because
-          it is particularly well suited for performance-focused showcase
-          websites. Astro outputs fully rendered HTML with per-page metadata,
-          which improves SEO and discoverability. Its island architecture
-          minimizes client-side JavaScript by hydrating only interactive
-          components, while built-in prefetching and optimized loading help
-          pages navigate faster. In addition, the Image component automatically
-          optimizes images for different screen sizes and formats, improving
-          performance and responsiveness without extra configuration.
-        </p>
-      </div>
-      <div class="section-8-bottom">
-        <AstroAccordionComponent client:load />
+      <div class="section-8-base">
+        <div class="section-8-content">
+          <div class="section-8-title animation-title">
+            <img class="astro-logo" src="/icons/astro.svg" alt="Astro" />
+            <h2>
+              Owen's Portfolio<span>Astro Project</span>
+            </h2>
+          </div>
+          <p class="animation-text">
+            Astro is particularly well suited for performance-focused showcase
+            websites.
+          </p>
+        </div>
+        <div class="section8-cards">
+          <div class="section8-card card1">
+            <Image src={astro1} alt="Astro 1" />
+            <div class="section8-card-text">
+              <h3>SEO-Friendly Architecture</h3>
+              <p>
+                Astro provides a Layout system where each page can pass props to
+                dynamically update elements like the title and metadata.
+                Navigation is handled through client-side routing, enabling
+                smooth transitions without full page reloads.
+              </p>
+              <p>
+                Unlike traditional React apps that rely on client-side
+                rendering, Astro delivers pre-rendered HTML by default,
+                improving SEO and initial load performance—making it ideal for
+                portfolio and content-focused websites.
+              </p>
+            </div>
+          </div>
+          <div class="section8-card card2">
+            <Image src={astro2} alt="Astro 2" />
+            <div class="section8-card-text">
+              <h3>Island Architecture & Prefetching</h3>
+              <p>
+                Astro’s island architecture allows me to limit interactivity to
+                specific React components, keeping the rest of the page
+                lightweight and server-rendered.
+              </p>
+              <p>
+                I also leveraged Astro’s prefetching strategy, so while users
+                are still browsing the home page, the browser can begin
+                preparing resources for other routes in the background. Combined
+                with Astro’s optimized loading behavior, this reduces perceived
+                loading delays, minimizes white screen flashes during
+                navigation, and creates a smoother overall browsing experience.
+              </p>
+            </div>
+          </div>
+          <div class="section8-card card3">
+            <Image src={astro3} alt="Astro 3" />
+            <div class="section8-card-text">
+              <h3>Image Optimization</h3>
+              <p>
+                Astro’s built-in Image component significantly improves image
+                performance in this project. For example, one image originally
+                sized at 1.9MB was optimized down to just 119KB after
+                processing.
+              </p>
+              <p>
+                The component also applies lazy loading by default and serves
+                appropriately sized images for different devices, reducing load
+                time while maintaining visual quality. This helps keep the site
+                both visually appealing and performance-efficient.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -814,32 +873,92 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
       }
 
       .section-8 {
-        padding: 0 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 2rem;
-        .section-8-top {
-          max-width: 1200px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 0.2rem;
-          text-align: left;
-          h2 {
+        background-image: url("../assets/frontend/astrobg.jpg");
+        bakcground-size: cover;
+        background-position: left center;
+        background-repeat: no-repeat;
+        .astro-logo {
+          width: 70px;
+        }
+        .section-8-base {
+          padding: 0 5%;
+          .section-8-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
             text-align: center;
-            span {
-              display: block;
-              font-weight: 900;
-              line-height: 1.2;
-              margin-top: 0.4rem;
+            color: var(--background-color);
+            .section-8-title {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 1rem;
+              h2 {
+                span {
+                  display: block;
+                  font-weight: 900;
+                  line-height: 1.2;
+                  margin-top: 0.4rem;
+                }
+              }
             }
           }
-        }
-        .section-8-bottom {
-          max-width: 1200px;
+          .section8-cards {
+            max-width: 1300px;
+            padding-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3.5rem;
+            .section8-card {
+              opacity: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: center;
+              border-radius: 16px;
+              overflow: hidden;
+              background-color: rgba(255, 255, 255, 0.15);
+              backdrop-filter: blur(1px);
+              -webkit-backdrop-filter: blur(1px);
+              border: 1px solid rgba(255, 255, 255, 0.732);
+              text-align: left;
+              img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                object-position: left top;
+              }
+              .section8-card-text {
+                padding: 1.4rem;
+                h3 {
+                  color: var(--background-color);
+                  font-size: 1.2rem;
+                  font-weight: 500;
+                  line-height: 1.2;
+                  margin-top: 0.4rem;
+                }
+                p {
+                  color: var(--background-color);
+                  font-size: 0.9rem;
+                  line-height: 1.4;
+                  margin-top: 0.4rem;
+                }
+              }
+            }
+            .card1 {
+              animation-delay: 0.1s;
+            }
+            .card2 {
+              animation-delay: 0.25s;
+            }
+            .card3 {
+              animation-delay: 0.4s;
+            }
+          }
         }
       }
 
@@ -905,6 +1024,10 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
       animation: fadeIn-opacity 0.8s ease-in-out forwards;
       animation-delay: 0.1s;
     }
+
+    .visible-cards {
+      animation: fadeIn 0.6s ease-in-out forwards;
+    }
   </style>
 
   <script>
@@ -954,7 +1077,28 @@ import { AstroAccordionComponent } from "../components/AstroAccordion";
       });
     }
 
+    function setupCardObserver() {
+      const elementsToObserve = document.querySelectorAll(".section8-card");
+      if (!elementsToObserve.length) return;
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible-cards");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.7 },
+      );
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible-cards");
+        observer.observe(el);
+      });
+    }
+
     document.addEventListener("astro:page-load", setupTitleObserver);
     document.addEventListener("astro:page-load", setupTextObserver);
+    document.addEventListener("astro:page-load", setupCardObserver);
   </script>
 </FrontendLayout>
