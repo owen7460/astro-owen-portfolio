@@ -1,5 +1,6 @@
 ---
 import "../styles/global.scss";
+import "../styles/global.css";
 import FrontendLayout from "../layouts/FrontendLayout.astro";
 const title: string = "Frontend development | Owen Portfolio";
 import { Image } from "astro:assets";
@@ -22,6 +23,7 @@ import kitchen2 from "../assets/frontend/kitchen2.png";
 import kitchen3 from "../assets/frontend/kitchen3.png";
 import kitchen4 from "../assets/frontend/kitchen4.png";
 import Footer from "../components/Footer.astro";
+import { AstroAccordionComponent } from "../components/AstroAccordion";
 ---
 
 <FrontendLayout title={title}>
@@ -334,6 +336,30 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
     </section>
+
+    <section class="section-8">
+      <div class="section-8-top">
+        <h2 class="animation-title">
+          Owen's Portfolio<span>Astro Project</span>
+        </h2>
+        <p class="animation-text">
+          Owen's Portfolio is a project built with Astro. It is a portfolio
+          website that showcases my projects and skills. I chose Astro because
+          it is particularly well suited for performance-focused showcase
+          websites. Astro outputs fully rendered HTML with per-page metadata,
+          which improves SEO and discoverability. Its island architecture
+          minimizes client-side JavaScript by hydrating only interactive
+          components, while built-in prefetching and optimized loading help
+          pages navigate faster. In addition, the Image component automatically
+          optimizes images for different screen sizes and formats, improving
+          performance and responsiveness without extra configuration.
+        </p>
+      </div>
+      <div class="section-8-bottom">
+        <AstroAccordionComponent client:load />
+      </div>
+    </section>
+
     <section class="last-section">
       <div class="end-of-page">
         <h2 class="animation-title">
@@ -672,6 +698,7 @@ import Footer from "../components/Footer.astro";
           z-index: 1;
         }
       }
+
       .section-6 {
         position: relative;
         display: flex;
@@ -783,6 +810,36 @@ import Footer from "../components/Footer.astro";
               margin-top: 0.4rem;
             }
           }
+        }
+      }
+
+      .section-8 {
+        padding: 0 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+        .section-8-top {
+          max-width: 1200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 0.2rem;
+          text-align: left;
+          h2 {
+            text-align: center;
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        .section-8-bottom {
+          max-width: 1200px;
         }
       }
 
