@@ -240,19 +240,19 @@ import { AccordionComponent } from "../components/Accordion";
         <div class="skills-chart">
           <div class="frontend">
             <!-- <hr class="ai-animation-hr ai-hr-1" /> -->
-            <div class="line-1 ai-line"></div>
+            <div class="line-1 ai-animation-line"></div>
             <p>Frontend</p>
           </div>
 
           <div class="backend">
             <!-- <hr class="ai-animation-hr ai-hr-2" /> -->
-            <div class="line-2 ai-line"></div>
+            <div class="line-2 ai-animation-line"></div>
             <p>Backend</p>
           </div>
 
           <div class="ai">
             <!-- <hr class="ai-animation-hr ai-hr-3" /> -->
-            <div class="line-3 ai-line"></div>
+            <div class="line-3 ai-animation-line"></div>
             <p>Python, FastAPI and LangChain..</p>
           </div>
         </div>
@@ -722,15 +722,16 @@ import { AccordionComponent } from "../components/Accordion";
             }
 
             .ai-animation-line {
-              width: 10%;
+              width: 100%;
               height: 6px;
               border-radius: 16px;
+              transform: scaleX(0);
+              transform-origin: left;
             }
             .frontend {
               width: 270px;
               height: 100px;
               .line-1 {
-                width: 10%;
                 height: 6px;
                 border-radius: 16px;
                 background-color: var(--text-color);
@@ -752,7 +753,6 @@ import { AccordionComponent } from "../components/Accordion";
               //   animation-delay: 0.4s;
               // }
               .line-2 {
-                width: 5%;
                 height: 6px;
                 border-radius: 16px;
                 background-color: var(--text-color);
@@ -769,7 +769,6 @@ import { AccordionComponent } from "../components/Accordion";
               //   animation-delay: 0.3s;
               // }
               .line-3 {
-                width: 8%;
                 height: 6px;
                 border-radius: 16px;
                 background-color: rgb(30, 195, 30);
@@ -848,10 +847,10 @@ import { AccordionComponent } from "../components/Accordion";
 
       @keyframes ai-grow-hr {
         from {
-          width: 10%;
+          transform: scaleX(0);
         }
         to {
-          width: 100%;
+          transform: scaleX(1);
         }
       }
 
@@ -912,7 +911,7 @@ import { AccordionComponent } from "../components/Accordion";
     }
 
     function setupLineObserver() {
-      const elementsToObserve = document.querySelectorAll(".ai-line");
+      const elementsToObserve = document.querySelectorAll(".ai-animation-line");
       if (!elementsToObserve.length) return;
       const observer = new IntersectionObserver(
         (entries, obs) => {
