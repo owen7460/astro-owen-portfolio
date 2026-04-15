@@ -207,7 +207,15 @@ import beach from "../assets/beach.png";
         <h2 class="fourth-part-title">
           A product is, in a way, a piece of art.
         </h2>
-        <video autoplay muted loop>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          webkit-playsinline
+          preload="metadata"
+        >
+          <source src="/videos/opera-house.webm" type="video/webm" />
           <source src="/videos/opera-house.mp4" type="video/mp4" />
         </video>
       </div>
