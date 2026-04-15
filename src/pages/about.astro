@@ -971,12 +971,14 @@ import beach from "../assets/beach.png";
     }
   </style>
   <script>
-    const isFirefox = navigator.userAgent.includes("Firefox");
-    const firstPart = document.querySelector(".first-part");
-    if (isFirefox) {
-      firstPart?.classList.add("is-firefox");
-    } else {
-      firstPart?.classList.add("not-firefox-first-part");
+    function checkBrowser() {
+      const isFirefox = navigator.userAgent.includes("Firefox");
+      const firstPart = document.querySelector(".first-part");
+      if (isFirefox) {
+        firstPart?.classList.add("is-firefox");
+      } else {
+        firstPart?.classList.add("not-firefox-first-part");
+      }
     }
 
     function setupFourthPartTitleObserver() {
@@ -1036,6 +1038,7 @@ import beach from "../assets/beach.png";
     function initAboutPage() {
       setupFourthPartTitleObserver();
       setupFourthPartVideo();
+      checkBrowser();
     }
 
     document.addEventListener("DOMContentLoaded", initAboutPage);
