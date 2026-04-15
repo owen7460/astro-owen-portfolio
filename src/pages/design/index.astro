@@ -20,7 +20,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
   </header>
   <main>
     <section class="introduction">
-      <h1 class="design-title">Design Portfolio</h1>
+      <h1>Design Portfolio</h1>
     </section>
 
     <section class="design">
@@ -134,143 +134,140 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
         </div>
       </div>
     </section>
-    <style lang="scss">
-      header {
-        .banner {
-          width: 100vw;
-          height: 30vh;
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: top;
-            filter: brightness(0.9);
-          }
+  </main>
+
+  <style lang="scss">
+    header {
+      .banner {
+        width: 100vw;
+        height: 30vh;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+          filter: brightness(0.9);
         }
       }
-      main {
-        .introduction {
-          width: 80vw;
-          margin: 4rem auto 4rem;
-          h1 {
-            font-size: 3.2rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-          }
+    }
+    main {
+      .introduction {
+        width: 80vw;
+        margin: 4rem auto 4rem;
+        h1 {
+          font-size: 3.2rem;
+          font-weight: 500;
+          margin-bottom: 1rem;
         }
+      }
 
-        .design {
-          position: relative;
-          z-index: 1;
-          text-align: center;
+      .design {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        margin: 0 auto;
+
+        .design-container {
+          width: 80vw;
           margin: 0 auto;
+          .design-header {
+            text-align: center;
+            margin: 6rem auto;
+            h2 {
+              font-size: 3vw;
+              margin-bottom: 1em;
+            }
+            p {
+              font-size: 1.2vw;
+              font-weight: 100;
+              margin-bottom: 1em;
+            }
+          }
 
-          .design-container {
-            width: 80vw;
-            margin: 0 auto;
-            .design-header {
-              text-align: center;
-              margin: 6rem auto;
-              h2 {
-                font-size: 3vw;
-                margin-bottom: 1em;
+          ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 1.6em;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            a {
+              display: block;
+              width: 100%;
+              height: 100%;
+
+              background-color: rgba(201, 201, 201, 0.4);
+              box-shadow: var(--liquid-border-shadow);
+              border-radius: 1em;
+              padding: 2.6em 3em;
+              text-align: left;
+              color: var(--text-color);
+            }
+
+            .design-item {
+              transition: scale 0.2s ease-in-out;
+              &:hover {
+                transform: scale(1.02);
+              }
+
+              h3 {
+                font-size: 1.6vw;
+                font-weight: 500;
+                margin-bottom: 0.8em;
               }
               p {
-                font-size: 1.2vw;
+                font-size: 0.8vw;
                 font-weight: 100;
-                margin-bottom: 1em;
+                line-height: 1.5;
+                margin-bottom: 3em;
+                line-height: 1.8;
               }
-            }
-
-            ul {
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-              gap: 1.6em;
-              backdrop-filter: blur(12px);
-              -webkit-backdrop-filter: blur(12px);
-
-              a {
-                display: block;
+              .design-item-image {
                 width: 100%;
-                height: 100%;
-
-                background-color: rgba(201, 201, 201, 0.4);
-                box-shadow: var(--liquid-border-shadow);
-                border-radius: 1em;
-                padding: 2.6em 3em;
-                text-align: left;
-                color: var(--text-color);
-              }
-
-              .design-item {
-                transition: scale 0.2s ease-in-out;
-                &:hover {
-                  transform: scale(1.02);
-                }
-
-                h3 {
-                  font-size: 1.6vw;
-                  font-weight: 500;
-                  margin-bottom: 0.8em;
-                }
-                p {
-                  font-size: 0.8vw;
-                  font-weight: 100;
-                  line-height: 1.5;
-                  margin-bottom: 3em;
-                  line-height: 1.8;
-                }
-                .design-item-image {
+                object-fit: cover;
+                object-position: center;
+                margin: 0 auto;
+                img {
                   width: 100%;
-                  object-fit: cover;
-                  object-position: center;
-                  margin: 0 auto;
-                  img {
-                    width: 100%;
-                    height: auto;
-                  }
+                  height: auto;
                 }
               }
             }
-          }
-        }
-
-        .design-item,
-        .design-title {
-          opacity: 0;
-
-          &.visible {
-            animation: fadeIn 0.6s ease-out forwards;
-          }
-
-          &:nth-of-type(1) {
-            animation-delay: 0.2s;
-          }
-          &:nth-of-type(2) {
-            animation-delay: 0.4s;
-          }
-          &:nth-of-type(3) {
-            animation-delay: 0.4s;
-          }
-          &:nth-of-type(4) {
-            animation-delay: 0.5s;
-          }
-          &:nth-of-type(5) {
-            animation-delay: 0.4s;
-          }
-          &:nth-of-type(6) {
-            animation-delay: 0.6s;
           }
         }
       }
-    </style>
-  </main>
+
+      .design-item {
+        opacity: 0;
+
+        &.visible {
+          animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        &:nth-of-type(1) {
+          animation-delay: 0.2s;
+        }
+        &:nth-of-type(2) {
+          animation-delay: 0.4s;
+        }
+        &:nth-of-type(3) {
+          animation-delay: 0.4s;
+        }
+        &:nth-of-type(4) {
+          animation-delay: 0.5s;
+        }
+        &:nth-of-type(5) {
+          animation-delay: 0.4s;
+        }
+        &:nth-of-type(6) {
+          animation-delay: 0.6s;
+        }
+      }
+    }
+  </style>
   <script>
     function setupTitleObserver() {
-      const elementsToObserve = [
-        ...document.querySelectorAll(".design-title"),
-        ...document.querySelectorAll(".design-item"),
-      ];
+      const elementsToObserve = [...document.querySelectorAll(".design-item")];
 
       if (!elementsToObserve.length) return;
 
@@ -283,7 +280,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
             }
           });
         },
-        { threshold: 0.1 },
+        { threshold: 0.3 },
       );
 
       elementsToObserve.forEach((el) => {
