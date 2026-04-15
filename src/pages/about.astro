@@ -983,7 +983,7 @@ import stage from "../assets/stage.jpg";
             }
           });
         },
-        { threshold: 0.7 },
+        { threshold: 0.4 },
       );
 
       elementsToObserve.forEach((el) => {
@@ -1027,7 +1027,7 @@ import stage from "../assets/stage.jpg";
       checkBrowser();
     }
 
-    // document.addEventListener("DOMContentLoaded", initAboutPage);
+    document.addEventListener("DOMContentLoaded", initAboutPage);
     document.addEventListener("astro:page-load", initAboutPage);
   </script>
 </Layout>
