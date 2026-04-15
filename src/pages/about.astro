@@ -345,7 +345,33 @@ import beach from "../assets/beach.png";
       overflow-x: clip;
     }
 
-    .first-part {
+    .is-firefox {
+      width: 100%;
+      height: 100%;
+      background-image: url("/stage.jpg");
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      display: grid;
+      place-items: center;
+      gap: 0;
+      .first-part-text {
+        margin-top: 24vw;
+
+        text-align: left;
+        p:first-of-type {
+          font-size: 4rem;
+          font-weight: 100;
+        }
+        p:last-of-type {
+          margin-top: 1.6rem;
+          font-size: 1.5rem;
+          font-weight: 100;
+        }
+      }
+    }
+
+    .not-firefox-first-part {
       width: 100%;
       height: 100%;
       background-image: url("/stage.jpg");
@@ -945,6 +971,14 @@ import beach from "../assets/beach.png";
     }
   </style>
   <script>
+    const isFirefox = navigator.userAgent.includes("Firefox");
+    const firstPart = document.querySelector(".first-part");
+    if (isFirefox) {
+      firstPart?.classList.add("is-firefox");
+    } else {
+      firstPart?.classList.add("not-firefox-first-part");
+    }
+
     function setupFourthPartTitleObserver() {
       const elementsToObserve = document.querySelectorAll(".fourth-part-title");
 
