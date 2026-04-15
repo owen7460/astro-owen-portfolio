@@ -876,8 +876,13 @@ import { AccordionComponent } from "../components/Accordion";
       });
     }
 
-    document.addEventListener("astro:page-load", setupTitleObserver);
-    document.addEventListener("astro:page-load", setupTextObserver);
-    document.addEventListener("astro:page-load", setuphrObserver);
+    function initBackendPage() {
+      setupTitleObserver();
+      setupTextObserver();
+      setuphrObserver();
+    }
+
+    document.addEventListener("DOMContentLoaded", initBackendPage);
+    document.addEventListener("astro:page-load", initBackendPage);
   </script>
 </Layout>
