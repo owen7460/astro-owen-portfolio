@@ -208,12 +208,14 @@ import beach from "../assets/beach.png";
           A product is, in a way, a piece of art.
         </h2>
         <video
+          class="fourth-part-video"
           autoplay
           muted
           loop
           playsinline
           webkit-playsinline
-          preload="metadata"
+          preload="auto"
+          poster="/videos/cover.jpg"
         >
           <source src="/videos/opera-house.webm" type="video/webm" />
           <source src="/videos/opera-house.mp4" type="video/mp4" />
@@ -720,6 +722,16 @@ import beach from "../assets/beach.png";
         }
       }
 
+      @keyframes video-animation {
+        from {
+          clip-path: inset(0 40% 0 40%);
+        }
+        to {
+          clip-path: inset(0 0 0 0);
+          opacity: 1;
+        }
+      }
+
       .fourth-part-content {
         margin: 15vh auto 15vh;
         width: 80vw;
@@ -788,16 +800,6 @@ import beach from "../assets/beach.png";
             width: 40%;
             gap: 2.6rem;
           }
-        }
-      }
-
-      @keyframes video-animation {
-        from {
-          clip-path: inset(0 40% 0 40%);
-        }
-        to {
-          clip-path: inset(0 0 0 0);
-          opacity: 1;
         }
       }
     }
@@ -967,5 +969,42 @@ import beach from "../assets/beach.png";
     }
 
     document.addEventListener("astro:page-load", setupFourthPartTitleObserver);
+
+    function setupFourthPartVideo() {
+      const video = document.querySelector(".fourth-part-video");
+      if (!video) return;
+
+      (video as HTMLVideoElement).muted = true;
+      (video as HTMLVideoElement).defaultMuted = true;
+      (video as HTMLVideoElement).playsInline = true;
+
+      const tryPlay = () => {
+        const promise = (video as HTMLVideoElement).play();
+        if (promise && typeof promise.catch === "function") {
+          promise.catch((error) => {
+            console.log("Safari video autoplay failed:", error);
+          });
+        }
+      };
+
+      (video as HTMLVideoElement).load();
+
+      (video as HTMLVideoElement).addEventListener("loadedmetadata", tryPlay, {
+        once: true,
+      });
+      (video as HTMLVideoElement).addEventListener("canplay", tryPlay, {
+        once: true,
+      });
+
+      tryPlay();
+    }
+
+    function initAboutPage() {
+      setupFourthPartTitleObserver();
+      setupFourthPartVideo();
+    }
+
+    document.addEventListener("DOMContentLoaded", initAboutPage);
+    document.addEventListener("astro:page-load", initAboutPage);
   </script>
 </Layout>
