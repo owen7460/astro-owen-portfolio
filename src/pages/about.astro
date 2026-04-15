@@ -971,17 +971,29 @@ import beach from "../assets/beach.png";
     }
   </style>
   <script>
+    // function checkBrowser() {
+    //   const isFirefox = navigator.userAgent.includes("Firefox");
+    //   const isSafari = navigator.userAgent.includes("Safari");
+    //   const firstPart = document.querySelector(".first-part");
+    //   if (isFirefox) {
+    //     firstPart?.classList.add("is-firefox");
+    //   }
+    //   else if (isSafari) {
+    //     firstPart?.classList.add("is-firefox");
+    //   }
+    //   else {
+    //     firstPart?.classList.add("not-firefox-first-part");
+    //   }
+    // }
+
     function checkBrowser() {
-      const isFirefox = navigator.userAgent.includes("Firefox");
-      // const isSafari = navigator.userAgent.includes("Safari");
       const firstPart = document.querySelector(".first-part");
-      if (isFirefox) {
+      const isScrollTimelineSupported = CSS.supports(
+        "animation-timeline: scroll()",
+      );
+      if (!isScrollTimelineSupported) {
         firstPart?.classList.add("is-firefox");
-      }
-      // else if (isSafari) {
-      //   firstPart?.classList.add("is-firefox");
-      // }
-      else {
+      } else {
         firstPart?.classList.add("not-firefox-first-part");
       }
     }
