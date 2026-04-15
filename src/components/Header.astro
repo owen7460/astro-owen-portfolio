@@ -16,6 +16,7 @@ const pathname = Astro.url.pathname;
       </li>
       <li>
         <a
+          data-astro-prefetch="load"
           href="/frontend"
           style="anchor-name: --link2"
           class={pathname === "/frontend/" ? "active" : ""}>Frontend</a
