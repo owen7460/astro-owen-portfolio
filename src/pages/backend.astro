@@ -32,17 +32,17 @@ import { AccordionComponent } from "../components/Accordion";
         <h1>Backend</h1>
         <div class="skills">
           <p class="animation-text">Technologies: Node.js, Python</p>
-          <hr class="animation-hr hr-1" />
+          <div class="line-1 line"></div>
           <p class="animation-text">Frameworks: Express.js, FastAPI</p>
-          <hr class="animation-hr hr-2" />
+          <div class="line-2 line"></div>
           <p class="animation-text">
             Database: MySQL, MongoDB, PostgreSQL, GraphQL
           </p>
-          <hr class="animation-hr hr-3" />
+          <div class="line-3 line"></div>
           <p class="animation-text">
             Other: RESTful, Swagger, Postman, Docker, Coolify
           </p>
-          <hr class="animation-hr hr-4" />
+          <div class="line-4 line"></div>
         </div>
         <div class="description">
           <p class="animation-text">
@@ -167,12 +167,24 @@ import { AccordionComponent } from "../components/Accordion";
 
     <section class="section-6">
       <div class="section-6-left">
-        <div class="database-card erd"></div>
-        <div class="database-card schema"></div>
-        <div class="database-card mysql"></div>
-        <div class="database-card mongodb"></div>
-        <div class="database-card graphql"></div>
-        <div class="database-card postgresql"></div>
+        <div class="database-card erd">
+          <img src="/icons/erd.webp" alt="ERD" />
+        </div>
+        <div class="database-card schema">
+          <img src="/icons/schema.webp" alt="Schema" />
+        </div>
+        <div class="database-card mysql">
+          <img src="/icons/mysql.svg" alt="MySQL" />
+        </div>
+        <div class="database-card mongodb">
+          <img src="/icons/mongo.png" alt="MongoDB" />
+        </div>
+        <div class="database-card graphql">
+          <img src="/icons/graphql.png" alt="GraphQL" />
+        </div>
+        <div class="database-card postgresql">
+          <img src="/icons/postgresql.png" alt="PostgreSQL" />
+        </div>
       </div>
       <div class="section-6-right">
         <h2 class="animation-title">
@@ -227,17 +239,20 @@ import { AccordionComponent } from "../components/Accordion";
       <div class="section-8-mid">
         <div class="skills-chart">
           <div class="frontend">
-            <hr class="ai-animation-hr ai-hr-1" />
+            <!-- <hr class="ai-animation-hr ai-hr-1" /> -->
+            <div class="line-1 ai-line"></div>
             <p>Frontend</p>
           </div>
 
           <div class="backend">
-            <hr class="ai-animation-hr ai-hr-2" />
+            <!-- <hr class="ai-animation-hr ai-hr-2" /> -->
+            <div class="line-2 ai-line"></div>
             <p>Backend</p>
           </div>
 
           <div class="ai">
-            <hr class="ai-animation-hr ai-hr-3" />
+            <!-- <hr class="ai-animation-hr ai-hr-3" /> -->
+            <div class="line-3 ai-line"></div>
             <p>Python, FastAPI and LangChain..</p>
           </div>
         </div>
@@ -551,48 +566,63 @@ import { AccordionComponent } from "../components/Accordion";
               line-height: 1.5;
             }
           }
-          .erd {
-            background-image: url("/icons/erd.webp");
-            background-size: 40%;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation-delay: 0s;
-          }
-          .schema {
-            background-image: url("/icons/schema.webp");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation-delay: 0.1s;
-          }
+          // .erd {
+          //   background-image: url("/icons/erd.webp");
+          //   background-size: 40%;
+          //   background-position: center;
+          //   background-repeat: no-repeat;
+          //   animation-delay: 0s;
+          // }
+          // .schema {
+          //   background-image: url("/icons/schema.webp");
+          //   background-size: cover;
+          //   background-position: center;
+          //   background-repeat: no-repeat;
+          //   animation-delay: 0.1s;
+          // }
           .mysql {
-            background-image: url("/icons/mysql.svg");
-            background-size: 45%;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation-delay: 0.3s;
+            // background-image: url("/icons/mysql.svg");
+            // background-size: 45%;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // animation-delay: 0.3s;
+            img {
+              width: 70%;
+              height: auto;
+              object-fit: cover;
+            }
           }
           .mongodb {
-            background-image: url("/icons/mongo.png");
-            background-size: 55%;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation-delay: 0.4s;
+            // background-image: url("/icons/mongo.png");
+            // background-size: 55%;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // animation-delay: 0.4s;
+            img {
+              width: 80%;
+              height: auto;
+              object-fit: cover;
+            }
           }
-          .graphql {
-            background-image: url("/icons/graphql.png");
-            background-size: 90%;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation-delay: 0.5s;
-            background-color: #ffffff;
-          }
+          // .graphql {
+          //   background-image: url("/icons/graphql.png");
+          //   background-size: 90%;
+          //   background-position: center;
+          //   background-repeat: no-repeat;
+          //   animation-delay: 0.5s;
+          //   background-color: #ffffff;
+          // }
           .postgresql {
-            background-image: url("/icons/postgresql.png");
-            background-size: 80%;
-            background-position: center;
-            background-repeat: no-repeat;
-            animation-delay: 0.7s;
+            // background-image: url("/icons/postgresql.png");
+            // background-size: 80%;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // animation-delay: 0.7s;
+            img {
+              width: 90%;
+              height: auto;
+              object-fit: cover;
+            }
           }
         }
         .section-6-right {
@@ -691,7 +721,7 @@ import { AccordionComponent } from "../components/Accordion";
               padding-top: 0.8rem;
             }
 
-            .ai-animation-hr {
+            .ai-animation-line {
               width: 10%;
               height: 6px;
               border-radius: 16px;
@@ -699,28 +729,52 @@ import { AccordionComponent } from "../components/Accordion";
             .frontend {
               width: 270px;
               height: 100px;
-              .ai-hr-1 {
+              .line-1 {
+                width: 100%;
+                height: 6px;
+                border-radius: 16px;
+                background-color: var(--text-color);
+                box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
+                animation-delay: 0.1s;
+              }
+              // .ai-hr-1 {
+              //   background-color: var(--text-color);
+              //   box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
+              //   animation-delay: 0.2s;
+              // }
+            }
+            .backend {
+              width: 200px;
+              height: 100px;
+              // .ai-hr-2 {
+              //   background-color: var(--text-color);
+              //   box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
+              //   animation-delay: 0.4s;
+              // }
+              .line-2 {
+                width: 100%;
+                height: 6px;
+                border-radius: 16px;
                 background-color: var(--text-color);
                 box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
                 animation-delay: 0.2s;
               }
             }
-            .backend {
-              width: 200px;
-              height: 100px;
-              .ai-hr-2 {
-                background-color: var(--text-color);
-                box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
-                animation-delay: 0.4s;
-              }
-            }
             .ai {
               width: 240px;
               height: 100px;
-              .ai-hr-3 {
+              // .ai-hr-3 {
+              //   background-color: rgb(30, 195, 30);
+              //   box-shadow: 0 0 10px 2px rgba(30, 195, 30, 0.4);
+              //   animation-delay: 0.3s;
+              // }
+              .line-3 {
+                width: 100%;
+                height: 6px;
+                border-radius: 16px;
                 background-color: rgb(30, 195, 30);
                 box-shadow: 0 0 10px 2px rgba(30, 195, 30, 0.4);
-                animation-delay: 0.3s;
+                animation-delay: 0.4s;
               }
             }
           }
@@ -752,10 +806,10 @@ import { AccordionComponent } from "../components/Accordion";
         opacity: 0;
       }
 
-      .animation-hr {
+      .line {
         width: 0;
         height: 1px;
-        color: var(--text-color);
+        background-color: var(--background-color);
         animation: grow-hr 0.6s ease-out forwards;
         @keyframes grow-hr {
           from {
@@ -767,18 +821,18 @@ import { AccordionComponent } from "../components/Accordion";
         }
       }
 
-      .hr-1 {
+      .line-1 {
         animation-delay: 0.4s;
       }
-      .hr-2 {
+      .line-2 {
         animation-duration: 0.9s;
         animation-delay: 0.5s;
       }
-      .hr-3 {
+      .line-3 {
         animation-duration: 0.8s;
         animation-delay: 0.7s;
       }
-      .hr-4 {
+      .line-4 {
         animation-duration: 0.4s;
         animation-delay: 0.9s;
       }
@@ -801,7 +855,7 @@ import { AccordionComponent } from "../components/Accordion";
         }
       }
 
-      .ai-visible-hr {
+      .ai-visible-line {
         animation: ai-grow-hr 0.7s ease-in-out forwards;
       }
     }
@@ -857,14 +911,14 @@ import { AccordionComponent } from "../components/Accordion";
       });
     }
 
-    function setuphrObserver() {
-      const elementsToObserve = document.querySelectorAll(".ai-animation-hr");
+    function setupLineObserver() {
+      const elementsToObserve = document.querySelectorAll(".ai-line");
       if (!elementsToObserve.length) return;
       const observer = new IntersectionObserver(
         (entries, obs) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add("ai-visible-hr");
+              entry.target.classList.add("ai-visible-line");
               obs.unobserve(entry.target);
             }
           });
@@ -872,7 +926,7 @@ import { AccordionComponent } from "../components/Accordion";
         { threshold: 0.7 },
       );
       elementsToObserve.forEach((el) => {
-        el.classList.remove("ai-visible-hr");
+        el.classList.remove("ai-visible-line");
         observer.observe(el);
       });
     }
@@ -880,7 +934,7 @@ import { AccordionComponent } from "../components/Accordion";
     function initBackendPage() {
       setupTitleObserver();
       setupTextObserver();
-      setuphrObserver();
+      setupLineObserver();
     }
 
     document.addEventListener("DOMContentLoaded", initBackendPage);
