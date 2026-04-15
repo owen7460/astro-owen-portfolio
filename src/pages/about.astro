@@ -9,11 +9,13 @@ import jomalone2 from "../assets/widget-jomalone-2.png";
 import jomalone1 from "../assets/widget-jomalone-1.png";
 import volvo from "../assets/widget-volvo.png";
 import beach from "../assets/beach.png";
+import stage from "../assets/stage.jpg";
 ---
 
 <Layout title={title}>
   <main>
     <div class="first-part-base">
+      <Image class="first-part-base-image" src={stage} alt="Stage" />
       <div class="first-part">
         <div class="first-part-text">
           <p>Hey, I'm Owen</p>
@@ -343,61 +345,42 @@ import beach from "../assets/beach.png";
       width: 100vw;
       height: 100vh;
       overflow-x: clip;
-    }
-
-    .is-firefox {
-      width: 100%;
-      height: 100%;
-      background-image: url("/stage.jpg");
-      background-size: cover;
-      background-position: top;
-      background-repeat: no-repeat;
-      display: grid;
-      place-items: center;
-      gap: 0;
-      .first-part-text {
-        margin-top: 24vw;
-
-        text-align: left;
-        p:first-of-type {
-          font-size: 4rem;
-          font-weight: 100;
-        }
-        p:last-of-type {
-          margin-top: 1.6rem;
-          font-size: 1.5rem;
-          font-weight: 100;
+      position: relative;
+      .first-part-base-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 5;
+      }
+      .first-part {
+        .first-part-text {
+          position: absolute;
+          bottom: 20%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 20;
+          color: var(--text-color);
+          text-align: left;
+          p:first-of-type {
+            font-size: 4rem;
+            font-weight: 100;
+          }
+          p:last-of-type {
+            margin-top: 1.6rem;
+            font-size: 1.5rem;
+            font-weight: 100;
+          }
         }
       }
     }
 
-    .not-firefox-first-part {
-      width: 100%;
-      height: 100%;
-      background-image: url("/stage.jpg");
-      background-size: cover;
-      background-position: top;
-      background-repeat: no-repeat;
-      display: grid;
-      place-items: center;
-      gap: 0;
+    .not-firefox-first-part-base {
       animation: gradually-fade-out linear forwards;
       animation-timeline: view();
       animation-range: entry 100% exit 40%;
-      .first-part-text {
-        margin-top: 24vw;
-
-        text-align: left;
-        p:first-of-type {
-          font-size: 4rem;
-          font-weight: 100;
-        }
-        p:last-of-type {
-          margin-top: 1.6rem;
-          font-size: 1.5rem;
-          font-weight: 100;
-        }
-      }
     }
 
     @keyframes gradually-fade-out {
@@ -971,30 +954,13 @@ import beach from "../assets/beach.png";
     }
   </style>
   <script>
-    // function checkBrowser() {
-    //   const isFirefox = navigator.userAgent.includes("Firefox");
-    //   const isSafari = navigator.userAgent.includes("Safari");
-    //   const firstPart = document.querySelector(".first-part");
-    //   if (isFirefox) {
-    //     firstPart?.classList.add("is-firefox");
-    //   }
-    //   else if (isSafari) {
-    //     firstPart?.classList.add("is-firefox");
-    //   }
-    //   else {
-    //     firstPart?.classList.add("not-firefox-first-part");
-    //   }
-    // }
-
     function checkBrowser() {
-      const firstPart = document.querySelector(".first-part");
+      const firstPartBase = document.querySelector(".first-part-base");
       const isScrollTimelineSupported = CSS.supports(
         "animation-timeline: scroll()",
       );
-      if (!isScrollTimelineSupported) {
-        firstPart?.classList.add("is-firefox");
-      } else {
-        firstPart?.classList.add("not-firefox-first-part");
+      if (isScrollTimelineSupported) {
+        firstPartBase?.classList.add("not-firefox-first-part-base");
       }
     }
 
