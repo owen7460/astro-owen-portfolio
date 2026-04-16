@@ -671,4 +671,22 @@ import stage from "../assets/stage.jpg";
     //   }
     // }
   </style>
+
+  <script>
+    function checkBrowser() {
+      const firstPartBase = document.querySelector(".first-part-base");
+      const isScrollTimelineSupported = CSS.supports(
+        "animation-timeline: scroll()",
+      );
+      if (isScrollTimelineSupported) {
+        firstPartBase?.classList.add("not-firefox-first-part-base");
+      }
+    }
+
+    function initAboutPage() {
+      checkBrowser();
+    }
+
+    document.addEventListener("astro:page-load", initAboutPage);
+  </script>
 </Layout>
