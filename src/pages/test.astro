@@ -12,6 +12,7 @@ import dorc5 from "../assets/backend/dorc5.png";
 import rest from "../assets/backend/rest.png";
 import swaggerdoc from "../assets/backend/swaggerdoc.png";
 import bgImage from "../assets/backend/bg-2.jpg";
+import { AccordionComponent } from "../components/Accordion";
 ---
 
 <Layout title={title}>
@@ -177,6 +178,28 @@ import bgImage from "../assets/backend/bg-2.jpg";
           approach helps me build well-structured, scalable, and maintainable
           backend systems.
         </p>
+      </div>
+    </section>
+
+    <section class="section-7">
+      <div class="section-7-top">
+        <h2 class="animation-title">
+          Deployment<span>Docker & Coolify</span>
+        </h2>
+        <p class="animation-text">
+          Docker is a containerization tool that allows me to package my
+          application and its dependencies into a container, making it easier to
+          deploy and scale. I have experience using Docker to deploy my
+          applications to production environments.
+        </p>
+        <p class="animation-text">
+          Coolify is a platform that allows me to deploy my applications to
+          production environments. It provides a simple and easy-to-use
+          interface for deploying and managing my backend services.
+        </p>
+      </div>
+      <div class="section-7-bottom">
+        <AccordionComponent client:visible />
       </div>
     </section>
 
@@ -564,6 +587,39 @@ import bgImage from "../assets/backend/bg-2.jpg";
               margin-top: 0.4rem;
             }
           }
+        }
+      }
+
+      .section-7 {
+        margin-top: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 5%;
+        max-width: 1600px;
+        .section-7-top {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 0.2rem;
+          text-align: left;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        .section-7-bottom {
+          width: 100%;
+          height: calc(100% + 10rem);
+          padding-top: 3rem;
+          margin: 0 auto;
         }
       }
 
