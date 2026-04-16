@@ -13,6 +13,7 @@ import rest from "../assets/backend/rest.png";
 import swaggerdoc from "../assets/backend/swaggerdoc.png";
 import bgImage from "../assets/backend/bg-2.jpg";
 import { AccordionComponent } from "../components/Accordion";
+import { CarouselDApiDemo } from "../components/Caresoul";
 ---
 
 <Layout title={title}>
@@ -142,6 +143,23 @@ import { AccordionComponent } from "../components/Accordion";
           and extend.
         </p>
       </div>
+    </section>
+
+    <section class="section-5">
+      <div class="section-5-top">
+        <h2 class="animation-title">
+          Middlewares<span>Safety Does Matter</span>
+        </h2>
+        <p class="animation-text">
+          In this project, I used tools such as Express Validator, JWT, RBAC,
+          and OAuth2 to ensure secure and reliable data processing. These tools
+          helped validate user input, protect authentication flows, and control
+          access based on roles. I also adopted an MVC architecture to separate
+          routes, controllers, and models, which improved code organization and
+          made the backend easier to maintain and scale.
+        </p>
+      </div>
+      <div class="section-5-bottom"><CarouselDApiDemo client:visible /></div>
     </section>
 
     <section class="section-6">
@@ -479,6 +497,41 @@ import { AccordionComponent } from "../components/Accordion";
               margin-top: 0.4rem;
             }
           }
+        }
+      }
+
+      .section-5 {
+        margin-top: 15rem;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 3rem;
+        .section-5-top {
+          max-width: 1200px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        .section-5-bottom {
+          max-width: 2400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
         }
       }
 
