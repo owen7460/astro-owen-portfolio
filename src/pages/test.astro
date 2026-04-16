@@ -1,0 +1,832 @@
+---
+import "../styles/global.scss";
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+const title: string = "Backend development | Owen Portfolio";
+import { Image } from "astro:assets";
+import dorc1 from "../assets/backend/dorc1.png";
+import dorc2 from "../assets/backend/dorc2.png";
+import dorc3 from "../assets/backend/dorc3.png";
+import dorc4 from "../assets/backend/dorc4.png";
+import dorc5 from "../assets/backend/dorc5.png";
+import rest from "../assets/backend/rest.png";
+import swaggerdoc from "../assets/backend/swaggerdoc.png";
+import bgImage from "../assets/backend/bg-2.jpg";
+---
+
+<Layout title={title}>
+  <main>
+    <section class="section-1">
+      <Image
+        loading="eager"
+        class="section-1-background-image"
+        src={bgImage}
+        alt="Background"
+      />
+
+      <div class="section-1-text">
+        <h1>Backend</h1>
+        <div class="skills">
+          <p class="animation-text">Technologies: Node.js, Python</p>
+          <div class="line-1 line"></div>
+          <p class="animation-text">Frameworks: Express.js, FastAPI</p>
+          <div class="line-2 line"></div>
+          <p class="animation-text">
+            Database: MySQL, MongoDB, PostgreSQL, GraphQL
+          </p>
+          <div class="line-3 line"></div>
+          <p class="animation-text">
+            Other: RESTful, Swagger, Postman, Docker, Coolify
+          </p>
+          <div class="line-4 line"></div>
+        </div>
+        <div class="description">
+          <p class="animation-text">
+            Backend development is equally engaging to me, as it brings ideas to
+            life on the server side and powers the functionality behind user
+            experiences. Seeing how different features are implemented and how
+            services are delivered to users makes the process both challenging
+            and rewarding
+          </p>
+          <p class="animation-text">
+            Understanding API design and database structure helps me create more
+            efficient and scalable applications. This full-stack perspective
+            allows me to better connect UI with data and design more practical,
+            well-rounded products. It also strengthens my ability to collaborate
+            with designers, frontend, and backend developers, enabling clearer
+            communication and smoother integration across different parts of a
+            project
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="section-2">
+      <div class="section-2-left">
+        <div class="dorc-card dorc1">
+          <Image loading="eager" src={dorc1} alt="Card for Owen's Kitchen" />
+        </div>
+        <div class="dorc-card dorc2">
+          <Image loading="eager" src={dorc2} alt="Card for Owen's Kitchen" />
+        </div>
+        <div class="dorc-card dorc3">
+          <Image loading="eager" src={dorc3} alt="Card for Owen's Kitchen" />
+        </div>
+        <div class="dorc-card dorc4">
+          <Image loading="eager" src={dorc4} alt="Card for Owen's Kitchen" />
+        </div>
+        <div class="dorc-card dorc5">
+          <Image loading="eager" src={dorc5} alt="Card for Owen's Kitchen" />
+        </div>
+      </div>
+      <div class="section-2-right">
+        <h2 class="animation-title">DORC <span>MERN Stack Project</span></h2>
+        <p class="animation-text">
+          DORC is a MERN stack RPG-style productivity app that gamifies
+          habit-building. Users create quests, earn XP, level up, unlock badges,
+          and join guilds to stay motivated.
+        </p>
+        <p class="animation-text">
+          This was a collaborative full-stack project with a separated frontend
+          and backend architecture. I primarily worked on backend development,
+          building RESTful APIs, designing data models, and implementing core
+          logic to support the game’s progression system.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-3">
+      <div class="section-3-left">
+        <h2 class="animation-title">
+          RESTful API<span>API Design and Implementation</span>
+        </h2>
+        <p class="animation-text">
+          RESTful APIs are the backbone of modern web applications. They provide
+          a standardized way to interact with backend services, making it easier
+          to build and maintain applications. I have experience building RESTful
+          APIs with Express.js and FastAPI, and working with databases such as
+          PostgreSQL, MongoDB, GraphQL and MySQL.
+        </p>
+      </div>
+      <div class="section-3-right">
+        <Image
+          class="rest-image"
+          src={rest}
+          alt="RESTful API"
+          width={1279 * 0.9}
+          height={850 * 0.9}
+        />
+      </div>
+    </section>
+
+    <section class="section-4">
+      <div class="section-4-left">
+        <Image
+          class="swaggerdoc-image"
+          src={swaggerdoc}
+          alt="SwaggerDoc"
+          width={1879 * 0.55}
+          height={1197 * 0.55}
+        />
+      </div>
+      <div class="section-4-right">
+        <h2 class="animation-title">
+          Swagger Doc<span>API Documentation</span>
+        </h2>
+        <p class="animation-text">
+          In the DORC project, I used SwaggerDoc to document the RESTful APIs I
+          built for the backend. It generates an interactive API documentation
+          interface, allowing team members to easily test endpoints and
+          understand request and response formats. This improved communication
+          between frontend and backend, and made the system easier to maintain
+          and extend.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-6">
+      <div class="section-6-left">
+        <div class="database-card erd">
+          <img src="/icons/erd.webp" alt="ERD" />
+        </div>
+        <div class="database-card schema">
+          <img src="/icons/schema.webp" alt="Schema" />
+        </div>
+        <div class="database-card mysql">
+          <img src="/icons/mysql.svg" alt="MySQL" />
+        </div>
+        <div class="database-card mongodb">
+          <img src="/icons/mongo.png" alt="MongoDB" />
+        </div>
+        <div class="database-card graphql">
+          <img src="/icons/graphql.png" alt="GraphQL" />
+        </div>
+        <div class="database-card postgresql">
+          <img src="/icons/postgresql.png" alt="PostgreSQL" />
+        </div>
+      </div>
+      <div class="section-6-right">
+        <h2 class="animation-title">
+          Database<span>From ERD to Implementation</span>
+        </h2>
+        <p class="animation-text">
+          Databases are the backbone of modern web applications. My workflow
+          begins with designing Entity Relationship Diagrams (ERD) to model data
+          structures and relationships, followed by translating them into
+          schemas and finally implementing them in the database. I have
+          experience working with PostgreSQL, MongoDB, GraphQL, and MySQL. This
+          approach helps me build well-structured, scalable, and maintainable
+          backend systems.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-8">
+      <div class="section-8-top">
+        <h2 class="animation-title">
+          AI and Future<span>Python, FastAPI and LangChain</span>
+        </h2>
+        <p class="animation-text">
+          I’m a self-motivated learner who isn’t limited to a single stack. From
+          frontend to backend, I’ve expanded my skills to include Python and
+          FastAPI and currently learning LangChain to explore AI-driven
+          development.
+        </p>
+      </div>
+      <div class="section-8-mid">
+        <div class="skills-chart">
+          <div class="frontend">
+            <!-- <hr class="ai-animation-hr ai-hr-1" /> -->
+            <div class="line-1 ai-animation-line"></div>
+            <p>Frontend</p>
+          </div>
+
+          <div class="backend">
+            <!-- <hr class="ai-animation-hr ai-hr-2" /> -->
+            <div class="line-2 ai-animation-line"></div>
+            <p>Backend</p>
+          </div>
+
+          <div class="ai">
+            <!-- <hr class="ai-animation-hr ai-hr-3" /> -->
+            <div class="line-3 ai-animation-line"></div>
+            <p>Python, FastAPI and LangChain..</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-8-bottom">
+        <div class="section-8-bottom-image">
+          <img
+            src="/icons/python.png"
+            alt="Python"
+            alt="FastAPI"
+            width={720 * 0.2}
+            height={405 * 0.2}
+          />
+          <img
+            src="/icons/fastapi.webp"
+            alt="FastAPI"
+            width={720 * 0.2}
+            height={405 * 0.2}
+          />
+        </div>
+        <p class="animation-text">
+          I’m excited about the future of AI and hope to continue growing in
+          this field, combining modern web technologies with intelligent systems
+          to create more powerful applications.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <style lang="scss">
+    main {
+      margin: 0 auto 10rem;
+
+      h1 {
+        font-size: 3.2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+        animation: fadeIn-slightly 0.4s ease-in-out both;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        font-weight: 100;
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 100;
+        line-height: 1.5;
+      }
+      a {
+        text-decoration: underline;
+        color: var(--text-color);
+        font-size: 1.4rem;
+        font-weight: 100;
+        margin-top: 2rem;
+      }
+      section {
+        max-width: 2400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .section-1 {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        .section-1-background-image {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          object-position: left top;
+        }
+        .section-1-text {
+          position: absolute;
+          z-index: 10;
+          color: var(--background-color);
+          max-width: 80ch;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          .description {
+            margin-top: 2rem;
+          }
+        }
+      }
+
+      .section-2 {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        .section-2-left {
+          width: 60%;
+          height: 100%;
+          position: relative;
+          .dorc-card {
+            position: absolute;
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+            overflow: hidden;
+            width: 55%;
+            height: auto;
+            animation-timeline: scroll();
+            animation-name: fadeIn-opacity-scroll-slow;
+            // animation-duration: 1s;
+            // animation-delay: 0.1s;
+            animation-fill-mode: both;
+            animation-range: entry 10% entry 17%;
+            img {
+              display: block;
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+          .dorc1 {
+            top: 20%;
+            left: 1%;
+            z-index: 1;
+            animation-duration: 1s;
+            animation-delay: 0.1s;
+          }
+          .dorc2 {
+            top: 30%;
+            left: 11%;
+            z-index: 2;
+            animation-duration: 1s;
+            animation-delay: 0.3s;
+          }
+          .dorc3 {
+            top: 40%;
+            left: 21%;
+            z-index: 3;
+            animation-duration: 1s;
+            animation-delay: 0.5s;
+          }
+          .dorc4 {
+            top: 50%;
+            left: 27%;
+            z-index: 4;
+            animation-duration: 1s;
+            animation-delay: 0.7s;
+          }
+          .dorc5 {
+            top: 60%;
+            left: 37%;
+            z-index: 5;
+            animation-duration: 1s;
+            animation-delay: 0.9s;
+          }
+        }
+        .section-2-right {
+          scroll-snap-stop: none;
+          width: 40%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-right: 4rem;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+      }
+
+      .section-3 {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        overflow-x: clip;
+        .section-3-left {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-left: 10%;
+          padding-right: 5%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        .section-3-right {
+          width: 55%;
+          .rest-image {
+            animation-timeline: view();
+            animation-name: fadeIn-right;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+            animation-range: entry 50% entry 100%;
+          }
+        }
+      }
+
+      .section-4 {
+        margin-top: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        .section-4-left {
+          width: 55%;
+          .swaggerdoc-image {
+            border-radius: 16px;
+            animation-timeline: view();
+            animation-name: fadeIn-left;
+            animation-duration: 1s;
+            animation-delay: 0.2s;
+            animation-fill-mode: both;
+            animation-range: entry 10% entry 55%;
+          }
+        }
+        .section-4-right {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-left: 10%;
+          padding-right: 5%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+      }
+
+      .section-6 {
+        margin-top: 22rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+        max-width: 1600px;
+        .section-6-left {
+          width: 55%;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 2rem;
+          padding-left: 10%;
+          .database-card {
+            will-change: transform, opacity;
+            opacity: 0;
+            width: 100%;
+            height: 150px;
+            border-radius: 16px;
+            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+              font-size: 1.2rem;
+              font-weight: 100;
+              line-height: 1.5;
+            }
+          }
+          // .erd {
+          //   background-image: url("/icons/erd.webp");
+          //   background-size: 40%;
+          //   background-position: center;
+          //   background-repeat: no-repeat;
+          //   animation-delay: 0s;
+          // }
+          // .schema {
+          //   background-image: url("/icons/schema.webp");
+          //   background-size: cover;
+          //   background-position: center;
+          //   background-repeat: no-repeat;
+          //   animation-delay: 0.1s;
+          // }
+          .mysql {
+            // background-image: url("/icons/mysql.svg");
+            // background-size: 45%;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // animation-delay: 0.3s;
+            img {
+              width: 70%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+          .mongodb {
+            // background-image: url("/icons/mongo.png");
+            // background-size: 55%;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // animation-delay: 0.4s;
+            img {
+              width: 80%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+          // .graphql {
+          //   background-image: url("/icons/graphql.png");
+          //   background-size: 90%;
+          //   background-position: center;
+          //   background-repeat: no-repeat;
+          //   animation-delay: 0.5s;
+          //   background-color: #ffffff;
+          // }
+          .postgresql {
+            // background-image: url("/icons/postgresql.png");
+            // background-size: 80%;
+            // background-position: center;
+            // background-repeat: no-repeat;
+            // animation-delay: 0.7s;
+            img {
+              width: 90%;
+              height: auto;
+              object-fit: cover;
+            }
+          }
+        }
+        .section-6-right {
+          width: 45%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 2rem;
+          padding-right: 10%;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+      }
+
+      .section-8 {
+        margin: 25rem 0 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        padding: 0 5%;
+        max-width: 2400px;
+        p {
+          max-width: 80ch;
+        }
+        .section-8-top {
+          width: 100%;
+          max-width: 2400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding-bottom: 5rem;
+          h2 {
+            span {
+              display: block;
+              font-weight: 900;
+              line-height: 1.2;
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        .section-8-mid {
+          width: 100%;
+          margin: 0 auto;
+          .skills-chart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            p {
+              font-size: 0.9rem;
+              font-weight: 100;
+              padding-top: 0.8rem;
+            }
+
+            .ai-animation-line {
+              width: 100%;
+              height: 6px;
+              border-radius: 16px;
+              transform: scaleX(0);
+              transform-origin: left;
+            }
+            .frontend {
+              width: 270px;
+              height: 100px;
+              .line-1 {
+                height: 6px;
+                border-radius: 16px;
+                background-color: var(--text-color);
+                box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
+                animation-delay: 0.1s;
+              }
+              // .ai-hr-1 {
+              //   background-color: var(--text-color);
+              //   box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
+              //   animation-delay: 0.2s;
+              // }
+            }
+            .backend {
+              width: 200px;
+              height: 100px;
+              // .ai-hr-2 {
+              //   background-color: var(--text-color);
+              //   box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
+              //   animation-delay: 0.4s;
+              // }
+              .line-2 {
+                height: 6px;
+                border-radius: 16px;
+                background-color: var(--text-color);
+                box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
+                animation-delay: 0.2s;
+              }
+            }
+            .ai {
+              width: 240px;
+              height: 100px;
+              // .ai-hr-3 {
+              //   background-color: rgb(30, 195, 30);
+              //   box-shadow: 0 0 10px 2px rgba(30, 195, 30, 0.4);
+              //   animation-delay: 0.3s;
+              // }
+              .line-3 {
+                height: 6px;
+                border-radius: 16px;
+                background-color: rgb(30, 195, 30);
+                box-shadow: 0 0 10px 2px rgba(30, 195, 30, 0.4);
+                animation-delay: 0.4s;
+              }
+            }
+          }
+        }
+        .section-8-bottom {
+          width: 100%;
+          max-width: 2400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          text-align: center;
+          .section-8-bottom-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            img {
+              box-shadow: 0 0 10px 2px rgba(49, 49, 49, 0.2);
+              border-radius: 16px;
+            }
+          }
+        }
+      }
+
+      .animation-title,
+      .animation-text {
+        opacity: 0;
+      }
+
+      .line {
+        width: 0;
+        height: 1px;
+        background-color: var(--background-color);
+        animation: grow-hr 0.6s ease-out forwards;
+        @keyframes grow-hr {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+      }
+
+      .line-1 {
+        animation-delay: 0.4s;
+      }
+      .line-2 {
+        animation-duration: 0.9s;
+        animation-delay: 0.5s;
+      }
+      .line-3 {
+        animation-duration: 0.8s;
+        animation-delay: 0.7s;
+      }
+      .line-4 {
+        animation-duration: 0.4s;
+        animation-delay: 0.9s;
+      }
+
+      .visible {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+
+      .visible-text {
+        animation: fadeIn-opacity 0.8s ease-in-out forwards;
+        animation-delay: 0.1s;
+      }
+
+      @keyframes ai-grow-hr {
+        from {
+          transform: scaleX(0);
+        }
+        to {
+          transform: scaleX(1);
+        }
+      }
+
+      .ai-visible-line {
+        animation: ai-grow-hr 0.7s ease-in-out forwards;
+      }
+    }
+  </style>
+
+  <script>
+    function setupTitleObserver() {
+      const elementsToObserve = [
+        ...document.querySelectorAll(".animation-title"),
+        ...document.querySelectorAll(".database-card"),
+      ];
+
+      if (!elementsToObserve.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible");
+        observer.observe(el);
+      });
+    }
+
+    function setupTextObserver() {
+      const elementsToObserve = document.querySelectorAll(".animation-text");
+
+      if (!elementsToObserve.length) return;
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible-text");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.7 },
+      );
+
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("visible-text");
+        observer.observe(el);
+      });
+    }
+
+    function setupLineObserver() {
+      const elementsToObserve = document.querySelectorAll(".ai-animation-line");
+      if (!elementsToObserve.length) return;
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("ai-visible-line");
+              obs.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.4 },
+      );
+      elementsToObserve.forEach((el) => {
+        el.classList.remove("ai-visible-line");
+        observer.observe(el);
+      });
+    }
+
+    function initBackendPage() {
+      setupTitleObserver();
+      setupTextObserver();
+      setupLineObserver();
+    }
+
+    document.addEventListener("DOMContentLoaded", initBackendPage);
+    document.addEventListener("astro:page-load", initBackendPage);
+  </script>
+</Layout>
