@@ -12,6 +12,7 @@ export function initGsap() {
 
 type RevealOptions = {
   trigger?: Element | string;
+  scroller?: Element | string;
   start?: string;
   y?: number;
   duration?: number;
@@ -23,6 +24,7 @@ export function setupReveal(
   targets: string,
   {
     trigger,
+    scroller,
     start = "top 80%",
     y = 40,
     duration = 0.8,
@@ -46,6 +48,11 @@ export function setupReveal(
 
   if (!resolvedTrigger) return;
 
+ const resolvedScroller =
+    typeof scroller === "string"
+      ? document.querySelector(scroller)
+      : scroller;
+
   ScrollTrigger.getAll().forEach((scrollTrigger) => {
     if (scrollTrigger.trigger === resolvedTrigger) {
       scrollTrigger.kill();
@@ -65,6 +72,7 @@ export function setupReveal(
     ease,
     scrollTrigger: {
       trigger: resolvedTrigger,
+      scroller: resolvedScroller || undefined,
       start,
       once: true,
     },
