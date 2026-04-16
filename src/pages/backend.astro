@@ -14,19 +14,26 @@ import swaggerdoc from "../assets/backend/swaggerdoc.png";
 import { CarouselDApiDemo } from "../components/Caresoul";
 import Iridescence from "../components/Iridescence";
 import { AccordionComponent } from "../components/Accordion";
+import bgImage from "../assets/backend/bg-2.jpg";
 ---
 
 <Layout title={title}>
   <main>
     <section class="section-1">
-      <Iridescence
+      <Image
+        loading="eager"
+        class="section-1-background-image"
+        src={bgImage}
+        alt="Background"
+      />
+      <!-- <Iridescence
         class="section-1-background"
         client:visible
         color={[0.5, 0.6, 0.8]}
         mouseReact={false}
         amplitude={0.1}
         speed={1}
-      />
+      /> -->
 
       <div class="section-1-text">
         <h1>Backend</h1>
@@ -319,9 +326,11 @@ import { AccordionComponent } from "../components/Accordion";
         width: 100vw;
         height: 100vh;
         position: relative;
-        .section-1-background {
+        .section-1-background-image {
           height: 100%;
           width: 100%;
+          object-fit: cover;
+          object-position: left top;
         }
         .section-1-text {
           position: absolute;
