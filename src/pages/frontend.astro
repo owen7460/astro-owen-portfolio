@@ -38,7 +38,7 @@ import astro3 from "../assets/frontend/astro-3.png";
           components for users, seeing those beautiful layouts appear on the
           screen in real time is what excites me the most. With numerous
           frameworks and libraries available now, along with component-based
-          development, our development efficiency has greatly improved.
+          development, our development efficiency has greatly improved
         </p>
         <div class="technologies">
           <p>Frameworks | React, React Native, Next.js, Astro, SwiftUI, Vue3</p>
@@ -912,6 +912,8 @@ import astro3 from "../assets/frontend/astro-3.png";
             gap: 3.5rem;
             .section8-card {
               opacity: 0;
+              transform: translateY(40px);
+              will-change: transform, opacity;
               width: 100%;
               height: 100%;
               display: flex;
@@ -1014,90 +1016,131 @@ import astro3 from "../assets/frontend/astro-3.png";
     .animation-title,
     .animation-text {
       opacity: 0;
-    }
-    .visible {
-      animation: fadeIn 0.8s ease-out forwards;
-    }
-
-    .visible-text {
-      animation: fadeIn-opacity 0.8s ease-in-out forwards;
-      animation-delay: 0.1s;
-    }
-
-    .visible-cards {
-      animation: fadeIn 0.6s ease-in-out forwards;
+      will-change: transform, opacity;
     }
   </style>
 
   <script>
-    function setupTitleObserver() {
-      const elementsToObserve = document.querySelectorAll(".animation-title");
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import { initGsap, setupReveal } from "../utils/gsap/initGsap";
 
-      if (!elementsToObserve.length) return;
+    function setupFrontendTextRevealGsap() {
+      setupReveal(".section-2 .animation-title, .section-2 .animation-text", {
+        trigger: ".section-2",
+        start: "top 75%",
+        y: 30,
+        duration: 0.8,
+        stagger: 0.12,
+      });
 
-      const observer = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              obs.unobserve(entry.target);
-            }
-          });
+      setupReveal(".section-3 .animation-title, .section-3 .animation-text", {
+        trigger: ".section-3",
+        start: "top 75%",
+        y: 30,
+        duration: 0.8,
+        stagger: 0.12,
+      });
+
+      setupReveal(".section-4 .animation-title, .section-4 .animation-text", {
+        trigger: ".section-4",
+        start: "top 75%",
+        y: 30,
+        duration: 0.8,
+        stagger: 0.12,
+      });
+
+      setupReveal(".section-5 .animation-text", {
+        trigger: ".section-5",
+        start: "top 75%",
+        y: 30,
+        duration: 0.8,
+        stagger: 0.12,
+      });
+
+      setupReveal(".section-6 .animation-text", {
+        trigger: ".section-6",
+        start: "top 75%",
+        y: 30,
+        duration: 0.8,
+        stagger: 0.12,
+      });
+
+      setupReveal(".section-7 .animation-title, .section-7 .animation-text", {
+        trigger: ".section-7",
+        start: "top 75%",
+        y: 30,
+        duration: 0.8,
+        stagger: 0.12,
+      });
+
+      setupReveal(
+        ".section-8 .section-8-title, .section-8 .section-8-content > .animation-text",
+        {
+          trigger: ".section-8",
+          start: "top 75%",
+          y: 30,
+          duration: 0.8,
+          stagger: 0.12,
         },
-        { threshold: 0.7 },
       );
 
-      elementsToObserve.forEach((el) => {
-        el.classList.remove("visible");
-        observer.observe(el);
+      setupReveal(
+        ".last-section .animation-title, .last-section .animation-text",
+        {
+          trigger: ".last-section",
+          start: "top 75%",
+          y: 30,
+          duration: 0.8,
+          stagger: 0.1,
+        },
+      );
+    }
+
+    function setupSection8CardsGsap() {
+      initGsap();
+
+      const cards = gsap.utils.toArray<HTMLElement>(".section8-card");
+      if (!cards.length) return;
+
+      cards.forEach((card) => {
+        gsap.killTweensOf(card);
+      });
+
+      ScrollTrigger.getAll().forEach((trigger) => {
+        if (
+          trigger.trigger instanceof Element &&
+          trigger.trigger.matches(".section8-cards")
+        ) {
+          trigger.kill();
+        }
+      });
+
+      gsap.set(cards, {
+        autoAlpha: 0,
+        y: 40,
+      });
+
+      gsap.to(cards, {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: ".section8-cards",
+          start: "top 75%",
+          once: true,
+        },
       });
     }
 
-    function setupTextObserver() {
-      const elementsToObserve = document.querySelectorAll(".animation-text");
-
-      if (!elementsToObserve.length) return;
-
-      const observer = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible-text");
-              obs.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.7 },
-      );
-
-      elementsToObserve.forEach((el) => {
-        el.classList.remove("visible-text");
-        observer.observe(el);
-      });
+    function initFrontendPage() {
+      initGsap();
+      setupFrontendTextRevealGsap();
+      setupSection8CardsGsap();
     }
 
-    function setupCardObserver() {
-      const elementsToObserve = document.querySelectorAll(".section8-card");
-      if (!elementsToObserve.length) return;
-      const observer = new IntersectionObserver(
-        (entries, obs) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible-cards");
-              obs.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.95 },
-      );
-      elementsToObserve.forEach((el) => {
-        el.classList.remove("visible-cards");
-        observer.observe(el);
-      });
-    }
-
-    document.addEventListener("astro:page-load", setupTitleObserver);
-    document.addEventListener("astro:page-load", setupTextObserver);
-    document.addEventListener("astro:page-load", setupCardObserver);
+    document.addEventListener("astro:page-load", initFrontendPage);
   </script>
 </FrontendLayout>
