@@ -29,28 +29,26 @@ import { CarouselDApiDemo } from "../components/Caresoul";
       <div class="section-1-text">
         <h1>Backend</h1>
         <div class="skills">
-          <p class="animation-text">Technologies: Node.js, Python</p>
+          <p class="p1-text">Technologies: Node.js, Python</p>
           <div class="line-1 line"></div>
-          <p class="animation-text">Frameworks: Express.js, FastAPI</p>
+          <p class="p1-text">Frameworks: Express.js, FastAPI</p>
           <div class="line-2 line"></div>
-          <p class="animation-text">
-            Database: MySQL, MongoDB, PostgreSQL, GraphQL
-          </p>
+          <p class="p1-text">Database: MySQL, MongoDB, PostgreSQL, GraphQL</p>
           <div class="line-3 line"></div>
-          <p class="animation-text">
+          <p class="p1-text">
             Other: RESTful, Swagger, Postman, Docker, Coolify
           </p>
           <div class="line-4 line"></div>
         </div>
         <div class="description">
-          <p class="animation-text">
+          <p class="p1-text">
             Backend development is equally engaging to me, as it brings ideas to
             life on the server side and powers the functionality behind user
             experiences. Seeing how different features are implemented and how
             services are delivered to users makes the process both challenging
             and rewarding
           </p>
-          <p class="animation-text">
+          <p class="p1-text">
             Understanding API design and database structure helps me create more
             efficient and scalable applications. This full-stack perspective
             allows me to better connect UI with data and design more practical,
@@ -312,6 +310,7 @@ import { CarouselDApiDemo } from "../components/Caresoul";
         margin-left: auto;
         margin-right: auto;
       }
+
       .section-1 {
         width: 100vw;
         height: 100vh;
@@ -321,6 +320,11 @@ import { CarouselDApiDemo } from "../components/Caresoul";
           width: 100%;
           object-fit: cover;
           object-position: left top;
+        }
+        .p1-text {
+          opacity: 0;
+          animation: fadeIn-slightly 0.8s ease-in-out forwards;
+          animation-delay: 0.3s;
         }
         .section-1-text {
           position: absolute;
@@ -877,7 +881,7 @@ import { CarouselDApiDemo } from "../components/Caresoul";
             }
           });
         },
-        { threshold: 0.4 },
+        { threshold: 0.2 },
       );
 
       elementsToObserve.forEach((el) => {
@@ -900,7 +904,7 @@ import { CarouselDApiDemo } from "../components/Caresoul";
             }
           });
         },
-        { threshold: 0.7 },
+        { threshold: 0.2 },
       );
 
       elementsToObserve.forEach((el) => {
@@ -921,7 +925,7 @@ import { CarouselDApiDemo } from "../components/Caresoul";
             }
           });
         },
-        { threshold: 0.4 },
+        { threshold: 0.2 },
       );
       elementsToObserve.forEach((el) => {
         el.classList.remove("ai-visible-line");
