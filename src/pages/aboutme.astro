@@ -285,7 +285,7 @@ import stage from "../assets/stage.jpg";
       <Image class="background-image" src={beach} alt="Beach" />
 
       <div class="vision-title">
-        <h2>MY VISION</h2>
+        <h2>VISION</h2>
       </div>
 
       <div class="container">
@@ -703,6 +703,10 @@ import stage from "../assets/stage.jpg";
       }
     }
 
+    .is-firefox-third-part {
+      height: 100vh;
+    }
+
     .fourth-part {
       margin-top: 15vh;
       width: 100vw;
@@ -949,24 +953,19 @@ import stage from "../assets/stage.jpg";
         }
       }
     }
-
-    // .fourth-part-title {
-    //   opacity: 0;
-
-    //   &.visible {
-    //     animation: fadeIn 0.8s ease-out forwards;
-    //   }
-    // }
   </style>
 
   <script>
     function checkBrowser() {
       const firstPartBase = document.querySelector(".first-part-base");
+      const thirdPart = document.querySelector(".third-part");
       const isScrollTimelineSupported = CSS.supports(
         "animation-timeline: scroll()",
       );
       if (isScrollTimelineSupported) {
         firstPartBase?.classList.add("not-firefox-first-part-base");
+      } else {
+        thirdPart?.classList.add("is-firefox-third-part");
       }
     }
 
