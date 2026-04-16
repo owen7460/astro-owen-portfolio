@@ -209,6 +209,78 @@ import stage from "../assets/stage.jpg";
       </div>
     </div>
 
+    <div class="fourth-part">
+      <div class="fourth-part-header">
+        <h2 class="fourth-part-title">
+          A product is, in a way, a piece of art.
+        </h2>
+        <video
+          class="fourth-part-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          webkit-playsinline
+          preload="auto"
+          poster="/videos/cover.jpg"
+        >
+          <source src="/videos/opera-house.webm" type="video/webm" />
+          <source src="/videos/opera-house.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="fourth-part-content">
+        <div class="fourth-part-content-upper">
+          <div class="fourth-part-text">
+            <p>
+              I see strong parallels between performing on stage and building
+              products. Just like a successful opera requires every note to
+              appear at the precise moment and pitch, a brilliant website or app
+              depends on structure, functionality, and aesthetics. I often study
+              digital products with the same attention, while also admiring the
+              beauty of thoughtful and refined design.
+            </p>
+          </div>
+          <div class="fourth-part-image-upper">
+            <Image src={goodreads1} alt="Goodreads" width={226} height={422} />
+            <Image src={jomalone2} alt="Goodreads" width={488} height={373} />
+          </div>
+        </div>
+        <div class="fourth-part-content-mid">
+          <Image src={jomalone1} alt="Goodreads" width={911} height={734} />
+
+          <div class="fourth-part-content-mid-text">
+            <p>
+              I am deeply grateful for my artistic training, which has
+              profoundly shaped how I see the world. When I experience or build
+              products, I often rely on an intuition cultivated through years of
+              studying art.
+            </p>
+            <p>
+              Early in my training, I listened to many works without fully
+              understanding the composers’ intentions. Over time, however, I
+              began to feel deeply moved by certain pieces — even on first
+              listening.
+            </p>
+          </div>
+        </div>
+        <div class="fourth-part-content-lower">
+          <div class="fourth-part-content-lower-image">
+            <Image src={goodreads4} alt="Goodreads" width={308} height={363} />
+            <Image src={volvo} alt="Goodreads" width={500} height={280} />
+          </div>
+
+          <div class="fourth-part-content-lower-text">
+            <p>
+              This sensitivity, developed through discipline and immersion, has
+              become part of my instinct. Today, it influences how I evaluate
+              functionality, aesthetics, and emotional resonance in digital
+              experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="fifth-part">
       <Image class="background-image" src={beach} alt="Beach" />
 
@@ -631,120 +703,120 @@ import stage from "../assets/stage.jpg";
       }
     }
 
-    // .fourth-part {
-    //   margin-top: 15vh;
-    //   width: 100vw;
-    //   background-color: var(--background-color);
+    .fourth-part {
+      margin-top: 15vh;
+      width: 100vw;
+      background-color: var(--background-color);
 
-    //   .fourth-part-header {
-    //     position: relative;
-    //     width: 100vw;
-    //     height: 100vh;
-    //     display: grid;
-    //     place-items: center;
-    //     .fourth-part-title {
-    //       color: white;
-    //       position: relative;
-    //       font-size: 3rem;
-    //       z-index: 15;
-    //     }
-    //     video {
-    //       position: absolute;
-    //       z-index: 10;
-    //       top: 0;
-    //       left: 0;
-    //       width: 100%;
-    //       height: 100%;
-    //       object-fit: cover;
-    //       opacity: 0.5;
-    //       animation: video-animation 1s ease-out forwards;
-    //       animation-timeline: view();
-    //       animation-range: entry;
-    //       clip-path: inset(0 40% 0 40%);
-    //     }
-    //   }
+      .fourth-part-header {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        .fourth-part-title {
+          color: white;
+          position: relative;
+          font-size: 3rem;
+          z-index: 15;
+        }
+        video {
+          position: absolute;
+          z-index: 10;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          opacity: 0.5;
+          animation: video-animation 1s ease-out forwards;
+          animation-timeline: view();
+          animation-range: entry;
+          clip-path: inset(0 40% 0 40%);
+        }
+      }
 
-    //   @keyframes video-animation {
-    //     from {
-    //       clip-path: inset(0 40% 0 40%);
-    //     }
-    //     to {
-    //       clip-path: inset(0 0 0 0);
-    //       opacity: 1;
-    //     }
-    //   }
+      @keyframes video-animation {
+        from {
+          clip-path: inset(0 40% 0 40%);
+        }
+        to {
+          clip-path: inset(0 0 0 0);
+          opacity: 1;
+        }
+      }
 
-    //   .fourth-part-content {
-    //     margin: 15vh auto 15vh;
-    //     width: 80vw;
+      .fourth-part-content {
+        margin: 15vh auto 15vh;
+        width: 80vw;
 
-    //     h2 {
-    //       font-size: 3rem;
-    //       font-weight: 100;
-    //       line-height: 1.5;
-    //     }
-    //     p {
-    //       text-align: left;
-    //       font-size: 1.3rem;
-    //       font-weight: 100;
-    //       line-height: 1.5;
-    //       margin-bottom: 2rem;
-    //     }
-    //     .fourth-part-content-upper {
-    //       display: flex;
-    //       justify-content: center;
-    //       align-items: center;
-    //       gap: 4rem;
+        h2 {
+          font-size: 3rem;
+          font-weight: 100;
+          line-height: 1.5;
+        }
+        p {
+          text-align: left;
+          font-size: 1.3rem;
+          font-weight: 100;
+          line-height: 1.5;
+          margin-bottom: 2rem;
+        }
+        .fourth-part-content-upper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4rem;
 
-    //       .fourth-part-text {
-    //         display: flex;
-    //         flex-direction: column;
-    //         width: 40%;
-    //         gap: 2.6rem;
-    //         margin-bottom: 4rem;
-    //       }
-    //       .fourth-part-image-upper {
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    //         gap: 1rem;
-    //       }
-    //     }
-    //     .fourth-part-content-mid {
-    //       display: flex;
-    //       justify-content: center;
-    //       align-items: center;
-    //       gap: 4rem;
-    //       margin-bottom: 2rem;
-    //       .fourth-part-content-mid-text {
-    //         display: flex;
-    //         flex-direction: column;
-    //         width: 40%;
-    //         gap: 2.6rem;
-    //       }
-    //     }
-    //     .fourth-part-content-lower {
-    //       display: flex;
-    //       justify-content: center;
-    //       align-items: center;
-    //       gap: 8rem;
-    //       .fourth-part-content-lower-image {
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: flex-end;
-    //         gap: 2rem;
-    //       }
-    //       .fourth-part-content-lower-text {
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: center;
-    //         align-items: flex-start;
-    //         width: 40%;
-    //         gap: 2.6rem;
-    //       }
-    //     }
-    //   }
-    // }
+          .fourth-part-text {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            gap: 2.6rem;
+            margin-bottom: 4rem;
+          }
+          .fourth-part-image-upper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+          }
+        }
+        .fourth-part-content-mid {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4rem;
+          margin-bottom: 2rem;
+          .fourth-part-content-mid-text {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            gap: 2.6rem;
+          }
+        }
+        .fourth-part-content-lower {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 8rem;
+          .fourth-part-content-lower-image {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 2rem;
+          }
+          .fourth-part-content-lower-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 40%;
+            gap: 2.6rem;
+          }
+        }
+      }
+    }
 
     .fifth-part {
       margin-top: 20vh;
