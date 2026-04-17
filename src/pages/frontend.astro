@@ -30,25 +30,25 @@ import astro3 from "../assets/frontend/astro-3.png";
 
 <FrontendLayout title={title}>
   <main>
-    <section id="top" class="introduction">
-      <div class="left">
+    <section id="top" class="front-introduction">
+      <div class="front-left">
         <h1><span>Design and Develop</span>Frontend</h1>
-        <p class="intro-frontend">
+        <p class="front-intro-frontend">
           Frontend development is my favourite. When designing pages and
           components for users, seeing those beautiful layouts appear on the
           screen in real time is what excites me the most. With numerous
           frameworks and libraries available now, along with component-based
           development, our development efficiency has greatly improved
         </p>
-        <div class="technologies">
+        <div class="front-technologies">
           <p>Frameworks | React, React Native, Next.js, Astro, SwiftUI, Vue3</p>
           <p>CSS | Tailwind CSS, Sass, Shadcn UI, Element Plus</p>
           <p>Libraries | Redux, Zustand, Pinia, Axios, Lucide Icons</p>
           <p>Other | PHP, TypeScript, Lottie Animations, Figma</p>
         </div>
       </div>
-      <div class="right">
-        <div class="image-card card1">
+      <div class="front-right">
+        <div class="front-image-card front-card1">
           <Image
             loading="eager"
             src={card1}
@@ -57,7 +57,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={99}
           />
         </div>
-        <div class="image-card card2">
+        <div class="front-image-card front-card2">
           <Image
             loading="eager"
             src={card2}
@@ -66,7 +66,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={55}
           />
         </div>
-        <div class="image-card card3">
+        <div class="front-image-card front-card3">
           <Image
             loading="eager"
             src={card3}
@@ -75,7 +75,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={328}
           />
         </div>
-        <div class="image-card card4">
+        <div class="front-image-card front-card4">
           <Image
             loading="eager"
             src={card4}
@@ -84,7 +84,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={419}
           />
         </div>
-        <div class="image-card card5">
+        <div class="front-image-card front-card5">
           <Image
             loading="eager"
             src={card5}
@@ -93,7 +93,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={287}
           />
         </div>
-        <div class="image-card card6">
+        <div class="front-image-card front-card6">
           <Image
             loading="eager"
             src={card6}
@@ -102,7 +102,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={201}
           />
         </div>
-        <div class="image-card card7">
+        <div class="front-image-card front-card7">
           <Image
             loading="eager"
             src={card7}
@@ -111,7 +111,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={125}
           />
         </div>
-        <div class="image-card card8">
+        <div class="front-image-card front-card8">
           <Image
             loading="eager"
             src={card8}
@@ -123,26 +123,26 @@ import astro3 from "../assets/frontend/astro-3.png";
       </div>
     </section>
 
-    <section class="section-2">
-      <div class="section-2-left">
+    <section class="front-section-2">
+      <div class="front-section-2-left">
         <Image
-          class="blendbetter-mac"
+          class="front-blendbetter-mac"
           src={blendbetterMac}
           alt="Blendbetter"
           width={980 * 0.8}
           height={596 * 0.8}
         />
         <Image
-          class="blendbetter-mobile"
+          class="front-blendbetter-mobile"
           src={blendbetterMobile}
           alt="Blendbetter"
           width={195}
           height={406}
         />
       </div>
-      <div class="section-2-right">
-        <h2 class="animation-title">Next.js Project</h2>
-        <p class="animation-text">
+      <div class="front-section-2-right">
+        <h2 class="front-animation-title">Next.js Project</h2>
+        <p class="front-animation-text">
           BlendBetter is a multi-platform project. On the desktop side, I
           developed it using Next.js, whose routing system is very convenient,
           by organizing different pages as folders, I could automatically create
@@ -152,7 +152,7 @@ import astro3 from "../assets/frontend/astro-3.png";
           clean visual style that makes buttons easy to recognize while reducing
           users’ reading effort.
         </p>
-        <p class="animation-text">
+        <p class="front-animation-text">
           These advantages allowed me to complete the desktop version quickly. I
           then developed the mobile version using React Native, enabling
           BlendBetter to better serve both iOS and Android users with greater
@@ -161,32 +161,32 @@ import astro3 from "../assets/frontend/astro-3.png";
       </div>
     </section>
 
-    <section class="section-3">
-      <div class="section-3-left">
-        <h2 class="animation-title">SwiftUI Rebuilding BlendBetter</h2>
-        <p class="animation-text">
+    <section class="front-section-3">
+      <div class="front-section-3-left">
+        <h2 class="front-animation-title">SwiftUI Rebuilding BlendBetter</h2>
+        <p class="front-animation-text">
           After implementing the core mobile features with React Native, I set
           higher expectations for the project. This time, I wanted to use an
           on-device model to directly recognize fruit types. To better achieve
           this, I rebuilt the entire project using SwiftUI and leveraged Apple’s
           Vision framework.
         </p>
-        <p class="animation-text">
+        <p class="front-animation-text">
           As a result, on iOS, users can directly use the camera to scan the
           fruits they have.
         </p>
       </div>
-      <div class="section-3-middle">
+      <div class="front-section-3-middle">
         <Image
-          class="blendbetter-apple"
+          class="front-blendbetter-apple"
           src={blendbetterApple}
           alt="Blendbetter detects fruits"
           width={1300 * 0.3}
           height={2642 * 0.3}
         />
       </div>
-      <div class="section-3-right">
-        <p class="animation-text">
+      <div class="front-section-3-right">
+        <p class="front-animation-text">
           The app is currently in the final stage of development, and it is
           expected to be launched on the App Store within the next few weeks.
         </p>
@@ -199,21 +199,21 @@ import astro3 from "../assets/frontend/astro-3.png";
       </div>
     </section>
 
-    <section class="section-4">
-      <div class="section-4-left">
-        <h2 class="animation-title">
+    <section class="front-section-4">
+      <div class="front-section-4-left">
+        <h2 class="front-animation-title">
           React Project<span>Single Page App</span>
         </h2>
-        <p class="animation-text">
+        <p class="front-animation-text">
           Jokeshare is a typical React SPA project. In this web app, any user
           can browse and upload jokes, like and comment on them, and sort jokes
           by number of likes or by most recent. Users can also save jokes using
           the Collections feature.
         </p>
       </div>
-      <div class="section-4-right">
+      <div class="front-section-4-right">
         <Image
-          class="jokeshare-image"
+          class="front-jokeshare-image"
           src={jokeshare}
           alt="Jokeshare"
           width={1387 * 0.75}
@@ -222,8 +222,8 @@ import astro3 from "../assets/frontend/astro-3.png";
       </div>
     </section>
 
-    <section class="section-5">
-      <div class="section-5-content">
+    <section class="front-section-5">
+      <div class="front-section-5-content">
         <p>
           In this SPA project, I used Zustand for global state management.
           Compared to Redux, Zustand is more lightweight, simpler, and more
@@ -236,9 +236,9 @@ import astro3 from "../assets/frontend/astro-3.png";
           loaded again the next time they visit the website.
         </p>
       </div>
-      <div class="section-5-image">
+      <div class="front-section-5-image">
         <Image
-          class="zustand"
+          class="front-zustand"
           src={zustand}
           alt="Zustand"
           width={1371 * 0.7}
@@ -247,21 +247,21 @@ import astro3 from "../assets/frontend/astro-3.png";
       </div>
     </section>
 
-    <section class="section-6">
-      <div class="section-6-content">
-        <p class="animation-text">
+    <section class="front-section-6">
+      <div class="front-section-6-content">
+        <p class="front-animation-text">
           I also used Lodash’s sorting utilities to implement dynamic joke
           ordering. When users click the sorting controls, a click event is
           triggered that applies different sorting strategies: one displays
           jokes in descending order based on the counts of likes, and the
           another one shows the newest jokes first based on their creation time.
         </p>
-        <p class="animation-text">
+        <p class="front-animation-text">
           This approach keeps the sorting logic clean and efficient while
           providing users with a smooth way to switch between “Most Liked” and
           “Latest” views.
         </p>
-        <div class="section-6-buttons">
+        <div class="front-section-6-buttons">
           <img
             src="/likeButton.png"
             alt="Like Button"
@@ -276,9 +276,9 @@ import astro3 from "../assets/frontend/astro-3.png";
           />
         </div>
       </div>
-      <div class="section-6-lodash">
+      <div class="front-section-6-lodash">
         <Image
-          class="jokeshare-lodash"
+          class="front-jokeshare-lodash"
           src={lodash}
           alt="Lodash"
           width={1285 * 0.62}
@@ -287,9 +287,9 @@ import astro3 from "../assets/frontend/astro-3.png";
       </div>
     </section>
 
-    <section class="section-7">
-      <div class="section-7-left">
-        <div class="kitchen-card kitchen1">
+    <section class="front-section-7">
+      <div class="front-section-7-left">
+        <div class="front-kitchen-card front-kitchen1">
           <Image
             loading="eager"
             src={kitchen1}
@@ -298,7 +298,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={1046}
           />
         </div>
-        <div class="kitchen-card kitchen2">
+        <div class="front-kitchen-card front-kitchen2">
           <Image
             loading="eager"
             src={kitchen2}
@@ -307,7 +307,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={1243}
           />
         </div>
-        <div class="kitchen-card kitchen3">
+        <div class="front-kitchen-card front-kitchen3">
           <Image
             loading="eager"
             src={kitchen3}
@@ -316,7 +316,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             height={1243}
           />
         </div>
-        <div class="kitchen-card kitchen4">
+        <div class="front-kitchen-card front-kitchen4">
           <Image
             loading="eager"
             src={kitchen4}
@@ -326,17 +326,17 @@ import astro3 from "../assets/frontend/astro-3.png";
           />
         </div>
       </div>
-      <div class="section-7-right">
-        <h2 class="animation-title">
+      <div class="front-section-7-right">
+        <h2 class="front-animation-title">
           Owen's Kitchen <span>PHP Project</span>
         </h2>
-        <p class="animation-text">
+        <p class="front-animation-text">
           Today, PHP still plays a very important role in development,
           especially for full-stack projects and applications that need to be
           built quickly. I enjoy cooking and sharing food, and Owen’s Kitchen is
           a project built with PHP and MySQL.
         </p>
-        <p class="animation-text">
+        <p class="front-animation-text">
           It allows users to browse dishes, add items to a cart, leave notes
           (such as marking allergies to certain dishes), confirm orders, and
           view their balance and bills.
@@ -344,24 +344,24 @@ import astro3 from "../assets/frontend/astro-3.png";
       </div>
     </section>
 
-    <section class="section-8">
-      <div class="section-8-base">
-        <div class="section-8-content">
-          <div class="section-8-title animation-title">
-            <img class="astro-logo" src="/icons/astro.svg" alt="Astro" />
+    <section class="front-section-8">
+      <div class="front-section-8-base">
+        <div class="front-section-8-content">
+          <div class="front-section-8-title front-animation-title">
+            <img class="front-astro-logo" src="/icons/astro.svg" alt="Astro" />
             <h2>
               Owen's Portfolio<span>Astro Project</span>
             </h2>
           </div>
-          <p class="animation-text">
+          <p class="front-animation-text">
             Astro is particularly well suited for performance-focused showcase
             websites.
           </p>
         </div>
-        <div class="section8-cards">
-          <div class="section8-card card1">
+        <div class="front-section8-cards">
+          <div class="front-section8-card front-card1">
             <Image src={astro1} alt="Astro 1" />
-            <div class="section8-card-text">
+            <div class="front-section8-card-text">
               <h3>SEO-Friendly Architecture</h3>
               <p>
                 Astro provides a Layout system where each page can pass props to
@@ -377,9 +377,9 @@ import astro3 from "../assets/frontend/astro-3.png";
               </p>
             </div>
           </div>
-          <div class="section8-card card2">
+          <div class="front-section8-card front-card2">
             <Image src={astro2} alt="Astro 2" />
-            <div class="section8-card-text">
+            <div class="front-section8-card-text">
               <h3>Island Architecture & Prefetching</h3>
               <p>
                 Astro’s island architecture allows me to limit interactivity to
@@ -396,9 +396,9 @@ import astro3 from "../assets/frontend/astro-3.png";
               </p>
             </div>
           </div>
-          <div class="section8-card card3">
+          <div class="front-section8-card front-card3">
             <Image src={astro3} alt="Astro 3" />
-            <div class="section8-card-text">
+            <div class="front-section8-card-text">
               <h3>Image Optimization</h3>
               <p>
                 Astro’s built-in Image component significantly improves image
@@ -418,23 +418,23 @@ import astro3 from "../assets/frontend/astro-3.png";
       </div>
     </section>
 
-    <section class="last-section">
-      <div class="end-of-page">
-        <h2 class="animation-title">
+    <section class="front-last-section">
+      <div class="front-end-of-page">
+        <h2 class="front-animation-title">
           Selecting the most suitable technologies for different application
           scenarios
         </h2>
-        <div class="technologies">
-          <p class="animation-text p1">
+        <div class="front-technologies">
+          <p class="front-animation-text p1">
             Frameworks | React, React Native, Next.js, Astro, SwiftUI, Vue3
           </p>
-          <p class="animation-text p2">
+          <p class="front-animation-text p2">
             CSS | Tailwind CSS, Sass, Shadcn UI, Element Plus
           </p>
-          <p class="animation-text p3">
+          <p class="front-animation-text p3">
             Libraries | Redux, Zustand, Pinia, Axios, Lucide Icons
           </p>
-          <p class="animation-text p4">
+          <p class="front-animation-text p4">
             Other | PHP, TypeScript, Lottie Animations, Figma
           </p>
         </div>
@@ -483,12 +483,12 @@ import astro3 from "../assets/frontend/astro-3.png";
         margin: 0 auto;
       }
 
-      .introduction {
+      .front-introduction {
         max-width: 2400px;
         gap: 8rem;
         margin: 0 auto;
 
-        .left {
+        .front-left {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -496,11 +496,11 @@ import astro3 from "../assets/frontend/astro-3.png";
           gap: 2rem;
           width: 45%;
           padding-left: 10%;
-          .intro-frontend {
+          .front-intro-frontend {
             animation: fadeIn-opacity 0.3s ease-in-out both;
             animation-delay: 0.5s;
           }
-          .technologies {
+          .front-technologies {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -513,7 +513,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             }
           }
         }
-        .right {
+        .front-right {
           width: 55%;
           padding-right: 10%;
           position: relative;
@@ -521,33 +521,33 @@ import astro3 from "../assets/frontend/astro-3.png";
           display: flex;
 
           &:hover {
-            .card1 {
+            .front-card1 {
               transform: translate3d(-30px, -10px, 0);
             }
-            .card2 {
+            .front-card2 {
               transform: translate3d(0, -30px, 0);
             }
-            .card3 {
+            .front-card3 {
               transform: translate3d(10px, 60px, 0);
             }
-            .card4 {
+            .front-card4 {
               transform: translate3d(0, 0, 0);
             }
-            .card5 {
+            .front-card5 {
               transform: translate3d(-5px, 5px, 0);
             }
-            .card6 {
+            .front-card6 {
               transform: translate3d(0px, -30px, 0);
             }
-            .card7 {
+            .front-card7 {
               transform: translate3d(40px, -20px, 0);
             }
-            .card8 {
+            .front-card8 {
               transform: translate3d(0, -30px, 0);
             }
           }
 
-          .image-card {
+          .front-image-card {
             position: absolute;
             border-radius: 16px;
             box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
@@ -561,56 +561,56 @@ import astro3 from "../assets/frontend/astro-3.png";
               object-fit: cover;
             }
           }
-          .card1 {
+          .front-card1 {
             width: 356px;
             height: 99px;
             top: 50px;
             left: 0px;
             z-index: 1;
           }
-          .card2 {
+          .front-card2 {
             width: 298px;
             height: 55px;
             top: 200px;
             left: 0px;
             z-index: 9;
           }
-          .card3 {
+          .front-card3 {
             width: 151px;
             height: 328px;
             top: 300px;
             left: 30px;
             z-index: 8;
           }
-          .card4 {
+          .front-card4 {
             width: 621px;
             height: 419px;
             top: 105px;
             left: 150px;
             z-index: 7;
           }
-          .card5 {
+          .front-card5 {
             width: 349px;
             height: 287px;
             top: 450px;
             left: 250px;
             z-index: 8;
           }
-          .card6 {
+          .front-card6 {
             width: 316px;
             height: 201px;
             top: 0px;
             left: 450px;
             z-index: 11;
           }
-          .card7 {
+          .front-card7 {
             width: 253px;
             height: 125px;
             top: 250px;
             left: 550px;
             z-index: 10;
           }
-          .card8 {
+          .front-card8 {
             width: 143px;
             height: 250px;
             top: 475px;
@@ -620,25 +620,25 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
       }
 
-      .section-2 {
+      .front-section-2 {
         background-image: url("../assets/frontend/blendbetterBG.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        .section-2-left {
+        .front-section-2-left {
           width: 55%;
           position: relative;
           display: flex;
           justify-content: center;
           align-items: center;
           overflow: hidden;
-          .blendbetter-mobile {
+          .front-blendbetter-mobile {
             position: absolute;
             bottom: 0px;
             right: 15px;
           }
         }
-        .section-2-right {
+        .front-section-2-right {
           width: 45%;
           display: flex;
           flex-direction: column;
@@ -649,12 +649,12 @@ import astro3 from "../assets/frontend/astro-3.png";
           padding-right: 10%;
         }
       }
-      .section-3 {
+      .front-section-3 {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        .section-3-left {
+        .front-section-3-left {
           width: 33%;
           display: flex;
           flex-direction: column;
@@ -663,20 +663,20 @@ import astro3 from "../assets/frontend/astro-3.png";
           gap: 2rem;
           padding-left: 10%;
         }
-        .section-3-middle {
+        .front-section-3-middle {
           width: 33%;
           display: flex;
           justify-content: center;
           align-items: center;
         }
-        .blendbetter-apple {
+        .front-blendbetter-apple {
           animation-timeline: view();
           animation-name: fadeIn-opacity-scroll;
           animation-duration: 1s;
           animation-delay: 0.2s;
           animation-fill-mode: both;
         }
-        .section-3-right {
+        .front-section-3-right {
           width: 33%;
           display: flex;
           flex-direction: column;
@@ -687,12 +687,12 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
       }
 
-      .section-4 {
+      .front-section-4 {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        .section-4-left {
+        .front-section-4-left {
           width: 45%;
           display: flex;
           flex-direction: column;
@@ -710,10 +710,10 @@ import astro3 from "../assets/frontend/astro-3.png";
             }
           }
         }
-        .section-4-right {
+        .front-section-4-right {
           width: 55%;
           overflow-x: clip;
-          .jokeshare-image {
+          .front-jokeshare-image {
             animation-timeline: view();
             animation-name: fadeIn-right;
             animation-duration: 1s;
@@ -723,13 +723,13 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
       }
 
-      .section-5 {
+      .front-section-5 {
         background-image: url("../assets/frontend/bear.jpg");
         background-size: cover;
         background-position: right;
         background-repeat: no-repeat;
         position: relative;
-        .section-5-content {
+        .front-section-5-content {
           position: absolute;
           bottom: 17%;
           right: 6%;
@@ -749,7 +749,7 @@ import astro3 from "../assets/frontend/astro-3.png";
           backdrop-filter: blur(25px);
           -webkit-backdrop-filter: blur(25px);
         }
-        .section-5-image {
+        .front-section-5-image {
           position: absolute;
           top: 15%;
           right: 2%;
@@ -757,14 +757,14 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
       }
 
-      .section-6 {
+      .front-section-6 {
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        .section-6-content {
+        .front-section-6-content {
           position: absolute;
           top: 15%;
           left: 50%;
@@ -776,7 +776,7 @@ import astro3 from "../assets/frontend/astro-3.png";
           align-items: center;
           gap: 1rem;
           text-align: center;
-          .section-6-buttons {
+          .front-section-6-buttons {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -784,14 +784,13 @@ import astro3 from "../assets/frontend/astro-3.png";
             margin-top: 2rem;
           }
         }
-
-        .section-6-lodash {
+        .front-section-6-lodash {
           position: absolute;
           bottom: 25%;
           right: 50%;
           transform: translateX(50%) translateY(50%);
           z-index: 1;
-          .jokeshare-lodash {
+          .front-jokeshare-lodash {
             animation-timeline: view();
             animation-name: fadeIn-opacity-scroll;
             animation-duration: 1s;
@@ -801,17 +800,17 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
       }
 
-      .section-7 {
+      .front-section-7 {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 2rem;
-        .section-7-left {
+        .front-section-7-left {
           width: 65%;
           height: 100%;
           padding-left: 10%;
           position: relative;
-          .kitchen-card {
+          .front-kitchen-card {
             position: absolute;
             border-radius: 16px;
             box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
@@ -829,28 +828,28 @@ import astro3 from "../assets/frontend/astro-3.png";
               object-fit: cover;
             }
           }
-          .kitchen1 {
+          .front-kitchen1 {
             top: 20%;
             left: 5%;
             z-index: 1;
           }
-          .kitchen2 {
+          .front-kitchen2 {
             top: 30%;
             left: 15%;
             z-index: 2;
           }
-          .kitchen3 {
+          .front-kitchen3 {
             top: 40%;
             left: 25%;
             z-index: 3;
           }
-          .kitchen4 {
+          .front-kitchen4 {
             top: 50%;
             left: 35%;
             z-index: 4;
           }
         }
-        .section-7-right {
+        .front-section-7-right {
           scroll-snap-stop: none;
           width: 50%;
           display: flex;
@@ -871,17 +870,17 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
       }
 
-      .section-8 {
+      .front-section-8 {
         background-image: url("../assets/frontend/astrobg.jpg");
         bakcground-size: cover;
         background-position: left center;
         background-repeat: no-repeat;
-        .astro-logo {
+        .front-astro-logo {
           width: 70px;
         }
-        .section-8-base {
+        .front-section-8-base {
           padding: 0 5%;
-          .section-8-content {
+          .front-section-8-content {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -889,7 +888,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             gap: 2rem;
             text-align: center;
             color: var(--background-color);
-            .section-8-title {
+            .front-section-8-title {
               display: flex;
               justify-content: center;
               align-items: center;
@@ -904,13 +903,13 @@ import astro3 from "../assets/frontend/astro-3.png";
               }
             }
           }
-          .section8-cards {
+          .front-section8-cards {
             max-width: 1300px;
             padding-top: 2rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3.5rem;
-            .section8-card {
+            .front-section8-card {
               opacity: 0;
               transform: translateY(40px);
               will-change: transform, opacity;
@@ -933,7 +932,7 @@ import astro3 from "../assets/frontend/astro-3.png";
                 object-fit: cover;
                 object-position: left top;
               }
-              .section8-card-text {
+              .front-section8-card-text {
                 padding: 1.4rem;
                 h3 {
                   color: var(--background-color);
@@ -950,26 +949,26 @@ import astro3 from "../assets/frontend/astro-3.png";
                 }
               }
             }
-            .card1 {
+            .front-card1 {
               animation-delay: 0.1s;
             }
-            .card2 {
+            .front-card2 {
               animation-delay: 0.25s;
             }
-            .card3 {
+            .front-card3 {
               animation-delay: 0.4s;
             }
           }
         }
       }
 
-      .last-section {
+      .front-last-section {
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
         gap: 6rem;
-        .end-of-page {
+        .front-end-of-page {
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -980,7 +979,7 @@ import astro3 from "../assets/frontend/astro-3.png";
             text-align: center;
             line-height: 1.4;
           }
-          .technologies {
+          .front-technologies {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1013,8 +1012,8 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
       }
     }
-    .animation-title,
-    .animation-text {
+    .front-animation-title,
+    .front-animation-text {
       opacity: 0;
       will-change: transform, opacity;
     }
@@ -1026,55 +1025,55 @@ import astro3 from "../assets/frontend/astro-3.png";
     import { initGsap, setupReveal } from "../utils/gsap/initGsap";
 
     function setupFrontendTextRevealGsap() {
-      setupReveal(".section-2 .animation-title, .section-2 .animation-text", {
-        trigger: ".section-2",
+      setupReveal(
+        ".front-section-2 .front-animation-title, .front-section-2 .front-animation-text",
+        {
+          trigger: ".front-section-2",
+          scroller: "main",
+          start: "top 75%",
+          y: 100,
+          duration: 0.6,
+          stagger: 0.3,
+        },
+      );
+
+      setupReveal(
+        ".front-section-3 .front-animation-title, .front-section-3 .front-animation-text",
+        {
+          trigger: ".front-section-3",
+          scroller: "main",
+          start: "top 75%",
+          y: 100,
+          duration: 0.6,
+          stagger: 0.3,
+        },
+      );
+
+      setupReveal(
+        ".front-section-4 .front-animation-title, .front-section-4 .front-animation-text",
+        {
+          trigger: ".front-section-4",
+          scroller: "main",
+          start: "top 75%",
+          y: 100,
+          duration: 0.6,
+          stagger: 0.6,
+        },
+      );
+
+      setupReveal(".front-section-6 .front-animation-text", {
+        trigger: ".front-section-6",
         scroller: "main",
         start: "top 75%",
         y: 100,
-        duration: 0.6,
-        stagger: 0.3,
-      });
-
-      setupReveal(".section-3 .animation-title, .section-3 .animation-text", {
-        trigger: ".section-3",
-        scroller: "main",
-        start: "top 75%",
-        y: 100,
-        duration: 0.6,
-        stagger: 0.3,
-      });
-
-      setupReveal(".section-4 .animation-title, .section-4 .animation-text", {
-        trigger: ".section-4",
-        scroller: "main",
-        start: "top 75%",
-        y: 100,
-        duration: 0.6,
-        stagger: 0.6,
-      });
-
-      setupReveal(".section-6 .animation-text", {
-        trigger: ".section-6",
-        scroller: "main",
-        start: "top 75%",
-        y: 100,
-        duration: 2,
-        stagger: 0.2,
-      });
-
-      setupReveal(".section-7 .animation-title, .section-7 .animation-text", {
-        trigger: ".section-7",
-        scroller: "main",
-        start: "top 75%",
-        y: 30,
-        duration: 0.8,
-        stagger: 0.12,
+        duration: 1.2,
+        stagger: 0.4,
       });
 
       setupReveal(
-        ".section-8 .section-8-title, .section-8 .section-8-content > .animation-text",
+        ".front-section-7 .front-animation-title, .front-section-7 .front-animation-text",
         {
-          trigger: ".section-8",
+          trigger: ".front-section-7",
           scroller: "main",
           start: "top 75%",
           y: 30,
@@ -1084,9 +1083,21 @@ import astro3 from "../assets/frontend/astro-3.png";
       );
 
       setupReveal(
-        ".last-section .animation-title, .last-section .animation-text",
+        ".front-section-8 .front-section-8-title, .front-section-8 .front-section-8-content > .front-animation-text",
         {
-          trigger: ".last-section",
+          trigger: ".front-section-8",
+          scroller: "main",
+          start: "top 75%",
+          y: 30,
+          duration: 1.2,
+          stagger: 0.3,
+        },
+      );
+
+      setupReveal(
+        ".front-last-section .front-animation-title, .front-last-section .front-animation-text",
+        {
+          trigger: ".front-last-section",
           scroller: "main",
           start: "top 75%",
           y: 30,
@@ -1099,7 +1110,7 @@ import astro3 from "../assets/frontend/astro-3.png";
     function setupSection8CardsGsap() {
       initGsap();
 
-      const cards = gsap.utils.toArray<HTMLElement>(".section8-card");
+      const cards = gsap.utils.toArray<HTMLElement>(".front-section8-card");
       if (!cards.length) return;
 
       cards.forEach((card) => {
@@ -1109,7 +1120,7 @@ import astro3 from "../assets/frontend/astro-3.png";
       ScrollTrigger.getAll().forEach((trigger) => {
         if (
           trigger.trigger instanceof Element &&
-          trigger.trigger.matches(".section8-cards")
+          trigger.trigger.matches(".front-section8-cards")
         ) {
           trigger.kill();
         }
@@ -1127,7 +1138,7 @@ import astro3 from "../assets/frontend/astro-3.png";
         ease: "power2.out",
         stagger: 0.15,
         scrollTrigger: {
-          trigger: ".section8-cards",
+          trigger: ".front-section8-cards",
           scroller: "main",
           start: "top 75%",
           once: true,
@@ -1141,6 +1152,7 @@ import astro3 from "../assets/frontend/astro-3.png";
       setupSection8CardsGsap();
     }
 
+    document.addEventListener("DOMContentLoaded", initFrontendPage);
     document.addEventListener("astro:page-load", initFrontendPage);
   </script>
 </FrontendLayout>
