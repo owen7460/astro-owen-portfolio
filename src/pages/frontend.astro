@@ -163,7 +163,9 @@ import astro3 from "../assets/frontend/astro-3.png";
 
     <section class="front-section-3">
       <div class="front-section-3-left">
-        <h2 class="front-animation-title">SwiftUI Rebuilding BlendBetter</h2>
+        <h2 class="front-animation-title">
+          SwiftUI<span>Rebuilding BlendBetter</span>
+        </h2>
         <p class="front-animation-text">
           After implementing the core mobile features with React Native, I set
           higher expectations for the project. This time, I wanted to use an
@@ -369,7 +371,7 @@ import astro3 from "../assets/frontend/astro-3.png";
                 Navigation is handled through client-side routing, enabling
                 smooth transitions without full page reloads.
               </p>
-              <p>
+              <p class="front-section8-card-invisible">
                 Unlike traditional React apps that rely on client-side
                 rendering, Astro delivers pre-rendered HTML by default,
                 improving SEO and initial load performance—making it ideal for
@@ -386,7 +388,7 @@ import astro3 from "../assets/frontend/astro-3.png";
                 specific React components, keeping the rest of the page
                 lightweight and server-rendered.
               </p>
-              <p>
+              <p class="front-section8-card-invisible">
                 I also leveraged Astro’s prefetching strategy, so while users
                 are still browsing the home page, the browser can begin
                 preparing resources for other routes in the background. Combined
@@ -406,7 +408,7 @@ import astro3 from "../assets/frontend/astro-3.png";
                 sized at 1.9MB was optimized down to just 119KB after
                 processing.
               </p>
-              <p>
+              <p class="front-section8-card-invisible">
                 The component also applies lazy loading by default and serves
                 appropriately sized images for different devices, reducing load
                 time while maintaining visual quality. This helps keep the site
@@ -452,21 +454,21 @@ import astro3 from "../assets/frontend/astro-3.png";
       height: 100vh;
 
       h1 {
-        font-size: 4.8rem;
+        font-size: var(--h1-size);
         font-weight: 100;
         margin-bottom: 2rem;
         animation: fadeIn-slightly 0.7s ease-in-out both;
         animation-delay: 0.2s;
         span {
           display: block;
-          font-size: 3.2rem;
+          font-size: var(--h1-span-size);
           font-weight: 900;
           line-height: 1.5;
           animation: fadeIn-slightly 0.6s ease-in-out both;
         }
       }
       p {
-        font-size: 1.2rem;
+        font-size: var(--p-size);
         font-weight: 100;
         line-height: 1.5;
       }
@@ -485,17 +487,21 @@ import astro3 from "../assets/frontend/astro-3.png";
 
       .front-introduction {
         max-width: 2400px;
-        gap: 8rem;
         margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
 
         .front-left {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
-          gap: 2rem;
+          gap: 1.4rem;
           width: 45%;
-          padding-left: 10%;
+          padding-left: 5%;
+          padding-right: 2%;
           .front-intro-frontend {
             animation: fadeIn-opacity 0.3s ease-in-out both;
             animation-delay: 0.5s;
@@ -509,17 +515,17 @@ import astro3 from "../assets/frontend/astro-3.png";
             animation: fadeIn-opacity 0.4s ease-in-out both;
             animation-delay: 0.6s;
             p {
-              font-size: 1.05rem;
+              font-size: var(--p-size);
             }
           }
         }
         .front-right {
-          width: 55%;
-          padding-right: 10%;
+          width: 50%;
+          padding-right: 5%;
           position: relative;
           height: 750px;
           display: flex;
-
+          justify-content: flex-end;
           &:hover {
             .front-card1 {
               transform: translate3d(-30px, -10px, 0);
@@ -618,6 +624,75 @@ import astro3 from "../assets/frontend/astro-3.png";
             z-index: 12;
           }
         }
+        @media (max-width: 1900px) {
+          gap: 4%;
+
+          .front-left {
+            padding-left: 4.5%;
+            padding-right: 0;
+          }
+
+          .front-right {
+            transform: scale(0.96);
+          }
+        }
+
+        @media (max-width: 1800px) {
+          gap: 3%;
+
+          .front-left {
+            padding-left: 4%;
+          }
+
+          .front-right {
+            transform: scale(0.87);
+          }
+        }
+
+        @media (max-width: 1700px) {
+          gap: 2%;
+
+          .front-left {
+            padding-left: 3.5%;
+          }
+
+          .front-right {
+            transform: scale(0.84);
+          }
+        }
+
+        @media (max-width: 1600px) {
+          gap: 1%;
+
+          .front-left {
+            padding-left: 3%;
+          }
+
+          .front-right {
+            transform: scale(0.76);
+          }
+        }
+        @media (max-width: 1500px) {
+          gap: 0;
+
+          .front-left {
+            padding-left: 2.5%;
+          }
+
+          .front-right {
+            transform: scale(0.68);
+          }
+        }
+        @media (max-width: 1400px) {
+          .front-left {
+            padding-left: 0;
+            width: 40%;
+          }
+
+          .front-right {
+            transform: scale(0.6);
+          }
+        }
       }
 
       .front-section-2 {
@@ -647,6 +722,10 @@ import astro3 from "../assets/frontend/astro-3.png";
           gap: 2rem;
           padding-left: 6rem;
           padding-right: 10%;
+          h2 {
+            font-size: var(--h2-size);
+            font-weight: 100;
+          }
         }
       }
       .front-section-3 {
@@ -654,6 +733,21 @@ import astro3 from "../assets/frontend/astro-3.png";
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        h2 {
+          font-size: var(--h2-size);
+          font-weight: 100;
+          span {
+            font-size: var(--h2-span-size);
+            display: block;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-top: 0.4rem;
+          }
+        }
+        p {
+          font-size: var(--p-size);
+          line-height: 1.5;
+        }
         .front-section-3-left {
           width: 33%;
           display: flex;
@@ -702,12 +796,20 @@ import astro3 from "../assets/frontend/astro-3.png";
           padding-left: 10%;
           padding-right: 5%;
           h2 {
+            font-size: var(--h2-size);
+            font-weight: 100;
             span {
+              font-size: var(--h2-span-size);
               display: block;
               font-weight: 900;
-              line-height: 1.2;
+              line-height: 1.5;
               margin-top: 0.4rem;
             }
+          }
+          p {
+            font-size: var(--p-size);
+            font-weight: 100;
+            line-height: 1.5;
           }
         }
         .front-section-4-right {
@@ -818,15 +920,31 @@ import astro3 from "../assets/frontend/astro-3.png";
             width: 600px;
             animation-timeline: view();
             animation-name: fadeIn-opacity-scroll-slow;
-            animation-duration: 1s;
-            animation-delay: 0.1s;
+            animation-duration: 3s;
+            animation-delay: 0.6s;
             animation-fill-mode: both;
-            // animation-range: entry 5% entry 90%;
+            // animation-range: entry 0% entry 100%;
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
             }
+          }
+
+          @media (max-width: 1700px) {
+            transform: scale(0.9);
+          }
+          @media (max-width: 1600px) {
+            transform: scale(0.86);
+          }
+          @media (max-width: 1500px) {
+            transform: scale(0.82);
+          }
+          @media (max-width: 1400px) {
+            transform: scale(0.78);
+          }
+          @media (max-width: 1300px) {
+            transform: scale(0.74);
           }
           .front-kitchen1 {
             top: 20%;
@@ -860,12 +978,19 @@ import astro3 from "../assets/frontend/astro-3.png";
           padding-right: 10%;
           padding-left: 5%;
           h2 {
+            font-size: var(--h2-size);
+            font-weight: 100;
             span {
+              font-size: var(--h2-span-size);
               display: block;
               font-weight: 900;
               line-height: 1.2;
               margin-top: 0.4rem;
             }
+          }
+          p {
+            font-size: var(--p-size);
+            line-height: 1.5;
           }
         }
       }
@@ -894,7 +1019,9 @@ import astro3 from "../assets/frontend/astro-3.png";
               align-items: center;
               gap: 1rem;
               h2 {
+                font-size: var(--h2-size);
                 span {
+                  font-size: var(--h2-span-size);
                   display: block;
                   font-weight: 900;
                   line-height: 1.2;
@@ -943,9 +1070,15 @@ import astro3 from "../assets/frontend/astro-3.png";
                 }
                 p {
                   color: var(--background-color);
-                  font-size: 0.9rem;
+                  font-size: var(--p-smaill-size);
                   line-height: 1.4;
                   margin-top: 0.4rem;
+                }
+
+                @media (max-width: 1600px) {
+                  .front-section8-card-invisible {
+                    display: none;
+                  }
                 }
               }
             }
@@ -975,7 +1108,9 @@ import astro3 from "../assets/frontend/astro-3.png";
           align-items: center;
           gap: 3rem;
           h2 {
-            max-width: 900px;
+            font-size: var(--h2-size);
+            font-weight: 100;
+            max-width: 1100px;
             text-align: center;
             line-height: 1.4;
           }
