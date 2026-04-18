@@ -12,7 +12,7 @@ import { MenuIcon } from "lucide-react";
           id="home"
           href="/"
           style="anchor-name: --link1"
-          class={pathname === "/" ? "active" : ""}>Home</a
+          class={pathname === "/" ? "desktop-nav-active" : ""}>Home</a
         >
       </li>
       <li>
@@ -20,7 +20,8 @@ import { MenuIcon } from "lucide-react";
           data-astro-prefetch="load"
           href="/frontend"
           style="anchor-name: --link2"
-          class={pathname === "/frontend/" ? "active" : ""}>Frontend</a
+          class={pathname === "/frontend/" ? "desktop-nav-active" : ""}
+          >Frontend</a
         >
       </li>
       <li>
@@ -28,14 +29,15 @@ import { MenuIcon } from "lucide-react";
           href="/backend"
           data-astro-prefetch="load"
           style="anchor-name: --link3"
-          class={pathname === "/backend/" ? "active" : ""}>Backend</a
+          class={pathname === "/backend/" ? "desktop-nav-active" : ""}
+          >Backend</a
         >
       </li>
       <li>
         <a
           href="/design"
           style="anchor-name: --link4"
-          class={pathname === "/design/" ? "active" : ""}>Design</a
+          class={pathname === "/design/" ? "desktop-nav-active" : ""}>Design</a
         >
       </li>
       <li>
@@ -43,7 +45,8 @@ import { MenuIcon } from "lucide-react";
           href="/photography"
           data-astro-prefetch="load"
           style="anchor-name: --link5"
-          class={pathname === "/photography/" ? "active" : ""}>Photography</a
+          class={pathname === "/photography/" ? "desktop-nav-active" : ""}
+          >Photography</a
         >
       </li>
       <li>
@@ -51,7 +54,8 @@ import { MenuIcon } from "lucide-react";
           href="/aboutme"
           data-astro-prefetch="load"
           style="anchor-name: --link6"
-          class={pathname === "/about/" ? "active" : ""}>About Me</a
+          class={pathname === "/aboutme/" ? "desktop-nav-active" : ""}
+          >About Me</a
         >
       </li>
     </ul>
@@ -127,7 +131,7 @@ import { MenuIcon } from "lucide-react";
   ul:has(li:nth-child(6):hover) ~ .liquid {
     position-anchor: --link6;
   }
-  .active {
+  .desktop-nav-active {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 28px;
     width: 120%;
