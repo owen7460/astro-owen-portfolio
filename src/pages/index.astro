@@ -447,6 +447,32 @@ import dorc from "../assets/dorc.png";
         li:nth-of-type(5) {
           top: 15vh;
         }
+        @media (max-width: 1000px) {
+          width: 95vw;
+        }
+        @media (max-width: 950px) {
+          li {
+            .right {
+              .right-content {
+                width: 90%;
+              }
+              p {
+                font-size: var(--card-p-size-mobile);
+              }
+              .buttons {
+                a {
+                  font-size: var(--card-a-size-mobile);
+                }
+              }
+              p:last-of-type {
+                margin-top: 0;
+              }
+              .buttons {
+                margin-top: 0.8em;
+              }
+            }
+          }
+        }
       }
 
       .design {
@@ -529,6 +555,29 @@ import dorc from "../assets/dorc.png";
                   height: auto;
                 }
               }
+            }
+          }
+        }
+
+        @media (max-width: 600px) {
+          .design-container {
+            width: 95vw;
+            padding: 1rem 0;
+          }
+          .design-header {
+            margin: 3rem auto;
+          }
+        }
+
+        @media (max-width: 550px) {
+          .design-container {
+            width: 99vw;
+          }
+        }
+        @media (max-width: 500px) {
+          .design-container {
+            ul {
+              grid-template-columns: 1fr;
             }
           }
         }
