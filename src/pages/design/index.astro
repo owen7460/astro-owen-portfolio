@@ -286,6 +286,16 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
       });
     }
 
+    function setupMobileNavObserver() {
+      const mobileNav = document.querySelector(".mobile-nav");
+      if (!mobileNav) return;
+      mobileNav.addEventListener("click", () => {
+        mobileNav.classList.toggle("active");
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", setupMobileNavObserver);
+    document.addEventListener("astro:page-load", setupMobileNavObserver);
     document.addEventListener("astro:page-load", setupTitleObserver);
     document.addEventListener("DOMContentLoaded", setupTitleObserver);
   </script>
