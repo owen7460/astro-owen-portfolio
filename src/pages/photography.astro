@@ -161,9 +161,8 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
   </main>
 
   <style lang="scss">
-    .horizontal-rule {
-      width: 60vw;
-      margin: 5vw auto;
+    :root {
+      --p-size-photography: clamp(1.2rem, 1.4vw, 1.8rem);
     }
     header {
       .banner {
@@ -179,6 +178,9 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
     }
 
     main {
+      width: 80vw;
+      max-width: 2400px;
+      margin: 0 auto;
       h1 {
         font-size: var(--h1-size);
         font-weight: 100;
@@ -191,7 +193,7 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
         margin-bottom: 2rem;
       }
       p {
-        font-size: var(--p-size);
+        font-size: var(--p-size-photography);
         font-weight: 100;
         line-height: 1.5;
       }
@@ -205,10 +207,11 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
       .introduction {
         width: 80vw;
         margin: 4rem auto 4rem;
+        width: 100%;
       }
       .intro-text {
         text-align: left;
-        width: 100%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -218,6 +221,7 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
         }
         .right {
           width: 50%;
+          margin-left: auto;
           text-align: right;
           margin-top: 5.6rem;
           p {
@@ -227,39 +231,79 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
       }
     }
     .montreal {
-      width: 80vw;
       height: 200vh;
       margin: 6rem auto 6rem;
       position: relative;
-
       .montreal-image-1 {
         position: absolute;
         top: 0;
         left: 2vw;
-        width: 1200px;
+        width: 100%;
         height: auto;
         object-fit: cover;
         object-position: center;
       }
       .montreal-image-2 {
         position: absolute;
-        bottom: 32vh;
-        right: 3vw;
-        width: 600px;
+        bottom: 2%;
+        right: 0;
+        width: 40%;
         height: auto;
+        @media (max-width: 2500px) {
+          bottom: 5%;
+        }
+        @media (max-width: 2300px) {
+          bottom: 20%;
+        }
+        @media (max-width: 1900px) {
+          bottom: 25%;
+        }
+        @media (max-width: 1600px) {
+          bottom: 30%;
+          width: 45%;
+        }
+        @media (max-width: 1400px) {
+          bottom: 35%;
+          width: 50%;
+        }
+        @media (max-width: 1200px) {
+          bottom: 30%;
+          width: 55%;
+        }
       }
       .montreal-image-3 {
         position: absolute;
-        bottom: 0;
+        bottom: -7%;
         left: 0vw;
         width: 600px;
         height: auto;
+        @media (max-width: 1800px) {
+          bottom: 0%;
+        }
+        @media (max-width: 1600px) {
+          bottom: 3%;
+        }
       }
       .montreal-text {
         position: absolute;
-        top: 50%;
+        top: 68%;
         left: 0vw;
-        width: 600px;
+        width: 40%;
+        @media (max-width: 2500px) {
+          top: 60%;
+        }
+        @media (max-width: 2300px) {
+          top: 57%;
+        }
+        @media (max-width: 1900px) {
+          top: 46%;
+        }
+        @media (max-width: 1700px) {
+          top: 45%;
+        }
+        @media (max-width: 1500px) {
+          top: 40%;
+        }
         p {
           padding-bottom: 4rem;
         }
@@ -267,18 +311,23 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
     }
 
     .quebec-city {
-      width: 80vw;
       height: 230vh;
       margin: 6rem auto;
       position: relative;
       .quebec-city-image-1 {
         position: absolute;
         top: 0;
-        right: 2vw;
-        width: 600px;
+        right: 2%;
+        width: 30%;
         height: auto;
         object-fit: cover;
         object-position: center;
+        @media (max-width: 2400px) {
+          width: 40%;
+        }
+        @media (max-width: 2000px) {
+          width: 43%;
+        }
       }
       .quebec-city-image-2 {
         position: absolute;
@@ -286,13 +335,21 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
         left: 0vw;
         width: 750px;
         height: auto;
+        @media (max-width: 1100px) {
+          width: 70%;
+          bottom: 21%;
+        }
       }
       .quebec-city-image-3 {
         position: absolute;
-        top: 24vh;
+        top: 24%;
         left: 0vw;
-        width: 500px;
+        width: 40%;
         height: auto;
+        z-index: 10;
+        @media (max-width: 2400px) {
+          width: 50%;
+        }
       }
       .quebec-city-image-4 {
         position: absolute;
@@ -300,6 +357,11 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
         right: 2vw;
         width: 550px;
         height: auto;
+        z-index: 5;
+        @media (max-width: 1100px) {
+          top: 30%;
+          width: 80%;
+        }
       }
       .quebec-city-image-5 {
         position: absolute;
@@ -307,12 +369,25 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
         right: 0;
         width: 600px;
         height: auto;
+        @media (max-width: 1100px) {
+          width: 90%;
+          bottom: 0%;
+        }
       }
       .quebec-city-text {
         position: absolute;
         top: 50%;
         left: 0vw;
         width: 600px;
+        @media (max-width: 1600px) {
+          width: 40%;
+        }
+        @media (max-width: 1400px) {
+          width: 30%;
+        }
+        @media (max-width: 1100px) {
+          width: 100%;
+        }
         p {
           padding-bottom: 4rem;
         }
@@ -320,7 +395,6 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
     }
 
     .sanya {
-      width: 80vw;
       height: 230vh;
       margin: 22rem auto;
       position: relative;
@@ -345,37 +419,66 @@ import sanyaImage7 from "../assets/photos/sanya7.jpg";
         position: absolute;
         top: 80vh;
         right: 0;
-        width: 600px;
+        width: 40%;
         height: auto;
         object-fit: cover;
         object-position: center;
+        z-index: 10;
+        @media (max-width: 2400px) {
+          top: 30%;
+          width: 45%;
+        }
+        @media (max-width: 2000px) {
+          width: 50%;
+          top: 27%;
+        }
+        @media (max-width: 1800px) {
+          width: 55%;
+        }
       }
 
       .sanya-image-5 {
         position: absolute;
         top: 90vh;
         left: 0;
-        width: 600px;
+        width: 40%;
         height: auto;
         object-fit: cover;
         object-position: center;
+        z-index: 5;
+        @media (max-width: 2400px) {
+          width: 45%;
+        }
+        @media (max-width: 2000px) {
+          width: 40%;
+        }
+        @media (max-width: 1800px) {
+          width: 55%;
+        }
+        @media (max-width: 1200px) {
+          top: 45%;
+          width: 80%;
+        }
       }
 
       .sanya-image-6 {
         position: absolute;
         bottom: 15vh;
         right: 0;
-        width: 900px;
+        width: 90%;
+        max-width: 1200px;
         height: auto;
+        z-index: 5;
       }
       .sanya-image-7 {
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 500px;
+        width: 40%;
         height: auto;
         object-fit: cover;
         object-position: center;
+        z-index: 10;
       }
 
       .sanya-text {
