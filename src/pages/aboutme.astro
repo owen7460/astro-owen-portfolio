@@ -23,7 +23,7 @@ import stage from "../assets/stage.jpg";
       />
       <div class="first-part">
         <div class="first-part-text">
-          <p>Hey, I'm Owen</p>
+          <h1>Hey, I'm Owen</h1>
           <p>
             Before transitioning into tech, I worked as a <span
               >professional opera tenor</span
@@ -246,7 +246,13 @@ import stage from "../assets/stage.jpg";
           </div>
         </div>
         <div class="fourth-part-content-mid">
-          <Image src={jomalone1} alt="Goodreads" width={911} height={734} />
+          <Image
+            src={jomalone1}
+            alt="Goodreads"
+            class="fourth-part-image-mid"
+            width={911}
+            height={734}
+          />
 
           <div class="fourth-part-content-mid-text">
             <p>
@@ -329,19 +335,24 @@ import stage from "../assets/stage.jpg";
         </div>
       </div>
 
-      <div class="contact-me">
+      <!-- <div class="contact-me">
         <p>
           Email: <a href="mailto:ouyangxiongwen@gmail.com"
             >ouyangxiongwen@gmail.com</a
           >
         </p>
         <p>Phone: <a href="tel:+13689992887">+1 368-999-2887</a></p>
-      </div>
+      </div> -->
     </div>
   </main>
 
   <style lang="scss">
     @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+
+    :root {
+      --h1-size-aboutme: clamp(2.8rem, 3.2vw, 4.4rem);
+      --p-size-aboutme: clamp(1.2rem, 1.4vw, 2.2rem);
+    }
     main {
       background-color: var(--background-color);
       overflow-x: clip;
@@ -363,19 +374,19 @@ import stage from "../assets/stage.jpg";
       .first-part {
         .first-part-text {
           position: absolute;
-          bottom: 20%;
-          left: 50%;
+          bottom: 15%;
+          left: 55%;
           transform: translate(-50%, -50%);
           z-index: 20;
           color: var(--text-color);
           text-align: left;
-          p:first-of-type {
-            font-size: 4rem;
+          h1 {
+            font-size: var(--h1-size-aboutme);
             font-weight: 100;
           }
-          p:last-of-type {
+          p {
             margin-top: 1.6rem;
-            font-size: 1.5rem;
+            font-size: var(--p-size-aboutme);
             font-weight: 100;
           }
         }
@@ -413,7 +424,7 @@ import stage from "../assets/stage.jpg";
         width: 60%;
         .second-part-text {
           p {
-            font-size: 1.5rem;
+            font-size: var(--p-size);
             font-weight: 100;
             line-height: 1.5;
           }
@@ -426,7 +437,7 @@ import stage from "../assets/stage.jpg";
     }
 
     .third-part {
-      margin-top: 15vh;
+      margin-top: 5vw;
       width: 100vw;
       height: 3500px;
       background-color: var(--background-color);
@@ -450,13 +461,13 @@ import stage from "../assets/stage.jpg";
           text-align: center;
 
           h2 {
-            font-size: 3rem;
+            font-size: var(--h2-size);
             font-weight: 100;
             line-height: 1.5;
           }
 
           p {
-            font-size: 1.3rem;
+            font-size: var(--p-size-aboutme);
             font-weight: 100;
             line-height: 1.5;
           }
@@ -708,7 +719,7 @@ import stage from "../assets/stage.jpg";
     }
 
     .fourth-part {
-      margin-top: 15vh;
+      margin-top: 25vh;
       width: 100vw;
       background-color: var(--background-color);
 
@@ -753,15 +764,23 @@ import stage from "../assets/stage.jpg";
       .fourth-part-content {
         margin: 15vh auto 15vh;
         width: 80vw;
-
-        h2 {
-          font-size: 3rem;
-          font-weight: 100;
-          line-height: 1.5;
+        @media (max-width: 1600px) {
+          width: 90vw;
         }
+        @media (max-width: 1500px) {
+          width: 95vw;
+        }
+        @media (max-width: 1400px) {
+          width: 100vw;
+        }
+        // h2 {
+        //   font-size: 3rem;
+        //   font-weight: 100;
+        //   line-height: 1.5;
+        // }
         p {
           text-align: left;
-          font-size: 1.3rem;
+          font-size: var(--p-size);
           font-weight: 100;
           line-height: 1.5;
           margin-bottom: 2rem;
@@ -772,6 +791,22 @@ import stage from "../assets/stage.jpg";
           align-items: center;
           gap: 4rem;
 
+          @media (max-width: 1600px) {
+            gap: 3rem;
+          }
+          @media (max-width: 1500px) {
+            gap: 2rem;
+            padding: 0 10%;
+          }
+          @media (max-width: 1400px) {
+            gap: 1rem;
+          }
+          @media (max-width: 1300px) {
+            gap: 0.5rem;
+          }
+          @media (max-width: 1200px) {
+            gap: 0;
+          }
           .fourth-part-text {
             display: flex;
             flex-direction: column;
@@ -784,6 +819,26 @@ import stage from "../assets/stage.jpg";
             justify-content: center;
             align-items: center;
             gap: 1rem;
+            @media (max-width: 1600px) {
+              transform: scale(0.92);
+            }
+            @media (max-width: 1500px) {
+              transform: scale(0.87);
+            }
+            @media (max-width: 1400px) {
+              transform: scale(0.82);
+            }
+            @media (max-width: 1300px) {
+              transform: scale(0.77);
+              gap: 0.5rem;
+            }
+            @media (max-width: 1200px) {
+              transform: scale(0.72);
+              gap: 0;
+            }
+            @media (max-width: 1100px) {
+              transform: scale(0.67);
+            }
           }
         }
         .fourth-part-content-mid {
@@ -792,18 +847,62 @@ import stage from "../assets/stage.jpg";
           align-items: center;
           gap: 4rem;
           margin-bottom: 2rem;
+          @media (max-width: 1600px) {
+            gap: 3rem;
+            transform: scale(0.96);
+          }
+          @media (max-width: 1500px) {
+            gap: 2rem;
+            transform: scale(0.92);
+          }
+          @media (max-width: 1400px) {
+            gap: 1rem;
+            transform: scale(0.88);
+          }
+          @media (max-width: 1300px) {
+            gap: 0.5rem;
+            transform: scale(0.84);
+          }
+          @media (max-width: 1200px) {
+            gap: 0;
+            transform: scale(0.8);
+          }
+          @media (max-width: 1100px) {
+            transform: scale(0.76);
+          }
           .fourth-part-content-mid-text {
             display: flex;
             flex-direction: column;
             width: 40%;
             gap: 2.6rem;
           }
+          // .fourth-part-image-mid {
+          //   @media (max-width: 1600px) {
+          //     transform: scale(0.92);
+          //   }
+          //   @media (max-width: 1500px) {
+          //     transform: scale(0.87);
+          //   }
+          //   @media (max-width: 1400px) {
+          //     transform: scale(0.82);
+          //   }
+          //   @media (max-width: 1300px) {
+          //     transform: scale(0.77);
+          //   }
+          //   @media (max-width: 1200px) {
+          //     transform: scale(0.72);
+          //   }
+          //   @media (max-width: 1100px) {
+          //     transform: scale(0.67);
+          //   }
+          // }
         }
         .fourth-part-content-lower {
           display: flex;
           justify-content: center;
           align-items: center;
           gap: 8rem;
+
           .fourth-part-content-lower-image {
             display: flex;
             justify-content: center;
@@ -817,6 +916,28 @@ import stage from "../assets/stage.jpg";
             align-items: flex-start;
             width: 40%;
             gap: 2.6rem;
+          }
+          @media (max-width: 1500px) {
+            gap: 4rem;
+            padding: 0 5%;
+          }
+          @media (max-width: 1400px) {
+            gap: 2rem;
+            .fourth-part-content-lower-image {
+              transform: scale(0.98);
+            }
+          }
+          @media (max-width: 1300px) {
+            gap: 0.5rem;
+            .fourth-part-content-lower-image {
+              transform: scale(0.84);
+            }
+          }
+          @media (max-width: 1200px) {
+            gap: 0;
+            .fourth-part-content-lower-image {
+              transform: scale(0.76);
+            }
           }
         }
       }
@@ -836,7 +957,7 @@ import stage from "../assets/stage.jpg";
 
       .vision-title {
         position: absolute;
-        top: 35%;
+        bottom: 46%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 15;
@@ -851,6 +972,27 @@ import stage from "../assets/stage.jpg";
           animation: vision-title-animation 1s linear forwards;
           animation-timeline: view();
           animation-range: entry;
+
+          @media (max-width: 1300px) {
+            font-size: 10rem;
+            bottom: 46%;
+            letter-spacing: 0.5rem;
+          }
+
+          @media (max-width: 1200px) {
+            font-size: 9rem;
+            bottom: 48%;
+            letter-spacing: 0.3rem;
+          }
+          @media (max-width: 1100px) {
+            font-size: 8rem;
+
+            letter-spacing: 0.2rem;
+          }
+          @media (max-width: 1000px) {
+            font-size: 6rem;
+            letter-spacing: 0.1rem;
+          }
 
           @keyframes vision-title-animation {
             from {
@@ -882,7 +1024,7 @@ import stage from "../assets/stage.jpg";
         // box-shadow: var(--liquid-border-shadow);
         border: 2px solid rgb(226, 226, 226);
         p {
-          font-size: 2.6rem;
+          font-size: var(--p-size);
           font-weight: 100;
           line-height: 1.5;
           color: var(--background-color);
@@ -900,7 +1042,7 @@ import stage from "../assets/stage.jpg";
           .right-text {
             text-align: left;
             p {
-              font-size: 1.6rem;
+              font-size: var(--p-size);
               font-weight: 100;
               line-height: 1.5;
               color: var(--background-color);
@@ -920,13 +1062,13 @@ import stage from "../assets/stage.jpg";
           div {
             h2 {
               color: var(--background-color);
-              font-size: 1.4rem;
-              font-weight: 300;
+              font-size: var(--p-size);
+              font-weight: 500;
               margin-bottom: 1rem;
             }
             p {
               color: var(--background-color);
-              font-size: 1rem;
+              font-size: var(--p-size);
               font-weight: 100;
               line-height: 1.5;
               margin-top: 1rem;
@@ -934,24 +1076,24 @@ import stage from "../assets/stage.jpg";
           }
         }
       }
-      .contact-me {
-        position: absolute;
-        bottom: 5%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 15;
-        text-align: center;
-        p {
-          font-weight: 100;
-          font-size: 1.1rem;
-          color: var(--background-color);
-          margin-bottom: 1rem;
-          a {
-            color: var(--background-color);
-            text-decoration: underline;
-          }
-        }
-      }
+      // .contact-me {
+      //   position: absolute;
+      //   bottom: 5%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      //   z-index: 15;
+      //   text-align: center;
+      //   p {
+      //     font-weight: 100;
+      //     font-size: var(--p-size);
+      //     color: var(--background-color);
+      //     margin-bottom: 1rem;
+      //     a {
+      //       color: var(--background-color);
+      //       text-decoration: underline;
+      //     }
+      //   }
+      // }
     }
   </style>
 
