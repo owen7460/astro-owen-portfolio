@@ -12,7 +12,7 @@ import dorc5 from "../assets/backend/dorc5.png";
 import rest from "../assets/backend/rest.png";
 import swaggerdoc from "../assets/backend/swaggerdoc.png";
 import { CarouselDApiDemo } from "../components/Caresoul";
-import Iridescence from "../components/Iridescence";
+// import Iridescence from "../components/Iridescence";
 import { AccordionComponent } from "../components/Accordion";
 import bgImage from "../assets/backend/bg-2.jpg";
 ---
@@ -22,7 +22,7 @@ import bgImage from "../assets/backend/bg-2.jpg";
     <section class="back-section-1">
       <Image
         loading="eager"
-        class="section-1-background-image"
+        class="back-section-1-background-image"
         src={bgImage}
         alt="Background"
       />
@@ -300,44 +300,46 @@ import bgImage from "../assets/backend/bg-2.jpg";
     main {
       margin: 0 auto 10rem;
       h1 {
-        font-size: 3.2rem;
+        font-size: var(--h1-size);
         font-weight: 100;
         margin-bottom: 2rem;
         animation: fadeIn-slightly 0.4s ease-in-out both;
       }
 
       h2 {
-        font-size: 3.2rem;
+        font-size: var(--h2-size);
         font-weight: 100;
         margin-bottom: 2rem;
       }
       p {
-        font-size: 1.2rem;
+        font-size: var(--p-size);
         font-weight: 100;
         line-height: 1.5;
       }
-      a {
-        text-decoration: underline;
-        color: var(--text-color);
-        font-size: 1.4rem;
-        font-weight: 100;
-        margin-top: 2rem;
-      }
+      // a {
+      //   text-decoration: underline;
+      //   color: var(--text-color);
+      //   font-size: 1.4rem;
+      //   font-weight: 100;
+      //   margin-top: 2rem;
+      // }
       section {
         max-width: 2400px;
         margin-left: auto;
         margin-right: auto;
       }
-
       .back-section-1 {
         width: 100vw;
         height: 100vh;
         position: relative;
+        overflow: hidden;
         .back-section-1-background-image {
+          position: absolute;
           height: 100%;
           width: 100%;
+          // inset: 0;
           object-fit: cover;
-          object-position: left top;
+          object-position: center;
         }
         .back-section-1-text {
           position: absolute;
@@ -359,7 +361,6 @@ import bgImage from "../assets/backend/bg-2.jpg";
         justify-content: center;
         align-items: center;
         height: 100vh;
-        width: 100vw;
         .back-section-2-left {
           width: 60%;
           height: 100%;
@@ -519,12 +520,11 @@ import bgImage from "../assets/backend/bg-2.jpg";
 
       .back-section-5 {
         margin-top: 15rem;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: 1.5vh;
         padding: 0 3rem;
         .back-section-5-top {
           max-width: 1200px;
@@ -549,6 +549,37 @@ import bgImage from "../assets/backend/bg-2.jpg";
           justify-content: center;
           align-items: center;
           gap: 2rem;
+
+          @media (max-width: 1600px) {
+            // transform: scale(0.9);
+            padding: 2rem;
+            padding-top: 0;
+          }
+          @media (max-width: 1500px) {
+            // transform: scale(0.8);
+            padding: 2.5rem;
+            padding-top: 0;
+          }
+          @media (max-width: 1400px) {
+            // transform: scale(0.7);
+            padding: 3rem;
+            padding-top: 0;
+          }
+          @media (max-width: 1300px) {
+            // transform: scale(0.6);
+            padding: 3.5rem;
+            padding-top: 0;
+          }
+          @media (max-width: 1200px) {
+            // transform: scale(0.5);
+            padding: 4rem;
+            padding-top: 0;
+          }
+          @media (max-width: 1100px) {
+            // transform: scale(0.4);
+            padding: 4.5rem;
+            padding-top: 0;
+          }
         }
       }
 
@@ -562,12 +593,11 @@ import bgImage from "../assets/backend/bg-2.jpg";
         .back-section-6-left {
           width: 55%;
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           gap: 2rem;
           padding-left: 10%;
           .back-database-card {
             will-change: transform, opacity;
-            // transform: translateY(150px);
             width: 100%;
             height: 150px;
             border-radius: 16px;
@@ -577,31 +607,13 @@ import bgImage from "../assets/backend/bg-2.jpg";
             justify-content: center;
             align-items: center;
             p {
-              font-size: 1.2rem;
+              font-size: var(--p-size);
               font-weight: 100;
               line-height: 1.5;
             }
           }
-          // .erd {
-          //   background-image: url("/icons/erd.webp");
-          //   background-size: 40%;
-          //   background-position: center;
-          //   background-repeat: no-repeat;
-          //   animation-delay: 0s;
-          // }
-          // .schema {
-          //   background-image: url("/icons/schema.webp");
-          //   background-size: cover;
-          //   background-position: center;
-          //   background-repeat: no-repeat;
-          //   animation-delay: 0.1s;
-          // }
+
           .back-mysql {
-            // background-image: url("/icons/mysql.svg");
-            // background-size: 45%;
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // animation-delay: 0.3s;
             img {
               width: 70%;
               height: auto;
@@ -609,31 +621,13 @@ import bgImage from "../assets/backend/bg-2.jpg";
             }
           }
           .back-mongodb {
-            // background-image: url("/icons/mongo.png");
-            // background-size: 55%;
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // animation-delay: 0.4s;
             img {
               width: 80%;
               height: auto;
               object-fit: cover;
             }
           }
-          // .graphql {
-          //   background-image: url("/icons/graphql.png");
-          //   background-size: 90%;
-          //   background-position: center;
-          //   background-repeat: no-repeat;
-          //   animation-delay: 0.5s;
-          //   background-color: #ffffff;
-          // }
           .back-postgresql {
-            // background-image: url("/icons/postgresql.png");
-            // background-size: 80%;
-            // background-position: center;
-            // background-repeat: no-repeat;
-            // animation-delay: 0.7s;
             img {
               width: 90%;
               height: auto;
@@ -658,6 +652,33 @@ import bgImage from "../assets/backend/bg-2.jpg";
             }
           }
         }
+        @media (max-width: 1600px) {
+          align-items: flex-start;
+          gap: 2rem;
+        }
+        @media (max-width: 1400px) {
+          .back-section-6-left {
+            grid-template-columns: repeat(auto-fit, minmax(2, 1fr));
+          }
+        }
+        @media (max-width: 1300px) {
+          .back-section-6-left {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            padding-left: 5%;
+          }
+          .back-section-6-right {
+            padding-right: 5%;
+          }
+        }
+        @media (max-width: 1200px) {
+          .back-section-6-left {
+            padding-left: 2%;
+          }
+          .back-section-6-right {
+            padding-right: 2%;
+          }
+        }
       }
 
       .back-section-7 {
@@ -677,12 +698,20 @@ import bgImage from "../assets/backend/bg-2.jpg";
           gap: 0.2rem;
           text-align: left;
           h2 {
+            font-size: var(--h2-size);
+            font-weight: 100;
             span {
+              font-size: var(--h2-span-size);
               display: block;
               font-weight: 900;
               line-height: 1.2;
               margin-top: 0.4rem;
             }
+          }
+          p {
+            font-size: var(--p-size);
+            font-weight: 100;
+            line-height: 1.5;
           }
         }
         .back-section-7-bottom {

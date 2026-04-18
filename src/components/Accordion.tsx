@@ -30,7 +30,7 @@ export function AccordionComponent() {
       >
         <AccordionItem value="docker" onClick={() => handleContent("docker")}>
           <AccordionTrigger className="text-lg">Docker</AccordionTrigger>
-          <AccordionContent className="text-base font-light">
+          <AccordionContent className="text-[clamp(0.8rem,1.2vw,1.6rem)] font-light">
             In my personal project JokeShare, I used Docker to containerize the
             application by creating a Docker image based on the project
             configuration. I then ran containers from this image to test the
@@ -44,7 +44,7 @@ export function AccordionComponent() {
         </AccordionItem>
         <AccordionItem value="coolify" onClick={() => handleContent("coolify")}>
           <AccordionTrigger className="text-lg">Coolify</AccordionTrigger>
-          <AccordionContent className="text-base font-light">
+          <AccordionContent className="text-[clamp(0.8rem,1.2vw,1.6rem)] font-light">
             After containerizing and testing the application with Docker, I used
             Coolify to handle deployment and infrastructure management. I
             deployed the JokeShare frontend through Coolify and configured it to
