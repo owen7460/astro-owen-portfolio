@@ -693,6 +693,35 @@ import astro3 from "../assets/frontend/astro-3.png";
             transform: scale(0.6);
           }
         }
+        @media (max-width: 1300px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 0 5rem;
+          .front-left {
+            width: 900px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0;
+            text-align: center;
+            .front-technologies {
+              display: none;
+            }
+            p {
+              max-width: 800px;
+            }
+          }
+          .front-right {
+            width: 900px;
+            height: 45%;
+            margin: 0 auto;
+            padding: 0;
+            transform: scale(0.65);
+          }
+        }
       }
 
       .front-section-2 {
@@ -700,6 +729,14 @@ import astro3 from "../assets/frontend/astro-3.png";
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
         .front-section-2-left {
           width: 55%;
           position: relative;
