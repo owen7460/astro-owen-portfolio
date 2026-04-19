@@ -12,8 +12,8 @@ export function AccordionComponent() {
   };
 
   return (
-    <div className="flex justify-center items-start max-w-[1600px] w-full gap-4">
-      <div className="w-[50%]">
+    <div className="flex justify-center items-start max-w-[1600px] w-full gap-4 max-[700px]:flex-col">
+      <div className="w-[50%] max-[700px]:w-full">
         <img
           className="rounded-lg overflow-hidden"
           src={
@@ -26,7 +26,7 @@ export function AccordionComponent() {
         type="single"
         collapsible
         defaultValue={content}
-        className="w-[50%]"
+        className="w-[50%] max-[700px]:w-full"
       >
         <AccordionItem value="docker" onClick={() => handleContent("docker")}>
           <AccordionTrigger className="text-lg">Docker</AccordionTrigger>

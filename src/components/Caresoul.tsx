@@ -52,6 +52,7 @@ export function CarouselDApiDemo() {
   return (
     <>
       <ToggleGroup
+        className="max-[700px]:flex-col max-[700px]:gap-1"
         size="lg"
         variant="outline"
         type="single"
