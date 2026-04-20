@@ -29,7 +29,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
           <ul>
             <li class="design-item">
               <a href="/design/jomalone">
-                <h3>Jo Malone London</h3>
+                <h3 class="design-item-title">Jo Malone London</h3>
                 <p>
                   Jo Malone is a British fragrance brand known for its elegant,
                   minimalist scents and signature cream-and-black packaging,
@@ -46,7 +46,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
 
             <li class="design-item">
               <a href="/design/goodreads">
-                <h3>Goodreads</h3>
+                <h3 class="design-item-title">Goodreads</h3>
                 <p>
                   Goodreads is a popular social platform where readers can
                   discover books, track their reading progress, write reviews,
@@ -64,7 +64,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
 
             <li class="design-item">
               <a href="/design/volvocars">
-                <h3>Volvo Cars</h3>
+                <h3 class="design-item-title">Volvo Cars</h3>
                 <p>
                   Volvo Cars is a Swedish automotive brand known for its
                   commitment to safety, Scandinavian design, and engineering
@@ -81,7 +81,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
 
             <li class="design-item">
               <a href="/design/calgarystampede">
-                <h3>Calgary Stampede</h3>
+                <h3 class="design-item-title">Calgary Stampede</h3>
                 <p>
                   Calgary Stampede is an iconic annual rodeo and festival in
                   Calgary celebrating Western heritage, cowboy culture, and
@@ -98,7 +98,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
 
             <li class="design-item">
               <a href="/design/canmorebanff">
-                <h3>Canmore&Banff</h3>
+                <h3 class="design-item-title">Canmore&Banff</h3>
                 <p>
                   I've visited Canmore many times, I was fascinated by those
                   thick forests, majestic mountains and breathtaking northern
@@ -117,7 +117,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
 
             <li class="design-item">
               <a href="/design/zcrew">
-                <h3>Zcrew Pancakes</h3>
+                <h3 class="design-item-title">Zcrew Pancakes</h3>
                 <p>
                   Design often comes from the small details of everyday life.
                   When I paid attention to the beautiful moments around me and
@@ -153,12 +153,12 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
     main {
       width: 80vw;
       max-width: 2400px;
-      margin: 0 auto;
+      margin: 0 auto 4rem;
       .introduction {
         width: 80vw;
         margin: 4rem auto 4rem;
         h1 {
-          font-size: var(--h2-size);
+          font-size: var(--h1-size);
           font-weight: 500;
           margin-bottom: 1rem;
         }
@@ -175,9 +175,11 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
           margin: 0 auto;
           .design-header {
             text-align: center;
-            h2 {
-              font-size: var(--card-h2-size);
+            .design-item-title {
+              font-size: var(--h3-size);
               margin-bottom: 1em;
+              font-weight: 500;
+              margin-bottom: 0.8em;
             }
           }
 
@@ -205,12 +207,6 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
               transition: scale 0.2s ease-in-out;
               &:hover {
                 transform: scale(1.02);
-              }
-
-              h3 {
-                font-size: var(--card-h2-size);
-                font-weight: 500;
-                margin-bottom: 0.8em;
               }
               p {
                 font-size: var(--card-p-size);
@@ -260,6 +256,40 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
           animation-delay: 0.6s;
         }
       }
+
+      @media (max-width: 700px) {
+        .introduction {
+          width: 90vw;
+        }
+        width: 90vw;
+        .design {
+          .design-container {
+            .design-header {
+              ul {
+                grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 600px) {
+        width: 95vw;
+        .design {
+          .design-container {
+            .design-header {
+              .design-item {
+                a {
+                  padding: 2.2em 1.6em;
+                }
+              }
+            }
+          }
+        }
+      }
+      @media (max-width: 500px) {
+        width: 100vw;
+      }
     }
   </style>
   <script>
@@ -277,7 +307,7 @@ import zCrewPancakes from "../../assets/design-zcrew.png";
             }
           });
         },
-        { threshold: 0.3 },
+        { threshold: 0.1 },
       );
 
       elementsToObserve.forEach((el) => {
