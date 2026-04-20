@@ -47,77 +47,81 @@ import astro3 from "../assets/frontend/astro-3.png";
         </div>
       </div>
       <div class="front-right">
-        <div class="front-image-card front-card1">
-          <Image
-            loading="eager"
-            src={card1}
-            alt="Card for weather"
-            width={356}
-            height={99}
-          />
-        </div>
-        <div class="front-image-card front-card2">
-          <Image
-            loading="eager"
-            src={card2}
-            alt="Card for tab bar"
-            width={298}
-            height={55}
-          />
-        </div>
-        <div class="front-image-card front-card3">
-          <Image
-            loading="eager"
-            src={card3}
-            alt="Card for BlendBetter App"
-            width={151}
-            height={328}
-          />
-        </div>
-        <div class="front-image-card front-card4">
-          <Image
-            loading="eager"
-            src={card4}
-            alt="Card for Owen's Kitchen"
-            width={621}
-            height={419}
-          />
-        </div>
-        <div class="front-image-card front-card5">
-          <Image
-            loading="eager"
-            src={card5}
-            alt="Card for Jokeshare"
-            width={349}
-            height={287}
-          />
-        </div>
-        <div class="front-image-card front-card6">
-          <Image
-            loading="eager"
-            src={card6}
-            alt="Card BlendBetter web"
-            width={316}
-            height={201}
-          />
-        </div>
-        <div class="front-image-card front-card7">
-          <Image
-            loading="eager"
-            src={card7}
-            alt="Card for Vue project"
-            width={253}
-            height={125}
-          />
-        </div>
-        <div class="front-image-card front-card8">
-          <Image
-            loading="eager"
-            src={card8}
-            alt="Card for Tailwind CSS"
-            width={143}
-            height={250}
-          />
+        <div class="front-cards-base">
+          <div class="front-cards-stage">
+            <div class="front-image-card front-card1">
+              <Image
+                loading="eager"
+                src={card1}
+                alt="Card for weather"
+                width={356}
+                height={99}
+              />
+            </div>
+            <div class="front-image-card front-card2">
+              <Image
+                loading="eager"
+                src={card2}
+                alt="Card for tab bar"
+                width={298}
+                height={55}
+              />
+            </div>
+            <div class="front-image-card front-card3">
+              <Image
+                loading="eager"
+                src={card3}
+                alt="Card for BlendBetter App"
+                width={151}
+                height={328}
+              />
+            </div>
+            <div class="front-image-card front-card4">
+              <Image
+                loading="eager"
+                src={card4}
+                alt="Card for Owen's Kitchen"
+                width={621}
+                height={419}
+              />
+            </div>
+            <div class="front-image-card front-card5">
+              <Image
+                loading="eager"
+                src={card5}
+                alt="Card for Jokeshare"
+                width={349}
+                height={287}
+              />
+            </div>
+            <div class="front-image-card front-card6">
+              <Image
+                loading="eager"
+                src={card6}
+                alt="Card BlendBetter web"
+                width={316}
+                height={201}
+              />
+            </div>
+            <div class="front-image-card front-card7">
+              <Image
+                loading="eager"
+                src={card7}
+                alt="Card for Vue project"
+                width={253}
+                height={125}
+              />
+            </div>
+            <div class="front-image-card front-card8">
+              <Image
+                loading="eager"
+                src={card8}
+                alt="Card for Tailwind CSS"
+                width={143}
+                height={250}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -498,161 +502,228 @@ import astro3 from "../assets/frontend/astro-3.png";
           }
         }
         .front-right {
-          width: 50%;
-          position: relative;
-          height: 750px;
-          display: flex;
-          justify-content: flex-end;
-          &:hover {
-            .front-card1 {
-              transform: translate3d(-30px, -10px, 0);
-            }
-            .front-card2 {
-              transform: translate3d(0, -30px, 0);
-            }
-            .front-card3 {
-              transform: translate3d(10px, 60px, 0);
-            }
-            .front-card4 {
-              transform: translate3d(0, 0, 0);
-            }
-            .front-card5 {
-              transform: translate3d(-5px, 5px, 0);
-            }
-            .front-card6 {
-              transform: translate3d(0px, -30px, 0);
-            }
-            .front-card7 {
-              transform: translate3d(40px, -20px, 0);
-            }
-            .front-card8 {
-              transform: translate3d(0, -30px, 0);
-            }
-          }
+          width: 50vw;
+          height: 100vh;
+          .front-cards-base {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            .front-cards-stage {
+              position: absolute;
+              max-width: 1200px;
+              width: 833px;
+              height: 725px;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              transform-origin: center center;
 
-          .front-image-card {
-            position: absolute;
-            border-radius: 16px;
-            box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
-            overflow: hidden;
-            transform: rotateY(-20deg) rotateX(20deg);
-            transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
+              &:hover {
+                .front-card1 {
+                  transform: translate3d(-30px, -10px, 0);
+                }
+                .front-card2 {
+                  transform: translate3d(0, -30px, 0);
+                }
+                .front-card3 {
+                  transform: translate3d(10px, 60px, 0);
+                }
+                .front-card4 {
+                  transform: translate3d(0, 0, 0);
+                }
+                .front-card5 {
+                  transform: translate3d(-5px, 5px, 0);
+                }
+                .front-card6 {
+                  transform: translate3d(0px, -30px, 0);
+                }
+                .front-card7 {
+                  transform: translate3d(40px, -20px, 0);
+                }
+                .front-card8 {
+                  transform: translate3d(0, -30px, 0);
+                }
+              }
+              .front-image-card {
+                position: absolute;
+                border-radius: 16px;
+                box-shadow: 5px 5px 10px 10px rgba(160, 160, 160, 0.4);
+                overflow: hidden;
+                transform: rotateY(-20deg) rotateX(20deg);
+                transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+              .front-card1 {
+                width: 356px;
+                height: 99px;
+                top: 50px;
+                left: 0px;
+                z-index: 1;
+              }
+              .front-card2 {
+                width: 298px;
+                height: 55px;
+                top: 200px;
+                left: 0px;
+                z-index: 9;
+              }
+              .front-card3 {
+                width: 151px;
+                height: 328px;
+                top: 300px;
+                left: 30px;
+                z-index: 8;
+              }
+              .front-card4 {
+                width: 621px;
+                height: 419px;
+                top: 105px;
+                left: 150px;
+                z-index: 7;
+              }
+              .front-card5 {
+                width: 349px;
+                height: 287px;
+                top: 450px;
+                left: 250px;
+                z-index: 8;
+              }
+              .front-card6 {
+                width: 316px;
+                height: 201px;
+                top: 0px;
+                left: 450px;
+                z-index: 11;
+              }
+              .front-card7 {
+                width: 253px;
+                height: 125px;
+                top: 250px;
+                left: 550px;
+                z-index: 10;
+              }
+              .front-card8 {
+                width: 143px;
+                height: 250px;
+                top: 475px;
+                left: 690px;
+                z-index: 12;
+              }
             }
           }
-          .front-card1 {
-            width: 356px;
-            height: 99px;
-            top: 50px;
-            left: 0px;
-            z-index: 1;
+        }
+
+        @media (max-width: 2200px) {
+          .front-right {
+            .front-cards-base {
+              .front-cards-stage {
+                left: 47.5%;
+              }
+            }
           }
-          .front-card2 {
-            width: 298px;
-            height: 55px;
-            top: 200px;
-            left: 0px;
-            z-index: 9;
+        }
+        @media (max-width: 2100px) {
+          .front-right {
+            .front-cards-base {
+              .front-cards-stage {
+                left: 46.5%;
+              }
+            }
           }
-          .front-card3 {
-            width: 151px;
-            height: 328px;
-            top: 300px;
-            left: 30px;
-            z-index: 8;
+        }
+        @media (max-width: 2000px) {
+          .front-right {
+            .front-cards-base {
+              .front-cards-stage {
+                left: 45%;
+              }
+            }
           }
-          .front-card4 {
-            width: 621px;
-            height: 419px;
-            top: 105px;
-            left: 150px;
-            z-index: 7;
-          }
-          .front-card5 {
-            width: 349px;
-            height: 287px;
-            top: 450px;
-            left: 250px;
-            z-index: 8;
-          }
-          .front-card6 {
-            width: 316px;
-            height: 201px;
-            top: 0px;
-            left: 450px;
-            z-index: 11;
-          }
-          .front-card7 {
-            width: 253px;
-            height: 125px;
-            top: 250px;
-            left: 550px;
-            z-index: 10;
-          }
-          .front-card8 {
-            width: 143px;
-            height: 250px;
-            top: 475px;
-            left: 690px;
-            z-index: 12;
+        }
+        @media (max-width: 1900px) {
+          .front-right {
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.95);
+              }
+            }
           }
         }
         @media (max-width: 1800px) {
-          .front-left {
-            padding-left: 5%;
-            padding-right: 0;
-            width: 45%;
-          }
           .front-right {
-            gap: 0;
-            width: 50%;
-            transform: scale(0.8);
-            left: -2%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.92);
+              }
+            }
           }
         }
         @media (max-width: 1700px) {
           .front-right {
-            transform: scale(0.76);
-            left: -4%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.88);
+              }
+            }
           }
         }
         @media (max-width: 1600px) {
           .front-right {
-            transform: scale(0.72);
-            left: -5%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.84);
+              }
+            }
           }
         }
         @media (max-width: 1500px) {
           .front-right {
-            transform: scale(0.65);
-            left: -6%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.8);
+              }
+            }
           }
         }
         @media (max-width: 1400px) {
           .front-right {
-            left: -7%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.76);
+              }
+            }
           }
         }
         @media (max-width: 1300px) {
           .front-right {
-            left: -8%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.67);
+              }
+            }
           }
         }
         @media (max-width: 1200px) {
           .front-right {
-            left: -9%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.63);
+              }
+            }
           }
         }
         @media (max-width: 1100px) {
-          .front-left {
-            padding-left: 0;
-          }
           .front-right {
-            left: -10%;
-            transform: scale(0.62);
+            .front-cards-base {
+              .front-cards-stage {
+                transform: scale(0.6);
+                transform: translate(-50%, -50%) scale(0.58);
+              }
+            }
           }
         }
         @media (max-width: 1000px) {
@@ -669,6 +740,9 @@ import astro3 from "../assets/frontend/astro-3.png";
             gap: 1rem;
             padding: 0 5%;
             text-align: center;
+            h2 {
+              margin-bottom: 0;
+            }
             .front-intro-frontend {
               text-align: center;
               width: 75%;
@@ -680,65 +754,87 @@ import astro3 from "../assets/frontend/astro-3.png";
           .front-right {
             width: 100%;
             height: 50%;
-            left: 50%;
-            transform: translateX(-50%) scale(0.62);
-            transform-origin: center center;
-          }
-          .front-intro-frontend {
-            height: 45%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 1rem;
-            padding: 0 5%;
-            text-align: center;
-            bottom: 5%;
-          }
-        }
-        @media (max-width: 950px) {
-          .front-right {
-            left: 50%;
-            transform: translateX(-50%) scale(0.55);
-          }
-        }
-        @media (max-width: 900px) {
-          .front-right {
-            left: 50%;
-          }
-        }
-        @media (max-width: 850px) {
-          .front-right {
-            left: 50%;
-          }
-        }
-        @media (max-width: 800px) {
-          .front-right {
-            left: 50%;
-          }
-        }
-        @media (max-width: 750px) {
-          .front-right {
-            left: 46%;
+            .front-cards-base {
+              .front-cards-stage {
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.62);
+              }
+            }
           }
         }
         @media (max-width: 700px) {
+          .front-left {
+            h1 {
+              margin-bottom: 0;
+            }
+          }
           .front-right {
-            left: 48%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.55);
+              }
+            }
           }
         }
-        @media (max-width: 650px) {
+        @media (max-width: 550px) {
           .front-right {
-            bottom: 6%;
-            left: 42%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.5);
+              }
+            }
           }
         }
-        @media (max-width: 600px) {
+        @media (max-width: 500px) {
           .front-right {
-            bottom: 10%;
-            left: 44%;
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.45);
+                top: 45%;
+              }
+            }
+          }
+        }
+        @media (max-width: 450px) {
+          .front-right {
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.4);
+              }
+            }
+          }
+        }
+        @media (max-width: 400px) {
+          .front-left {
+            gap: 0.5rem;
+            h1 {
+              font-size: 2rem;
+              span {
+                font-size: 1.5rem;
+              }
+            }
+
+            .front-intro-frontend {
+              width: 100%;
+              font-size: 0.7rem;
+            }
+            .front-technologies {
+              p {
+                font-size: 0.6rem;
+              }
+            }
+          }
+          .front-right {
+            .front-cards-base {
+              .front-cards-stage {
+                transform: translate(-50%, -50%) scale(0.35);
+                top: 55%;
+              }
+            }
           }
         }
       }
+
       .front-section-2 {
         background-image: url("../assets/frontend/blendbetterBG.png");
         background-size: cover;
