@@ -19,10 +19,20 @@ import dorc from "../assets/dorc.png";
 <Layout>
   <main>
     <section class="hero">
-      <div>
-        <h1>Welcome to Owen's Portfolio</h1>
-        <p>Learning technologies to solve problems with the best solutions.</p>
-        <p>This site is built with Astro*</p>
+      <div class="hero-content">
+        <p class="title">Developer & Designer</p>
+        <h1 class="title-h1">Portfolio.</h1>
+        <div class="title-my-name-container">
+          <p class="title-my-name">Owen Ouyang</p>
+          <p class="title-year">2026</p>
+        </div>
+
+        <div class="title-description-container">
+          <p>
+            Learning technologies to solve problems with the best solutions.
+          </p>
+          <p>This site is built with Astro*</p>
+        </div>
       </div>
     </section>
 
@@ -307,7 +317,8 @@ import dorc from "../assets/dorc.png";
   <style lang="scss">
     @use "../styles/mixins.scss" as mixins;
     :root {
-      --intro-text-size: clamp(2rem, 3.4vw, 4rem);
+      --title-size: clamp(1rem, 1vw, 2rem);
+      --intro-text-size: 8rem;
       --intro-subtitle-size: clamp(1rem, 1.8vw, 2rem);
       --intro-subtitle-buildwith: clamp(0.8rem, 1vw, 1.2rem);
       --cardHeight: clamp(400px, 40vw, 800px);
@@ -332,10 +343,47 @@ import dorc from "../assets/dorc.png";
         color: var(--text-color);
         text-align: center;
 
-        h1 {
+        .title {
+          font-weight: 100;
+          text-align: left;
+          font-size: var(--title-size);
+          margin-bottom: 0;
+          animation: fadeIn 0.4s ease-in-out both;
+        }
+        .title-h1 {
           font-size: var(--intro-text-size);
           margin-bottom: 1rem;
           animation: fadeIn 0.4s ease-in-out both;
+        }
+        .title-my-name-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0.5rem;
+          p {
+            font-size: var(--title-size);
+            font-weight: 100;
+            text-align: left;
+            margin-bottom: 0;
+          }
+        }
+        .title-description-container {
+          position: absolute;
+          bottom: 10%;
+          left: 50%;
+          transform: translateX(-50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          p {
+            font-size: 0.8rem;
+            font-weight: 300;
+            letter-spacing: 0.2px;
+            animation: fadeIn 0.6s ease-in-out both;
+            animation-delay: 0.1s;
+            margin-bottom: 0.6vw;
+          }
         }
         p {
           font-size: var(--intro-subtitle-size);
