@@ -212,7 +212,9 @@ import stage from "../assets/stage.jpg";
     <div class="fourth-part">
       <div class="fourth-part-header">
         <h2 class="fourth-part-title">
-          A product is, in a way, a piece of art.
+          A product is, <span class="fourth-part-title-span-1"
+            >in a way,
+          </span><span class="fourth-part-title-span-2">a piece of art.</span>
         </h2>
         <video
           class="fourth-part-video"
@@ -310,11 +312,11 @@ import stage from "../assets/stage.jpg";
             <h2>Core Skills</h2>
             <p>TypeScript, JavaScript</p>
             <p>React, Next.js, Astro</p>
-            <p>Node.js, Express.js, PHP</p>
+            <p>Node.js, Express.js,PHP, FastAPI</p>
           </div>
           <div>
             <h2>Database</h2>
-            <p>MySQL, MongoDB</p>
+            <p>MySQL, MongoDB, GraphQL, PostgreSQL</p>
           </div>
           <div>
             <h2>Mobile</h2>
@@ -322,11 +324,14 @@ import stage from "../assets/stage.jpg";
           </div>
           <div>
             <h2>Styling & UI</h2>
-            <p>Tailwind CSS, Shadcn, Sass</p>
+            <p>Tailwind CSS, Shadcn, Sass, GASP, Lottie</p>
           </div>
           <div>
             <h2>Other</h2>
-            <p>Git, WordPress, Elementor</p>
+            <p>
+              Git, Redux, Zustand, RESTful, WordPress, Elementor, Docker,
+              Coolify
+            </p>
           </div>
           <div>
             <h2>Design</h2>
@@ -334,15 +339,6 @@ import stage from "../assets/stage.jpg";
           </div>
         </div>
       </div>
-
-      <!-- <div class="contact-me">
-        <p>
-          Email: <a href="mailto:ouyangxiongwen@gmail.com"
-            >ouyangxiongwen@gmail.com</a
-          >
-        </p>
-        <p>Phone: <a href="tel:+13689992887">+1 368-999-2887</a></p>
-      </div> -->
     </div>
   </main>
 
@@ -350,8 +346,8 @@ import stage from "../assets/stage.jpg";
     @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 
     :root {
-      --h1-size-aboutme: clamp(2.8rem, 3.2vw, 4.4rem);
-      --p-size-aboutme: clamp(1.2rem, 1.4vw, 2.2rem);
+      --h1-size-aboutme: clamp(1.8rem, 2.6vw, 4.4rem);
+      --p-size-aboutme: clamp(1rem, 1vw, 2.2rem);
     }
     main {
       background-color: var(--background-color);
@@ -388,6 +384,19 @@ import stage from "../assets/stage.jpg";
             margin-top: 1.6rem;
             font-size: var(--p-size-aboutme);
             font-weight: 100;
+          }
+        }
+      }
+      @media (max-width: 700px) {
+        .first-part {
+          .first-part-text {
+          }
+        }
+      }
+      @media (max-height: 700px) {
+        .first-part {
+          .first-part-text {
+            bottom: 5%;
           }
         }
       }
@@ -433,6 +442,28 @@ import stage from "../assets/stage.jpg";
             margin-bottom: 2rem;
           }
         }
+        @media (max-width: 1000px) {
+          width: 85vw;
+          gap: 2rem;
+        }
+        @media (max-width: 900px) {
+          width: 90vw;
+          gap: 1rem;
+        }
+        @media (max-width: 800px) {
+          width: 95vw;
+          gap: 0;
+        }
+        @media (max-width: 600px) {
+          flex-direction: column;
+          .second-part-text {
+            margin-top: 2rem;
+            width: 80%;
+          }
+        }
+      }
+      @media (max-width: 700px) {
+        margin-bottom: 18rem;
       }
     }
 
@@ -462,12 +493,12 @@ import stage from "../assets/stage.jpg";
 
           h2 {
             font-size: var(--h2-size);
-            font-weight: 100;
+            font-weight: 500;
             line-height: 1.5;
           }
 
           p {
-            font-size: var(--p-size-aboutme);
+            font-size: var(--p-size);
             font-weight: 100;
             line-height: 1.5;
           }
@@ -712,6 +743,44 @@ import stage from "../assets/stage.jpg";
         animation: pc-9-animation 1s ease-in-out forwards;
         animation-timeline: view();
       }
+      @media (max-width: 700px) {
+        img {
+          transform: scale(0.8);
+          transform-origin: center;
+        }
+      }
+      @media (max-width: 600px) {
+        img {
+          transform: scale(0.6);
+        }
+      }
+      @media (max-width: 500px) {
+        .pc-2 {
+          top: 0%;
+        }
+        .pc-7 {
+          left: 0%;
+          top: 0%;
+        }
+        .pc-13 {
+          bottom: 15%;
+        }
+      }
+      @media (max-width: 400px) {
+        .pc-13 {
+          left: -10%;
+          bottom: 40%;
+        }
+        .pc-14 {
+          right: -10%;
+          bottom: 40%;
+        }
+      }
+      @media (max-height: 1000px) {
+        img {
+          transform: scale(0.45);
+        }
+      }
     }
 
     .is-firefox-third-part {
@@ -734,6 +803,12 @@ import stage from "../assets/stage.jpg";
           position: relative;
           font-size: var(--h1-size);
           z-index: 15;
+          @media (max-width: 1100px) {
+            .fourth-part-title-span-1 {
+              display: block;
+              margin: 0.4rem auto;
+            }
+          }
         }
         video {
           position: absolute;
@@ -763,15 +838,9 @@ import stage from "../assets/stage.jpg";
 
       .fourth-part-content {
         margin: 15vh auto 15vh;
-        width: 80vw;
+        padding: 0 10%;
         @media (max-width: 1600px) {
-          width: 90vw;
-        }
-        @media (max-width: 1500px) {
-          width: 95vw;
-        }
-        @media (max-width: 1400px) {
-          width: 100vw;
+          padding: 0 5%;
         }
         // h2 {
         //   font-size: 3rem;
@@ -780,7 +849,7 @@ import stage from "../assets/stage.jpg";
         // }
         p {
           text-align: left;
-          font-size: var(--p-size);
+          font-size: var(--p-size-aboutme);
           font-weight: 100;
           line-height: 1.5;
           margin-bottom: 2rem;
@@ -793,32 +862,6 @@ import stage from "../assets/stage.jpg";
           gap: 2.6rem;
           margin-bottom: 4rem;
         }
-        .fourth-part-image-upper {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 1rem;
-          @media (max-width: 1600px) {
-            transform: scale(0.92);
-          }
-          @media (max-width: 1500px) {
-            transform: scale(0.87);
-          }
-          @media (max-width: 1400px) {
-            transform: scale(0.82);
-          }
-          @media (max-width: 1300px) {
-            transform: scale(0.77);
-            gap: 0.5rem;
-          }
-          @media (max-width: 1200px) {
-            transform: scale(0.72);
-            gap: 0;
-          }
-          @media (max-width: 1100px) {
-            transform: scale(0.67);
-          }
-        }
 
         .fourth-part-content-upper {
           display: flex;
@@ -826,27 +869,70 @@ import stage from "../assets/stage.jpg";
           align-items: center;
           gap: 4rem;
 
+          .fourth-part-image-upper {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            img {
+              height: auto;
+              display: block;
+            }
+            img:first-child {
+              width: min(226px, 14vw);
+            }
+            img:last-child {
+              width: min(488px, 28vw);
+            }
+          }
           @media (max-width: 1600px) {
             gap: 3rem;
+            .fourth-part-image-upper {
+              img:first-child {
+                width: min(226px, 13vw);
+              }
+              img:last-child {
+                width: min(488px, 27vw);
+              }
+            }
           }
           @media (max-width: 1500px) {
-            gap: 2rem;
-            padding: 0 10%;
+            .fourth-part-image-upper {
+              img:first-child {
+                width: min(226px, 12vw);
+              }
+              img:last-child {
+                width: min(488px, 26vw);
+              }
+            }
           }
           @media (max-width: 1400px) {
-            gap: 1rem;
+            .fourth-part-image-upper {
+              img:first-child {
+                width: min(226px, 11vw);
+              }
+              img:last-child {
+                width: min(488px, 25vw);
+              }
+            }
           }
           @media (max-width: 1300px) {
-            gap: 0.5rem;
-          }
-          @media (max-width: 1200px) {
-            gap: 0;
+            .fourth-part-image-upper {
+              img:first-child {
+                width: min(226px, 10vw);
+              }
+              img:last-child {
+                width: min(488px, 24vw);
+              }
+            }
           }
           @media (max-width: 1100px) {
             flex-direction: column;
+            gap: 0;
             .fourth-part-text {
               width: 80%;
+              margin-bottom: 0;
             }
+            margin-bottom: 2rem;
           }
         }
         .fourth-part-content-mid {
@@ -856,38 +942,61 @@ import stage from "../assets/stage.jpg";
           gap: 4rem;
           margin-bottom: 2rem;
 
+          .fourth-part-image-mid {
+            width: min(911px, 48vw);
+            height: auto;
+            flex-shrink: 1;
+          }
+
           .fourth-part-content-mid-text {
             display: flex;
             flex-direction: column;
             width: 40%;
             gap: 2.6rem;
-            p {
-              font-size: var(--card-p-size);
-            }
           }
 
           @media (max-width: 1600px) {
             gap: 3rem;
-            transform: scale(0.96);
+            .fourth-part-image-mid {
+              width: min(911px, 48vw);
+            }
+            .fourth-part-content-mid-text {
+              width: 40%;
+            }
           }
           @media (max-width: 1500px) {
             gap: 2rem;
-            transform: scale(0.92);
+            .fourth-part-image-mid {
+              width: min(911px, 46vw);
+            }
+            .fourth-part-content-mid-text {
+              width: 42%;
+            }
           }
           @media (max-width: 1400px) {
             gap: 1rem;
-            transform: scale(0.88);
+            .fourth-part-image-mid {
+              width: min(911px, 44vw);
+            }
+            .fourth-part-content-mid-text {
+              width: 44%;
+            }
           }
           @media (max-width: 1300px) {
-            gap: 0.5rem;
-            transform: scale(0.84);
+            .fourth-part-image-mid {
+              width: min(911px, 42vw);
+            }
+            .fourth-part-content-mid-text {
+              width: 46%;
+            }
           }
           @media (max-width: 1200px) {
-            gap: 0;
-            transform: scale(0.8);
-          }
-          @media (max-width: 1100px) {
-            transform: scale(0.76);
+            .fourth-part-image-mid {
+              width: min(911px, 40vw);
+            }
+            .fourth-part-content-mid-text {
+              width: 48%;
+            }
           }
           @media (max-width: 1100px) {
             flex-direction: column-reverse;
@@ -896,7 +1005,8 @@ import stage from "../assets/stage.jpg";
               gap: 0;
             }
             .fourth-part-image-mid {
-              height: 692px;
+              height: auto;
+              width: 100%;
             }
           }
         }
@@ -911,6 +1021,16 @@ import stage from "../assets/stage.jpg";
             justify-content: center;
             align-items: flex-end;
             gap: 2rem;
+            img {
+              display: block;
+              height: auto;
+            }
+            img:first-child {
+              width: min(308px, 18vw);
+            }
+            img:last-child {
+              width: min(500px, 28vw);
+            }
           }
           .fourth-part-content-lower-text {
             display: flex;
@@ -920,39 +1040,94 @@ import stage from "../assets/stage.jpg";
             width: 40%;
             gap: 2.6rem;
           }
+          @media (max-width: 1600px) {
+            gap: 6rem;
+            .fourth-part-content-lower-image {
+              img:first-child {
+                width: min(308px, 17vw);
+              }
+              img:last-child {
+                width: min(500px, 27vw);
+              }
+            }
+          }
           @media (max-width: 1500px) {
             gap: 4rem;
-            padding: 0 5%;
+            .fourth-part-content-lower-image {
+              gap: 1.5rem;
+              img:first-child {
+                width: min(308px, 16vw);
+              }
+              img:last-child {
+                width: min(500px, 26vw);
+              }
+            }
+            .fourth-part-content-lower-text {
+              width: 42%;
+            }
           }
           @media (max-width: 1400px) {
             gap: 2rem;
             .fourth-part-content-lower-image {
-              transform: scale(0.98);
+              gap: 1rem;
+              img:first-child {
+                width: min(308px, 15vw);
+              }
+              img:last-child {
+                width: min(500px, 24vw);
+              }
+            }
+            .fourth-part-content-lower-text {
+              width: 44%;
             }
           }
           @media (max-width: 1300px) {
-            gap: 0.5rem;
             .fourth-part-content-lower-image {
-              transform: scale(0.84);
+              img:first-child {
+                width: min(308px, 14vw);
+              }
+              img:last-child {
+                width: min(500px, 22vw);
+              }
+            }
+            .fourth-part-content-lower-text {
+              width: 46%;
             }
           }
           @media (max-width: 1200px) {
-            gap: 0;
             .fourth-part-content-lower-image {
-              transform: scale(0.76);
+              img:first-child {
+                width: min(308px, 13vw);
+              }
+              img:last-child {
+                width: min(500px, 20vw);
+              }
+            }
+            .fourth-part-content-lower-text {
+              width: 48%;
             }
           }
+
           @media (max-width: 1100px) {
             flex-direction: column;
+            gap: 2rem;
+            .fourth-part-content-lower-image {
+              width: 100%;
+              justify-content: center;
+              img:first-child {
+                width: min(308px, 32vw);
+              }
+              img:last-child {
+                width: min(500px, 52vw);
+              }
+            }
             .fourth-part-content-lower-text {
+              width: 80%;
               gap: 0;
             }
           }
-          @media (max-width: 1000px) {
-            flex-direction: column-reverse;
-            .fourth-part-content-lower-text {
-              gap: 0;
-            }
+          @media (max-width: 600px) {
+            padding-bottom: 10rem;
           }
         }
       }
@@ -1025,8 +1200,8 @@ import stage from "../assets/stage.jpg";
         @media (max-width: 1000px) {
           bottom: 59%;
         }
-        @media (max-width: 900px) {
-          bottom: 64%;
+        @media (max-width: 800px) {
+          display: none;
         }
       }
 
@@ -1046,7 +1221,6 @@ import stage from "../assets/stage.jpg";
         backdrop-filter: blur(16px);
         padding: 3rem;
         border-radius: 1rem;
-        // box-shadow: var(--liquid-border-shadow);
         border: 2px solid rgb(226, 226, 226);
         p {
           font-size: var(--p-size);
@@ -1061,7 +1235,7 @@ import stage from "../assets/stage.jpg";
           gap: 2rem;
           .vision-text-hr {
             width: 2px;
-            height: 100px;
+            height: 5vw;
             background-color: var(--background-color);
           }
           .right-text {
@@ -1072,6 +1246,10 @@ import stage from "../assets/stage.jpg";
               line-height: 1.5;
               color: var(--background-color);
             }
+          }
+          .vision-text-hr {
+            width: 1px;
+            height: 5vw;
           }
         }
 
@@ -1087,7 +1265,7 @@ import stage from "../assets/stage.jpg";
           div {
             h2 {
               color: var(--background-color);
-              font-size: var(--p-size);
+              font-size: var(--p-size-aboutme);
               font-weight: 500;
               margin-bottom: 1rem;
             }
@@ -1100,25 +1278,34 @@ import stage from "../assets/stage.jpg";
             }
           }
         }
+        @media (max-width: 1100px) {
+          gap: 2rem;
+          padding: 2rem;
+        }
+        @media (max-width: 800px) {
+          top: 30%;
+          padding: 1rem;
+          background-color: rgba(113, 113, 113, 0.55);
+          .my-skills {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+          }
+        }
+        @media (max-width: 650px) {
+          top: 25%;
+        }
+        @media (max-width: 600px) {
+          top: 20%;
+          gap: 1rem;
+          .vision-text {
+            display: none;
+          }
+        }
+        @media (max-width: 500px) {
+          top: -10%;
+        }
       }
-      // .contact-me {
-      //   position: absolute;
-      //   bottom: 5%;
-      //   left: 50%;
-      //   transform: translate(-50%, -50%);
-      //   z-index: 15;
-      //   text-align: center;
-      //   p {
-      //     font-weight: 100;
-      //     font-size: var(--p-size);
-      //     color: var(--background-color);
-      //     margin-bottom: 1rem;
-      //     a {
-      //       color: var(--background-color);
-      //       text-decoration: underline;
-      //     }
-      //   }
-      // }
     }
   </style>
 
