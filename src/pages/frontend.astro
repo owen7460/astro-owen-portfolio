@@ -128,15 +128,11 @@ import astro3 from "../assets/frontend/astro-3.png";
           class="front-blendbetter-mac"
           src={blendbetterMac}
           alt="Blendbetter"
-          width={980 * 0.8}
-          height={596 * 0.8}
         />
         <Image
           class="front-blendbetter-mobile"
           src={blendbetterMobile}
           alt="Blendbetter"
-          width={195}
-          height={406}
         />
       </div>
       <div class="front-section-2-right">
@@ -182,9 +178,9 @@ import astro3 from "../assets/frontend/astro-3.png";
           class="front-blendbetter-apple"
           src={blendbetterApple}
           alt="Blendbetter detects fruits"
-          width={1300 * 0.3}
-          height={2642 * 0.3}
         />
+        <!-- width={1300 * 0.3}
+        height={2642 * 0.3} -->
       </div>
       <div class="front-section-3-right">
         <p class="front-animation-text">
@@ -213,13 +209,9 @@ import astro3 from "../assets/frontend/astro-3.png";
         </p>
       </div>
       <div class="front-section-4-right">
-        <Image
-          class="front-jokeshare-image"
-          src={jokeshare}
-          alt="Jokeshare"
-          width={1387 * 0.75}
-          height={899 * 0.75}
-        />
+        <Image class="front-jokeshare-image" src={jokeshare} alt="Jokeshare" />
+        <!-- width={1387 * 0.75}
+        height={899 * 0.75} -->
       </div>
     </section>
 
@@ -237,15 +229,13 @@ import astro3 from "../assets/frontend/astro-3.png";
           loaded again the next time they visit the website.
         </p>
       </div>
-      <div class="front-section-5-image">
-        <Image
-          class="front-zustand"
-          src={zustand}
-          alt="Zustand"
-          width={1371 * 0.7}
-          height={941 * 0.7}
-        />
-      </div>
+      <Image
+        class="front-zustand front-section-5-image"
+        src={zustand}
+        alt="Zustand"
+      />
+      <!-- width={1371 * 0.7}
+        height={941 * 0.7} -->
     </section>
 
     <section class="front-section-6">
@@ -263,28 +253,12 @@ import astro3 from "../assets/frontend/astro-3.png";
           “Latest” views.
         </p>
         <div class="front-section-6-buttons">
-          <img
-            src="/likeButton.png"
-            alt="Like Button"
-            width={160}
-            height={35}
-          />
-          <img
-            src="/recentButton.png"
-            alt="Recent Button"
-            width={169}
-            height={35}
-          />
+          <img src="/likeButton.png" alt="Like Button" />
+          <img src="/recentButton.png" alt="Recent Button" />
         </div>
       </div>
       <div class="front-section-6-lodash">
-        <Image
-          class="front-jokeshare-lodash"
-          src={lodash}
-          alt="Lodash"
-          width={1285 * 0.62}
-          height={873 * 0.62}
-        />
+        <Image class="front-jokeshare-lodash" src={lodash} alt="Lodash" />
       </div>
     </section>
 
@@ -359,10 +333,10 @@ import astro3 from "../assets/frontend/astro-3.png";
             websites.
           </p>
         </div>
-        <div class="front-section8-cards">
-          <div class="front-section8-card front-card1">
+        <div class="front-section-8-cards">
+          <div class="front-section-8-card front-card1">
             <Image src={astro1} alt="Astro 1" />
-            <div class="front-section8-card-text">
+            <div class="front-section-8-card-text">
               <h3>SEO-Friendly Architecture</h3>
               <p>
                 Astro provides a Layout system where each page can pass props to
@@ -370,36 +344,36 @@ import astro3 from "../assets/frontend/astro-3.png";
                 Navigation is handled through client-side routing, enabling
                 smooth transitions without full page reloads.
               </p>
-              <p class="front-section8-card-invisible">
+              <!-- <p class="front-section-8-card-invisible">
                 Unlike traditional React apps that rely on client-side
                 rendering, Astro delivers pre-rendered HTML by default,
                 improving SEO and initial load performance—making it ideal for
                 portfolio and content-focused websites.
-              </p>
+              </p> -->
             </div>
           </div>
-          <div class="front-section8-card front-card2">
+          <div class="front-section-8-card front-card2">
             <Image src={astro2} alt="Astro 2" />
-            <div class="front-section8-card-text">
+            <div class="front-section-8-card-text">
               <h3>Island Architecture & Prefetching</h3>
               <p>
                 Astro’s island architecture allows me to limit interactivity to
                 specific React components, keeping the rest of the page
                 lightweight and server-rendered.
               </p>
-              <p class="front-section8-card-invisible">
+              <!-- <p class="front-section-8-card-invisible">
                 I also leveraged Astro’s prefetching strategy, so while users
                 are still browsing the home page, the browser can begin
                 preparing resources for other routes in the background. Combined
                 with Astro’s optimized loading behavior, this reduces perceived
                 loading delays, minimizes white screen flashes during
                 navigation, and creates a smoother overall browsing experience.
-              </p>
+              </p> -->
             </div>
           </div>
-          <div class="front-section8-card front-card3">
+          <div class="front-section-8-card front-card3">
             <Image src={astro3} alt="Astro 3" />
-            <div class="front-section8-card-text">
+            <div class="front-section-8-card-text">
               <h3>Image Optimization</h3>
               <p>
                 Astro’s built-in Image component significantly improves image
@@ -407,12 +381,12 @@ import astro3 from "../assets/frontend/astro-3.png";
                 sized at 1.9MB was optimized down to just 119KB after
                 processing.
               </p>
-              <p class="front-section8-card-invisible">
+              <!-- <p class="front-section-8-card-invisible">
                 The component also applies lazy loading by default and serves
                 appropriately sized images for different devices, reducing load
                 time while maintaining visual quality. This helps keep the site
                 both visually appealing and performance-efficient.
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
@@ -441,11 +415,16 @@ import astro3 from "../assets/frontend/astro-3.png";
         </div>
         <a href="#top">Back to Top</a>
       </div>
-      <Footer />
+      <Footer class="front-footer" />
     </section>
   </main>
 
   <style lang="scss">
+    @use "../styles/mixins.scss" as mixins;
+    :root {
+      --p-zustand-size: clamp(0.8rem, 1.4vw, 1.6rem);
+      --p-front-astro-size: clamp(0.8rem, 1.2vw, 1.2rem);
+    }
     main {
       scroll-behavior: smooth;
       scroll-snap-type: y mandatory;
@@ -490,7 +469,7 @@ import astro3 from "../assets/frontend/astro-3.png";
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 5%;
+        overflow: clip;
 
         .front-left {
           display: flex;
@@ -498,7 +477,7 @@ import astro3 from "../assets/frontend/astro-3.png";
           justify-content: center;
           align-items: flex-start;
           gap: 1.4rem;
-          width: 45%;
+          width: 50%;
           padding-left: 5%;
           padding-right: 2%;
           .front-intro-frontend {
@@ -520,7 +499,6 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
         .front-right {
           width: 50%;
-          padding-right: 5%;
           position: relative;
           height: 750px;
           display: flex;
@@ -559,7 +537,6 @@ import astro3 from "../assets/frontend/astro-3.png";
             overflow: hidden;
             transform: rotateY(-20deg) rotateX(20deg);
             transition: transform 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-
             img {
               width: 100%;
               height: 100%;
@@ -623,120 +600,152 @@ import astro3 from "../assets/frontend/astro-3.png";
             z-index: 12;
           }
         }
-        @media (max-width: 1900px) {
-          gap: 4%;
-
-          .front-left {
-            padding-left: 4.5%;
-            padding-right: 0;
-          }
-
-          .front-right {
-            transform: scale(0.96);
-          }
-        }
-
         @media (max-width: 1800px) {
-          gap: 3%;
-
           .front-left {
-            padding-left: 4%;
+            padding-left: 5%;
+            padding-right: 0;
+            width: 45%;
           }
-
           .front-right {
-            transform: scale(0.87);
+            gap: 0;
+            width: 50%;
+            transform: scale(0.8);
+            left: -2%;
           }
         }
-
         @media (max-width: 1700px) {
-          gap: 2%;
-
-          .front-left {
-            padding-left: 3.5%;
-          }
-
-          .front-right {
-            transform: scale(0.84);
-          }
-        }
-
-        @media (max-width: 1600px) {
-          gap: 1%;
-
-          .front-left {
-            padding-left: 3%;
-          }
-
           .front-right {
             transform: scale(0.76);
+            left: -4%;
+          }
+        }
+        @media (max-width: 1600px) {
+          .front-right {
+            transform: scale(0.72);
+            left: -5%;
           }
         }
         @media (max-width: 1500px) {
-          gap: 0;
-
-          .front-left {
-            padding-left: 2.5%;
-          }
-
           .front-right {
-            transform: scale(0.68);
+            transform: scale(0.65);
+            left: -6%;
           }
         }
         @media (max-width: 1400px) {
-          .front-left {
-            padding-left: 0;
-            width: 40%;
-          }
-
           .front-right {
-            transform: scale(0.6);
+            left: -7%;
           }
         }
         @media (max-width: 1300px) {
+          .front-right {
+            left: -8%;
+          }
+        }
+        @media (max-width: 1200px) {
+          .front-right {
+            left: -9%;
+          }
+        }
+        @media (max-width: 1100px) {
+          .front-left {
+            padding-left: 0;
+          }
+          .front-right {
+            left: -10%;
+            transform: scale(0.62);
+          }
+        }
+        @media (max-width: 1000px) {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 0 5rem;
           .front-left {
-            width: 900px;
+            width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
-            gap: 0;
+            gap: 1rem;
+            padding: 0 5%;
             text-align: center;
-            .front-technologies {
-              display: none;
+            .front-intro-frontend {
+              text-align: center;
+              width: 75%;
             }
-            p {
-              max-width: 800px;
+            .front-technologies {
+              align-items: center;
             }
           }
           .front-right {
-            width: 900px;
+            width: 100%;
+            height: 50%;
+            left: 50%;
+            transform: translateX(-50%) scale(0.62);
+            transform-origin: center center;
+          }
+          .front-intro-frontend {
             height: 45%;
-            margin: 0 auto;
-            padding: 0;
-            transform: scale(0.65);
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 1rem;
+            padding: 0 5%;
+            text-align: center;
+            bottom: 5%;
+          }
+        }
+        @media (max-width: 950px) {
+          .front-right {
+            left: 50%;
+            transform: translateX(-50%) scale(0.55);
+          }
+        }
+        @media (max-width: 900px) {
+          .front-right {
+            left: 50%;
+          }
+        }
+        @media (max-width: 850px) {
+          .front-right {
+            left: 50%;
+          }
+        }
+        @media (max-width: 800px) {
+          .front-right {
+            left: 50%;
+          }
+        }
+        @media (max-width: 750px) {
+          .front-right {
+            left: 46%;
+          }
+        }
+        @media (max-width: 700px) {
+          .front-right {
+            left: 48%;
+          }
+        }
+        @media (max-width: 650px) {
+          .front-right {
+            bottom: 6%;
+            left: 42%;
+          }
+        }
+        @media (max-width: 600px) {
+          .front-right {
+            bottom: 10%;
+            left: 44%;
           }
         }
       }
-
       .front-section-2 {
         background-image: url("../assets/frontend/blendbetterBG.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        margin-right: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        margin-left: 1rem;
         .front-section-2-left {
+          height: 100%;
           width: 55%;
           position: relative;
           display: flex;
@@ -745,8 +754,20 @@ import astro3 from "../assets/frontend/astro-3.png";
           overflow: hidden;
           .front-blendbetter-mobile {
             position: absolute;
-            bottom: 0px;
+            bottom: 47%;
+            transform: translateY(50%);
             right: 15px;
+            width: 21%;
+            height: auto;
+            z-index: 10;
+          }
+          .front-blendbetter-mac {
+            position: absolute;
+            bottom: 50%;
+            transform: translateY(50%);
+            width: 70%;
+            height: auto;
+            z-index: 9;
           }
         }
         .front-section-2-right {
@@ -763,7 +784,75 @@ import astro3 from "../assets/frontend/astro-3.png";
             font-weight: 100;
           }
         }
+        @media (max-width: 1500px) {
+          .front-section-2-right {
+            padding-left: 4rem;
+          }
+        }
+        @media (max-width: 1100px) {
+          .front-section-2-right {
+            padding-left: 2rem;
+          }
+        }
+        @media (max-width: 800px) {
+          flex-direction: column-reverse;
+          .front-section-2-left {
+            height: 50%;
+            width: 100%;
+            .front-blendbetter-mobile {
+              top: 15%;
+              right: 25%;
+              height: 70%;
+              width: auto;
+              transform: translateX(50%);
+            }
+            .front-blendbetter-mac {
+              top: 5%;
+              height: 80%;
+              width: auto;
+              right: 55%;
+              transform: translateX(50%);
+            }
+          }
+          .front-section-2-right {
+            height: 50%;
+            width: 100%;
+            padding: 0 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+          }
+        }
+        @media (max-width: 600px) {
+          .front-section-2-left {
+            .front-blendbetter-mobile {
+              height: 60%;
+              width: auto;
+            }
+            .front-blendbetter-mac {
+              height: 70%;
+              width: auto;
+            }
+          }
+        }
+        @media (max-width: 500px) {
+          .front-section-2-left {
+            height: 40%;
+            .front-blendbetter-mobile {
+              height: 50%;
+              width: auto;
+            }
+            .front-blendbetter-mac {
+              height: 60%;
+              width: auto;
+            }
+          }
+          .front-section-2-right {
+            height: 60%;
+          }
+        }
       }
+
       .front-section-3 {
         display: flex;
         justify-content: center;
@@ -795,9 +884,15 @@ import astro3 from "../assets/frontend/astro-3.png";
         }
         .front-section-3-middle {
           width: 33%;
+          height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
+          .front-blendbetter-apple {
+            width: auto;
+            height: 70%;
+            object-fit: cover;
+          }
         }
         .front-blendbetter-apple {
           animation-timeline: view();
@@ -814,6 +909,84 @@ import astro3 from "../assets/frontend/astro-3.png";
           align-items: flex-start;
           gap: 2rem;
           padding-right: 10%;
+        }
+        @media (max-width: 1200px) {
+          .front-section-3-middle {
+            .front-blendbetter-apple {
+              height: 55%;
+              width: auto;
+            }
+          }
+        }
+
+        @media (max-width: 1000px) {
+          gap: 0;
+          .front-section-3-middle {
+            .front-blendbetter-apple {
+              height: 45%;
+              width: auto;
+            }
+          }
+        }
+        @media (max-width: 800px) {
+          .front-section-3-left {
+            padding: 0 2%;
+          }
+          .front-section-3-right {
+            padding: 0 2%;
+          }
+        }
+        @media (max-width: 700px) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          padding: 0 5%;
+          .front-section-3-left {
+            height: 40%;
+            width: 100%;
+            padding: 0 2%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1rem;
+            text-align: center;
+          }
+          .front-section-3-middle {
+            width: 100%;
+            height: 30%;
+            padding: 0 2%;
+            .front-blendbetter-apple {
+              height: 100%;
+              width: auto;
+            }
+          }
+          .front-section-3-right {
+            width: 100%;
+            padding: 0 2%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.2rem;
+            img {
+              width: auto;
+              height: 15%;
+            }
+          }
+        }
+        @media (max-width: 600px) {
+          .front-section-3-left {
+            height: 50%;
+          }
+          .front-section-3-middle {
+            height: 25%;
+          }
+          .front-section-3-right {
+            height: 25%;
+          }
         }
       }
 
@@ -849,14 +1022,46 @@ import astro3 from "../assets/frontend/astro-3.png";
           }
         }
         .front-section-4-right {
+          position: relative;
           width: 55%;
+          height: 100%;
           overflow-x: clip;
           .front-jokeshare-image {
+            position: absolute;
+            width: auto;
+            height: 70%;
+            top: 50%;
+            transform: translateY(-50%);
+
             animation-timeline: view();
-            animation-name: fadeIn-right;
+            animation-name: fadeIn-right-ycenter;
             animation-duration: 1s;
-            animation-delay: 0.2s;
             animation-fill-mode: both;
+            animation-range: entry 50% entry 100%;
+          }
+        }
+        @media (max-width: 700px) {
+          gap: 0;
+        }
+        @media (max-width: 600px) {
+          .front-section-4-left {
+            padding: 0 5%;
+          }
+        }
+        @media (max-width: 500px) {
+          .front-section-4-right {
+            .front-jokeshare-image {
+              height: 60%;
+              width: auto;
+            }
+          }
+        }
+        @media (max-width: 400px) {
+          .front-section-4-right {
+            .front-jokeshare-image {
+              height: 55%;
+              width: auto;
+            }
           }
         }
       }
@@ -867,11 +1072,14 @@ import astro3 from "../assets/frontend/astro-3.png";
         background-position: right;
         background-repeat: no-repeat;
         position: relative;
+        height: 100vh;
+        width: 100vw;
         .front-section-5-content {
           position: absolute;
           bottom: 17%;
           right: 6%;
-          width: 50ch;
+          width: 60%;
+          max-width: 900px;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
@@ -881,17 +1089,53 @@ import astro3 from "../assets/frontend/astro-3.png";
           background-color: rgba(255, 255, 255, 0.2);
           padding: 4rem;
           border-radius: 16px;
-          // box-shadow: var(--liquid-border-shadow);
           border: 1px solid rgba(255, 255, 255, 0.3);
           z-index: 2;
           backdrop-filter: blur(25px);
           -webkit-backdrop-filter: blur(25px);
+          p {
+            font-size: var(--p-zustand-size);
+          }
         }
         .front-section-5-image {
           position: absolute;
           top: 15%;
           right: 2%;
           z-index: 1;
+          height: 60%;
+          width: auto;
+        }
+        @media (max-width: 1200px) {
+          .front-section-5-content {
+            width: 80%;
+            max-width: 700px;
+          }
+          .front-section-5-image {
+            height: 50%;
+          }
+        }
+        @media (max-width: 1000px) {
+          .front-section-5-content {
+            width: 90%;
+            left: 50%;
+            transform: translateX(-50%);
+            p {
+              font-size: var(--p-zustand-size);
+            }
+            padding: 2rem;
+          }
+          .front-section-5-image {
+            transform: translateX(-50%);
+            left: 50%;
+          }
+        }
+        @media (max-width: 900px) {
+          .front-section-5-imgae {
+            right: 50%;
+            transform: translateX(-50%);
+            height: auto;
+            width: 95%;
+          }
         }
       }
 
@@ -902,6 +1146,7 @@ import astro3 from "../assets/frontend/astro-3.png";
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        overflow-y: clip;
         .front-section-6-content {
           position: absolute;
           top: 15%;
@@ -920,11 +1165,20 @@ import astro3 from "../assets/frontend/astro-3.png";
             align-items: center;
             gap: 2rem;
             margin-top: 2rem;
+            width: 45%;
+            max-width: 300px;
+            height: auto;
+            img {
+              width: 100%;
+              height: auto;
+            }
           }
         }
         .front-section-6-lodash {
+          width: auto;
+          height: 80%;
           position: absolute;
-          bottom: 25%;
+          bottom: 10%;
           right: 50%;
           transform: translateX(50%) translateY(50%);
           z-index: 1;
@@ -934,6 +1188,103 @@ import astro3 from "../assets/frontend/astro-3.png";
             animation-duration: 1s;
             animation-delay: 0.2s;
             animation-fill-mode: both;
+            // animation-range: entry 5% entry 90%;
+          }
+        }
+        @media (max-width: 1400px) {
+          .front-section-6-lodash {
+            bottom: 20%;
+            transform: translateX(50%) translateY(50%) scale(0.95);
+          }
+        }
+        @media (max-width: 1300px) {
+          gap: 0;
+          .front-section-6-content {
+            gap: 0;
+            .front-section-6-buttons {
+              margin-top: 0.8rem;
+            }
+          }
+
+          .front-section-6-lodash {
+            bottom: 25%;
+            transform: translateX(50%) translateY(50%) scale(0.9);
+          }
+        }
+        @media (max-width: 1200px) {
+          .front-section-6-lodash {
+            bottom: 30%;
+            transform: translateX(50%) translateY(50%) scale(0.8);
+          }
+        }
+        @media (max-width: 1100px) {
+          .front-section-6-lodash {
+            bottom: 27%;
+            transform: translateX(50%) translateY(50%) scale(0.76);
+          }
+        }
+        @media (max-width: 1000px) {
+          .front-section-6-lodash {
+            transform: translateX(50%) translateY(50%) scale(0.69);
+          }
+        }
+        @media (max-width: 900px) {
+          .front-section-6-content {
+            width: 80vw;
+          }
+          .front-section-6-lodash {
+            bottom: 25%;
+            transform: translateX(50%) translateY(50%) scale(0.62);
+          }
+        }
+        @media (max-width: 800px) {
+          .front-section-6-lodash {
+            transform: translateX(50%) translateY(50%) scale(0.57);
+          }
+        }
+        @media (max-width: 750px) {
+          .front-section-6-lodash {
+            transform: translateX(50%) translateY(50%) scale(0.52);
+          }
+        }
+        @media (max-width: 700px) {
+          .front-section-6-lodash {
+            transform: translateX(50%) translateY(50%) scale(0.47);
+            right: 50%;
+            bottom: 35%;
+          }
+        }
+        @media (max-width: 600px) {
+          .front-section-6-lodash {
+            transform: translateX(50%) translateY(50%) scale(0.42);
+            right: 50%;
+          }
+        }
+        @media (max-width: 550px) {
+          .front-section-6-lodash {
+            bottom: 30%;
+          }
+        }
+        @media (max-width: 500px) {
+          .front-section-6-content {
+            top: 20%;
+          }
+          .front-section-6-lodash {
+            transform: translateX(50%) translateY(50%) scale(0.55);
+            right: 50%;
+          }
+        }
+        @media (max-width: 450px) {
+          .front-section-6-content {
+            top: 12%;
+            .front-section-6-buttons {
+              margin-top: 0.4rem;
+            }
+          }
+        }
+        @media (max-width: 400px) {
+          .front-section-6-content {
+            top: 7%;
           }
         }
       }
@@ -957,30 +1308,14 @@ import astro3 from "../assets/frontend/astro-3.png";
             animation-timeline: view();
             animation-name: fadeIn-opacity-scroll-slow;
             animation-duration: 3s;
-            animation-delay: 0.6s;
+            animation-delay: 0.2s;
             animation-fill-mode: both;
-            // animation-range: entry 0% entry 100%;
+            // animation-range: entry 35% entry 100%;
             img {
               width: 100%;
               height: 100%;
               object-fit: cover;
             }
-          }
-
-          @media (max-width: 1700px) {
-            transform: scale(0.9);
-          }
-          @media (max-width: 1600px) {
-            transform: scale(0.86);
-          }
-          @media (max-width: 1500px) {
-            transform: scale(0.82);
-          }
-          @media (max-width: 1400px) {
-            transform: scale(0.78);
-          }
-          @media (max-width: 1300px) {
-            transform: scale(0.74);
           }
           .front-kitchen1 {
             top: 20%;
@@ -1029,6 +1364,55 @@ import astro3 from "../assets/frontend/astro-3.png";
             line-height: 1.5;
           }
         }
+        @media (max-width: 1550px) {
+          .front-section-7-right {
+            padding-right: 2%;
+          }
+        }
+        @media (max-width: 1450px) {
+          .front-section-7-left {
+            .front-kitchen-card {
+              width: 37vw;
+              height: auto;
+              img {
+                height: auto;
+                width: 100%;
+              }
+            }
+          }
+        }
+        @media (max-width: 850px) {
+          gap: 1rem;
+          .front-section-7-left {
+            padding-left: 2%;
+            .front-kitchen-card {
+              left: 55%;
+              transform: translateX(-50%);
+            }
+          }
+          .front-section-7-right {
+            padding-left: 0;
+          }
+        }
+        @media (max-width: 500px) {
+          gap: 0;
+        }
+        @media (max-width: 450px) {
+          .front-section-7-left {
+            .front-kitchen1 {
+              top: 30%;
+            }
+            .front-kitchen2 {
+              top: 40%;
+            }
+            .front-kitchen3 {
+              top: 50%;
+            }
+            .front-kitchen4 {
+              top: 60%;
+            }
+          }
+        }
       }
 
       .front-section-8 {
@@ -1066,56 +1450,56 @@ import astro3 from "../assets/frontend/astro-3.png";
               }
             }
           }
-          .front-section8-cards {
+          .front-section-8-cards {
             max-width: 1300px;
             padding-top: 2rem;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 3.5rem;
-            .front-section8-card {
+            .front-section-8-card {
               opacity: 0;
               transform: translateY(40px);
               will-change: transform, opacity;
               width: 100%;
-              height: 100%;
+              height: auto;
               display: flex;
               flex-direction: column;
               justify-content: flex-start;
               align-items: center;
               border-radius: 16px;
               overflow: hidden;
-              background-color: rgba(255, 255, 255, 0.15);
+              background-color: rgba(74, 74, 74, 0.2);
               backdrop-filter: blur(5px);
               -webkit-backdrop-filter: blur(5px);
               border: 1px solid rgba(255, 255, 255, 0.732);
               text-align: left;
               img {
                 width: 100%;
-                height: 300px;
+                height: 50%;
                 object-fit: cover;
                 object-position: left top;
               }
-              .front-section8-card-text {
-                padding: 1.4rem;
+              .front-section-8-card-text {
+                padding: 1rem;
                 h3 {
                   color: var(--background-color);
-                  font-size: 1.2rem;
+                  font-size: clamp(1rem, 1.2vw, 1.2rem);
                   font-weight: 500;
                   line-height: 1.2;
                   margin-top: 0.4rem;
                 }
                 p {
                   color: var(--background-color);
-                  font-size: var(--p-smaill-size);
+                  font-size: var(--p-front-astro-size);
                   line-height: 1.4;
                   margin-top: 0.4rem;
                 }
 
-                @media (max-width: 1600px) {
-                  .front-section8-card-invisible {
-                    display: none;
-                  }
-                }
+                // @media (max-width: 1600px) {
+                //   .front-section-8-card-invisible {
+                //     display: none;
+                //   }
+                // }
               }
             }
             .front-card1 {
@@ -1129,23 +1513,97 @@ import astro3 from "../assets/frontend/astro-3.png";
             }
           }
         }
+        @media (max-width: 1300px) {
+          .front-section-8-base {
+            .front-section-8-content {
+              gap: 0.4rem;
+              p {
+                display: none;
+              }
+            }
+            .front-section-8-cards {
+              gap: 1.2rem;
+              padding-top: 0.2rem;
+              .front-section-8-card {
+                .front-section-8-card-text {
+                  h3 {
+                    margin-top: 0;
+                  }
+                  p {
+                    margin-top: 0.4rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        @media (max-width: 1050px) {
+          .front-section-8-base {
+            .front-section-8-cards {
+              margin-top: 1rem;
+              .front-section-8-card {
+                background-color: rgba(74, 74, 74, 0.5);
+              }
+            }
+          }
+        }
+        @media (max-width: 950px) {
+          .front-section-8-base {
+            .front-section-8-cards {
+              grid-template-columns: 1fr;
+              .front-section-8-card {
+                flex-direction: row;
+                img {
+                  height: 100%;
+                  width: 30%;
+                  object-fit: cover;
+                  object-position: left top;
+                }
+                .front-section-8-card-text {
+                  width: 70%;
+                }
+              }
+            }
+          }
+        }
+        @media (max-width: 400px) {
+          .front-section-8-base {
+            .front-section-8-cards {
+              .front-section-8-card {
+                .front-section-8-card-text {
+                  padding: 0.4rem;
+                  h3 {
+                    font-size: 0.8rem;
+                  }
+                  p {
+                    font-size: 0.8rem;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
 
       .front-last-section {
+        @include mixins.gradient-background;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
-        gap: 6rem;
+        gap: 4vh;
         .front-end-of-page {
+          height: 60vh;
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          justify-content: flex-end;
           align-items: center;
-          gap: 3rem;
+          gap: 2rem;
           h2 {
             font-size: var(--h2-size);
             font-weight: 100;
+            width: 65vw;
             max-width: 1100px;
             text-align: center;
             line-height: 1.4;
@@ -1171,6 +1629,7 @@ import astro3 from "../assets/frontend/astro-3.png";
           }
           a {
             display: block;
+            margin-top: 1rem;
             font-size: 0.8rem;
             font-weight: 100;
             padding: 0.6rem 1.6rem;
@@ -1181,8 +1640,23 @@ import astro3 from "../assets/frontend/astro-3.png";
               inset 0 0 10px 2px rgba(160, 160, 160, 0.2);
           }
         }
+        @media (max-height: 700px) {
+          .front-end-of-page {
+            gap: 0.4rem;
+            h2 {
+              font-size: 1.6rem;
+            }
+            .front-technologies {
+              gap: 0.2rem;
+            }
+            p {
+              font-size: 0.8rem;
+            }
+          }
+        }
       }
     }
+
     .front-animation-title,
     .front-animation-text {
       opacity: 0;
@@ -1281,7 +1755,7 @@ import astro3 from "../assets/frontend/astro-3.png";
     function setupSection8CardsGsap() {
       initGsap();
 
-      const cards = gsap.utils.toArray<HTMLElement>(".front-section8-card");
+      const cards = gsap.utils.toArray<HTMLElement>(".front-section-8-card");
       if (!cards.length) return;
 
       cards.forEach((card) => {
@@ -1291,7 +1765,7 @@ import astro3 from "../assets/frontend/astro-3.png";
       ScrollTrigger.getAll().forEach((trigger) => {
         if (
           trigger.trigger instanceof Element &&
-          trigger.trigger.matches(".front-section8-cards")
+          trigger.trigger.matches(".front-section-8-cards")
         ) {
           trigger.kill();
         }
@@ -1309,7 +1783,7 @@ import astro3 from "../assets/frontend/astro-3.png";
         ease: "power2.out",
         stagger: 0.15,
         scrollTrigger: {
-          trigger: ".front-section8-cards",
+          trigger: ".front-section-8-cards",
           scroller: "main",
           start: "top 75%",
           once: true,
