@@ -1019,7 +1019,7 @@ import astro3 from "../assets/frontend/astro-3.png";
           gap: 0;
           .front-section-3-middle {
             .front-blendbetter-apple {
-              height: 45%;
+              height: 41%;
               width: auto;
             }
           }
@@ -1170,6 +1170,8 @@ import astro3 from "../assets/frontend/astro-3.png";
         position: relative;
         height: 100vh;
         width: 100vw;
+        overflow-y: clip;
+        overflow-x: clip;
         .front-section-5-content {
           position: absolute;
           bottom: 17%;
@@ -1242,6 +1244,7 @@ import astro3 from "../assets/frontend/astro-3.png";
         justify-content: center;
         align-items: center;
         gap: 2rem;
+        overflow-x: clip;
         overflow-y: clip;
         .front-section-6-content {
           position: absolute;
@@ -1381,6 +1384,12 @@ import astro3 from "../assets/frontend/astro-3.png";
         @media (max-width: 400px) {
           .front-section-6-content {
             top: 7%;
+          }
+        }
+        @media (max-height: 800px) {
+          .front-section-6-lodash {
+            transform: translateX(50%) translateY(50%) scale(0.55);
+            right: 50%;
           }
         }
       }
