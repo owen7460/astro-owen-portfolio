@@ -20,11 +20,11 @@ import dorc from "../assets/dorc.png";
   <main>
     <section class="hero">
       <div class="hero-content">
-        <p class="title">Developer & Designer</p>
+        <p class="title">Web Developer & Designer</p>
         <h1 class="title-h1">Portfolio.</h1>
         <div class="title-my-name-container">
           <p class="title-my-name">Owen Ouyang</p>
-          <p class="title-year">2026</p>
+          <p class="title-year">2024 - 2026</p>
         </div>
 
         <div class="title-description-container">
@@ -318,7 +318,7 @@ import dorc from "../assets/dorc.png";
     @use "../styles/mixins.scss" as mixins;
     :root {
       --title-size: clamp(1rem, 1vw, 2rem);
-      --intro-text-size: 8rem;
+      --intro-text-size: clamp(4rem, 20vw, 12rem);
       --intro-subtitle-size: clamp(1rem, 1.8vw, 2rem);
       --intro-subtitle-buildwith: clamp(0.8rem, 1vw, 1.2rem);
       --cardHeight: clamp(400px, 40vw, 800px);
@@ -344,6 +344,7 @@ import dorc from "../assets/dorc.png";
         text-align: center;
 
         .title {
+          padding-left: 1rem;
           font-weight: 100;
           text-align: left;
           font-size: var(--title-size);
@@ -360,11 +361,18 @@ import dorc from "../assets/dorc.png";
           align-items: center;
           justify-content: space-between;
           gap: 0.5rem;
-          p {
+          .title-my-name,
+          .title-year {
             font-size: var(--title-size);
             font-weight: 100;
             text-align: left;
             margin-bottom: 0;
+          }
+          .title-my-name {
+            padding-left: 1rem;
+          }
+          .title-year {
+            padding-right: 1rem;
           }
         }
         .title-description-container {
