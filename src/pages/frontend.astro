@@ -1562,7 +1562,6 @@ import astro3 from "../assets/frontend/astro-3.png";
             grid-template-columns: repeat(3, 1fr);
             gap: 3.5rem;
             .front-section-8-card {
-              opacity: 0;
               transform: translateY(40px);
               will-change: transform, opacity;
               width: 100%;
@@ -1580,7 +1579,7 @@ import astro3 from "../assets/frontend/astro-3.png";
               text-align: left;
               img {
                 width: 100%;
-                height: 50%;
+                height: 250px;
                 object-fit: cover;
                 object-position: left top;
               }
@@ -1621,14 +1620,13 @@ import astro3 from "../assets/frontend/astro-3.png";
         @media (max-width: 1300px) {
           .front-section-8-base {
             .front-section-8-content {
-              gap: 0.4rem;
               p {
                 display: none;
               }
             }
             .front-section-8-cards {
               gap: 1.2rem;
-              padding-top: 0.2rem;
+              padding-top: 2rem;
               .front-section-8-card {
                 .front-section-8-card-text {
                   h3 {
@@ -1642,7 +1640,6 @@ import astro3 from "../assets/frontend/astro-3.png";
             }
           }
         }
-
         @media (max-width: 1050px) {
           .front-section-8-base {
             .front-section-8-cards {
@@ -1684,6 +1681,17 @@ import astro3 from "../assets/frontend/astro-3.png";
                   p {
                     font-size: 0.8rem;
                   }
+                }
+              }
+            }
+          }
+        }
+        @media (max-height: 800px) {
+          .front-section-8-base {
+            .front-section-8-cards {
+              .front-section-8-card {
+                img {
+                  height: 180px;
                 }
               }
             }

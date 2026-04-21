@@ -61,7 +61,7 @@ import "../styles/global.scss";
     }
 
     p {
-      font-size: var(--nav-a-size);
+      font-size: var(--footer-p-size);
       font-weight: 100;
       line-height: 1.5;
       margin-bottom: 0.5rem;
@@ -81,7 +81,7 @@ import "../styles/global.scss";
       li {
         a {
           display: block;
-          font-size: 0.8rem;
+          font-size: var(--footer-a-size);
           font-weight: 100;
           padding: 0.6rem 1.6rem;
           background-color: rgba(255, 255, 255, 0.9);
@@ -89,6 +89,9 @@ import "../styles/global.scss";
           box-shadow:
             var(--liquid-border-shadow),
             inset 0 0 10px 2px rgba(160, 160, 160, 0.2);
+          @media (max-width: 700px) {
+            font-size: var(--nav-a-size-mobile);
+          }
         }
       }
     }
