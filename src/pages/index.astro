@@ -50,9 +50,12 @@ import dorc from "../assets/dorc.png";
                 recipes to help reduce fruit waste by turning leftover fruit
                 into enjoyable drinks.
               </p>
-              <p>
-                Full-stack project, built with Next.js, TypeScript, Tailwind
-                CSS, and Shadcn UI.
+              <p class="tech-stack">
+                Full-stack project, built with
+                <span class="tech-item tech-nextjs">Next.js</span>
+                <span class="tech-item tech-typescript">TypeScript</span>
+                <span class="tech-item tech-tailwind">Tailwind CSS</span>
+                <span class="tech-item tech-shadcn">Shadcn UI</span>
               </p>
               <div class="buttons">
                 <a
@@ -79,7 +82,12 @@ import dorc from "../assets/dorc.png";
                 A single page app that allows users to share, like and collect
                 jokes.
               </p>
-              <p>Built with React, Zustand, Tailwind CSS</p>
+              <p class="tech-stack">
+                Built with
+                <span class="tech-item tech-react">React</span>
+                <span class="tech-item tech-zustand">Zustand</span>
+                <span class="tech-item tech-tailwind">Tailwind CSS</span>
+              </p>
               <div class="buttons">
                 <a
                   href="https://github.com/owen7460/joke-share-react"
@@ -117,7 +125,11 @@ import dorc from "../assets/dorc.png";
                 implementing core logic to support the game’s progression
                 system.
               </p>
-              <p>Built with Express.js, MongoDB</p>
+              <p class="tech-stack">
+                Built with
+                <span class="tech-item tech-express">Express.js</span>
+                <span class="tech-item tech-mongodb">MongoDB</span>
+              </p>
               <div class="buttons">
                 <a
                   class="view-project"
@@ -140,7 +152,14 @@ import dorc from "../assets/dorc.png";
                 MySQL, allowing users to browse menus, place orders, and manage
                 basic order data efficiently.
               </p>
-              <p>Built with PHP, MySQL, HTML, CSS, JavaScript</p>
+              <p class="tech-stack">
+                Built with
+                <span class="tech-item tech-php">PHP</span>
+                <span class="tech-item tech-mysql">MySQL</span>
+                <span class="tech-item tech-html">HTML</span>
+                <span class="tech-item tech-css">CSS</span>
+                <span class="tech-item tech-javascript">JavaScript</span>
+              </p>
               <div class="buttons">
                 <a
                   class="view-project"
@@ -163,7 +182,12 @@ import dorc from "../assets/dorc.png";
                 the brand identity and product collections, while providing a
                 smooth and intuitive online shopping experience for customers.
               </p>
-              <p>Built with Wordpress, Elementor, and WooCommerce.</p>
+              <p class="tech-stack">
+                Built with
+                <span class="tech-item tech-wordpress">WordPress</span>
+                <span class="tech-item tech-elementor">Elementor</span>
+                <span class="tech-item tech-woocommerce">WooCommerce</span>
+              </p>
               <div class="buttons">
                 <a
                   class="view-project"
@@ -185,7 +209,11 @@ import dorc from "../assets/dorc.png";
                 This portfolio website is built with Astro, and it showcases my
                 projects and skills.
               </p>
-              <p>Built with Astro, Sass.</p>
+              <p class="tech-stack">
+                Built with
+                <span class="tech-item tech-astro">Astro</span>
+                <span class="tech-item tech-sass">Sass</span>
+              </p>
               <div class="buttons">
                 <a
                   class="view-project"
@@ -443,6 +471,104 @@ import dorc from "../assets/dorc.png";
               width: 80%;
               margin: 0 auto;
             }
+            .tech-stack {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              gap: 0.6em 0.9em;
+            }
+
+            .tech-item {
+              display: inline-flex;
+              align-items: center;
+              position: relative;
+              padding-left: 1em;
+              white-space: nowrap;
+              color: var(--text-color);
+
+              &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 0.5em;
+                height: 0.5em;
+                border-radius: 50%;
+                transform: translateY(-50%);
+              }
+            }
+
+            .tech-nextjs::before {
+              background-color: #000000;
+            }
+
+            .tech-typescript::before {
+              background-color: #3178c6;
+            }
+
+            .tech-tailwind::before {
+              background-color: #06b6d4;
+            }
+
+            .tech-shadcn::before {
+              background-color: #111827;
+            }
+
+            .tech-react::before {
+              background-color: #61dafb;
+            }
+
+            .tech-zustand::before {
+              background-color: #7c5cff;
+            }
+
+            .tech-express::before {
+              background-color: #444444;
+            }
+
+            .tech-mongodb::before {
+              background-color: #47a248;
+            }
+
+            .tech-php::before {
+              background-color: #777bb4;
+            }
+
+            .tech-mysql::before {
+              background-color: #4479a1;
+            }
+
+            .tech-html::before {
+              background-color: #e34f26;
+            }
+
+            .tech-css::before {
+              background-color: #1572b6;
+            }
+
+            .tech-javascript::before {
+              background-color: #f7df1e;
+            }
+
+            .tech-wordpress::before {
+              background-color: #21759b;
+            }
+
+            .tech-elementor::before {
+              background-color: #92003b;
+            }
+
+            .tech-woocommerce::before {
+              background-color: #96588a;
+            }
+
+            .tech-astro::before {
+              background-color: #ff5d01;
+            }
+
+            .tech-sass::before {
+              background-color: #cc6699;
+            }
             h2 {
               font-weight: 900;
               font-size: var(--card-h2-size);
@@ -514,6 +640,9 @@ import dorc from "../assets/dorc.png";
               }
               p {
                 font-size: var(--card-p-size-mobile);
+              }
+              .tech-stack {
+                gap: 0.5em 0.8em;
               }
               .buttons {
                 a {
