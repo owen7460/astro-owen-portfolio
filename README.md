@@ -32,11 +32,11 @@ Together, these strengths make Astro a strong fit for a fast, content-rich portf
 
 ## Features
 
-- Idea and project presentation homepage experience
+- Engaging homepage experience for presenting ideas and projects
 - Dedicated Frontend / Backend / Design / Photography sections
-- Story-driven about me section
+- Story-driven About Me section that shares my journey and passions
 - Responsive layout across desktop and mobile
-- Smooth animations powered by GSAP and animation timelines
+- Smooth animations powered by GSAP and CSS `animation-timeline`
 - Optimized assets for performance
 - SEO-friendly routing and metadata
 
