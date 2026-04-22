@@ -48,7 +48,7 @@ Together, these strengths make Astro a strong fit for a fast, content-rich portf
 | UI islands | [React](https://react.dev/) 19 (`@astrojs/react`)                                                            |
 | Styling    | [Tailwind CSS](https://tailwindcss.com/) 4, [Sass](https://sass-lang.com/), [shadcn](https://ui.shadcn.com/) |
 | Motion     | [GSAP](https://gsap.com/)                                                                                    |
-| Fonts      | [@fontsource-variable/geist](https://fontsource.org/)                                                        |
+| Fonts      | [Geist](https://fonts.google.com/specimen/Geist), Afacad, Inter                                              |
 | Other      | Lucide icons, Radix UI                                                                                       |
 
 ## Getting started
