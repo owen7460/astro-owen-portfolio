@@ -6,16 +6,29 @@ Personal portfolio site for **Web Developer & Designer** work: projects, design 
 
 [Visit Live Portfolio Site - https://owen-ca.com](https://owen-ca.com)
 
+<p align="center">
+  <img src="./public/readme/homepage.png" alt="Homepage of Owen Ouyang Portfolio" />
+  <img src="./public/readme/backend.png" alt="Bacnend page ofOwen Ouyang Portfolio" />
+</p>
+
 ## Why Astro
 
-This site is built with **Astro** because it fits a **performance-focused showcase** well: mostly static content with selective interactivity.
+This site is built with **Astro** because it suits a performance-focused portfolio: mostly static content with selective interactivity.
 
-- **SEO-friendly structure** — Layouts let each page pass props so titles and metadata stay accurate. Navigation can feel smooth without sacrificing a solid HTML-first baseline.
-- **Islands architecture** — Interactivity is limited to specific **React** components where it is needed; the rest stays lightweight and server-rendered by default.
-- **Built-in image pipeline** — Astro’s `Image` component handles optimization (for example, a ~1.9MB source asset can be served at a much smaller).
-- **Prefetching** — Route prefetching is enabled in config so upcoming pages can warm up in the background, which helps reduce perceived wait when moving around the site.
+- Strong static output with minimal client JavaScript（fast loading）
+- SEO-friendly routing and metadata support
+- Islands architecture for interactive React components only
+- Built-in image optimization for media-heavy pages
+- Route prefetching for smoother navigation
 
-Together, these choices support a portfolio that stays visually rich without paying the full cost of a client-rendered SPA everywhere.
+Together, these strengths make Astro a strong fit for a fast, content-rich portfolio experience.
+
+## Engineering Decisions
+
+- Structured pages with reusable layouts and shared sections for long-term scalability
+- Used `client:visible` to defer non-critical interactive components
+- Prioritized above-the-fold assets with eager loading and lazy-loaded lower-priority media
+- Tuned animations to balance visual polish with first-load performance
 
 ## Features
 
@@ -29,14 +42,14 @@ Together, these choices support a portfolio that stays visually rich without pay
 
 ## Tech stack
 
-| Area       | Notes                                                                                                                                                                                             |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Framework  | [Astro](https://astro.build/) 5                                                                                                                                                                   |
-| UI islands | [React](https://react.dev/) 19 (`@astrojs/react`)                                                                                                                                                 |
-| Styling    | [Tailwind CSS](https://tailwindcss.com/) 4 (Vite plugin), [Sass](https://sass-lang.com/), [shadcn](https://ui.shadcn.com/)-style utilities (`class-variance-authority`, `tailwind-merge`, `clsx`) |
-| Motion     | [GSAP](https://gsap.com/)                                                                                                                                                                         |
-| Fonts      | [@fontsource-variable/geist](https://fontsource.org/)                                                                                                                                             |
-| Other      | Embla Carousel, Lucide icons, Radix UI primitives, OGL                                                                                                                                            |
+| Area       | Notes                                                                                                        |
+| ---------- | ------------------------------------------------------------------------------------------------------------ |
+| Framework  | [Astro](https://astro.build/) 5                                                                              |
+| UI islands | [React](https://react.dev/) 19 (`@astrojs/react`)                                                            |
+| Styling    | [Tailwind CSS](https://tailwindcss.com/) 4, [Sass](https://sass-lang.com/), [shadcn](https://ui.shadcn.com/) |
+| Motion     | [GSAP](https://gsap.com/)                                                                                    |
+| Fonts      | [@fontsource-variable/geist](https://fontsource.org/)                                                        |
+| Other      | Lucide icons, Radix UI                                                                                       |
 
 ## Getting started
 
