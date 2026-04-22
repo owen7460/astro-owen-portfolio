@@ -1,6 +1,6 @@
 # Owen Ouyang — Portfolio
 
-Personal portfolio site for **Web Developer & Designer** work: projects, design case studies, frontend and backend notes, photography, and an about section. The goal is to present work clearly while keeping the experience fast and pleasant to browse.
+Personal portfolio site showcasing my work as a Web Developer & Designer: projects, design work, frontend and backend studies, photography, and a story-driven About Me section. The goal is to present my work clearly while keeping the experience fast and enjoyable to browse.
 
 ## Live Site
 
