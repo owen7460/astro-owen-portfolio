@@ -8,14 +8,14 @@ Personal portfolio site showcasing my work as a Web Developer & Designer: projec
 
 <p align="center">
   <img src="./public/readme/homepage.png" alt="Homepage of Owen Ouyang Portfolio" />
-  <img src="./public/readme/backend.png" alt="Bacnend page ofOwen Ouyang Portfolio" />
+  <img src="./public/readme/backend.png" alt="Bacnend page of Owen Ouyang Portfolio" />
 </p>
 
 ## Why Astro
 
 This site is built with **Astro** because it suits a performance-focused portfolio: mostly static content with selective interactivity.
 
-- Strong static output with minimal client JavaScript（fast loading）
+- Strong static output with minimal client JavaScript (fast loading)
 - SEO-friendly routing and metadata support
 - Islands architecture for interactive React components only
 - Built-in image optimization for media-heavy pages
