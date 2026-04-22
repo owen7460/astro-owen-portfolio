@@ -16,7 +16,7 @@ import p1 from "../assets/backend/1_validator.png";
 import p2 from "../assets/backend/2_jwt.png";
 import p3 from "../assets/backend/3_rbac.png";
 import p4 from "../assets/backend/4_oath2.png";
-import p5 from "../assets/backend/rest.png";
+import p5 from "../assets/backend/5_mvc.png";
 
 const images = [
   { id: 1, name: "Express-Validator", src: p1.src, alt: "Image 1" },
