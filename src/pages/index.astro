@@ -5,7 +5,6 @@ import { Image } from "astro:assets";
 import blendbetter from "../assets/blendbetter.png";
 import jokeshare from "../assets/frontend/jokeshare.png";
 import owenkitchen from "../assets/owenkitchen.png";
-import noirrose from "../assets/noirrose.png";
 import portfolio from "../assets/portfolio.png";
 import joMalone from "../assets/design-jomalone.png";
 import goodreads from "../assets/design-goodreads.png";
@@ -87,6 +86,8 @@ import dorc from "../assets/dorc.png";
                 <span class="tech-item tech-react">React</span>
                 <span class="tech-item tech-zustand">Zustand</span>
                 <span class="tech-item tech-tailwind">Tailwind CSS</span>
+                <span class="tech-item tech-express">Express.js</span>
+                <span class="tech-item tech-mysql">MySQL</span>
               </p>
               <div class="buttons">
                 <a
@@ -167,34 +168,6 @@ import dorc from "../assets/dorc.png";
             </div>
           </div>
         </li>
-        <!-- <li>
-          <div class="left">
-            <Image src={noirrose} alt="Noir Rose Website" />
-          </div>
-          <div class="right">
-            <div class="right-content">
-              <h2>Noir Rose</h2>
-              <p>
-                Noir Rose is a press-on nails brand website designed to showcase
-                the brand identity and product collections, while providing a
-                smooth and intuitive online shopping experience for customers.
-              </p>
-              <p class="tech-stack">
-                Built with
-                <span class="tech-item tech-wordpress">WordPress</span>
-                <span class="tech-item tech-elementor">Elementor</span>
-                <span class="tech-item tech-woocommerce">WooCommerce</span>
-              </p>
-              <div class="buttons">
-                <a
-                  class="view-project"
-                  href="https://noir-rose.shop/"
-                  target="_blank">View Project</a
-                >
-              </div>
-            </div>
-          </div>
-        </li> -->
         <li>
           <div class="left">
             <Image src={portfolio} alt="Portfolio Website" />
@@ -210,6 +183,11 @@ import dorc from "../assets/dorc.png";
                 Built with
                 <span class="tech-item tech-astro">Astro</span>
                 <span class="tech-item tech-sass">Sass</span>
+                <span class="tech-item tech-tailwind">Tailwind CSS</span>
+                <span class="tech-item tech-shadcn">Shadcn UI</span>
+                <span class="tech-item tech-lucide">Lucide Icons</span>
+                <span class="tech-item tech-radix">Radix UI</span>
+                <span class="tech-item tech-gsap">GSAP</span>
               </p>
               <div class="buttons">
                 <a
@@ -449,6 +427,7 @@ import dorc from "../assets/dorc.png";
           background-color: rgba(255, 255, 255, 0.4);
           box-shadow: var(--liquid-border-shadow);
           backdrop-filter: blur(15px);
+          -webkit-backdrop-filter: blur(15px);
           border-radius: 1em;
           // animation: scaleIn 1s ease-in-out forwards;
           // animation-timeline: view();
@@ -565,6 +544,18 @@ import dorc from "../assets/dorc.png";
             .tech-sass::before {
               background-color: #cc6699;
             }
+            .tech-lucide::before {
+              background-color: #cb4646;
+            }
+
+            .tech-radix::before {
+              background-color: #52a81c;
+            }
+
+            .tech-gsap::before {
+              background-color: #ff0000;
+            }
+
             h2 {
               font-weight: 900;
               font-size: var(--card-h2-size);
@@ -594,6 +585,7 @@ import dorc from "../assets/dorc.png";
                 margin-right: 1em;
                 border: 1px solid var(--text-color);
                 backdrop-filter: blur(60px);
+                -webkit-backdrop-filter: blur(60px);
                 background-color: transparent;
                 &.view-project {
                   background-color: var(--text-color);
