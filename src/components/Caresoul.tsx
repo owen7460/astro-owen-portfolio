@@ -22,7 +22,7 @@ const images = [
   { id: 1, name: "Express-Validator", src: p1.src, alt: "Image 1" },
   { id: 2, name: "JWT", src: p2.src, alt: "Image 2" },
   { id: 3, name: "RBAC", src: p3.src, alt: "Image 3" },
-  { id: 4, name: "Oath2", src: p4.src, alt: "Image 4" },
+  { id: 4, name: "OAuth2", src: p4.src, alt: "Image 4" },
   { id: 5, name: "MVC", src: p5.src, alt: "Image 5" },
 ];
 
